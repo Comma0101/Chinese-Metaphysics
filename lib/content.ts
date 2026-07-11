@@ -954,10 +954,10 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
       version: "方法版本 · Method v1.0 · 2026-07-10",
       sections: [
         {
-          h: "以八字为主，按案结合紫微斗数",
+          h: "以八字为主，兼采中国命理的其他方法",
           body: [
-            "八字是默认的结构框架，用来观察时间、重复模式与选择边界。当出生时间足够可靠、且问题适合时，会结合紫微斗数作为补充视角。",
-            "这两者都是传统解释框架，不是预测科学。它们帮助你多一个可参照的结构，而不是给出一个确定的未来。",
+            "知几做的是中国命理，不只是八字。八字是默认的结构框架，用来观察时间、重复模式与选择边界；当出生时间足够可靠、问题也适合时，会结合紫微斗数等其他中国命理方法作为补充视角。每份判读只会用到真正用上的方法，并写清楚用了哪些。",
+            "这些都是传统解释框架，不是预测科学。它们帮助你多一个可参照的结构，而不是给出一个确定的未来。",
           ],
         },
         {
@@ -1142,9 +1142,9 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
       version: "Method v1.0 · 2026-07-10",
       sections: [
         {
-          h: "BaZi-led, Zi Wei Dou Shu when useful",
+          h: "BaZi-led, drawing on the wider Chinese metaphysics tradition",
           body: [
-            "BaZi is the default structural framework for examining timing, recurring patterns, and decision boundaries. When the birth time is reliable enough and the question fits, Zi Wei Dou Shu is added as a complementary lens.",
+            "Zhiji practices Chinese metaphysics, not BaZi alone. BaZi is the default structural framework for examining timing, recurring patterns, and decision boundaries. When the birth time is reliable enough and the question fits, Zi Wei Dou Shu and other Chinese methods are drawn in as complementary lenses. Each brief uses only the methods it actually applied, and names which ones.",
             "Both are traditional interpretive frameworks, not predictive science. They give you one more structure to reason with — not a fixed future.",
           ],
         },

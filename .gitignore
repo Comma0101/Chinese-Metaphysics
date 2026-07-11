@@ -8,3 +8,8 @@ data/*.json
 *.log
 .DS_Store
 next-env.d.ts
+.omc/
+.playwright-cli/
+nohup.out
+output/
+*.tsbuildinfo

@@ -51,15 +51,15 @@ export const T: Record<Lang, Chrome> = {
     toggleEn: "EN",
     home: {
       eyebrow: "私人中国命理咨询 · 以八字为主",
-      h1: "一件真正要做的决定，多一个视角。",
-      lead: "带来一件 90 天内要决定的事。你会收到一份经过人工审核的书面决策判读；交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题。知几以八字为主；出生资料与问题适合时，按案结合紫微斗数。依据、假设与不确定性都会写清楚。",
+      h1: "一件难下的决定，先看清它的结构。",
+      lead: "你正站在一个 90 天内要定下来的选择前——两份 offer、去还是留、进还是退。知几以八字为主、适合时结合紫微斗数，把时机、反复出现的模式与关键取舍，写成一份书面决策判读；交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题。不催你，不吓你，决定始终是你的。",
       accent: "Private Chinese metaphysics consultation, led by BaZi.",
       cta: "查看服务内容",
       applyCta: "已有邀请，开始申请",
       ctaNote: "适合职业、offer、去留、迁移、创业、关系与家庭节点",
       proof: ["一项重大决定", "书面决策判读", "一轮书面澄清 + 30/90 天书面复盘"],
       s2h: "你正在决定什么？",
-      s2lead: "知几适合已经有明确选项，并且需要在 90 天内做出选择的人。",
+      s2lead: "知几适合这样的时刻：选项已经摆在你面前，越想却越难定——而它不能一直拖，要在 90 天内定下来。",
       isnotLabel: "常见的人生节点",
       isnot: [
         "两份 offer 之间，哪一份更适合现在的你",
@@ -69,10 +69,10 @@ export const T: Record<Lang, Chrome> = {
       ],
       isLabel: "这次咨询会做什么",
       is: [
-        "以八字为主，适合时结合紫微斗数，观察时间、重复模式与风险取舍",
-        "把盘面解释与现实条件分开写清楚",
+        "以八字为主、适合时结合紫微斗数，看这件事的时机窗口、你反复走进的模式，和此刻没权衡到的取舍",
+        "把盘面解释和现实条件分开写清楚，哪句是观察、哪句是事实，一眼能分",
         "比较选项，而不是替你下命令",
-        "留下可回看、可质疑、可复盘的记录",
+        "留下一份可回看、可质疑、可复盘的记录",
       ],
       confidenceH: "一次完整咨询，你会收到什么",
       confidenceLead:
@@ -132,8 +132,8 @@ export const T: Record<Lang, Chrome> = {
     toggleEn: "EN",
     home: {
       eyebrow: "Private Chinese metaphysics consultation · BaZi-led",
-      h1: "One real decision. A second perspective.",
-      lead: "Bring one consequential decision you expect to make within 90 days. You receive a human-reviewed written decision brief. Within 14 days after delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. BaZi is the primary framework; Zi Wei Dou Shu may be included when the birth data and case support it. The reasoning, assumptions, and uncertainty are stated plainly.",
+      h1: "A hard decision, seen in its structure.",
+      lead: "You're standing in front of one choice due within 90 days — two offers, stay or go, in or out. Led by BaZi (with Zi Wei Dou Shu when the case supports it), Zhiji writes the timing, the patterns that keep repeating, and the trade-off you can't yet see into one written decision brief. Within 14 days of delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. No pressure, no fear — the decision stays yours.",
       accent: "私人中国命理咨询，以八字为主，按案结合紫微斗数。",
       cta: "See what is included",
       applyCta: "View application requirements",
@@ -141,7 +141,7 @@ export const T: Record<Lang, Chrome> = {
       proof: ["One consequential decision", "A written decision brief", "One written follow-up + written 30/90-day reviews"],
       s2h: "What are you deciding?",
       s2lead:
-        "Zhiji is designed for people with real options in front of them and a decision due within 90 days.",
+        "Zhiji is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can't keep waiting past 90 days.",
       isnotLabel: "Common decision points",
       isnot: [
         "Choosing between two offers or career paths",
@@ -151,10 +151,10 @@ export const T: Record<Lang, Chrome> = {
       ],
       isLabel: "What the consultation does",
       is: [
-        "Uses BaZi—and Zi Wei Dou Shu when appropriate—to examine timing, recurring patterns, and risk trade-offs",
-        "Separates chart interpretation from real-world constraints",
+        "Uses BaZi—and Zi Wei Dou Shu when it fits—to read the timing window, the patterns you keep walking back into, and the trade-off you haven't weighed yet",
+        "Separates chart interpretation from real-world facts, so you can see which line is an observation and which is a constraint",
         "Compares options without making the decision for you",
-        "Leaves you with documented reasoning you can revisit, challenge, and review later",
+        "Leaves you with a record you can revisit, challenge, and review later",
       ],
       confidenceH: "What you receive",
       confidenceLead:

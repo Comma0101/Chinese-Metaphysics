@@ -589,13 +589,16 @@ a {
   text-wrap: balance;
 }
 
+/* 雕宋 monument scale — the concrete headline opens with real impact
+   (the fate slogan is intentionally not used here; see copy-integrity) */
 .hero-title-zh {
   font-family: var(--font-carve), "Noto Serif SC", serif;
   font-weight: 900;
-  font-size: clamp(40px, 5vw, 66px);
-  line-height: 1.18;
-  letter-spacing: 0.015em;
-  max-width: 11em;
+  font-size: clamp(42px, 6.4vw, 88px);
+  line-height: 1.12;
+  letter-spacing: 0.012em;
+  max-width: 12em;
+  text-wrap: initial;
 }
 
 .hero-aside {

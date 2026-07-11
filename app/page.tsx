@@ -63,7 +63,7 @@ export default function Home({
                 <p className="eyebrow">{c.eyebrow}</p>
 
                 <h1 className={`hero-title${lang === "zh" ? " hero-title-zh" : ""}`} data-hero-title>
-                  {c.h1}
+                  {lang === "zh" ? clauseBreak(c.h1) : c.h1}
                 </h1>
 
                 <div className="hero-aside">

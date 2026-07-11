@@ -37,9 +37,9 @@ export const PILOT_PATH: PilotStage[] = [
         "核对排盘方法与相关历史事实",
       ],
       en: [
-        "Zhiji contact and explanation of data use and scope",
+        "Zhiji contacts you to explain what data is needed, how it will be used, and the service scope",
         "Birth details and your question are collected only then",
-        "Calculation method and relevant history are checked",
+        "Birth data, calculation settings, and relevant past events are reviewed",
       ],
     },
     footnote: {
@@ -50,7 +50,7 @@ export const PILOT_PATH: PilotStage[] = [
   {
     id: "core",
     price: PILOT_CORE_PRICE_LABEL,
-    name: { zh: "完整咨询 · 首批服务价", en: "Complete consultation · initial cohort" },
+    name: { zh: "完整咨询 · 首批服务价", en: "Full decision consultation · initial-cohort fee" },
     blurb: {
       zh: "围绕一件具体决定，交付书面判读、60 分钟私人面谈与后续复盘。",
       en: "A written decision brief, a 60-minute private consultation, and follow-up reviews focused on one concrete decision.",
@@ -64,12 +64,12 @@ export const PILOT_PATH: PilotStage[] = [
       en: [
         "Written brief: chart observations, real-world facts, assumptions, and option trade-offs",
         "A 60-minute private consultation",
-        "14 days of related clarification + 30/90-day reviews",
+        "Clarifying questions about the original brief for 14 days + 30/90-day reviews",
       ],
     },
     footnote: {
       zh: "定金全额计入服务费；方法说明、受理与退款规则、隐私条款和运营门槛公布前，付款保持关闭。",
-      en: "The deposit is credited in full. Payment remains closed until the method disclosure, acceptance and refund rules, privacy terms, and operating gates are published.",
+      en: "The deposit is credited in full. Payments remain closed until the method disclosure, privacy notice, service terms, acceptance and refund policy, and operational readiness checks are complete.",
     },
   },
 ];

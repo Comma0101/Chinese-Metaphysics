@@ -38,9 +38,9 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zhiji 知几｜Private BaZi Consultation｜私人八字咨询",
+  title: "Zhiji 知几 | Private Chinese Metaphysics Consultation",
   description:
-    "Private BaZi consultation for Chinese professionals in North America, focused on one career, relocation, founder, relationship, or family decision due within 90 days. 北美华人重大人生节点私人八字咨询。",
+    "A private, human-reviewed, BaZi-led Chinese metaphysics consultation for one consequential decision. Invitation-only; applications and payments are currently closed.",
   icons: {
     icon: "/icon.svg",
   },

@@ -14,9 +14,11 @@ import {
 } from "../lib/content";
 import { PILOT_PATH } from "../lib/tiers";
 
-test("homepage leads with a concrete private BaZi service, not a fate slogan", () => {
-  assert.match(T.zh.home.eyebrow, /私人八字咨询/);
-  assert.match(T.en.home.eyebrow, /Private BaZi consultation/);
+test("homepage leads with a concrete Chinese metaphysics service, not a fate slogan", () => {
+  assert.match(T.zh.home.eyebrow, /私人中国命理咨询/);
+  assert.match(T.en.home.eyebrow, /Private Chinese metaphysics consultation/);
+  assert.match(T.zh.home.lead, /八字/);
+  assert.match(T.en.home.lead, /BaZi/);
   assert.doesNotMatch(T.zh.home.h1, /命是结构|结局/);
   assert.doesNotMatch(T.en.home.h1, /\bfate\b|verdict/i);
   assert.match(T.zh.home.lead, /书面|面谈|90 天/);
@@ -47,7 +49,10 @@ test("illustrative sample avoids fabricated proof and precise future timing", ()
 
   assert.match(SAMPLE.zh.tag, /演示|虚构/);
   assert.match(SAMPLE.en.tag, /illustrative|fictional/i);
-  assert.doesNotMatch(sample, /18 个月|18 months|2\.5 years|两年半|真实客户|real client/i);
+  assert.doesNotMatch(
+    sample,
+    /18 个月|18 months|2\.5 years|两年半|真实客户案例|real client (?:case|result|proof)/i,
+  );
   assert.doesNotMatch(sample, /一定|必然|will succeed|best time/i);
   assert.match(SAMPLE.zh.falsifyLabel, /改变|推翻|不成立/);
   assert.match(SAMPLE.en.falsifyLabel, /change|invalidate|wrong/i);
@@ -66,7 +71,7 @@ test("public accountability belongs to Zhiji, not a public practitioner persona"
 
   assert.doesNotMatch(
     publicCopy,
-    /主理人|具名咨询师|practitioner profile|practitioner's name|named practitioner|personally delivered/i,
+    /主理人|具名咨询师|practitioner profile|publish(?:es)? the practitioner's name|named practitioner|personally delivered/i,
   );
   assert.match(TRUST.zh.eyebrow, /方法与责任/);
   assert.match(TRUST.en.eyebrow, /method.*accountability/i);
@@ -85,6 +90,31 @@ test("application and closing use calm private-practice language", () => {
   assert.doesNotMatch(CLOSING.en.cta, /founding pilot/i);
 });
 
+test("English copy is professional, customer-facing, and aligned with the umbrella category", () => {
+  const english = JSON.stringify({
+    home: T.en.home,
+    form: PILOT_FORM.en,
+    trust: TRUST.en,
+    guarantees: GUARANTEES.en,
+    tiers: PILOT_PATH.map((stage) => ({
+      name: stage.name.en,
+      blurb: stage.blurb.en,
+      includes: stage.includes.en,
+      footnote: stage.footnote.en,
+    })),
+  });
+
+  assert.match(T.en.home.eyebrow, /Private Chinese metaphysics consultation/i);
+  assert.match(english, /Zi Wei Dou Shu/);
+  assert.match(JSON.stringify(T.zh.home), /紫微斗数/);
+  assert.equal(TRUST.en.h, "Every case includes a traceable review record");
+  assert.equal(GUARANTEES.en.eyebrow, "Before payments open");
+  assert.doesNotMatch(
+    english,
+    /operating gates|bounded follow-up|risk posture|No payment happened|Back to home|complete fee structure/i,
+  );
+});
+
 test("pages contain no stale hard-coded hero, personal practitioner promise, or marketing-consent capture", async () => {
   const [home, application, layout, sample] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
@@ -100,4 +130,7 @@ test("pages contain no stale hard-coded hero, personal practitioner promise, or 
     sample,
     /practitioner profile|practitioner's name|portrait(?:Url|Src)/i,
   );
+  assert.doesNotMatch(sample, /Method v1\.0|not client proof/i);
+  assert.match(sample, /method specification pending/i);
+  assert.match(layout, /Private Chinese Metaphysics Consultation/);
 });

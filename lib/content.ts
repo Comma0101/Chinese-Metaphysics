@@ -134,7 +134,7 @@ export const T: Record<Lang, Chrome> = {
     home: {
       eyebrow: "Private Chinese metaphysics consultation · BaZi-led",
       h1: "A hard decision, seen in its structure.",
-      lead: "You're standing in front of one choice due within 90 days — two offers, stay or go, in or out. Led by BaZi (with Zi Wei Dou Shu when the case supports it), Zhiji writes the timing, the patterns that keep repeating, and the trade-off you can't yet see into one written decision brief. Within 14 days of delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. No pressure, no fear — the decision stays yours.",
+      lead: "You’re standing in front of one choice due within 90 days — two offers, stay or go, in or out. Led by BaZi (with Zi Wei Dou Shu when the case supports it), Zhiji writes the timing, the patterns that keep repeating, and the trade-off you can’t yet see into one written decision brief. Within 14 days of delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. No pressure, no fear — the decision stays yours.",
       accent: "私人中国命理咨询，以八字为主，按案结合紫微斗数。",
       cta: "See what is included",
       applyCta: "View application requirements",
@@ -142,18 +142,18 @@ export const T: Record<Lang, Chrome> = {
       proof: ["One consequential decision", "A written decision brief", "One written follow-up + written 30/90-day reviews"],
       s2h: "What are you deciding?",
       s2lead:
-        "Zhiji is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can't keep waiting past 90 days.",
+        "Zhiji is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can’t keep waiting past 90 days.",
       isnotLabel: "Common decision points",
       isnot: [
         "Which job to take — or whether to change direction entirely, now",
         "Stay, go back, or start over in another city",
         "Whether this relationship moves forward, or the timing is too early or too late",
-        "Your family's expectations and the path you actually want — how they fit together",
+        "Your family’s expectations and the path you actually want — how they fit together",
         "Leaving a stable job to bet on something of your own — now, or wait",
       ],
       isLabel: "What the consultation does",
       is: [
-        "Uses BaZi—and Zi Wei Dou Shu when it fits—to read the timing window, the patterns you keep walking back into, and the trade-off you haven't weighed yet",
+        "Uses BaZi—and Zi Wei Dou Shu when it fits—to read the timing window, the patterns you keep walking back into, and the trade-off you haven’t weighed yet",
         "Separates chart interpretation from real-world facts, so you can see which line is an observation and which is a constraint",
         "Compares options without making the decision for you",
         "Leaves you with a record you can revisit, challenge, and review later",
@@ -390,7 +390,7 @@ export const PILOT_FORM: Record<
         unsupported_country: "试点目前仅在美国与加拿大受理。",
         location_not_enabled: "你所在的地区尚未开放受理。",
         decision_not_within_90_days: "试点优先受理 90 天内要定的事——时机到了欢迎再来。",
-        price_not_acknowledged: "进入试点需要确认了解 US$388 的创始价。",
+        price_not_acknowledged: "进入正式服务需要先确认了解 US$388 的首批服务费。",
         required_acknowledgement_missing: "尚有必要的确认未勾选。",
         acute_crisis:
           "你现在更需要的是即时的专业支持，而不是一次命理咨询。若在美国或加拿大，可拨打或发送短信 988（Suicide & Crisis Lifeline）。",
@@ -517,14 +517,14 @@ export const PILOT_FORM: Record<
     gateNote: "Applications and payments are not yet open. Before they open, we will publish the method disclosure, privacy notice, service terms, and acceptance and refund policy, and complete our operational readiness checks.",
     errors: {
       missing: "Please complete all required fields and confirmations.",
-      validation: "One of the fields didn't pass validation — please check and retry.",
-      declined: "Based on these basic details, the decision is not currently within Zhiji's scope. Nothing was charged, and no personal history is needed.",
+      validation: "One of the fields didn’t pass validation — please check and retry.",
+      declined: "Based on these basic details, the decision is not currently within Zhiji’s scope. Nothing was charged, and no personal history is needed.",
       declinedReasons: {
         minor_or_age_unconfirmed: "The pilot is only open to confirmed adults (18+).",
         unsupported_country: "The pilot currently accepts cases in the US and Canada only.",
-        location_not_enabled: "Your area isn't enabled for the pilot yet.",
+        location_not_enabled: "Your area isn’t enabled for the pilot yet.",
         decision_not_within_90_days: "This initial cohort is limited to decisions expected within 90 days. You are welcome to return when that applies.",
-        price_not_acknowledged: "The pilot requires acknowledging the US$388 founding price.",
+        price_not_acknowledged: "Entering the service requires acknowledging the US$388 initial-cohort fee.",
         required_acknowledgement_missing: "A required acknowledgement is missing.",
         acute_crisis:
           "Zhiji is not appropriate for an immediate mental-health crisis. In the U.S. or Canada, contact 988 by phone or text for immediate support.",
@@ -532,7 +532,7 @@ export const PILOT_FORM: Record<
           "Questions like this belong with a licensed professional — medical, legal, immigration, and investment advice are outside this service.",
         third_party_or_minor_data: "The pilot accepts applications about yourself only.",
       },
-      accessDenied: "That access code isn't valid. Please check your invitation.",
+      accessDenied: "That access code isn’t valid. Please check your invitation.",
       pilotClosed: "This pilot batch is full or not yet open. Your application was not submitted and nothing was charged.",
       checkoutExpired: "That payment session expired. Please submit the application again.",
       checkoutUnavailable: "Payment is temporarily unavailable and nothing was charged. Try again later; if the problem continues, contact us through your invitation email.",
@@ -732,7 +732,7 @@ export const TRUST: Record<
   zh: {
     eyebrow: "方法与责任",
     h: "每一份判断，都留下可追溯的责任记录",
-    body: "知几不公开个人姓名或照片，也不虚构“大师”人设。每份交付都经过实质性人工审核，并记录案例编号、方法版本、审核日期与修订历史。软件参与哪些环节，也会如实说明。",
+    body: "知几不公开个人姓名或照片，也不虚构「大师」人设。每份交付都经过实质性人工审核，并记录案例编号、方法版本、审核日期与修订历史。软件参与哪些环节，也会如实说明。",
     points: [
       { h: "人工审核", p: "盘面输入、解释、书面简报与关键修改都必须经过人工复核，不能把自动生成结果直接交付给客户。" },
       { h: "方法可追溯", p: "排盘选择、关键假设、软件用途、不确定之处与报告版本会保留在案例记录中。" },
@@ -743,7 +743,7 @@ export const TRUST: Record<
   en: {
     eyebrow: "Method & accountability",
     h: "Every case includes a traceable review record",
-    body: "Zhiji uses brand accountability rather than a public practitioner persona. Every delivered interpretation undergoes substantive human review and carries a case number, reviewer-role ID, method version, review date, and revision history. The report also states which tasks were software-assisted. We do not publish a practitioner's name or photograph, and we do not invent a ‘master’ persona.",
+    body: "Zhiji uses brand accountability rather than a public practitioner persona. Every delivered interpretation undergoes substantive human review and carries a case number, reviewer-role ID, method version, review date, and revision history. The report also states which tasks were software-assisted. We do not publish a practitioner’s name or photograph, and we do not invent a ‘master’ persona.",
     points: [
       { h: "Human review", p: "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Automated output is never delivered as final judgment." },
       { h: "Traceable method", p: "Calculation choices, key assumptions, software use, uncertainty, and report versions remain in the case record." },
@@ -805,7 +805,7 @@ export const SAMPLE: Record<
     lead: "This fictional sample shows how a brief separates chart observations, real-world constraints, key assumptions, and action boundaries. It uses no real client data and makes no claim about accuracy.",
     tag: "Fictional sample · no real client data",
     caseH: "Fictional case: a chance elsewhere, home is here",
-    q: "“There's a real opportunity in another city, but my partner's life is here and my parents need me more every year. Do I take this, or stay?”",
+    q: "“There’s a real opportunity in another city, but my partner’s life is here and my parents need me more every year. Do I take this, or stay?”",
     meta: "Fictional scenario · delivery structure only",
     reading: [
       {
@@ -814,7 +814,7 @@ export const SAMPLE: Record<
       },
       {
         k: "Chart observation",
-        v: "In this illustrative chart, the useful tension is between carrying other people's needs first and acting on your own window. It explains why this feels so hard—it does not tell you to go or to stay.",
+        v: "In this illustrative chart, the useful tension is between carrying other people’s needs first and acting on your own window. It explains why this feels so hard—it does not tell you to go or to stay.",
       },
       {
         k: "Key assumption",
@@ -1159,7 +1159,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           h: "Historical calibration is a fit gate",
           body: [
             "Before a full reading, the chart is calibrated against things that actually happened to you. This is a test of data quality and case fit — not scientific validation, and not proof of accuracy.",
-            "Calibration records matches, misses, and ambiguity. If it doesn't hold, the case does not proceed under the published acceptance rule, and the deposit is returned.",
+            "Calibration records matches, misses, and ambiguity. If it doesn’t hold, the case does not proceed under the published acceptance rule, and the deposit is returned.",
           ],
         },
         {
@@ -1181,7 +1181,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     },
     promise: {
       eyebrow: "Our promise",
-      h1: "What we don't do",
+      h1: "What we don’t do",
       lead: "Much of the distrust in this category comes from being sold to, frightened, or kept hooked. Zhiji states the boundaries first.",
       version: "Version 2026-07-10",
       sections: [
@@ -1195,7 +1195,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "No fear, no promised outcome",
           body: [
-            "We do not predict a fixed future, promise any outcome, or use “it's destined” or “disaster is coming” language to push you to buy.",
+            "We do not predict a fixed future, promise any outcome, or use “it’s destined” or “disaster is coming” language to push you to buy.",
             "A reading that would fit anyone else just as well is a failed reading — we say so and re-cast it.",
           ],
         },
@@ -1206,7 +1206,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           ],
         },
         {
-          h: "Some questions don't belong here",
+          h: "Some questions don’t belong here",
           body: [
             "Medical, mental-health, legal, immigration, investment, and fertility questions are outside the service — please consult the appropriate licensed professional.",
             "If you are in acute crisis (e.g. thoughts of self-harm, severe panic), what you need is immediate professional support, not a consultation. In the US or Canada, call or text 988 (Suicide & Crisis Lifeline).",
@@ -1223,7 +1223,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     privacy: {
       eyebrow: "Privacy",
       h1: "How your information is handled",
-      lead: "A plain-language summary. The core principle: collect only what's needed, keep purposes separate, and don't train models on your data by default.",
+      lead: "A plain-language summary. The core principle: collect only what’s needed, keep purposes separate, and don’t train models on your data by default.",
       version: "Draft · 2026-07-10",
       draft: DRAFT_EN,
       sections: [
@@ -1235,7 +1235,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           ],
         },
         {
-          h: "What we don't collect",
+          h: "What we don’t collect",
           body: [
             "We do not collect or store IP addresses or device fingerprints as identifiers. We do not collect third-party or minor data unrelated to your own case.",
           ],
@@ -1258,7 +1258,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     },
     terms: {
       eyebrow: "Terms",
-      h1: "What this service is, and isn't",
+      h1: "What this service is, and isn’t",
       lead: "A plain-language summary so you understand the shape and boundaries of the service before payments open.",
       version: "Draft · 2026-07-10",
       draft: DRAFT_EN,
@@ -1266,7 +1266,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "Written and asynchronous throughout",
           body: [
-            "The service includes no meeting, call, or live component. You receive a human-reviewed written decision brief; within 14 days of delivery you may submit one consolidated written follow-up about the original brief's reasoning, assumptions, or wording; written 30/90-day reviews follow.",
+            "The service includes no meeting, call, or live component. You receive a human-reviewed written decision brief; within 14 days of delivery you may submit one consolidated written follow-up about the original brief’s reasoning, assumptions, or wording; written 30/90-day reviews follow.",
             "A new decision is a separately scoped case, outside the follow-up.",
           ],
         },
@@ -1314,7 +1314,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "If not accepted: returned",
           body: [
-            "If the case cannot proceed under the published acceptance rule (for example, calibration doesn't fit, the question is out of scope, or your area isn't enabled), the deposit is returned to the original payment method.",
+            "If the case cannot proceed under the published acceptance rule (for example, calibration doesn’t fit, the question is out of scope, or your area isn’t enabled), the deposit is returned to the original payment method.",
             "Refunds follow a predefined process and are not conditioned on a subjective sense of “accuracy.”",
           ],
         },

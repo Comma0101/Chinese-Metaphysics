@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
  * 髹夜世界 — the persistent material world (Igloo model, spec 2026-07-09).
  *
  * One bronze luopan suspended in cured lacquer, rendered in a fixed
- * full-viewport canvas behind the page. Scroll is the world's only clock:
+ * full-viewport canvas behind the page. Scroll is the world’s only clock:
  * sections carry data-act="0..6" and the world interpolates camera, light,
  * plate attitude and ring alignment between per-act keyframes. The DOM
  * scrolls free — the world listens, it never jacks.
@@ -341,7 +341,7 @@ export function LacquerWorld() {
       scene.add(tilt);
 
       // ---- scroll → world state ----
-      let anchors: number[] = []; // document-space y of each act's section center
+      let anchors: number[] = []; // document-space y of each act’s section center
       function measure() {
         const els = Array.from(document.querySelectorAll<HTMLElement>("[data-act]"))
           .sort((a, b) => Number(a.dataset.act) - Number(b.dataset.act));

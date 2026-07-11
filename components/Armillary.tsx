@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /**
- * 罗盘 — a gilt luopan (the 命理 practitioner's compass), drawn in hairlines.
+ * 罗盘 — a gilt luopan (the 命理 practitioner’s compass), drawn in hairlines.
  *
  * On-theme for 知几 / 八字: concentric fine brass rings carrying the eight 卦
  * (trigrams) as thin gold bars — pure line geometry, so it stays elegant, not

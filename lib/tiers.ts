@@ -7,8 +7,8 @@ export type LocalizedList = { zh: string[]; en: string[] };
 // 浏览器绝不提交 tier / 金额 / 支付状态；服务端常量才是定价事实。
 // The deposit amount is a server-side constant (4,900 cents); the string
 // below is presentation only and must match the server.
-export const PILOT_DEPOSIT_PRICE_LABEL = "$49";
-export const PILOT_CORE_PRICE_LABEL = `$${PILOT_CORE_PRICE_USD}`;
+export const PILOT_DEPOSIT_PRICE_LABEL = "US$49";
+export const PILOT_CORE_PRICE_LABEL = `US$${PILOT_CORE_PRICE_USD}`;
 
 export type PilotStage = {
   id: "deposit" | "core";

@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * 卷目 — the volume index rail (Chartogne's parcel-index grammar).
+ * 卷目 — the volume index rail (Chartogne’s parcel-index grammar).
  * A fixed hairline spine on the left edge (desktop only) listing the
- * homepage's acts 卷首…卷终. Tracks the reader's position against the same
+ * homepage’s acts 卷首…卷终. Tracks the reader’s position against the same
  * [data-act] anchors that drive the world; click travels there.
  */
 

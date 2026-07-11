@@ -4,7 +4,7 @@
 
    Material logic:
    - LACQUER (warm near-black) is the world. Three depths only.
-   - RICE PAPER is reserved for artifacts you're meant to trust:
+   - RICE PAPER is reserved for artifacts you’re meant to trust:
      the chart, the worked sample, the intake form, the featured tier.
    - GOLD is a hairline and a glint. Never a fill.
    - CINNABAR is the only true color. It appears only as the seal.
@@ -105,7 +105,7 @@ body {
   text-rendering: optimizeLegibility;
   /* one raking lamp on cured lacquer (top-right), a faint celadon counter-light
      from the lower-left — the wet lacquer look with zero glow */
-  /* one tight lamp (fast falloff — light pools, it doesn't fog), a real celadon
+  /* one tight lamp (fast falloff — light pools, it doesn’t fog), a real celadon
      counter-shadow for the cool axis, and a deeper, cooler lacquer base so the
      warm bronze reads AGAINST the dark instead of dissolving into it */
   background-image:
@@ -192,7 +192,7 @@ main {
   font-size: clamp(40px, 6vw, 92px);
   line-height: 1.08;
   letter-spacing: 0.015em;
-  text-wrap: balance; /* no orphan character on the monument's last line */
+  text-wrap: balance; /* no orphan character on the monument’s last line */
 }
 
 /* a lacquer act squeezed between two sheets needs stage-time for the world */
@@ -227,7 +227,7 @@ main {
   }
 }
 
-/* a sheet's bottom teeth must lie ON TOP of whatever ground follows it */
+/* a sheet’s bottom teeth must lie ON TOP of whatever ground follows it */
 .seam-b {
   z-index: 1;
 }
@@ -366,7 +366,7 @@ a {
   font-size: 18px;
 }
 
-/* a gilt hairline that catches light at one end — the ruling tool's line */
+/* a gilt hairline that catches light at one end — the ruling tool’s line */
 .gilt-rule {
   height: 1px;
   width: 100%;
@@ -1051,7 +1051,7 @@ a {
   flex-direction: column;
 }
 
-/* pin provenance to the plate's foot — no dead paper between */
+/* pin provenance to the plate’s foot — no dead paper between */
 .sample-side .sample-meta {
   margin-top: auto;
   padding-top: 24px;
@@ -2063,7 +2063,7 @@ a {
   line-height: 1.5;
 }
 
-/* ---- the form's own submit: dark, so it reads on paper ---- */
+/* ---- the form’s own submit: dark, so it reads on paper ---- */
 .form-submit {
   width: 100%;
   min-height: 54px;

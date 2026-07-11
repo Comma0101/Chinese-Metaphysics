@@ -8,6 +8,7 @@ import {
   GUARANTEES,
   HEADER,
   PILOT_FORM,
+  PILOT_EXPLAINER,
   SAMPLE,
   T,
   TRUST,
@@ -21,8 +22,10 @@ test("homepage leads with a concrete Chinese metaphysics service, not a fate slo
   assert.match(T.en.home.lead, /BaZi/);
   assert.doesNotMatch(T.zh.home.h1, /命是结构|结局/);
   assert.doesNotMatch(T.en.home.h1, /\bfate\b|verdict/i);
-  assert.match(T.zh.home.lead, /书面|面谈|90 天/);
-  assert.match(T.en.home.lead, /written brief|private consultation|90 days/i);
+  assert.match(T.zh.home.lead, /书面判读/);
+  assert.match(T.zh.home.lead, /书面澄清/);
+  assert.match(T.en.home.lead, /written decision brief/i);
+  assert.match(T.en.home.lead, /written clarification/i);
   assert.doesNotMatch(T.zh.home.cta, /申请|试点/);
   assert.doesNotMatch(T.en.home.cta, /apply|pilot/i);
 });
@@ -31,17 +34,34 @@ test("copy names customer situations and observable deliverables", () => {
   const zh = JSON.stringify(T.zh.home);
   const en = JSON.stringify(T.en.home);
 
-  for (const phrase of ["offer", "去留", "迁移", "书面判读", "60 分钟"]) {
+  for (const phrase of ["offer", "去留", "迁移", "书面判读", "书面澄清"]) {
     assert.equal(zh.includes(phrase), true, `missing Chinese service language: ${phrase}`);
   }
   for (const phrase of [
     "offer",
     "relocation",
     "written decision brief",
-    "60-minute",
+    "written clarification",
   ]) {
     assert.equal(en.toLowerCase().includes(phrase.toLowerCase()), true, `missing English service language: ${phrase}`);
   }
+});
+
+test("public delivery is fully asynchronous and written", () => {
+  const delivery = JSON.stringify({
+    home: T,
+    explainer: PILOT_EXPLAINER,
+    guarantees: GUARANTEES,
+    tiers: PILOT_PATH,
+  });
+
+  assert.match(delivery, /书面澄清/);
+  assert.match(delivery, /written clarification/i);
+  assert.match(delivery, /asynchronous|异步/i);
+  assert.doesNotMatch(
+    delivery,
+    /面谈|通话|语音解读|视频咨询|60\s*分钟|60-minute|live session|private session|video consultation/i,
+  );
 });
 
 test("illustrative sample avoids fabricated proof and precise future timing", () => {

@@ -774,60 +774,60 @@ export const SAMPLE: Record<
     h: "先看文件怎么写，再决定值不值得谈。",
     lead: "下面是一份虚构演示，用来展示判读如何区分盘面观察、现实条件、关键假设与行动边界。它不是客户证明，也不代表准确率。",
     tag: "虚构演示 · 不对应任何真实个案",
-    caseH: "演示：两份 offer 之间",
-    q: "「大厂稳定的 offer，还是加入一个早期团队？我不想再赌错一次。」",
+    caseH: "演示：机会在别处，家在这里",
+    q: "「一个很好的机会在另一座城市，可我对象的生活在这边，爸妈也一年比一年需要人。我到底该抓住这次，还是留下来？」",
     meta: "虚构情境 · 仅展示交付结构",
     reading: [
       {
         k: "现实条件",
-        v: "选择不只关乎兴趣：现金储备、身份安排、团队质量、工作边界与可逆性都会改变结论。判读不会把这些事实藏在盘面之后。",
+        v: "这不只是一个工作选择。对象能不能一起走、父母真实的健康与身边有没有人照应、这一步可不可逆、以及推掉这次机会的实际代价——这些事实比盘更能改变结论。判读会把它们和盘面分开写。",
       },
       {
         k: "盘面观察",
-        v: "这份示意盘把注意力放在「借助成熟资源」与「独立承担不确定性」之间的张力。它提供一个观察角度，不直接决定去哪一家公司。",
+        v: "这份示意盘把注意力放在「先扛起别人的需要」与「顺着自己的时机走」之间的张力。它解释的是这件事为什么这么难，而不是叫你走还是留。",
       },
       {
         k: "关键假设",
-        v: "只有当过去几年确实反复出现「承担过多、资源不足」的模式时，这个观察才值得进入选项比较；否则需要重看。",
+        v: "只有当过去几年确实反复出现「为了让别人安心，一再推迟自己的选择」时，这个观察才值得进入比较；否则需要重看。",
       },
       {
         k: "低后悔行动",
-        v: "先向两边索取同一组事实：直属负责人、前三个月目标、退出成本与身份影响。信息补齐后，再比较哪条路径更符合当下承受能力。",
+        v: "先向三边要同一组事实：这个机会能不能等、能不能远程、真实的截止在哪；和对象认真谈一次「真要走需要什么」；弄清父母除了你之外还有哪些支持。信息补齐后，再比较哪条路更符合当下的承受力。",
       },
     ],
     falsifyLabel: "哪些事实会改变或推翻这版判断",
     falsify:
-      "如果当事人拥有充足现金缓冲、早期团队已有稳定收入，或过去在低资源环境里持续表现更好，风险比较就会改变。正式判读必须把这些反例写出来，而不是等结果出现后再解释。",
+      "如果对象其实愿意一起搬、父母身边已有稳妥的照应，或你过去每一次大胆独立的决定反而走得更好，那么整个风险判断都会改变。正式判读必须把这些反例写在前面，而不是等结果出来再补解释。",
   },
   en: {
     eyebrow: "Delivery example",
     h: "See the deliverable before deciding whether to apply.",
     lead: "This fictional sample shows how a brief separates chart observations, real-world constraints, key assumptions, and action boundaries. It uses no real client data and makes no claim about accuracy.",
     tag: "Fictional sample · no real client data",
-    caseH: "Fictional case: choosing between two offers",
-    q: "“A stable offer at a large company, or a role with an early-stage team? I can't afford to make the wrong choice again.”",
+    caseH: "Fictional case: a chance elsewhere, home is here",
+    q: "“There's a real opportunity in another city, but my partner's life is here and my parents need me more every year. Do I take this, or stay?”",
     meta: "Fictional scenario · delivery structure only",
     reading: [
       {
         k: "Real-world constraints",
-        v: "This choice is not only about interest. Cash runway, immigration constraints, team quality, working boundaries, and reversibility can all change the conclusion. The brief keeps those facts separate from the chart.",
+        v: "This is not only a career choice. Whether your partner could move too, your parents' actual health and whether anyone else is nearby to help, how reversible the move is, and the real cost of turning this down — these facts change the answer more than the chart does. The brief keeps them separate from the chart.",
       },
       {
         k: "Chart observation",
-        v: "In this illustrative chart, the useful tension is between drawing on established resources and carrying uncertainty independently. That is one interpretive lens—not an instruction about which employer to choose.",
+        v: "In this illustrative chart, the useful tension is between carrying other people's needs first and acting on your own window. It explains why this feels so hard—it does not tell you to go or to stay.",
       },
       {
         k: "Key assumption",
-        v: "The observation matters only if recent history also shows a pattern of taking on responsibility without enough support. If that pattern is absent, the interpretation needs revision.",
+        v: "This matters only if recent years also show a pattern of putting off your own moves to keep others comfortable. If that pattern is absent, the reading needs revision.",
       },
       {
         k: "Low-regret next step",
-        v: "Ask both employers for the same facts: direct manager, first-quarter expectations, the cost of leaving, and immigration impact. Compare the options again once those unknowns are reduced.",
+        v: "Before deciding, get the same set of facts from all three sides: whether the opportunity can wait or be remote and its real deadline; one honest conversation with your partner about what a move would actually take; and what support your parents have beyond you. Compare again once those unknowns shrink.",
       },
     ],
     falsifyLabel: "What would change this assessment",
     falsify:
-      "The comparison changes if the client has a substantial cash buffer, the early-stage company already has durable revenue, or the client consistently performs better in low-resource settings. A real brief must name those counterexamples before the outcome is known.",
+      "If your partner is in fact open to moving, your parents already have dependable support, or you have historically done better by making bold independent moves, the whole risk picture changes. A real brief names those counterexamples up front, not after the outcome.",
   },
 };
 

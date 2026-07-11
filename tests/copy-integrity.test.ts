@@ -22,7 +22,7 @@ test("homepage leads with a concrete Chinese metaphysics service, not a fate slo
   assert.match(T.en.home.lead, /BaZi/);
   assert.doesNotMatch(T.zh.home.h1, /命是结构|结局/);
   assert.doesNotMatch(T.en.home.h1, /\bfate\b|verdict/i);
-  assert.match(T.zh.home.lead, /书面判读/);
+  assert.match(T.zh.home.lead, /书面决策判读/);
   assert.match(T.zh.home.lead, /书面澄清/);
   assert.match(T.en.home.lead, /written decision brief/i);
   assert.match(T.en.home.lead, /written clarification/i);
@@ -34,7 +34,7 @@ test("copy names customer situations and observable deliverables", () => {
   const zh = JSON.stringify(T.zh.home);
   const en = JSON.stringify(T.en.home);
 
-  for (const phrase of ["offer", "去留", "迁移", "书面判读", "书面澄清"]) {
+  for (const phrase of ["offer", "去留", "迁移", "书面决策判读", "书面澄清"]) {
     assert.equal(zh.includes(phrase), true, `missing Chinese service language: ${phrase}`);
   }
   for (const phrase of [

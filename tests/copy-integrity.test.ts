@@ -23,7 +23,7 @@ test("homepage leads with a concrete Chinese metaphysics service, not a fate slo
   assert.doesNotMatch(T.zh.home.h1, /命是结构|结局/);
   assert.doesNotMatch(T.en.home.h1, /\bfate\b|verdict/i);
   assert.match(T.zh.home.lead, /书面决策判读/);
-  assert.match(T.zh.home.lead, /集中提交一次书面澄清/);
+  assert.match(T.zh.home.lead, /集中提交一轮关于原判读依据、假设或表述的书面问题/);
   assert.match(T.en.home.lead, /written decision brief/i);
   assert.match(T.en.home.lead, /one consolidated written follow-up/i);
   assert.doesNotMatch(T.zh.home.cta, /申请|试点/);
@@ -34,7 +34,7 @@ test("copy names customer situations and observable deliverables", () => {
   const zh = JSON.stringify(T.zh.home);
   const en = JSON.stringify(T.en.home);
 
-  for (const phrase of ["offer", "去留", "迁移", "书面决策判读", "一次书面澄清"]) {
+  for (const phrase of ["offer", "去留", "迁移", "书面决策判读", "一轮书面澄清"]) {
     assert.equal(zh.includes(phrase), true, `missing Chinese service language: ${phrase}`);
   }
   for (const phrase of [
@@ -58,10 +58,14 @@ test("public delivery is fully asynchronous and written", () => {
     tiers: PILOT_PATH,
   });
 
-  assert.match(delivery, /集中提交一次书面澄清/);
+  assert.match(delivery, /集中提交一轮关于原判读依据、假设或表述的书面问题/);
   assert.match(delivery, /one consolidated written follow-up/i);
   assert.match(delivery, /asynchronous|异步/i);
-  assert.doesNotMatch(delivery, /defined written clarification|人工审核交付/i);
+  assert.equal(T.zh.home.steps[2]?.h, "交付、澄清与复盘，全程以书面进行");
+  assert.doesNotMatch(
+    delivery,
+    /defined written clarification|人工审核交付|集中提交一次书面澄清|以书面完成交付、澄清与复盘/i,
+  );
   assert.doesNotMatch(
     delivery,
     /面谈|通话|语音解读|视频咨询|会面|一对一|60\s*分钟|60-minute|live session|private session|video consultation|\bmeeting\b|\bcall\b|audio session|synchronous consultation/i,

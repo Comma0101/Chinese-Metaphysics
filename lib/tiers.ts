@@ -52,13 +52,13 @@ export const PILOT_PATH: PilotStage[] = [
     price: PILOT_CORE_PRICE_LABEL,
     name: { zh: "完整咨询 · 首批服务价", en: "Full decision consultation · initial-cohort fee" },
     blurb: {
-      zh: "围绕一件具体决定，交付书面决策判读、一次书面澄清与后续书面复盘。",
+      zh: "围绕一件具体决定，交付书面决策判读、一轮书面澄清与后续书面复盘。",
       en: "A written decision brief, one written follow-up, and written reviews focused on one consequential decision.",
     },
     includes: {
       zh: [
         "书面决策判读：盘面观察、现实条件、假设与选项比较",
-        "交付后 14 天内，可就原判读的依据、假设或表述，集中提交一次书面澄清",
+        "交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题",
         "30/90 天书面复盘",
       ],
       en: [

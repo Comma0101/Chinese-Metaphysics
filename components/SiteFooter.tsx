@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Lang, FOOTER } from "@/lib/content";
+import { Lang, FOOTER, DOC_NAV } from "@/lib/content";
 
 export function SiteFooter({ lang }: { lang: Lang }) {
   const f = FOOTER[lang];
+  const docs = DOC_NAV[lang];
 
   function href(h: string) {
     return h.startsWith("/#") ? `/?lang=${lang}${h.slice(1)}` : `${h}?lang=${lang}`;
@@ -33,6 +34,13 @@ export function SiteFooter({ lang }: { lang: Lang }) {
             <div className="fhead">{lang === "zh" ? "边界" : "Scope & limits"}</div>
             <p className="flegal">{f.legal}</p>
           </div>
+        </div>
+        <div className="fpolicy">
+          {docs.map((d) => (
+            <Link key={d.slug} href={`/${d.slug === "deposit" ? "deposit-policy" : d.slug}?lang=${lang}`}>
+              {d.label}
+            </Link>
+          ))}
         </div>
         <div className="frights">{f.rights}</div>
       </div>

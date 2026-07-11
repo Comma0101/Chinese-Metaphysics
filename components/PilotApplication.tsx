@@ -445,7 +445,20 @@ export function PilotApplication({ lang }: { lang: Lang }) {
               onChange={(e) => setAck(a.key as AckKey, e.target.checked)}
               required
             />
-            <span>{a.label}</span>
+            <span>
+              {a.label}
+              {a.href && (
+                <a
+                  className="ack-link"
+                  href={`/${a.href === "deposit" ? "deposit-policy" : a.href}?lang=${lang}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {a.linkLabel}
+                </a>
+              )}
+            </span>
           </label>
         ))}
 

@@ -19,7 +19,16 @@ const DOC = {
     pending: "待复盘",
     reviewer: "知几案例审核 · 审核角色 ZJ-R01",
     method: "演示格式 · 方法规范待冻结",
-    note: "这是虚构演示，不对应任何客户，也不证明准确率。它只展示正式文件如何区分观察、事实、假设、行动与反例。",
+    provLabel: "案例记录（演示）",
+    prov: [
+      { k: "案例编号", v: "ZJ—DEMO" },
+      { k: "审核角色", v: "ZJ-R01" },
+      { k: "方法版本", v: "待冻结" },
+      { k: "审核日期", v: "演示" },
+      { k: "报告版本", v: "v1" },
+      { k: "更正记录", v: "无" },
+    ],
+    note: "这是虚构演示，不对应任何客户，也不证明准确率。它只展示正式文件如何区分观察、事实、假设、行动与反例，并记录可追溯的案例信息。",
     cta: "已有邀请，开始申请",
     back: "← 返回",
   },
@@ -34,7 +43,16 @@ const DOC = {
     pending: "pending",
     reviewer: "Zhiji Case Review · Reviewer role: ZJ-R01",
     method: "Illustrative format · method specification pending",
-    note: "This fictional sample uses no real client data and makes no claim about accuracy. It shows how the brief separates observations, facts, assumptions, actions, and counterexamples.",
+    provLabel: "Case record (illustrative)",
+    prov: [
+      { k: "Case no.", v: "ZJ—DEMO" },
+      { k: "Reviewer role", v: "ZJ-R01" },
+      { k: "Method version", v: "pending" },
+      { k: "Review date", v: "illustrative" },
+      { k: "Report version", v: "v1" },
+      { k: "Revisions", v: "none" },
+    ],
+    note: "This fictional sample uses no real client data and makes no claim about accuracy. It shows how the brief separates observations, facts, assumptions, actions, and counterexamples, and records traceable case information.",
     cta: "View application requirements",
     back: "← Back",
   },
@@ -108,6 +126,19 @@ export default function SampleReading({
                 </div>
               </div>
               <p className="rdoc-review-note">{d.reviewNote}</p>
+            </section>
+
+            {/* 案例记录 — traceable provenance (brand-accountability spec) */}
+            <section className="rdoc-provenance" aria-label={d.provLabel}>
+              <p className="falsify-label">{d.provLabel}</p>
+              <div className="rdoc-prov">
+                {d.prov.map((p) => (
+                  <div className="pv" key={p.k}>
+                    <span className="k">{p.k}</span>
+                    <span className="v">{p.v}</span>
+                  </div>
+                ))}
+              </div>
             </section>
 
             <footer className="rdoc-sign">

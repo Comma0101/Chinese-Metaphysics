@@ -2944,6 +2944,164 @@ a {
   margin-top: 10px;
 }
 
+/* ---------------- 说明页 · trust & compliance documents ---------------- */
+.doc-version {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 14px 0 0;
+}
+
+.doc-draft {
+  margin: 26px 0 4px;
+  padding: 16px 20px;
+  border: 1px solid rgba(168, 58, 40, 0.4);
+  border-left: 3px solid var(--seal);
+  border-radius: 2px;
+  background: rgba(168, 58, 40, 0.05);
+  font-family: var(--kai);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.doc-prose {
+  margin-top: 30px;
+  max-width: 66ch;
+}
+
+.doc-prose section {
+  padding: 22px 0;
+  border-top: 1px solid rgba(25, 19, 7, 0.13);
+}
+
+.doc-prose section:first-child {
+  border-top: 0;
+  padding-top: 6px;
+}
+
+.doc-prose h2 {
+  font-family: var(--carve-stack);
+  font-weight: 900;
+  font-size: clamp(19px, 2.4vw, 24px);
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.doc-prose p {
+  font-size: 15.5px;
+  line-height: 1.78;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+.doc-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.doc-footnote {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(25, 19, 7, 0.24);
+  font-family: var(--kai);
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+
+.doc-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(25, 19, 7, 0.16);
+}
+
+.doc-more a {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--gold-leaf);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-line);
+  padding-bottom: 2px;
+}
+
+.doc-more a:hover {
+  border-color: var(--gold);
+}
+
+/* acknowledgement row inline link → the draft it references */
+.ack-link {
+  margin-left: 6px;
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--seal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* footer policy strip */
+.fpolicy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gold-faint);
+}
+
+.fpolicy a {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ivory-faint);
+  text-decoration: none;
+}
+
+.fpolicy a:hover {
+  color: var(--gold-leaf);
+}
+
+/* 案例审核 provenance block — on the deliverable sample */
+.rdoc-prov {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(25, 19, 7, 0.16);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 22px;
+}
+
+.rdoc-prov .pv {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  line-height: 1.9;
+  border-bottom: 1px dotted rgba(25, 19, 7, 0.2);
+  padding-bottom: 3px;
+}
+
+.rdoc-prov .pv .k {
+  color: var(--ink-faint);
+}
+
+.rdoc-prov .pv .v {
+  color: var(--ink);
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .rdoc-prov {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------------- 判读书 · the deliverable document ---------------- */
 .rdoc {
   position: relative;

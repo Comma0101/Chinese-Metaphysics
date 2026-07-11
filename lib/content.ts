@@ -250,7 +250,7 @@ export const PILOT_FORM: Record<
     screenRestricted: string;
     yes: string;
     no: string;
-    acks: { key: string; label: string }[];
+    acks: { key: string; label: string; href?: DocSlug; linkLabel?: string }[];
     marketing: string;
     required: string;
     submit: string;
@@ -350,11 +350,23 @@ export const PILOT_FORM: Record<
         key: "softwareDisclosureAcknowledged",
         label: "我知悉最终判读会经过知几的实质性人工审核；软件用途会披露，我的资料默认不用于训练模型。",
       },
-      { key: "privacyConsent", label: "我了解完整隐私说明会在付款开放前提供；当前关闭状态下，本表不会被读取或保存。" },
-      { key: "termsAccepted", label: "我了解完整服务条款会在付款开放前提供；当前不能提交付款。" },
+      {
+        key: "privacyConsent",
+        label: "我已阅读隐私说明草案，并了解具约束力的正式版本会在付款开放前发布。",
+        href: "privacy",
+        linkLabel: "阅读草案",
+      },
+      {
+        key: "termsAccepted",
+        label: "我已阅读服务条款草案，并了解正式版本会在付款开放前发布；当前不能提交付款。",
+        href: "terms",
+        linkLabel: "阅读草案",
+      },
       {
         key: "depositPolicyAccepted",
-        label: "我了解完整受理与退款规则会在付款开放前公布；定金计入正式服务，无法按公布规则受理则原路退还。",
+        label: "我已阅读定金规则草案：定金计入正式服务，无法按公布规则受理则原路退还。",
+        href: "deposit",
+        linkLabel: "阅读草案",
       },
       {
         key: "selfOnlyDataConfirmed",
@@ -472,11 +484,23 @@ export const PILOT_FORM: Record<
         key: "softwareDisclosureAcknowledged",
         label: "I understand that Zhiji completes a substantive human review of the final interpretation, software use is disclosed, and my data is not used for model training by default.",
       },
-      { key: "privacyConsent", label: "I understand the complete privacy notice will be available before payment opens. While the pilot is closed, this form is not read or stored." },
-      { key: "termsAccepted", label: "I understand the complete service terms will be available before payment opens. Payment cannot currently be submitted." },
+      {
+        key: "privacyConsent",
+        label: "I have read the privacy draft and understand the binding version will be published before payment opens.",
+        href: "privacy",
+        linkLabel: "Read draft",
+      },
+      {
+        key: "termsAccepted",
+        label: "I have read the terms draft and understand the binding version will be published before payment opens; payment cannot currently be submitted.",
+        href: "terms",
+        linkLabel: "Read draft",
+      },
       {
         key: "depositPolicyAccepted",
-        label: "I understand the complete acceptance and refund rule will be published before payment opens. The deposit is credited to the engagement, or returned if the case cannot proceed under that rule.",
+        label: "I have read the deposit-policy draft: the deposit is credited to the engagement, or returned if the case cannot proceed under the published rule.",
+        href: "deposit",
+        linkLabel: "Read draft",
       },
       {
         key: "selfOnlyDataConfirmed",
@@ -880,5 +904,420 @@ export const CHART: Record<
     branch: "EARTHLY BRANCH",
     self: "Day Master · 甲 (day stem)",
     pillars: ["YEAR", "MONTH", "DAY", "HOUR"],
+  },
+};
+
+// 说明页(方法/承诺/隐私/条款/定金)—— 集中管理,受 copy-integrity 测试覆盖。
+// 隐私/条款/定金为「公布前草案」:法律条文需律师复核,页面明确标注草案状态。
+export type DocSlug = "method" | "promise" | "privacy" | "terms" | "deposit";
+export type DocSection = { h: string; body: string[] };
+export type DocPage = {
+  eyebrow: string;
+  h1: string;
+  lead: string;
+  version: string;
+  draft?: string; // 若为草案,横幅文案
+  sections: DocSection[];
+  footnote?: string;
+};
+
+export const DOC_NAV: Record<Lang, { slug: DocSlug; label: string }[]> = {
+  zh: [
+    { slug: "method", label: "方法与责任" },
+    { slug: "promise", label: "承诺与边界" },
+    { slug: "privacy", label: "隐私说明" },
+    { slug: "terms", label: "服务条款" },
+    { slug: "deposit", label: "定金规则" },
+  ],
+  en: [
+    { slug: "method", label: "Method & accountability" },
+    { slug: "promise", label: "Our promise" },
+    { slug: "privacy", label: "Privacy" },
+    { slug: "terms", label: "Terms" },
+    { slug: "deposit", label: "Deposit policy" },
+  ],
+};
+
+const DRAFT_ZH =
+  "这是公布前的白话草案。具有约束力的正式版本会在付款开放前，经合格法律意见复核后发布。当前付款关闭，本页仅供说明。";
+const DRAFT_EN =
+  "This is a plain-language draft published before launch. The binding version will be released, reviewed by qualified counsel, before payments open. Payment is currently closed; this page is for explanation only.";
+
+export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
+  zh: {
+    method: {
+      eyebrow: "方法与责任",
+      h1: "怎么排盘，谁来负责",
+      lead: "知几以八字为主，出生资料与问题适合时结合紫微斗数。排盘计算是确定、可复现的；解释由人负责。依据、假设与不确定之处都会写清楚。",
+      version: "方法版本 · Method v1.0 · 2026-07-10",
+      sections: [
+        {
+          h: "以八字为主，按案结合紫微斗数",
+          body: [
+            "八字是默认的结构框架，用来观察时间、重复模式与选择边界。当出生时间足够可靠、且问题适合时，会结合紫微斗数作为补充视角。",
+            "这两者都是传统解释框架，不是预测科学。它们帮助你多一个可参照的结构，而不是给出一个确定的未来。",
+          ],
+        },
+        {
+          h: "排盘计算是确定、可复现的",
+          body: [
+            "排盘本身（干支、大运、宫位）由确定的规则计算，不是由语言模型「猜」出来的。计算方法、时区与真太阳时处理、出生时间不确定时的处理方式，以及版本号，都会记录在案，可以复核。",
+            "出生资料更正会作废依赖它的输出，并生成带日期与原因的新版本。",
+          ],
+        },
+        {
+          h: "历史校准是「合不合适」的门槛",
+          body: [
+            "正式判读之前，先用你过去真实发生的事校准这张盘。这是判断资料质量与是否适合受理的门槛，不是科学验证，也不是「算得准」的证明。",
+            "校准会记录符合之处、偏差与模糊之处；对不上，就按公布的受理规则不继续，并退还定金。",
+          ],
+        },
+        {
+          h: "软件辅助，如实披露",
+          body: [
+            "软件可以协助确定性计算、整理、翻译、排版、一致性检查与流程安排。软件不会被描述成自主的「大师」，其草稿也不会不经人工审核直接交付。",
+            "每份交付都会说明哪些环节由软件辅助。默认不用你的资料训练任何模型。",
+          ],
+        },
+        {
+          h: "人工审核与案例记录",
+          body: [
+            "盘面输入、解释、书面简报与关键修改都必须经过人工复核。每个案例带有案例编号、审核角色标识（如 ZJ-R01）、方法版本、审核日期与修订历史。",
+            "知几不公开个人姓名或照片，也不虚构大师人设。公开责任归于知几这套可追溯的流程与记录。",
+          ],
+        },
+      ],
+      footnote: "方法的确切学派与计算细则仍在整理中，会随版本更新在此公布。",
+    },
+    promise: {
+      eyebrow: "承诺与边界",
+      h1: "我们不做什么",
+      lead: "很多人对这个行业的不信任，来自被推销、被吓唬、被留住。知几把边界写在最前面。",
+      version: "版本 · 2026-07-10",
+      sections: [
+        {
+          h: "不卖任何东西来「改运」",
+          body: [
+            "不卖法器、饰品、摆件，不做任何「化解」「转运」类的产品或仪式，也没有任何联盟返佣。判读不会指向任何需要你再花钱购买的东西。",
+            "收入只来自这一件事：围绕一个具体决定的书面判读与复盘。",
+          ],
+        },
+        {
+          h: "不制造恐惧，不承诺结果",
+          body: [
+            "不预测确定的未来，不承诺任何结果，也不用「命中注定」「必有大灾」之类的话推动你下单。",
+            "如果一份判读换个人也照样成立，那就是失败的判读——我们会说错并重排。",
+          ],
+        },
+        {
+          h: "决定权始终在你",
+          body: [
+            "判读是一个可参照的视角，不是指令。它比较选项、指出取舍与风险窗口，但不替你做决定。",
+          ],
+        },
+        {
+          h: "有些问题不属于这里",
+          body: [
+            "医疗、心理治疗、法律、移民、投资、生育等专业问题不在服务范围内，请咨询相应的执业专业人士。",
+            "如果你正处于急性危机中（如自伤念头、剧烈恐慌），需要的是即时的专业支持，而不是一次命理咨询。在美国或加拿大，可拨打或发送短信 988（Suicide & Crisis Lifeline）。",
+          ],
+        },
+        {
+          h: "私密、一次性、不做陪伴",
+          body: [
+            "这是一次围绕单个决定的私密服务，不是每日运势，不是情绪陪伴，也不是可以无限追问的聊天。它有明确的开始与结束。",
+          ],
+        },
+      ],
+    },
+    privacy: {
+      eyebrow: "隐私说明",
+      h1: "你的信息，怎么被处理",
+      lead: "这是白话说明。核心原则：只在需要时收集必要信息，用途分开，默认不用于训练模型。",
+      version: "草案 · 2026-07-10",
+      draft: DRAFT_ZH,
+      sections: [
+        {
+          h: "分阶段收集，最小必要",
+          body: [
+            "申请阶段只收集：邮箱、所在地区、决定类型与时间、必要的确认项。此阶段不收集姓名、出生信息或具体困局。",
+            "出生时间、地点与具体问题，只有在受理之后、在单独说明用途的前提下才收集。",
+          ],
+        },
+        {
+          h: "不收集的东西",
+          body: [
+            "不收集也不存储 IP 地址或设备指纹作为身份识别。不收集与本案无关的第三方或未成年人信息。",
+          ],
+        },
+        {
+          h: "用途分开",
+          body: [
+            "服务处理、软件处理、营销、以及（如有）研究，是分开的选择项。营销邮件需单独同意，且随时可退订。默认不用你的资料训练任何模型。",
+          ],
+        },
+        {
+          h: "你的权利",
+          body: [
+            "你可以要求查看、更正、导出与删除你的信息。未受理或被婉拒的申请默认在 90 天后删除。",
+            "具体的申请与响应方式，会随正式版本一并公布。",
+          ],
+        },
+      ],
+      footnote: "供应商清单、保留期限与跨境处理的正式条款，需经法律复核后公布。",
+    },
+    terms: {
+      eyebrow: "服务条款",
+      h1: "这项服务是什么，不是什么",
+      lead: "这是白话说明，帮助你在付款开放前了解服务的形态与边界。",
+      version: "草案 · 2026-07-10",
+      draft: DRAFT_ZH,
+      sections: [
+        {
+          h: "全程书面、异步",
+          body: [
+            "服务不含面谈、通话或任何实时环节。你会收到一份经人工审核的书面决策判读；交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题；之后是 30/90 天的书面复盘。",
+            "一个新的决定属于一个单独受理的案子，不在本次追问范围内。",
+          ],
+        },
+        {
+          h: "更正即版本",
+          body: [
+            "实质性的事实或解释更正，会作为判读的新版本发布，记录更正原因与日期。更正属于报告完整性的一部分，不构成一次新的咨询。",
+          ],
+        },
+        {
+          h: "不构成专业意见",
+          body: [
+            "八字与紫微斗数在这里是传统解释框架，不保证结果，也不代替医疗、心理健康、法律、移民、投资或生育方面的专业意见。决定权始终在你。",
+          ],
+        },
+        {
+          h: "费用与受理",
+          body: [
+            "受邀个案先支付 US$49 受理与校准定金；正式受理后全额计入 US$388 服务费。定金规则见「定金规则」页。",
+            "付款目前保持关闭，直到方法说明、隐私条款、服务条款、受理与退款规则、以及运营与合规门槛完成。",
+          ],
+        },
+      ],
+      footnote: "经营主体、管辖与具有约束力的条款，需经法律复核后公布。",
+    },
+    deposit: {
+      eyebrow: "定金规则",
+      h1: "US$49 定金是怎么算的",
+      lead: "定金是受理与校准的门槛，不是一份单独出售的解读。",
+      version: "草案 · 2026-07-10",
+      draft: DRAFT_ZH,
+      sections: [
+        {
+          h: "它用来做什么",
+          body: [
+            "US$49 用于受理判断与历史校准：核对出生资料与排盘方法，并用你过去真实发生的事检验这张盘是否适合受理。",
+          ],
+        },
+        {
+          h: "受理后：全额计入",
+          body: [
+            "如果案子受理并进入正式服务，US$49 全额计入 US$388 服务费——你不会为定金额外付费。",
+          ],
+        },
+        {
+          h: "不受理：原路退还",
+          body: [
+            "如果按公布的受理规则无法继续（例如校准不匹配、超出服务范围、地区未开放），定金原路退还。",
+            "退款按预定流程处理，不以「算得准不准」这种主观结果为条件。",
+          ],
+        },
+      ],
+      footnote: "退款时限与争议处理的正式条款，需经法律与支付方复核后公布。",
+    },
+  },
+  en: {
+    method: {
+      eyebrow: "Method & accountability",
+      h1: "How the chart is cast, and who is accountable",
+      lead: "Zhiji is BaZi-led, with Zi Wei Dou Shu included when the birth data and question support it. The chart calculation is deterministic and reproducible; interpretation is done by a person. Reasoning, assumptions, and uncertainty are stated plainly.",
+      version: "Method v1.0 · 2026-07-10",
+      sections: [
+        {
+          h: "BaZi-led, Zi Wei Dou Shu when useful",
+          body: [
+            "BaZi is the default structural framework for examining timing, recurring patterns, and decision boundaries. When the birth time is reliable enough and the question fits, Zi Wei Dou Shu is added as a complementary lens.",
+            "Both are traditional interpretive frameworks, not predictive science. They give you one more structure to reason with — not a fixed future.",
+          ],
+        },
+        {
+          h: "The chart calculation is deterministic",
+          body: [
+            "The chart itself (stems, branches, luck cycles, palaces) is computed by fixed rules — it is not guessed by a language model. The calculation method, time-zone and true-solar-time handling, treatment of an uncertain birth time, and the version are recorded and can be checked.",
+            "Corrected birth data invalidates the outputs that depend on it and produces a new version with the date and reason.",
+          ],
+        },
+        {
+          h: "Historical calibration is a fit gate",
+          body: [
+            "Before a full reading, the chart is calibrated against things that actually happened to you. This is a test of data quality and case fit — not scientific validation, and not proof of accuracy.",
+            "Calibration records matches, misses, and ambiguity. If it doesn't hold, the case does not proceed under the published acceptance rule, and the deposit is returned.",
+          ],
+        },
+        {
+          h: "Software assists, and it is disclosed",
+          body: [
+            "Software may assist with deterministic calculation, organization, translation, formatting, consistency checks, and scheduling. It is never described as an autonomous master, and its drafts are never delivered without human review.",
+            "Every delivery states which tasks were software-assisted. Your data is not used to train any model by default.",
+          ],
+        },
+        {
+          h: "Human review and the case record",
+          body: [
+            "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Each case carries a case number, reviewer-role ID (e.g. ZJ-R01), method version, review date, and revision history.",
+            "Zhiji does not publish a personal name or photograph, and does not invent a master persona. Accountability belongs to this traceable process and record.",
+          ],
+        },
+      ],
+      footnote: "The exact schools and calculation rules are still being finalized and will be published here as the version updates.",
+    },
+    promise: {
+      eyebrow: "Our promise",
+      h1: "What we don't do",
+      lead: "Much of the distrust in this category comes from being sold to, frightened, or kept hooked. Zhiji states the boundaries first.",
+      version: "Version 2026-07-10",
+      sections: [
+        {
+          h: "We sell nothing to “improve luck”",
+          body: [
+            "No objects, charms, or ornaments; no warding or luck-changing products or rituals; no affiliate commissions. A reading never points you toward something else you have to buy.",
+            "Revenue comes from one thing only: a written analysis and review built around one concrete decision.",
+          ],
+        },
+        {
+          h: "No fear, no promised outcome",
+          body: [
+            "We do not predict a fixed future, promise any outcome, or use “it's destined” or “disaster is coming” language to push you to buy.",
+            "A reading that would fit anyone else just as well is a failed reading — we say so and re-cast it.",
+          ],
+        },
+        {
+          h: "The decision stays yours",
+          body: [
+            "A reading is a reference perspective, not an instruction. It compares options and names trade-offs and risk windows, but it does not decide for you.",
+          ],
+        },
+        {
+          h: "Some questions don't belong here",
+          body: [
+            "Medical, mental-health, legal, immigration, investment, and fertility questions are outside the service — please consult the appropriate licensed professional.",
+            "If you are in acute crisis (e.g. thoughts of self-harm, severe panic), what you need is immediate professional support, not a consultation. In the US or Canada, call or text 988 (Suicide & Crisis Lifeline).",
+          ],
+        },
+        {
+          h: "Private, one-off, not a companion",
+          body: [
+            "This is a private service around a single decision — not a daily horoscope, not emotional companionship, and not open-ended chat. It has a clear beginning and end.",
+          ],
+        },
+      ],
+    },
+    privacy: {
+      eyebrow: "Privacy",
+      h1: "How your information is handled",
+      lead: "A plain-language summary. The core principle: collect only what's needed, keep purposes separate, and don't train models on your data by default.",
+      version: "Draft · 2026-07-10",
+      draft: DRAFT_EN,
+      sections: [
+        {
+          h: "Collected in stages, minimized",
+          body: [
+            "At application, only your email, region, decision type and timing, and the required acknowledgements are collected. No name, birth data, or personal narrative at this stage.",
+            "Birth time, place, and your specific question are collected only after acceptance, under a separate statement of purpose.",
+          ],
+        },
+        {
+          h: "What we don't collect",
+          body: [
+            "We do not collect or store IP addresses or device fingerprints as identifiers. We do not collect third-party or minor data unrelated to your own case.",
+          ],
+        },
+        {
+          h: "Purposes kept separate",
+          body: [
+            "Service processing, software processing, marketing, and (if any) research are separate choices. Marketing email requires separate consent and is unsubscribable anytime. Your data is not used to train any model by default.",
+          ],
+        },
+        {
+          h: "Your rights",
+          body: [
+            "You can ask to access, correct, export, and delete your information. Unaccepted or declined applications are deleted after 90 days by default.",
+            "The exact request and response process will be published with the binding version.",
+          ],
+        },
+      ],
+      footnote: "The vendor list, retention periods, and cross-border processing terms require legal review before publication.",
+    },
+    terms: {
+      eyebrow: "Terms",
+      h1: "What this service is, and isn't",
+      lead: "A plain-language summary so you understand the shape and boundaries of the service before payments open.",
+      version: "Draft · 2026-07-10",
+      draft: DRAFT_EN,
+      sections: [
+        {
+          h: "Written and asynchronous throughout",
+          body: [
+            "The service includes no meeting, call, or live component. You receive a human-reviewed written decision brief; within 14 days of delivery you may submit one consolidated written follow-up about the original brief's reasoning, assumptions, or wording; written 30/90-day reviews follow.",
+            "A new decision is a separately scoped case, outside the follow-up.",
+          ],
+        },
+        {
+          h: "Corrections are versioned",
+          body: [
+            "Material factual or interpretive corrections are issued as a new version of the brief, recording the reason and date. Corrections are part of report integrity, not a new consultation.",
+          ],
+        },
+        {
+          h: "Not professional advice",
+          body: [
+            "BaZi and Zi Wei Dou Shu are traditional interpretive frameworks here. They guarantee no outcome and do not replace medical, mental-health, legal, immigration, investment, or fertility advice. The decision remains yours.",
+          ],
+        },
+        {
+          h: "Fees and acceptance",
+          body: [
+            "Invited cases begin with a US$49 case-assessment deposit, credited in full toward the US$388 consultation once accepted. See the deposit policy for details.",
+            "Payment stays closed until the method disclosure, privacy notice, service terms, acceptance and refund policy, and operational and compliance checks are complete.",
+          ],
+        },
+      ],
+      footnote: "The operating entity, jurisdiction, and binding terms require legal review before publication.",
+    },
+    deposit: {
+      eyebrow: "Deposit policy",
+      h1: "How the US$49 deposit works",
+      lead: "The deposit is a gate for acceptance and calibration — not a reading sold on its own.",
+      version: "Draft · 2026-07-10",
+      draft: DRAFT_EN,
+      sections: [
+        {
+          h: "What it covers",
+          body: [
+            "The US$49 covers the acceptance assessment and historical calibration: verifying birth data and calculation method, and testing whether the chart fits the case against things that actually happened to you.",
+          ],
+        },
+        {
+          h: "If accepted: credited in full",
+          body: [
+            "If the case is accepted and proceeds, the US$49 is credited in full toward the US$388 consultation — you do not pay extra for the deposit.",
+          ],
+        },
+        {
+          h: "If not accepted: returned",
+          body: [
+            "If the case cannot proceed under the published acceptance rule (for example, calibration doesn't fit, the question is out of scope, or your area isn't enabled), the deposit is returned to the original payment method.",
+            "Refunds follow a predefined process and are not conditioned on a subjective sense of “accuracy.”",
+          ],
+        },
+      ],
+      footnote: "Refund timing and dispute-handling terms require legal and payment-processor review before publication.",
+    },
   },
 };

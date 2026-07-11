@@ -154,7 +154,14 @@ Preserve the distinction between facts, inferences, hypotheses, and proposed dec
   `--no-sandbox --use-gl=angle --use-angle=swiftshader
   --enable-unsafe-swiftshader` (WebGL works headless). Wait ~3s after load
   for world/GSAP; ~2.5s after scrolls.
-- Known open gap: the versioned privacy/terms/deposit-policy documents
-  (2026-07-10) referenced by the application acknowledgements have no
-  public pages yet. They must exist before the pilot gate opens.
+- Trust & compliance layer (2026-07-11, Track A of the what's-next
+  roadmap): `/method` `/promise` `/privacy` `/terms` `/deposit-policy`
+  now exist (`components/DocPage.tsx` + `DOCS` in `lib/content.ts`).
+  Privacy/terms/deposit carry a visible DRAFT banner — their binding
+  legal text still needs qualified counsel before the gate opens. The
+  application acknowledgements link to these drafts; the footer links
+  all five; the sample carries the full ZJ-R01 provenance block.
+- Roadmap of record: `docs/plans/2026-07-11-whats-next-roadmap.md`
+  (tracks A–E mapped to the research validation phases; payment stays
+  closed; Tracks D/E are explicitly deferred).
 </agent-handoff-log>

@@ -627,10 +627,10 @@ export const PILOT_EXPLAINER: Record<
     back: "← 返回",
     eyebrow: "服务流程",
     h1: "从受邀申请到 90 天复盘",
-    lead: "目前只接受受邀申请。每一步都说明要收什么资料、由谁完成，以及什么时候可以停止。",
+    lead: "目前只接受受邀申请，付款尚未开放。每一步都说明要收什么资料、由谁完成，以及什么时候可以停止。",
     steps: [
       { k: "一 · 范围确认", v: "只确认地区、决定类型与时间；不收出生信息或具体经历。" },
-      { k: "二 · 受理定金", v: "US$49。正式受理后计入 US$388 服务费；无法按公布规则继续则原路退还。" },
+      { k: "二 · 受理与校准定金", v: "US$49。正式受理后计入 US$388 服务费；无法按公布规则继续则原路退还。" },
       { k: "三 · 资料与方法", v: "说明用途和保存方式后，才收出生时间、地点与一个具体问题。" },
       { k: "四 · 历史核对", v: "用已发生的事实检查排盘资料与解释是否适用；这不是准确率证明。" },
       { k: "五 · 书面交付", v: "交付一份经过人工审核、带版本记录的书面决策判读；整个服务以书面异步方式完成。" },
@@ -643,7 +643,7 @@ export const PILOT_EXPLAINER: Record<
     back: "← Back",
     eyebrow: "Service process",
     h1: "From invited application to the 90-day review",
-    lead: "Applications and payments are not yet open. The steps below show the intended service process, including what information is collected and when a client may stop.",
+    lead: "Applications are by invitation, and payments are not yet open. The steps below show what information is collected, by whom, and when you can stop.",
     steps: [
       { k: "1 · Scope check", v: "Location, decision type, and timing only. No birth data or personal history." },
       { k: "2 · Case assessment deposit", v: "US$49. Credited toward the US$388 fee; returned if the case cannot proceed under the published acceptance criteria." },
@@ -660,11 +660,11 @@ export const PILOT_EXPLAINER: Record<
 // 首页 band —— 试点入口（替代旧免费盲测转化带）
 export const HOME_PILOT_BAND: Record<Lang, { band: string; cta: string }> = {
   zh: {
-    band: "目前仅接受受邀申请。提交前，可以先看完整流程、费用与资料边界。",
+    band: "目前仅接受受邀申请，付款尚未开放。提交前，可以先看完整流程、费用与资料边界。",
     cta: "了解流程",
   },
   en: {
-    band: "Applications and payments are not yet open. Review the process, current fees, and data boundaries in advance.",
+    band: "Invited applications only; payment is not yet open. Review the process, current fees, and data boundaries first.",
     cta: "Review the process",
   },
 };
@@ -1285,7 +1285,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "Fees and acceptance",
           body: [
-            "Invited cases begin with a US$49 case-assessment deposit, credited in full toward the US$388 consultation once accepted. See the deposit policy for details.",
+            "Invited cases begin with a US$49 case assessment deposit, credited in full toward the US$388 consultation once accepted. See the deposit policy for details.",
             "Payment stays closed until the method disclosure, privacy notice, service terms, acceptance and refund policy, and operational and compliance checks are complete.",
           ],
         },

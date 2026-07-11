@@ -50,7 +50,7 @@ export const PILOT_PATH: PilotStage[] = [
   {
     id: "core",
     price: PILOT_CORE_PRICE_LABEL,
-    name: { zh: "完整咨询 · 首批服务价", en: "Full decision consultation · initial-cohort fee" },
+    name: { zh: "完整咨询 · 首批服务费", en: "Full decision consultation · initial-cohort fee" },
     blurb: {
       zh: "围绕一件具体决定，交付书面决策判读、一轮书面澄清与后续书面复盘。",
       en: "A written decision brief, one written follow-up, and written reviews focused on one consequential decision.",

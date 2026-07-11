@@ -1,0 +1,459 @@
+{
+  "summary": "Three design directors propose a complete cinematic-dark × Chinese-craft-luxury language for the zhiji funnel; a judge panel scores against the references + an anti-scam bar; a synthesizer merges the winner into one build-ready spec",
+  "supersedingDecision": "This artifact remains the visual-material source of truth only. Its historical hero slogans, prices, funnel steps, free-test concepts, track-record claims, and named-practitioner assumptions are superseded by .agents/product-marketing.md, docs/plans/2026-07-10-bilingual-trust-copy-design.md, and docs/plans/2026-07-10-brand-accountability-design.md. Zhiji publishes no real name, personal photograph, or invented practitioner persona. Cinnabar seals and colophons represent institutional case provenance: case ID, reviewer-role ID, method version, review date, and revision history.",
+  "agentCount": 7,
+  "logs": [
+    "3 design directions proposed"
+  ],
+  "result": {
+    "proposals": [
+      {
+        "key": "lacquer-silk",
+        "concept": "Fate as a lacquer panel — depth built in patient layers, read by leaning in. The language is \"髹夜 / Lacquer Nocturne\": 大漆 (raw Chinese lacquer) cures in dozens of thin coats into a translucent brown-black that glows warm under raking light. That IS the thesis — 命是结构，不是结局: a chart, like a lacquer panel, is accumulated structure you can inspect, not a glowing surface that dazzles. A lacquer-and-silk atelier at night, one warm lamp, a bronze instrument half-seen at the edge."
+      },
+      {
+        "key": "ink-night",
+        "concept": "留白 · Liúbái (\"what is left unmarked\") — the reading rendered as ink on warm-black 宣纸 (xuan paper): a single self-drawing brushstroke against enormous negative space, where the emptiness is the luxury and the one mark is the reading. 命是结构，不是结局 as 墨 (ink) on a scholar's night table, not a fortune-teller's glow. Language name: 留白 / Ink & Space."
+      },
+      {
+        "key": "imperial-modern",
+        "concept": "石渠 · The Imperial Vitrine — the site is a warm-lit after-hours museum gallery where your 八字 is catalogued and examined like an imperial artifact (named for 石渠宝笈, the Qing court's catalog of painting & calligraphy), not divined. The winning wedge over the current \"Ink & Gold Atelier\": break the gold+cinnabar+glow \"scam-astrology\" trap by adopting the pigments 故宫 actually uses — celadon/malachite green, porcelain glaze, jade, xuan paper, lacquer — laid FLAT and MATTE, with 冰裂纹 (ice-crackle) as the load-bearing motif and 金缮 (kintsugi) as the argument that \"命是结构\" (the cracks ARE the structure)."
+      }
+    ],
+    "rulings": [
+      {
+        "ranking": [
+          "lacquer-silk",
+          "ink-night",
+          "imperial-modern"
+        ],
+        "scores": [
+          {
+            "concept": "lacquer-silk",
+            "premium": 9,
+            "onBrandToRefs": 8.5,
+            "antiScamTrust": 8,
+            "feasibility": 9,
+            "total": 34.5,
+            "note": "Winner. The 大漆 lacquer thesis gives the darkness a material REASON (cured-coat translucent depth, not void) — the single most defensibly-premium dark material in the Chinese craft canon, and 上下 literally makes lacquer objects. Thesis, metaphor, palette and motion are fully coherent; 'material over glow' is the exact-correct anti-scam diagnosis and the metaphor literally argues 命是结构. Highest floor AND high ceiling, and by far the most buildable at top fidelity: retexture the existing Armillary, fonts already in-stack, cheap MeshStandardMaterial bronze (no transmission), all texture in-code. Watch two things: brown-dominance risks reading one-note/muddy if the raking light is flat — widen the celadon from thin accent toward a real secondary; and the bronze luopan + gilt hairlines are still the most scam-adjacent elements in the whole set, so hold them matte, faint (~0.3) and env-lit exactly as specced, never emissive."
+          },
+          {
+            "concept": "ink-night",
+            "premium": 8.5,
+            "onBrandToRefs": 9,
+            "antiScamTrust": 7.5,
+            "feasibility": 7,
+            "total": 32,
+            "note": "The purest 上下/观夏 idea in the set — 留白 as the luxury, 立轴 vertical-rl hero, scholar's colophon, museum wall-label register. Highest concept ceiling; executed flawlessly it could be the single most beautiful result. But the lowest FLOOR: 'acres of void + one ink stroke' is also the most-attempted and most-often-failed zen-luxury cliché, and the feTurbulence + feDisplacementMap ink-bleed with 飞白 is the hardest signature here to make read as real 墨韵 rather than a wobbly watercolor filter — real cross-browser and CWV risk. On warm-black it also tips toward 'zen/wellness-mystic' if control slips even slightly. The win condition demands typographic and filter execution the stack/timeline may not deliver."
+          },
+          {
+            "concept": "imperial-modern",
+            "premium": 7.5,
+            "onBrandToRefs": 7.5,
+            "antiScamTrust": 7.5,
+            "feasibility": 6.5,
+            "total": 29,
+            "note": "Holds the single sharpest idea in the whole set — celadon/malachite green as an anti-scam SIGNAL ('the color no scam site uses' is correct: scam astrology is purple/gold/black, never porcelain-green) — plus 金缮 kintsugi literalizing 命是结构 as 'the cracks ARE the structure.' But it sins against the references by ADDITION where they win by subtraction: ~9 palette tokens, 6–7 type families (Fraunces + Newsreader + Noto Serif CJK + LXGW WenKai + Inter + system sans + Plex Mono), plus crackle + kintsugi + glaze + 缂丝 + xuan + 云纹 + vitrine light. That is theme-park-imperial maximalism, the exact failure mode of bad 故宫文创. The jade-transmission luopan risks re-becoming a glowing mystic orb in green, and transmission + LXGW subset + bespoke SVG motifs make it the costliest and riskiest on Core Web Vitals and mobile."
+          }
+        ],
+        "bestGrafts": [
+          "From imperial-modern: promote celadon/malachite green from a thin 'cool counterpoint' to a genuine load-bearing secondary in the winner — it is the single strongest anti-scam lever in the set ('the color no fortune-teller site uses'), and it rescues lacquer-silk from brown monochrome.",
+          "From imperial-modern: 金缮 kintsugi crackle-mend (ice-crackle hairlines filling with gold via stroke-dashoffset) as the most thesis-perfect signature moment across all three — graft it as ONE restrained beat onto the winner's sample-reading or pricing panel to literalize 命是结构.",
+          "From ink-night: the 落款 / named-human colophon seal as the trust beat — a specific accountable person presses their chop in the About section. Accountability over anonymous mystique is the strongest single trust device proposed; add it to lacquer-silk's about panel.",
+          "From ink-night: set the ONE hero CJK line 命是结构，不是结局 vertical-rl as a 立轴 hanging-scroll column — the most on-theme typographic move available — layered onto the winner's raked lacquer ground.",
+          "From ink-night: calibrate Lenis genuinely heavy (lerp ~0.08, long easeOutExpo tail) so scroll 'unrolls like a weighted scroll'; the winner's motion should adopt this weight rather than a lighter default.",
+          "From imperial-modern: the 石渠宝笈 catalog framing — accession numbers and 卷 volume numbering — to sharpen the winner's existing mono museum-label indices into an 'examined, not divined' register.",
+          "From ink-night: give the winner's cinnabar seal real 飞白/墨韵 ink-spread texture on press (feTurbulence ink-bleed used sparingly on exactly that one chop), borrowing ink-night's best texture idea without its whole-page brushstroke risk."
+        ],
+        "verdict": "髹夜 / Lacquer Nocturne (lacquer-silk) wins, and it wins on the axis that actually separates real craft-luxury from cosplay: it gives the mandated darkness a material REASON. 观夏/上下/故宫 are light-first houses, so any dark translation has to justify itself — and cured 大漆 (warm translucent brown-black built in forty coats, glowing only under raking light) is the single most defensibly-premium dark material in the Chinese craft canon, one 上下 literally sells. That makes the whole system coherent from thesis to pixel: the metaphor ('a chart is inspectable accumulated structure, not a dazzling surface') IS the anti-scam argument ('material over glow'), which is exactly the correct diagnosis of why the current dark+gold+orb site reads as scam. It also has the highest execution FLOOR and a high ceiling, and is by far the most buildable at top fidelity in the given stack (retexture the existing luopan, fonts in-stack, cheap MeshStandardMaterial, all texture in-code). ink-night is the purest 上下 idea and the highest-ceiling artifact, but it has the lowest floor — 'vast void plus one ink stroke' is the most-failed zen-luxury cliché, its feTurbulence ink-bleed is the hardest thing here to keep from looking like a cheap filter, and on black it drifts toward wellness-mystic; strong but risky second. imperial-modern owns the single sharpest insight in the whole set — celadon-green as an anti-scam signal, since no scam astrology site is porcelain-green — but it violates the references' governing law: they win by subtraction and this proposal adds nine pigments, seven type families, and seven motifs, then puts a translucent glowing-jade compass at the center, quietly re-inventing the mystic orb it set out to kill. The correct move is to ship lacquer-silk and graft imperial-modern's celadon and kintsugi and ink-night's named-human 落款 seal onto it; the one shared liability to watch is that all three retain a three.js luopan (the most scam-coded object), and only lacquer-silk's matte-bronze, faint, env-lit treatment neutralizes it — keep it that way."
+      },
+      {
+        "ranking": [
+          "ink-night",
+          "lacquer-silk",
+          "imperial-modern"
+        ],
+        "scores": [
+          {
+            "concept": "ink-night",
+            "premium": 8.5,
+            "onBrandToRefs": 8.5,
+            "antiScamTrust": 8,
+            "feasibility": 7,
+            "total": 32,
+            "note": "留白/立轴 restraint is the cleanest break from scam grammar and the truest read of 上下 + 观夏. Gold demoted to 0.5px hairline, no orb (inked diagram), and the 落款 named-human chop is the smartest single trust signal in the set — a scam site never signs. Loses points only on execution risk: the whole thing rides one self-drawing feTurbulence→feDisplacement ink stroke with 飞白 and a bloom-settle; if that reads fake the premium collapses, and a 0.08 Lenis lerp risks feeling laggy. High reward, real fragility."
+          },
+          {
+            "concept": "lacquer-silk",
+            "premium": 8,
+            "onBrandToRefs": 8,
+            "antiScamTrust": 6.5,
+            "feasibility": 9,
+            "total": 31.5,
+            "note": "The most materially gorgeous and by far the most buildable — a retexture of the existing Armillary + CSS, no new fonts, proven lifecycle. But as the skeptical buyer my gut stalls: this is the best-possible version of the exact gold-hairline-on-dark-brown-with-a-bronze-compass language the owner already flagged as scammy. Bronze gilt everywhere, a light 'sweeping the headline into existence,' cinnabar seals. Intellectually 'material over glow' is well argued; at first glance it is still gold-on-dark. Least differentiated departure — that is the whole assignment."
+          },
+          {
+            "concept": "imperial-modern",
+            "premium": 7.5,
+            "onBrandToRefs": 7.5,
+            "antiScamTrust": 7.5,
+            "feasibility": 6.5,
+            "total": 29,
+            "note": "Owns the single best anti-scam idea (celadon/porcelain green — 'the color no scam site uses,' correct) and the best thesis-to-visual argument (金缮 kintsugi = 命是结构). Most literally 故宫文创. But it is the maximal option — 6 font families, MeshPhysicalMaterial transmission (a real GPU cost needing a fallback path), and a motif pile-up (ice-crackle + kintsugi + cloud-line + silk-weave + glaze + deckle) plus vermilion FILL bands. Richness fights the references' core virtue, restraint, and drags feasibility. Great parts, over-loaded whole."
+          }
+        ],
+        "bestGrafts": [
+          "From imperial-modern: the celadon / malachite / porcelain-green palette shift as the PRIMARY anti-scam wedge. This is the strongest single idea in the entire set — introducing a scholarly green that no fortune-teller site uses does more to break the 'scam' read than any amount of restraint on gold. Graft it onto the winner so the dark ground is warm-black + celadon, not brown + bronze.",
+          "From imperial-modern: 金缮 kintsugi crackle-mend literalizing 命是结构，不是结局 — the ice-crackle cracks filling with gold on scroll. It is the only proposal where the aesthetic PROVES the thesis instead of decorating it; deeply on-brand to 故宫 and inherently anti-mystical.",
+          "From imperial-modern: the 石渠宝笈 museum-catalog framing (accession numbers, 卷 volume markers, provenance labels) — institutional-scholarship semiotics are the opposite of occult theater and read as trust.",
+          "From imperial-modern: jade via MeshPhysicalMaterial (transmission/clearcoat) as a genuine material-not-glow 3D upgrade — but keep it ONLY with the stated MeshStandard degrade path, and light it so it never catches enough to read as a crystal ball.",
+          "From lacquer-silk: gilt/celadon hairlines rendered as transparent→color→light linear-gradients so every 1px rule catches light at one end. Cheap in code, high in craft, and it de-flattens the whole page.",
+          "From lacquer-silk: use its PROVEN, low-risk approach of retexturing the existing Armillary.tsx luopan instead of ink-night's fragile hand-built ink signature — it de-risks the winner's single biggest failure point.",
+          "From lacquer-silk: the material-over-glow texture stack (layered lacquer-depth gradients + feTurbulence grain at soft-light) and the two-column 是/不是 spec-sheet split by one hairline.",
+          "From lacquer-silk: the discipline of ONE shared 'material ease' cubic-bezier(0.22,1,0.36,1) at 0.8–1.4s with Lenis tuned heavy — a single easing family is what separates 'designed' motion from gimmick, and it is safer than ink-night's very-slow 0.08 lerp."
+        ],
+        "verdict": "留白 (ink-night) wins, narrowly, because it is the only proposal that decisively solves the actual problem: the owner's site 'looks like a scam,' and scam-astrology's grammar is dark + glowing gold + a mystic orb + crowding. ink-night inverts all four — gold becomes a 0.5px hairline, the orb becomes a faint inked diagram, negative space replaces crowding, and — the killer move — a real human's 落款 chop signs the work, which is precisely the accountability a scam hides. It is also the truest reading of the restraint that defines 上下 and 观夏. lacquer-silk is a hair behind and is the most beautiful, most feasible, most buildable option in the set — but as the skeptical buyer I have to be honest that it is the best-possible execution of the exact gold-on-dark-with-a-bronze-compass language that already failed; refining the failed direction is not the same as escaping it, and that is the whole assignment. imperial-modern is third despite carrying the two best individual ideas (the celadon palette and the kintsugi=structure argument), because it over-loads: six fonts, transmission 3D, and half a dozen competing motifs work directly against the restraint that makes the references read as expensive. The correct build is not any one of them pure: take ink-night's restraint, museum register, and signed-human spine as the skeleton; shift its palette from brown/gold toward imperial-modern's celadon/porcelain (the strongest anti-scam lever) and adopt its kintsugi literalization of 命是结构; and de-risk the fragile self-drawing ink stroke by using lacquer-silk's proven Armillary retexture, gilt-gradient hairlines, and single weighted easing family. That synthesis clears the anti-scam bar more convincingly than any proposal alone while staying feasible in the Next/three.js/gsap stack."
+      },
+      {
+        "ranking": [
+          "髹夜 / Lacquer Nocturne (lacquer-silk)",
+          "石渠 / Imperial Vitrine (imperial-modern)",
+          "留白 / Liúbái (ink-night)"
+        ],
+        "scores": [
+          {
+            "concept": "髹夜 / Lacquer Nocturne (lacquer-silk)",
+            "premium": 9,
+            "onBrandToRefs": 8.5,
+            "antiScamTrust": 8,
+            "feasibility": 9.5,
+            "total": 35,
+            "note": "The most materially-TRUE luxury metaphor of the three: 大漆 cured in dozens of coats is genuinely among the costliest Chinese craft materials, and 'warm brown-black, never #000, lit by one lamp, nothing self-illuminates' is exactly the craft-luxury instinct. Tightest typographic discipline (one serif statement per section, everything else drops to tracked mono marginalia; Noto Serif CJK SC full range VERIFIED on system). Cleanest build by far — retextures the existing Armillary with a standard material, 4 available fonts, all texture in-code. Its one real risk is that dark+bronze-gold+a luopan is still the CLOSEST silhouette to scam-astrology of the three — but it is mitigated with the most rigorous rules (matte antique hairlines only, never #FFD700, single cinnabar seal, sample reading placed high, honest small disclaimers), and the 'fate = inspectable accumulated layers' metaphor is itself anti-mystical. Wins because it is the one most certain to actually SHIP at the intended bar."
+          },
+          {
+            "concept": "石渠 / Imperial Vitrine (imperial-modern)",
+            "premium": 8.5,
+            "onBrandToRefs": 8.5,
+            "antiScamTrust": 8.5,
+            "feasibility": 7,
+            "total": 32.5,
+            "note": "Best STRATEGIC insight of the three: exit the dark+gold scam trap by adopting the pigments 故宫 actually uses — celadon/malachite/jade/porcelain, laid flat and matte — a palette NO fortune-teller site uses, so it structurally leaves the scam silhouette that #1 and #2 still flirt with. Best concept-to-thesis link: 冰裂纹 crackle + 金缮 kintsugi literally arguing 'the cracks ARE the structure' beats lacquer's 'layers.' Museum-catalog (石渠宝笈) accession/specimen-label semiotics are trust-forward institutional codes ideal for a skeptical high-ticket buyer. Docked hard on two counts: it is the MAXIMALIST entry (7 font families incl. LXGW WenKai which is NOT installed + non-cross-platform PingFang, plus ice-crackle+glaze+silk-weave+xuan+cloud-line+kintsugi) where 上下/观夏 premium comes from subtraction — real risk of tipping to '故宫文创 gift shop.' And the jade TRANSMISSION luopan reintroduces a translucent internally-glowing object (real GPU cost, self-conceded MeshStandard fallback), edging back toward the mystic-orb energy the brief forbids. Strongest ideas, heaviest and riskiest execution."
+          },
+          {
+            "concept": "留白 / Liúbái (ink-night)",
+            "premium": 8,
+            "onBrandToRefs": 8,
+            "antiScamTrust": 7.5,
+            "feasibility": 8,
+            "total": 31.5,
+            "note": "The most refined single idea and purest 上下 read — 留白 (emptiness as the luxury) and a vertical-rl 立轴 hanging-scroll hero is the single most on-theme typographic gesture across all three, and the tightest font set (3 families, swaps out Newsreader). But it bets the ENTIRE page on one execution-fragile element: a self-drawing brushstroke with authentic 墨韵 ink-bleed via feTurbulence→feDisplacementMap. In-code that effect most often reads as a crisp vector or a wormy displacement artifact, and the vast negative space AMPLIFIES any flaw — high ceiling, low floor, and a jury has seen a thousand 'one perfect brushstroke' minimal sites that die on a fake stroke. Second concern for THIS audience: extreme austerity reads as luxury to a juror but risks reading as 'empty/unfinished/sketchy' to an affluent-but-not-design-literate diaspora buyer, and it SHOWS the least substance to earn $249 (the sample-reading rigor that builds trust is minimized). Gorgeous, but the riskiest bet."
+          }
+        ],
+        "bestGrafts": [
+          "From imperial-modern → into the lacquer winner: push CELADON/malachite far more assertively (lacquer-silk already lists celadon as a counterpoint but treats it timidly). This is the single highest-value graft — a celadon-forward secondary directly neutralizes lacquer-silk's one weakness (dark+bronze is the nearest of the three to the scam silhouette). A palette no scam site uses is the cheapest anti-scam insurance available.",
+          "From imperial-modern: the 金缮 kintsugi / 冰裂纹 ice-crackle 'the cracks ARE the structure' motif is a sharper literal proof of 命是结构 than lacquer's 'accumulated layers.' Graft it onto the sample-reading card as the signature thesis beat — a few crackle hairlines mend to gold via stroke-dashoffset as the chart assembles.",
+          "From imperial-modern: the 石渠宝笈 museum-catalog framing — accession numbers, 卷 numbering, specimen/provenance labels, and especially the SEALED refund certificate (先验盘 clause + chop). These institutional-scholarship codes are trust gold for a skeptical high-ticket buyer and reinforce accountability far better than generic section eyebrows.",
+          "From ink-night: the vertical-rl 立轴 hanging-scroll column for 命是结构，不是结局 — the most on-theme typographic move of any proposal. Drop it into the lacquer hero's right/behind zone as the CJK display treatment.",
+          "From ink-night: the extreme-留白 pacing (breath → artifact → breath) and Lenis tuned genuinely slow (lerp ~0.08, wheel <1) as the discipline that keeps the richer lacquer/celadon world from feeling busy — borrow the negative-space conviction, not the emptiness.",
+          "From ink-night: the named-human 落款 colophon closing the About section with the single cinnabar chop — an accountable person's signature is the strongest anti-mystique trust beat, the opposite of an anonymous oracle.",
+          "Graft CAUTION (anti-graft): do NOT adopt imperial-modern's jade-transmission luopan. Keep the winner's MATTE bronze object, or better, borrow ink-night's faint 'inked-diagram' luopan treatment (lowest opacity, least occult, zero internal glow) — most on-brief for 'material over glow.'"
+        ],
+        "verdict": "髹夜 / Lacquer Nocturne (lacquer-silk) wins. Against the 观夏/上下/故宫 bar and, decisively, against the anti-scam bar, it is the only entry that pairs near-top marks on every subjective axis with the cleanest, most certain execution — it retextures the EXISTING Armillary with a standard material, uses only fonts confirmed present on the system (the full Noto Serif CJK SC ExtraLight→Black range is real), and builds all texture in-code, so it will actually ship at the intended craft level rather than aspiring to it. Its material thesis is also the truest: 大漆 is one of the costliest Chinese craft materials and 'depth as accumulated inspectable layers' both looks expensive and literally argues 命是结构. Its lone weakness — dark+bronze+luopan is the closest of the three to the scam silhouette — is fixable, not fatal, and the graft list closes it. 石渠 / Imperial Vitrine places second on the strength of the single best strategic idea in the set (escape the scam trap by using 故宫's actual celadon/jade/porcelain pigments, a palette no fortune-teller uses) and the best thesis link (kintsugi crackle = structure), but it pays for its ambition: it is the maximalist entry where the references reward subtraction, its jade TRANSMISSION luopan quietly reintroduces the glowing translucent object the brief forbids, and it is the heaviest, riskiest build (transmission perf + self-conceded fallback, 7 font families including LXGW WenKai which is NOT installed). Its ideas are too good to leave on the table — hence the grafts. 留白 / Liúbái is the most beautiful concept on paper and the purest 上下, but it stakes the whole page on one in-code brushstroke whose authentic ink-bleed is the hardest effect here to nail, and its austerity — luxurious to a juror — risks reading as empty and shows the least substance to earn $249 from a skeptical buyer. The right move is to SHIP lacquer-silk and graft imperial-modern's celadon palette + kintsugi-crackle + catalog semiotics and ink-night's vertical 立轴 hero + slow-留白 pacing + named colophon into it."
+      }
+    ],
+    "finalSpec": {
+      "name": "髹夜 · Lacquer Nocturne — 知几/Zhiji final design language",
+      "northStar": "A dark, warm, material craft-luxury site where a birth chart is presented as an inspectable lacquer-and-celadon artifact in a scholar's studio after dark — catalogued like an imperial 石渠宝笈 entry, examined rather than divined in a fortune-teller's glow. The darkness has a material reason: cured 大漆 builds depth through patient, inspectable layers. 青瓷 celadon provides the cool counterpoint, while 冰裂纹 and 金缮 make structure, uncertainty, and revision visible. Nothing self-illuminates; every special surface is lit by one consistent warm lamp. Gold remains matte and structural. Cinnabar appears only as Zhiji's institutional seal and case-review provenance. Material over glow, restraint over ornament, traceable process over personal mystique. The site should read as an expensive craft house that happens to be dark, never as occult theater.",
+      "palette": [
+        {
+          "token": "lacquer-ink",
+          "hex": "#14110C",
+          "use": "Page base ground — deepest cured-大漆 brown-black. Never #000; warm and brownish so the whole screen reads as a material, not a void. Maps to the existing --lacquer token; keep."
+        },
+        {
+          "token": "lacquer-oxblood",
+          "hex": "#211B13",
+          "use": "Raised panels, cards, and alternating section grounds — warmer ox-blood brown reading as a second lacquer coat catching the raking light. Maps to existing --lacquer-3."
+        },
+        {
+          "token": "lacquer-red",
+          "hex": "#7A2E24",
+          "use": "剔红 carved-lacquer red — ONE hero material moment and the pricing-plaque edges only. Muted and deep, never a bright fortune-teller red."
+        },
+        {
+          "token": "bronze",
+          "hex": "#9C7A45",
+          "use": "Primary metal: gilt hairline rules, 卷 indices, active/focus states, small marks. Matte antique gilt — intentionally BROWNER/more mineral than the old brassy --gold #c9a35f, to de-scam. Never chrome, never #FFD700."
+        },
+        {
+          "token": "bronze-light",
+          "hex": "#C7A265",
+          "use": "The lit edge — highlight end of every gilt gradient, focus glints, the warm light that sweeps the hero headline into existence, and the color the kintsugi crackle mends to."
+        },
+        {
+          "token": "silk-raw",
+          "hex": "#ECE1CE",
+          "use": "Primary text and display on dark — warm raw-silk ivory. Never pure white; keeps the page inside the warm material world. WCAG AA on lacquer-ink. Refines existing --ivory."
+        },
+        {
+          "token": "silk-muted",
+          "hex": "#B9AB94",
+          "use": "Secondary text, captions, standfirst, and mono marginalia — warm taupe-silk. The quiet administrative/catalog voice."
+        },
+        {
+          "token": "celadon",
+          "hex": "#7E9583",
+          "use": "THE promoted load-bearing secondary (rescues brown-monochrome + the strongest anti-scam lever). Ge-ware 青瓷 glaze green: links, annotations, the 是 (is) column glaze, hover rim-lights, 五行·木 hints, and the 冰裂纹 crackle lines. Accent/large-text/UI weight — body stays silk-raw."
+        },
+        {
+          "token": "celadon-deep",
+          "hex": "#3C6350",
+          "use": "Deep court malachite green — the ONE fuller color moment (the free-blind-test band ground) plus small structural fills and 木 tags. Gives the green real presence so it is a secondary, not one thin note."
+        },
+        {
+          "token": "rice",
+          "hex": "#EFE6D0",
+          "use": "Rice/xuan-paper ARTIFACT surface — the sample reading, BaziChart, intake form, guarantee certificate, receipts. Signals 'a physical sheet you may inspect and trust.' Refines existing --rice."
+        },
+        {
+          "token": "ink",
+          "hex": "#1A1509",
+          "use": "Text on the rice/porcelain artifact surfaces — the darkest brushed value on light objects. Maps to existing --ink."
+        },
+        {
+          "token": "cinnabar",
+          "hex": "#B4402E",
+          "use": "朱砂 seal ONLY — the 知几 chop, the pricing stamp, the institutional case-review colophon, and the error state. Kept at the existing --seal hex so all chop assets stay consistent. Always small, always vermilion ink, never a glow."
+        }
+      ],
+      "typography": "Four voices, no generic corporate sans anywhere. (1) DISPLAY — Latin: Fraunces via next/font/google (variable; axes opsz 9–144, wght 300–600, SOFT low, WONK 0 for restraint). wght 300 for thin-luxe headers, ~560–600 for editorial statements, opsz maxed for crisp large serifs; used for English display lines and the italic 卷 numerals. Reads warm-editorial-heritage, never Didone-scammy. (2) DISPLAY + PROSE — CJK: Noto Serif CJK SC via next/font/local (VERIFIED on system at /usr/share/fonts/noto-cjk/, full ExtraLight→Black). The single family carries 上下-style thin elegance (ExtraLight 200 for large 标题) AND bold editorial weight (SemiBold 600 / Black 900) for the one statement per section. (3) BODY — Latin longform (the sample reading prose): Newsreader (already in stack). (4) MICRO/LEDGER: IBM Plex Mono (already in stack), uppercase, tracked +0.14–0.18em — the '石渠 catalog' voice for accession numbers, 卷 indices (卷一/一/二/三), the 干支 grid, prices, timestamps. HIERARCHY PRINCIPLE (the museum specimen label): every section = tracked-mono eyebrow (accession + 卷 no.) → ONE large serif statement → restrained serif support; everything administrative drops to mono marginalia set as margin notes beside the serif, museum-label style. SCALE (fluid, major-third ~1.25): hero display CJK clamp(2.6rem,8vw,6.4rem)/1.02, tracking -0.01em, set vertical-rl as a 立轴 hanging-scroll column; English display Fraunces clamp(1.6rem,3vw,2.6rem)/1.1 wght 300; section statement clamp(1.9rem,4.2vw,3.2rem); body 1.06rem/1.72 at a comfortable measure (~34em CJK, ~66ch Latin); mono labels 0.75rem tracked. Exactly one large serif statement per section; numbers and indices are always small mono.",
+      "texture": "All in-code, zero external images/CDN. (1) GRAIN — keep and tune the existing feTurbulence fractalNoise data-URI (baseFrequency 0.9, 2 octaves) at ~5% opacity, mix-blend-mode soft-light over the whole ground: the raw-silk-and-lacquer-dust tooth. (2) LACQUER DEPTH — layered CSS gradients: a large off-center radial of bronze-light at ~4% over the oxblood ground plus a faint vertical lacquer-ink→oxblood, simulating a raking lamp on a cured panel — the wet look with zero glow. (3) GILT HAIRLINES — every 1px rule becomes linear-gradient(90deg, transparent → bronze → bronze-light → transparent) so the line catches light at one end and reads as real gilding, not a flat stroke. (4) 冰裂纹 ICE-CRACKLE — a hand-authored inline-SVG network of ~40 hairline segments forming irregular polygons, 0.5px celadon stroke at 4–8% opacity, tiled as the back-surface of the sample-reading card and used exactly ONCE more as the boundary/边界 divider. (5) 金缮 KINTSUGI MEND — a subset of those crackle segments is a second SVG path drawn on via stroke-dashoffset that fills to bronze-light on scroll — the cracks becoming the structure. (6) CELADON GLAZE — on celadon surfaces (the 是 column, the free-test band): flat celadon pigment + a soft top-lit sheen radial-gradient(120% 80% at 30% 0%, rgba(255,255,255,.05), transparent) + a 1px inset celadon rim-light = the lip of a glazed vessel, glazed not glowing. (7) SILK SHEEN — a slow bronze-light linear-gradient sweep masked to CTAs/cards, ~600ms on hover, blend-mode overlay: light traveling across silk. (8) 云纹 CLOUD-SCROLL — one thin unfilled SVG ruyi-line in the seal and one section corner, drawn on via stroke-dashoffset, never filled, never tiled. (9) 飞白/墨韵 SEAL INK-SPREAD — a small feTurbulence displacement applied ONLY to the one cinnabar chop on press, so it stamps with authentic ink-bleed. Grain + lacquer-depth gradients + gilt-gradient hairlines + celadon glaze + crackle = material entirely from code.",
+      "motionSystem": "Lenis smooth scroll stays deliberately weighted (lerp about 0.08, duration about 1.2, wheel multiplier below 1) with one material easing family and no bounce. Serif lines fade up 12–20px; gilt hairlines rule in from the left. Parallax is limited to the raking highlight and luopan at no more than 6–10% differential. Keep one pinned beat for the fictional sample; never scroll-jack the whole page. The reduced-motion path uses native scroll, instant fades, no scrub, a static repaired crackle, and a paused 3D object. Signature moments: the currently approved hero headline receives one restrained bronze-light sweep; section rules and volume indices draw in; the fictional sample reveals its chart and correction structure; the pricing stamp presses once; the Method & accountability section receives a Zhiji institutional case-review seal rather than a personal signature; the luopan rings settle during the process section and then recede.",
+      "threejsSignature": "ONE artifact, retexturing the EXISTING components/Armillary.tsx (do NOT rebuild, do NOT adopt imperial-modern's jade transmission). Concept: a gilt-bronze 罗盘/luopan as a lacquered OBJECT catching the room's one lamp, not an emitter. Keep the current geometry — concentric hairline TorusGeometry rings, 24 mountain ticks, the eight 卦 as thin solid/broken BoxGeometry bars (pure line geometry, never pictorial glyphs), a small 太极 node at the pivot. Material: MeshStandardMaterial matte antique gilt (color ~#9C7A45, metalness ~0.9, roughness ~0.45 = antique gilt, not chrome), lit ONLY by the existing warm procedural equirect environment (DataTexture→PMREM) + ACES tone mapping, so it catches the same raking light as the lacquer panel and reads as real bronze. CRITICAL FIX (enforces 'material over glow'): the current 太极 node uses emissive 0xb4402e at emissiveIntensity 0.4 — a live glow — KILL it: set emissiveIntensity 0 and make it a matte cinnabar/lacquer inlay (MeshStandardMaterial, metalness ~0.2, roughness ~0.6). No self-lit element anywhere. Optional restrained celadon tie-in: give only the innermost heart-ring a faint celadon patina so the 3D nods to the promoted green without becoming a green jade orb. Placement: recessed into the dark, tilted (~-1.02 rad, as now), half off the right edge, faint — desktop opacity ~0.3, mobile ~0.12. MOTION: a very slow constant disc.rotation.z spin for background life PLUS a new ScrollTrigger-scrubbed alignment (rings counter-rotate and settle at the 三步/sample beat via a scroll-progress ref), tilt eased in on load. Keep the full reduced-motion pause + IntersectionObserver + visibility-pause + dispose lifecycle already in place. Low-PR fallback: matte MeshStandardMaterial as-is (already cheap; no transmission cost to degrade).",
+      "homepagePlan": [
+        {
+          "section": "卷首 · Hero (raked lacquer panel)",
+          "layout": "Full-viewport lacquer-ink→oxblood ground with an off-center raking radial highlight top-right + grain. Asymmetric 12-col grid. LEFT (cols 1–7): mono eyebrow (知几 · 命理事务所 · № 甲午·0001), the huge 立轴 vertical-rl column 命是结构，不是结局 in Noto Serif CJK SC (结构 heavier + bronze-inflected), a thin Fraunces English line, one line of Newsreader subcopy, and a single CTA framed by a gilt-gradient hairline (开始委托 · Commission a reading). RIGHT (cols 7–12): the matte-bronze luopan tilted, faint (~0.3), mostly off the right edge. A gilt baseline hairline under the hero carries mono marginalia (a checkable track-record number, 已读 1,240 张盘). Cinnabar appears exactly once — the tiny 知几 chop in a corner.",
+          "motion": "Hero type-mask: bronze-light gradient sweeps L→R across the headline (结构 holds light longer); 立轴 column fades up character-by-character (60ms stagger); luopan eases into tilt — one ~1.4s load timeline. Reads as a craft-monograph cover, not a landing page."
+        },
+        {
+          "section": "卷一 · 是什么 / 不是什么",
+          "layout": "Two-column craftsman's spec-sheet split by a vertical gilt-gradient hairline. 是 column on a subtle celadon-glazed ground (top-lit sheen + 1px celadon rim-light); 不是 column on muted oxblood. Mono eyebrow + 卷 index in the left margin.",
+          "motion": "On enter the two columns slide from opposite sides toward the center hairline and meet — a couplet closing, small distances, long material ease. Section hairline rules in via scaleX; 卷 index counts up."
+        },
+        {
+          "section": "卷二 · 真实样例 Sample reading (placed HIGH — evidence before claims)",
+          "layout": "The centerpiece and only pinned beat. A rice/xuan sample card inset and 'pinned' onto the lacquer board, given the most light (--shadow-art). The BaziChart 干支 grid in mono, 日主 甲 marked in bronze. A faint 冰裂纹 ice-crackle surface sits behind the card. A self-falsifiability line in small serif beneath.",
+          "motion": "The 金缮 kintsugi thesis beat (pinned ~1 screen): card lifts (y + shadow bloom); 干支 grid fills cell-by-cell; 日主 甲 stamped last in bronze; then a few crackle hairlines mend to bronze via stroke-dashoffset — the cracks becoming the structure, literalizing 命是结构. Then unpins."
+        },
+        {
+          "section": "卷三 · 为什么值得付费",
+          "layout": "A tall, quiet editorial column: ONE large serif thesis statement centered in generous margin (wall-label), with Newsreader supporting prose at ~66ch. Optional single celadon pull-mark. Ground alternates to lacquer-ink.",
+          "motion": "Serif lines fade up 12–20px staggered per line (power3.out); nothing else moves — the 留白 does the work."
+        },
+        {
+          "section": "卷四 · 三步 (the intake ritual)",
+          "layout": "A true numbered sequence: 一 / 二 / 三 as bronze paper tags down the left spine, tall vertical gaps between steps, thin 云纹 cloud-line connectors drawn between them. Ground oxblood.",
+          "motion": "The scroll-driven 3D LOCK lands here: the background luopan's rings counter-rotate and settle into alignment (scrubbed) as this section passes, tying the instrument to the reading narrative, then dim back."
+        },
+        {
+          "section": "卷五 · 方法与责任 / Method & accountability",
+          "layout": "An institutional case-review colophon: method disclosure, substantive human-review statement, case and reviewer-role provenance, correction history, and software boundaries. Quiet, single-column, generous 留白. Keep the #about anchor for compatibility.",
+          "motion": "The Zhiji case-review seal presses onto the panel (scale 1.04→1.00 + restrained ink-spread), marking institutional provenance rather than a personal signature."
+        },
+        {
+          "section": "卷六 · 免费盲测 band (free blind test)",
+          "layout": "The ONE fuller color moment: a deep celadon-deep (#3C6350) glazed full-bleed band (top-lit sheen + inset rim-light), carrying a quieter torn-slip form. This is where the promoted green earns real presence.",
+          "motion": "Band rises 16–24px and fades in on material ease; the glaze sheen settles; a hairline underline draws on the input on focus."
+        },
+        {
+          "section": "卷七 · 交付保证 Guarantees",
+          "layout": "A 封 sealed-certificate card: hairline-ruled clauses in mono on rice, with the refund clause 先验盘：盘不准，不问事，全额退 set as a formal 石渠-catalog clause + a small chop. Institutional-scholarship codes = trust.",
+          "motion": "Clauses reveal in sequence (staggered fade-up); the certificate's gilt hairline frame draws in via scaleX."
+        },
+        {
+          "section": "卷八 · 价位 Pricing",
+          "layout": "Three lacquer plaques with 剔红 (lacquer-red #7A2E24) edges on the oxblood ground; the recommended tier gets a bronze-gradient frame + a tiny cinnabar seal (no loud badges). Prices in mono ledger.",
+          "motion": "THE pricing stamp — the page's only impact motion: the selected plaque's cinnabar seal presses in with 飞白 ink-spread (feTurbulence), quick scale+opacity, a chop pressing paper. Plaques settle in staggered on enter."
+        },
+        {
+          "section": "卷九 · 边界声明 Boundary",
+          "layout": "Deliberately small, honest mono fine print under a single 冰裂纹 ice-crackle divider (the second and last crackle use). The restraint itself signals trust — a scam site hides its limits.",
+          "motion": "The crackle divider draws on via stroke-dashoffset as it enters; text fades in plainly, no flourish."
+        },
+        {
+          "section": "卷终 · 邮件订阅 Newsletter",
+          "layout": "One quiet serif line + a gilt-hairline-underlined input, closing the scroll for those not yet ready. Maximum 留白.",
+          "motion": "Underline draws left→right on focus; a soft final fade-up — the scroll rests."
+        }
+      ],
+      "buildNotes": "FONTS: (1) Add Fraunces via next/font/google (variable, axes opsz/wght + SOFT/WONK held low), new --font-display var. (2) Add Noto Serif CJK SC via next/font/local: extract ExtraLight(200)/Regular(400)/SemiBold(600)/Black(900) from the system TTCs at /usr/share/fonts/noto-cjk/ with fonttools, SUBSET to the site's actual CJK glyph set (scan lib/content.ts + lib/tiers.ts → a few hundred glyphs), emit woff2 into app/fonts, load with display:swap + preload only the hero weights, exposing --font-cjk-serif. Update the existing --serif stack to Fraunces-first (Latin) then --font-cjk-serif then the current fallbacks. Keep Newsreader + IBM Plex Mono. DO NOT use LXGW WenKai (not installed — confirmed absent). CSS TOKENS (app/globals.css :root): add --celadon #7E9583, --celadon-deep #3C6350, --bronze #9C7A45, --bronze-light #C7A265; brownen the primary metal from the old brassy --gold #c9a35f toward --bronze; keep --lacquer/--rice/--ink/--seal; convert all hairline rules to linear-gradient(transparent→bronze→bronze-light→transparent); add the ice-crackle SVG data-URI + a kintsugi stroke-dashoffset target class; add the celadon-glaze sheen mixin. THREE.JS (components/Armillary.tsx): FIRST FIX — set the 太极 nodeMat emissiveIntensity to 0 and make it a matte cinnabar inlay (kills the one remaining self-lit element); optionally add a faint celadon patina to the heart-ring; add a ScrollTrigger-scrubbed alignment hook fed a scroll-progress ref; keep dispose/IntersectionObserver/visibility-pause. MOTION: install gsap + lenis (in progress); add a client Lenis provider gated on prefers-reduced-motion; define the single material-ease cubic-bezier and a shared reveal/gilt-rule-draw util. PERF/A11Y GUARDRAILS: all texture stays in-code (CSP-safe, zero external images); hero 立轴 is real selectable text (LCP is text, not an image); dynamic-import three.js + IO pause + dispose (present); every GSAP/Lenis/3D effect has a reduced-motion off-path (reveals→instant, scrub off, crackle shown pre-mended, 3D static); verify WCAG AA — silk-raw #ECE1CE on lacquer-ink #14110C passes for body, celadon is for accents/links/large text/UI only (verify each celadon-on-dark contrast, never body). WORKFLOW HAZARD: never run `npm run build` while the :3111 dev server is up (clobbers .next → chunk 404s); use the existing headless rig (node shot.js / node hero.js on :3111) for the 20-shot zh/en × desktop/mobile × error/receipt verification matrix. BUILD ORDER: (1) tokens + gilt-gradient hairlines + grain/lacquer-depth stack (foundation, no JS); (2) type system (Fraunces + subset CJK + fluid scale); (3) Lenis + material-ease + section reveal + gilt-rule-draw (motion spine); (4) hero type-mask + 立轴 vertical-rl; (5) retexture luopan + kill emissive + scroll-lock; (6) the 金缮 kintsugi sample beat (the thesis signature — build this carefully, it is the payload); (7) pricing stamp + 落款 colophon + celadon free-test band; (8) reduced-motion + CWV pass + headless verification."
+    }
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Direct"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Judge"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 3,
+      "title": "Synthesize"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "direct:lacquer-silk",
+      "phaseIndex": 1,
+      "phaseTitle": "Direct",
+      "agentId": "ac96e62357f442e5a",
+      "model": "claude-opus-4-8[1m]",
+      "state": "done",
+      "startedAt": 1783577400717,
+      "queuedAt": 1783577399271,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Fate as a lacquer panel — depth built in patient layers, re…",
+      "promptPreview": "PRODUCT: 知几 / Zhiji — a high-ticket ($49 / $99 / $249) 八字 (Chinese astrology / 命理) advisory service for the affluent overseas Chinese diaspora. A real human reads your chart; the promise is \"命是结构，不是结局\" (fate is a structure, not a verdict). The buyer is educated, skeptical, and paying real money — the site must earn trust.\n\nTHE PROBLEM WE ARE SOLVING: the current site is dark lacquer + gold hairlin…",
+      "lastProgressAt": 1783577643431,
+      "tokens": 50113,
+      "toolCalls": 3,
+      "durationMs": 242714,
+      "resultPreview": "{\"concept\":\"Fate as a lacquer panel — depth built in patient layers, read by leaning in. The language is \\\"髹夜 / Lacquer Nocturne\\\": 大漆 (raw Chinese lacquer) cures in dozens of thin coats into a translucent brown-black that glows warm under raking light. That IS the thesis — 命是结构，不是结局: a chart, like a lacquer panel, is accumulated structure you can inspect, not a glowing surface that dazzles. A lac…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "direct:ink-night",
+      "phaseIndex": 1,
+      "phaseTitle": "Direct",
+      "agentId": "a89bdf9bd5b8c39e4",
+      "model": "claude-opus-4-8[1m]",
+      "state": "done",
+      "startedAt": 1783577400774,
+      "queuedAt": 1783577399272,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "留白 · Liúbái (\"what is left unmarked\") — the reading rende…",
+      "promptPreview": "PRODUCT: 知几 / Zhiji — a high-ticket ($49 / $99 / $249) 八字 (Chinese astrology / 命理) advisory service for the affluent overseas Chinese diaspora. A real human reads your chart; the promise is \"命是结构，不是结局\" (fate is a structure, not a verdict). The buyer is educated, skeptical, and paying real money — the site must earn trust.\n\nTHE PROBLEM WE ARE SOLVING: the current site is dark lacquer + gold hairlin…",
+      "lastProgressAt": 1783577682437,
+      "tokens": 51124,
+      "toolCalls": 3,
+      "durationMs": 281663,
+      "resultPreview": "{\"concept\":\"留白 · Liúbái (\\\"what is left unmarked\\\") — the reading rendered as ink on warm-black 宣纸 (xuan paper): a single self-drawing brushstroke against enormous negative space, where the emptiness is the luxury and the one mark is the reading. 命是结构，不是结局 as 墨 (ink) on a scholar's night table, not a fortune-teller's glow. Language name: 留白 / Ink & Space.\",\"moodInWords\":\"A visitor feels the hush o…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "direct:imperial-modern",
+      "phaseIndex": 1,
+      "phaseTitle": "Direct",
+      "agentId": "ab1c977b00edc54b3",
+      "model": "claude-opus-4-8[1m]",
+      "state": "done",
+      "startedAt": 1783577402057,
+      "queuedAt": 1783577399272,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "石渠 · The Imperial Vitrine — the site is a warm-lit after-…",
+      "promptPreview": "PRODUCT: 知几 / Zhiji — a high-ticket ($49 / $99 / $249) 八字 (Chinese astrology / 命理) advisory service for the affluent overseas Chinese diaspora. A real human reads your chart; the promise is \"命是结构，不是结局\" (fate is a structure, not a verdict). The buyer is educated, skeptical, and paying real money — the site must earn trust.\n\nTHE PROBLEM WE ARE SOLVING: the current site is dark lacquer + gold hairlin…",
+      "lastProgressAt": 1783577696547,
+      "tokens": 52778,
+      "toolCalls": 5,
+      "durationMs": 294490,
+      "resultPreview": "{\"concept\":\"石渠 · The Imperial Vitrine — the site is a warm-lit after-hours museum gallery where your 八字 is catalogued and examined like an imperial artifact (named for 石渠宝笈, the Qing court's catalog of painting & calligraphy), not divined. The winning wedge over the current \\\"Ink & Gold Atelier\\\": break the gold+cinnabar+glow \\\"scam-astrology\\\" trap by adopting the pigments 故宫 actually uses — cela…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "judge:1",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a97ec490aa35e8089",
+      "model": "claude-opus-4-8[1m]",
+      "state": "done",
+      "startedAt": 1783577699756,
+      "queuedAt": 1783577698017,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "髹夜 / Lacquer Nocturne (lacquer-silk) wins, and it wins on…",
+      "promptPreview": "PRODUCT: 知几 / Zhiji — a high-ticket ($49 / $99 / $249) 八字 (Chinese astrology / 命理) advisory service for the affluent overseas Chinese diaspora. A real human reads your chart; the promise is \"命是结构，不是结局\" (fate is a structure, not a verdict). The buyer is educated, skeptical, and paying real money — the site must earn trust.\n\nTHE PROBLEM WE ARE SOLVING: the current site is dark lacquer + gold hairlin…",
+      "lastProgressAt": 1783577849770,
+      "tokens": 61029,
+      "toolCalls": 1,
+      "durationMs": 150014,
+      "resultPreview": "{\"ranking\":[\"lacquer-silk\",\"ink-night\",\"imperial-modern\"],\"scores\":[{\"concept\":\"lacquer-silk\",\"premium\":9,\"onBrandToRefs\":8.5,\"antiScamTrust\":8,\"feasibility\":9,\"total\":34.5,\"note\":\"Winner. The 大漆 lacquer thesis gives the darkness a material REASON (cured-coat translucent depth, not void) — the single most defensibly-premium dark material in the Chinese craft canon, and 上下 literally makes lacquer o…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "judge:2",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a6d293cbcf27ce221",
+      "model": "claude-opus-4-8[1m]",
+      "state": "done",
+      "startedAt": 1783577699373,
+      "queuedAt": 1783577698017,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "留白 (ink-night) wins, narrowly, because it is the only pro…",
+      "promptPreview": "PRODUCT: 知几 / Zhiji — a high-ticket ($49 / $99 / $249) 八字 (Chinese astrology / 命理) advisory service for the affluent overseas Chinese diaspora. A real human reads your chart; the promise is \"命是结构，不是结局\" (fate is a structure, not a verdict). The buyer is educated, skeptical, and paying real money — the site must earn trust.\n\nTHE PROBLEM WE ARE SOLVING: the current site is dark lacquer + gold hairlin…",
+      "lastProgressAt": 1783577836487,
+      "tokens": 61031,
+      "toolCalls": 1,
+      "durationMs": 137114,
+      "resultPreview": "{\"ranking\":[\"ink-night\",\"lacquer-silk\",\"imperial-modern\"],\"scores\":[{\"concept\":\"ink-night\",\"premium\":8.5,\"onBrandToRefs\":8.5,\"antiScamTrust\":8,\"feasibility\":7,\"total\":32,\"note\":\"留白/立轴 restraint is the cleanest break from scam grammar and the truest read of 上下 + 观夏. Gold demoted to 0.5px hairline, no orb (inked diagram), and the 落款 named-human chop is the smartest single trust signal in the set — a…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "judge:3",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a7b0b54c487e32bc2",
+      "model": "claude-opus-4-8[1m]",
+      "state": "done",
+      "startedAt": 1783577699386,
+      "queuedAt": 1783577698017,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "髹夜 / Lacquer Nocturne (lacquer-silk) wins. Against the 观…",
+      "promptPreview": "PRODUCT: 知几 / Zhiji — a high-ticket ($49 / $99 / $249) 八字 (Chinese astrology / 命理) advisory service for the affluent overseas Chinese diaspora. A real human reads your chart; the promise is \"命是结构，不是结局\" (fate is a structure, not a verdict). The buyer is educated, skeptical, and paying real money — the site must earn trust.\n\nTHE PROBLEM WE ARE SOLVING: the current site is dark lacquer + gold hairlin…",
+      "lastProgressAt": 1783577905249,
+      "tokens": 67345,
+      "toolCalls": 5,
+      "durationMs": 205862,
+      "resultPreview": "{\"ranking\":[\"髹夜 / Lacquer Nocturne (lacquer-silk)\",\"石渠 / Imperial Vitrine (imperial-modern)\",\"留白 / Liúbái (ink-night)\"],\"scores\":[{\"concept\":\"髹夜 / Lacquer Nocturne (lacquer-silk)\",\"premium\":9,\"onBrandToRefs\":8.5,\"antiScamTrust\":8,\"feasibility\":9.5,\"total\":35,\"note\":\"The most materially-TRUE luxury metaphor of the three: 大漆 cured in dozens of coats is genuinely among the costliest Chinese craft mat…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "synthesize",
+      "phaseIndex": 3,
+      "phaseTitle": "Synthesize",
+      "agentId": "ad5340f334ba31d6a",
+      "model": "claude-opus-4-8[1m]",
+      "state": "done",
+      "startedAt": 1783577909043,
+      "queuedAt": 1783577906466,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "髹夜 · Lacquer Nocturne — 知几/Zhiji final design language",
+      "promptPreview": "PRODUCT: 知几 / Zhiji — a high-ticket ($49 / $99 / $249) 八字 (Chinese astrology / 命理) advisory service for the affluent overseas Chinese diaspora. A real human reads your chart; the promise is \"命是结构，不是结局\" (fate is a structure, not a verdict). The buyer is educated, skeptical, and paying real money — the site must earn trust.\n\nTHE PROBLEM WE ARE SOLVING: the current site is dark lacquer + gold hairlin…",
+      "lastProgressAt": 1783578230215,
+      "tokens": 86234,
+      "toolCalls": 10,
+      "durationMs": 321172,
+      "resultPreview": "{\"name\":\"髹夜 · Lacquer Nocturne — 知几/Zhiji final design language\",\"northStar\":\"A dark, warm, material craft-luxury site where a birth chart is presented as an inspectable lacquer-and-celadon artifact in a scholar's studio after dark — catalogued like an imperial 石渠宝笈 entry, examined rather than divined in a fortune-teller's glow. The darkness has a MATERIAL REASON, which is the whole anti-scam argu…"
+    }
+  ],
+  "totalTokens": 429654,
+  "totalToolCalls": 28
+}

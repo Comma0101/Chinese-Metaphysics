@@ -52,12 +52,12 @@ export const T: Record<Lang, Chrome> = {
     home: {
       eyebrow: "私人中国命理咨询 · 以八字为主",
       h1: "一件真正要做的决定，多一个视角。",
-      lead: "带来一件 90 天内要决定的事。你会收到一份经过人工审核的书面决策判读，并可在交付后就原文件提出限定范围的书面澄清。知几以八字为主；出生资料与问题适合时，按案结合紫微斗数。依据、假设与不确定性都会写清楚。",
+      lead: "带来一件 90 天内要决定的事。你会收到一份经过人工审核的书面决策判读；交付后 14 天内，可就原判读的依据、假设或表述，集中提交一次书面澄清。知几以八字为主；出生资料与问题适合时，按案结合紫微斗数。依据、假设与不确定性都会写清楚。",
       accent: "Private Chinese metaphysics consultation, led by BaZi.",
       cta: "查看服务内容",
       applyCta: "已有邀请，开始申请",
       ctaNote: "适合职业、offer、去留、迁移、创业、关系与家庭节点",
-      proof: ["一项重大决定", "书面决策判读", "书面澄清 + 30/90 天复盘"],
+      proof: ["一项重大决定", "书面决策判读", "一次书面澄清 + 30/90 天书面复盘"],
       s2h: "你正在决定什么？",
       s2lead: "知几适合已经有明确选项，并且需要在 90 天内做出选择的人。",
       isnotLabel: "常见的人生节点",
@@ -76,15 +76,15 @@ export const T: Record<Lang, Chrome> = {
       ],
       confidenceH: "一次完整咨询，你会收到什么",
       confidenceLead:
-        "这不是一份自动生成的性格报告，而是围绕一件具体决定完成的人工审核交付。全部服务以书面异步方式完成。",
+        "这不是一份自动生成的性格报告，而是围绕一件具体决定、经过实质性人工审核的书面分析。交付、澄清与复盘均以书面完成。",
       confidence: [
         {
           h: "书面决策判读",
           p: "把盘面观察、现实约束、关键假设、选项差异与不确定之处放在同一份文件里。",
         },
         {
-          h: "限定范围的书面澄清",
-          p: "交付后 14 天内，你可以就原判读中的依据、假设或表述提出书面问题。需要修正的内容会进入版本记录；新的决定不属于本次范围。",
+          h: "一次书面澄清",
+          p: "交付后 14 天内，可就原判读的依据、假设或表述，集中提交一次书面澄清。实质性修正会进入版本记录；新的决定不在本案范围内。",
         },
         {
           h: "30/90 天书面复盘",
@@ -106,7 +106,7 @@ export const T: Record<Lang, Chrome> = {
         {
           num: "03 · 交付与复盘",
           h: "以书面完成交付、澄清与复盘",
-          p: "交付后 14 天内，就原判读提供限定范围的书面澄清；30/90 天以书面记录哪些判断有用、哪些需要修正。",
+          p: "交付后 14 天内，可就原判读的依据、假设或表述，集中提交一次书面澄清；30/90 天以书面记录哪些判断有用、哪些需要修正。",
         },
       ],
       priceH: "费用与受理方式",
@@ -133,12 +133,12 @@ export const T: Record<Lang, Chrome> = {
     home: {
       eyebrow: "Private Chinese metaphysics consultation · BaZi-led",
       h1: "One real decision. A second perspective.",
-      lead: "Bring one consequential decision you expect to make within 90 days. You receive a human-reviewed written decision brief, followed by defined written clarification on the delivered analysis. BaZi is the primary framework; Zi Wei Dou Shu may be included when the birth data and case support it. The reasoning, assumptions, and uncertainty are stated plainly.",
+      lead: "Bring one consequential decision you expect to make within 90 days. You receive a human-reviewed written decision brief. Within 14 days after delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. BaZi is the primary framework; Zi Wei Dou Shu may be included when the birth data and case support it. The reasoning, assumptions, and uncertainty are stated plainly.",
       accent: "私人中国命理咨询，以八字为主，按案结合紫微斗数。",
       cta: "See what is included",
       applyCta: "View application requirements",
       ctaNote: "For career choices, job offers, relocation, founder decisions, relationships, and family transitions",
-      proof: ["One consequential decision", "A written decision brief", "Written clarification + 30/90-day review"],
+      proof: ["One consequential decision", "A written decision brief", "One written follow-up + written 30/90-day reviews"],
       s2h: "What are you deciding?",
       s2lead:
         "Zhiji is designed for people with real options in front of them and a decision due within 90 days.",
@@ -165,8 +165,8 @@ export const T: Record<Lang, Chrome> = {
           p: "Chart observations, real-world constraints, key assumptions, option trade-offs, and uncertainty in one document.",
         },
         {
-          h: "Defined written clarification",
-          p: "For 14 days after delivery, you may submit written questions about the reasoning, assumptions, or wording in the original brief. Material corrections are recorded in the revision history; new decisions are outside the case scope.",
+          h: "One written follow-up",
+          p: "Within 14 days after delivery, you may submit one consolidated written follow-up about the original brief’s reasoning, assumptions, or wording. Material corrections enter the revision history; new decisions are outside the case scope.",
         },
         {
           h: "Written reviews at 30 and 90 days",
@@ -188,7 +188,7 @@ export const T: Record<Lang, Chrome> = {
         {
           num: "03 · Delivery and review",
           h: "Complete the case in writing",
-          p: "For 14 days after delivery, defined written clarification is available on the original brief. Written reviews at 30 and 90 days record what helped and what needs revision.",
+          p: "Within 14 days after delivery, you may submit one consolidated written follow-up about the original brief’s reasoning, assumptions, or wording. Written reviews at 30 and 90 days record what helped and what needs revision.",
         },
       ],
       priceH: "Fees and case acceptance",
@@ -501,7 +501,7 @@ export const PILOT_FORM: Record<
         price_not_acknowledged: "The pilot requires acknowledging the US$388 founding price.",
         required_acknowledgement_missing: "A required acknowledgement is missing.",
         acute_crisis:
-          "Zhiji is not appropriate for an immediate mental-health crisis. In the U.S. or Canada, call or text 988 for immediate support.",
+          "Zhiji is not appropriate for an immediate mental-health crisis. In the U.S. or Canada, contact 988 by phone or text for immediate support.",
         restricted_advice:
           "Questions like this belong with a licensed professional — medical, legal, immigration, and investment advice are outside this service.",
         third_party_or_minor_data: "The pilot accepts applications about yourself only.",
@@ -608,7 +608,7 @@ export const PILOT_EXPLAINER: Record<
       { k: "三 · 资料与方法", v: "说明用途和保存方式后，才收出生时间、地点与一个具体问题。" },
       { k: "四 · 历史核对", v: "用已发生的事实检查排盘资料与解释是否适用；这不是准确率证明。" },
       { k: "五 · 书面交付", v: "交付一份经过人工审核、带版本记录的书面决策判读；整个服务以书面异步方式完成。" },
-      { k: "六 · 书面澄清与复盘", v: "交付后 14 天内，就原判读提供限定范围的书面澄清；30/90 天后完成书面复盘。" },
+      { k: "六 · 书面澄清与复盘", v: "交付后 14 天内，可就原判读的依据、假设或表述，集中提交一次书面澄清；30/90 天后完成书面复盘。" },
     ],
     note: "知几不提供免费盲测，也不会为了获客先收出生信息。没有邀请码，可以先查看演示判读与完整费用说明。",
     cta: "已有邀请，开始申请",
@@ -624,7 +624,7 @@ export const PILOT_EXPLAINER: Record<
       { k: "3 · Data and method", v: "Birth time, location, and one question are collected only after purpose and retention are explained." },
       { k: "4 · Historical check", v: "Past facts are used to check the source data and whether the interpretation is useful—not to claim an accuracy rate." },
       { k: "5 · Written delivery", v: "A human-reviewed, versioned written decision brief. The entire service is delivered asynchronously in writing." },
-      { k: "6 · Written clarification and review", v: "Defined written clarification on the original brief for 14 days after delivery, followed by written reviews at 30 and 90 days." },
+      { k: "6 · Written follow-up and review", v: "Within 14 days after delivery, you may submit one consolidated written follow-up about the original brief’s reasoning, assumptions, or wording. Written reviews follow at 30 and 90 days." },
     ],
     note: "Zhiji does not offer a free blind reading or collect birth data as a lead magnet. You can review the illustrative brief and current fee structure before applications open.",
     cta: "View application requirements",
@@ -779,7 +779,7 @@ export const SAMPLE: Record<
     lead: "This fictional sample shows how a brief separates chart observations, real-world constraints, key assumptions, and action boundaries. It uses no real client data and makes no claim about accuracy.",
     tag: "Fictional sample · no real client data",
     caseH: "Fictional case: choosing between two offers",
-    q: "“A stable offer at a large company, or a role with an early-stage team? I can't afford to make the wrong call again.”",
+    q: "“A stable offer at a large company, or a role with an early-stage team? I can't afford to make the wrong choice again.”",
     meta: "Fictional scenario · delivery structure only",
     reading: [
       {
@@ -828,7 +828,7 @@ export const GUARANTEES: Record<
       },
       {
         k: "服务何时结束",
-        v: "服务范围包括书面决策判读、交付后 14 天内限定范围的书面澄清，以及 30/90 天书面复盘；不提供无限聊天。",
+        v: "服务范围包括书面决策判读；交付后 14 天内，可就原判读的依据、假设或表述，集中提交一次书面澄清；并在 30/90 天完成书面复盘。不提供无限聊天。",
       },
     ],
   },
@@ -850,7 +850,7 @@ export const GUARANTEES: Record<
       },
       {
         k: "What the fee includes",
-        v: "The scope includes a written decision brief, defined written clarification on the original brief for 14 days after delivery, and written reviews at 30 and 90 days—not unlimited chat.",
+        v: "The scope includes a written decision brief; one consolidated written follow-up about the original brief’s reasoning, assumptions, or wording within 14 days after delivery; and written reviews at 30 and 90 days—not unlimited chat.",
       },
     ],
   },

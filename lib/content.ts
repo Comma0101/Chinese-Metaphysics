@@ -1,0 +1,884 @@
+export type Lang = "zh" | "en";
+
+export function pickLang(v?: string): Lang {
+  return v === "en" ? "en" : "zh";
+}
+
+type Step = { num: string; h: string; p: string };
+
+type Chrome = {
+  toggleZh: string;
+  toggleEn: string;
+  home: {
+    eyebrow: string;
+    h1: string;
+    lead: string;
+    accent: string;
+    cta: string;
+    applyCta: string;
+    ctaNote: string;
+    proof: string[];
+    s2h: string;
+    s2lead: string;
+    isnotLabel: string;
+    isnot: string[];
+    isLabel: string;
+    is: string[];
+    confidenceH: string;
+    confidenceLead: string;
+    confidence: { h: string; p: string }[];
+    s3h: string;
+    steps: Step[];
+    priceH: string;
+    priceLead: string;
+    priceTrust: string;
+    boundary: string;
+    footer: string;
+  };
+  cancel: {
+    h1: string;
+    lead: string;
+    finish: string;
+    home: string;
+    keptLabel: string;
+    reassure: string;
+  };
+};
+
+export const T: Record<Lang, Chrome> = {
+  zh: {
+    toggleZh: "中文",
+    toggleEn: "EN",
+    home: {
+      eyebrow: "私人八字咨询 · 面向北美华人专业人士",
+      h1: "一件真正要做的决定，多一个视角。",
+      lead: "带来一件 90 天内要决定的事。你会收到一份书面判读和一次 60 分钟私人面谈；八字提供一个观察角度，依据、假设与不确定性都会写清楚。",
+      accent: "Private BaZi consultation for one decision that matters now.",
+      cta: "查看服务内容",
+      applyCta: "已有邀请，开始申请",
+      ctaNote: "适合职业、offer、去留、迁移、创业、关系与家庭节点",
+      proof: ["一件具体问题", "书面判读 + 60 分钟面谈", "30/90 天回看"],
+      s2h: "你正在决定什么？",
+      s2lead: "知几适合已经有明确选项，并且需要在 90 天内做出选择的人。",
+      isnotLabel: "常见的人生节点",
+      isnot: [
+        "两份 offer 之间，哪一份更适合现在的你",
+        "留在海外、回国，或迁往另一座城市",
+        "加入、离开，或继续承担一个创业项目",
+        "关系与家庭安排的下一步",
+      ],
+      isLabel: "这次咨询会做什么",
+      is: [
+        "用八字观察时间、重复模式与风险倾向",
+        "把盘面解释与现实条件分开写清楚",
+        "比较选项，而不是替你下命令",
+        "留下可回看、可质疑、可复盘的记录",
+      ],
+      confidenceH: "一次完整咨询，你会收到什么",
+      confidenceLead:
+        "这不是一份自动生成的性格报告，而是围绕一件具体决定完成的人工交付。",
+      confidence: [
+        {
+          h: "书面判读",
+          p: "把盘面观察、现实约束、关键假设、选项差异与不确定之处放在同一份文件里。",
+        },
+        {
+          h: "60 分钟私人面谈",
+          p: "知几会逐条解释书面判读，也听你补充事实。你可以追问、不同意，或要求说明判断依据。",
+        },
+        {
+          h: "有限追问与复盘",
+          p: "14 天内处理与本次判读直接相关的澄清；30/90 天后回看决定与当时的判断。",
+        },
+      ],
+      s3h: "从申请到复盘",
+      steps: [
+        {
+          num: "01 · 受邀申请",
+          h: "先确认范围与基本条件",
+          p: "只确认地区、决定类型、时间与服务边界；这一步不收出生信息，也不要求你讲具体困局。",
+        },
+        {
+          num: "02 · 资料确认与判读",
+          h: "核对排盘方法，围绕一件事写作",
+          p: "受理后才收出生时间、地点与具体问题。知几核对方法与相关历史事实，再完成书面判读。",
+        },
+        {
+          num: "03 · 面谈与复盘",
+          h: "把判断说清，也把结果留下",
+          p: "完成私人面谈与有限追问；30/90 天后记录哪些判断有用、哪些需要修正。",
+        },
+      ],
+      priceH: "费用与受理方式",
+      priceLead: "受邀个案先支付 US$49 受理与校准定金；正式受理后，全额计入首批服务费 US$388。",
+      priceTrust:
+        "付款目前保持关闭。开放前，方法说明、受理与退款规则、隐私条款和运营门槛会完整公布。",
+      boundary:
+        "知几把八字作为一种传统解释框架，用来梳理时间、重复模式与选择边界。它不保证结果，也不代替医疗、心理健康、法律、移民、投资或生育方面的专业意见。决定权始终在你。",
+      footer: "知几 · Zhiji　—　围绕重大人生节点的私人八字咨询。",
+    },
+    cancel: {
+      h1: "还没付定金",
+      lead: "没有付款发生。想清楚再回来也不迟——这本来就不是一个该被催促的决定。",
+      finish: "回到申请",
+      home: "返回首页",
+      keptLabel: "未付款",
+      reassure:
+        "US$49 为受理与校准定金。正式受理后全额计入 US$388 服务费；若按公布规则无法继续，原路退还。",
+    },
+  },
+  en: {
+    toggleZh: "中文",
+    toggleEn: "EN",
+    home: {
+      eyebrow: "Private BaZi consultation · For Chinese professionals in North America",
+      h1: "One real decision. A second perspective.",
+      lead: "Bring one decision due within 90 days. You receive a written decision brief and a 60-minute private consultation. BaZi provides one interpretive lens, with reasoning, assumptions, and uncertainty stated plainly.",
+      accent: "私人八字咨询，围绕一件真正要做的决定。",
+      cta: "See what is included",
+      applyCta: "Have an invitation? Apply",
+      ctaNote: "For career, offers, relocation, founder, relationship, and family decisions",
+      proof: ["One concrete question", "Written brief + 60-minute session", "30/90-day review"],
+      s2h: "What are you deciding?",
+      s2lead:
+        "Zhiji is designed for people with real options in front of them and a decision due within 90 days.",
+      isnotLabel: "Common decision points",
+      isnot: [
+        "Choosing between two offers or career paths",
+        "Staying abroad, returning, or relocating",
+        "Joining, leaving, or continuing a founder role",
+        "Taking the next step in a relationship or family decision",
+      ],
+      isLabel: "What the consultation does",
+      is: [
+        "Uses BaZi to examine timing, recurring patterns, and risk posture",
+        "Separates chart interpretation from real-world constraints",
+        "Compares options without making the decision for you",
+        "Leaves you with a record you can question, keep, and review",
+      ],
+      confidenceH: "What you receive",
+      confidenceLead:
+        "This is not an automated personality report. It is a human-reviewed engagement built around one specific decision.",
+      confidence: [
+        {
+          h: "A written decision brief",
+          p: "Chart observations, real-world constraints, key assumptions, option trade-offs, and uncertainty in one document.",
+        },
+        {
+          h: "A 60-minute private consultation",
+          p: "Zhiji walks through the brief and hears what the document may have missed. You can question any conclusion.",
+        },
+        {
+          h: "Bounded follow-up and review",
+          p: "Clarification related to the brief for 14 days, followed by structured reviews at 30 and 90 days.",
+        },
+      ],
+      s3h: "From application to review",
+      steps: [
+        {
+          num: "01 · Invited application",
+          h: "Confirm scope and basic eligibility",
+          p: "Only location, decision type, timing, and service boundaries are checked. No birth data or personal narrative is collected here.",
+        },
+        {
+          num: "02 · Intake and written analysis",
+          h: "Verify the method and write around one question",
+          p: "Birth details and your question are collected only after acceptance. Zhiji checks the method and relevant history, then prepares the brief.",
+        },
+        {
+          num: "03 · Consultation and review",
+          h: "Discuss the reasoning and preserve the outcome",
+          p: "Complete the private session and bounded follow-up, then record what helped and what needs revision at 30 and 90 days.",
+        },
+      ],
+      priceH: "Fees and acceptance",
+      priceLead: "Invited cases begin with a US$49 case assessment deposit. Once accepted, it is credited in full toward the US$388 initial-cohort fee.",
+      priceTrust:
+        "Payment is currently closed. The method disclosure, acceptance and refund rules, privacy terms, and operating gates will be published before it opens.",
+      boundary:
+        "Zhiji uses BaZi as a traditional interpretive framework for examining timing, recurring patterns, and decision boundaries. It does not guarantee outcomes or replace medical, mental-health, legal, immigration, investment, or fertility advice. The decision remains yours.",
+      footer: "Zhiji — Private BaZi consultation for major life transitions.",
+    },
+    cancel: {
+      h1: "No deposit was paid",
+      lead: "No payment happened. Come back when you've thought it through — this was never a decision to be rushed.",
+      finish: "Back to the application",
+      home: "Back to home",
+      keptLabel: "Not paid",
+      reassure:
+        "The US$49 is a case assessment deposit. Once accepted, it is credited in full toward the US$388 fee. If the case cannot proceed under the published rule, it is returned to the original payment method.",
+    },
+  },
+};
+
+// 生成带 lang 的链接
+export function withLang(path: string, lang: Lang, extra?: Record<string, string>): string {
+  const params = new URLSearchParams({ lang, ...(extra || {}) });
+  return `${path}?${params.toString()}`;
+}
+
+// 试点申请（资格确认表）—— 只收集 lib/contracts/pilot.ts 允许的字段
+export const PILOT_FORM: Record<
+  Lang,
+  {
+    back: string;
+    eyebrow: string;
+    h1: string;
+    lead: string;
+    noSensitive: string;
+    sectionBasics: string;
+    sectionDecision: string;
+    sectionScreen: string;
+    sectionConsent: string;
+    email: string;
+    emailHint: string;
+    country: string;
+    countries: { v: "US" | "CA" | "OTHER"; label: string }[];
+    region: string;
+    regionPlaceholder: string;
+    city: string;
+    cityPlaceholder: string;
+    decisionType: string;
+    decisionTypes: { v: string; label: string }[];
+    decisionWindow: string;
+    decisionWindows: { v: string; label: string }[];
+    friendGraph: string;
+    friendGraphs: { v: string; label: string }[];
+    accessCode: string;
+    accessCodeHint: string;
+    screenCrisis: string;
+    screenRestricted: string;
+    yes: string;
+    no: string;
+    acks: { key: string; label: string }[];
+    marketing: string;
+    required: string;
+    submit: string;
+    submitting: string;
+    priceLine: string;
+    gateNote: string;
+    errors: {
+      missing: string;
+      validation: string;
+      declined: string;
+      declinedReasons: Record<string, string>;
+      accessDenied: string;
+      pilotClosed: string;
+      checkoutExpired: string;
+      checkoutUnavailable: string;
+      conflict: string;
+      tooLarge: string;
+      badContentType: string;
+      network: string;
+    };
+  }
+> = {
+  zh: {
+    back: "← 返回",
+    eyebrow: "受邀咨询申请",
+    h1: "先确认这件事是否在服务范围内",
+    lead: "如果你已经收到邀请，请先完成这份基本确认。这里不收出生信息，也不要求你写下具体困局。通过后，才会进入定金与正式资料环节。",
+    noSensitive:
+      "请不要在这里填写出生日期、具体经历、健康状况、财务信息或他人的资料。正式受理后，需要的资料会在单独说明用途与保存方式后收集。",
+    sectionBasics: "联系与地区",
+    sectionDecision: "决定的范围",
+    sectionScreen: "服务边界",
+    sectionConsent: "提交前确认",
+    email: "Email",
+    emailHint: "— 仅用于本次申请的沟通",
+    country: "所在国家",
+    countries: [
+      { v: "US", label: "美国" },
+      { v: "CA", label: "加拿大" },
+      { v: "OTHER", label: "其他" },
+    ],
+    region: "州 / 省",
+    regionPlaceholder: "如：California / Ontario",
+    city: "城市",
+    cityPlaceholder: "如：Los Angeles / Toronto",
+    decisionType: "决定的类型",
+    decisionTypes: [
+      { v: "career", label: "职业 / offer" },
+      { v: "relocation", label: "去留 / 迁移" },
+      { v: "founder", label: "创业 / 关键业务" },
+      { v: "relationship", label: "关系" },
+      { v: "family", label: "家庭" },
+      { v: "other", label: "其他" },
+    ],
+    decisionWindow: "大约什么时候要定",
+    decisionWindows: [
+      { v: "within_30_days", label: "30 天内" },
+      { v: "within_90_days", label: "90 天内" },
+      { v: "later", label: "更晚" },
+      { v: "unsure", label: "不确定" },
+    ],
+    friendGraph: "你如何得知知几（可选）",
+    friendGraphs: [
+      { v: "unknown", label: "不方便说 / 其他" },
+      { v: "direct_friend", label: "知几团队直接认识的人" },
+      { v: "client_referral", label: "客户介绍" },
+      { v: "community", label: "社群" },
+      { v: "organic", label: "自己搜到 / 看到内容" },
+      { v: "paid", label: "广告" },
+    ],
+    accessCode: "邀请码",
+    accessCodeHint: "— 仅受邀申请需要",
+    screenCrisis: "你目前是否处于急性心理危机（如自伤念头、剧烈恐慌）中？",
+    screenRestricted:
+      "你要问的，是否属于医疗、心理治疗、法律、移民、投资或生育方面的专业建议？",
+    yes: "是",
+    no: "否",
+    acks: [
+      { key: "ageConfirmed", label: "我已年满 18 岁。" },
+      {
+        key: "priceAcknowledged",
+        label: "我了解首批完整咨询费用为 US$388，US$49 定金会全额计入服务费。",
+      },
+      {
+        key: "frameworkAccepted",
+        label: "我理解八字在这里是一种传统解释框架，不保证结果。",
+      },
+      {
+        key: "agencyAccepted",
+        label: "我会自行作出决定；判读是一个参考角度，不是指令。",
+      },
+      {
+        key: "scopeAccepted",
+        label: "我了解本服务不提供医疗、心理健康、法律、移民、投资或生育专业意见。",
+      },
+      {
+        key: "softwareDisclosureAcknowledged",
+        label: "我知悉最终判读会经过知几的实质性人工审核；软件用途会披露，我的资料默认不用于训练模型。",
+      },
+      { key: "privacyConsent", label: "我了解完整隐私说明会在付款开放前提供；当前关闭状态下，本表不会被读取或保存。" },
+      { key: "termsAccepted", label: "我了解完整服务条款会在付款开放前提供；当前不能提交付款。" },
+      {
+        key: "depositPolicyAccepted",
+        label: "我了解完整受理与退款规则会在付款开放前公布；定金计入正式服务，无法按公布规则受理则原路退还。",
+      },
+      {
+        key: "selfOnlyDataConfirmed",
+        label: "我提交的信息只关于我本人，不含未成年人或第三方的资料。",
+      },
+    ],
+    marketing: "邮件更新目前未开放。",
+    required: "必填",
+    submit: "确认资格并继续",
+    submitting: "正在提交…",
+    priceLine: "下一步费用：US$49 受理与校准定金；正式受理后全额计入首批咨询费用 US$388。",
+    gateNote: "付款目前保持关闭。开放前，方法说明、受理与退款规则、隐私条款和运营门槛会完整公布。",
+    errors: {
+      missing: "请完成所有必填项与必要的确认。",
+      validation: "有一项信息未通过校验，请检查后重试。",
+      declined: "根据这些基本信息，这件事目前不在知几的受理范围内。没有扣款，也不需要补充个人经历。",
+      declinedReasons: {
+        minor_or_age_unconfirmed: "试点仅面向已确认年满 18 岁的申请人。",
+        unsupported_country: "试点目前仅在美国与加拿大受理。",
+        location_not_enabled: "你所在的地区尚未开放受理。",
+        decision_not_within_90_days: "试点优先受理 90 天内要定的事——时机到了欢迎再来。",
+        price_not_acknowledged: "进入试点需要确认了解 US$388 的创始价。",
+        required_acknowledgement_missing: "尚有必要的确认未勾选。",
+        acute_crisis:
+          "你现在更需要的是即时的专业支持，而不是一次命理咨询。若在美国或加拿大，可拨打或发送短信 988（Suicide & Crisis Lifeline）。",
+        restricted_advice:
+          "这类问题请咨询相应领域的执业专业人士——医疗、法律、移民、投资等不在本服务范围内。",
+        third_party_or_minor_data: "试点只受理关于你本人的申请。",
+      },
+      accessDenied: "邀请码无效。请核对你收到的邀请信息。",
+      pilotClosed: "本批试点已满或暂未开放。你的申请未被提交，也没有任何扣款。",
+      checkoutExpired: "这次支付会话已过期。请重新提交申请。",
+      checkoutUnavailable: "支付暂不可用，没有产生扣款。请稍后再试；若问题持续，请通过邀请邮件联系我们。",
+      conflict: "这份申请似乎已提交过。若你修改了内容，请刷新页面后重新填写。",
+      tooLarge: "提交内容过长，请缩短后重试。",
+      badContentType: "提交格式异常，请刷新页面后重试。",
+      network: "网络异常，请稍后重试。你的定金不会被重复扣取。",
+    },
+  },
+  en: {
+    back: "← Back",
+    eyebrow: "Invited consultation request",
+    h1: "First, confirm that the decision is within scope",
+    lead: "If you have received an invitation, start with this basic eligibility check. It does not ask for birth data or your personal story. Deposit and detailed intake come only after acceptance.",
+    noSensitive:
+      "Do not enter birth dates, personal history, health or financial details, or information about anyone else. If accepted, required information is collected separately after its purpose and retention are explained.",
+    sectionBasics: "Contact and location",
+    sectionDecision: "Decision scope",
+    sectionScreen: "Service boundaries",
+    sectionConsent: "Before you submit",
+    email: "Email",
+    emailHint: "— used only to contact you about this application",
+    country: "Country",
+    countries: [
+      { v: "US", label: "United States" },
+      { v: "CA", label: "Canada" },
+      { v: "OTHER", label: "Other" },
+    ],
+    region: "State / Province",
+    regionPlaceholder: "e.g. California / Ontario",
+    city: "City",
+    cityPlaceholder: "e.g. Los Angeles / Toronto",
+    decisionType: "Type of decision",
+    decisionTypes: [
+      { v: "career", label: "Career / offer" },
+      { v: "relocation", label: "Stay / relocate" },
+      { v: "founder", label: "Founding / key business" },
+      { v: "relationship", label: "Relationship" },
+      { v: "family", label: "Family" },
+      { v: "other", label: "Other" },
+    ],
+    decisionWindow: "When must it be decided?",
+    decisionWindows: [
+      { v: "within_30_days", label: "Within 30 days" },
+      { v: "within_90_days", label: "Within 90 days" },
+      { v: "later", label: "Later" },
+      { v: "unsure", label: "Unsure" },
+    ],
+    friendGraph: "How did you find Zhiji? (optional)",
+    friendGraphs: [
+      { v: "unknown", label: "Prefer not to say / other" },
+      { v: "direct_friend", label: "Someone the Zhiji team knows directly" },
+      { v: "client_referral", label: "Client referral" },
+      { v: "community", label: "Community" },
+      { v: "organic", label: "Found it myself" },
+      { v: "paid", label: "An ad" },
+    ],
+    accessCode: "Invitation code",
+    accessCodeHint: "— required for invited applications",
+    screenCrisis:
+      "Are you currently in acute crisis (e.g. thoughts of self-harm, severe panic)?",
+    screenRestricted:
+      "Is your question a request for medical, mental-health, legal, immigration, investment, or fertility advice?",
+    yes: "Yes",
+    no: "No",
+    acks: [
+      { key: "ageConfirmed", label: "I am 18 or older." },
+      {
+        key: "priceAcknowledged",
+        label: "I understand the complete consultation costs US$388 for the initial cohort, with the US$49 deposit credited in full.",
+      },
+      {
+        key: "frameworkAccepted",
+        label: "I understand BaZi is used here as a traditional interpretive framework and does not guarantee an outcome.",
+      },
+      {
+        key: "agencyAccepted",
+        label: "I remain responsible for the decision. The brief offers another perspective, not an instruction.",
+      },
+      {
+        key: "scopeAccepted",
+        label: "I understand the boundaries: no medical, mental-health, legal, immigration, investment, or fertility advice.",
+      },
+      {
+        key: "softwareDisclosureAcknowledged",
+        label: "I understand that Zhiji completes a substantive human review of the final interpretation, software use is disclosed, and my data is not used for model training by default.",
+      },
+      { key: "privacyConsent", label: "I understand the complete privacy notice will be available before payment opens. While the pilot is closed, this form is not read or stored." },
+      { key: "termsAccepted", label: "I understand the complete service terms will be available before payment opens. Payment cannot currently be submitted." },
+      {
+        key: "depositPolicyAccepted",
+        label: "I understand the complete acceptance and refund rule will be published before payment opens. The deposit is credited to the engagement, or returned if the case cannot proceed under that rule.",
+      },
+      {
+        key: "selfOnlyDataConfirmed",
+        label: "Everything I submit is about me only — no minors, no third parties.",
+      },
+    ],
+    marketing: "Email updates are not currently offered.",
+    required: "required",
+    submit: "Confirm eligibility and continue",
+    submitting: "Submitting…",
+    priceLine: "Next-step fee: a US$49 case assessment deposit, credited in full toward the US$388 initial-cohort consultation.",
+    gateNote: "Payment is currently closed. The method disclosure, acceptance and refund rules, privacy terms, and operating gates will be published before it opens.",
+    errors: {
+      missing: "Please complete all required fields and confirmations.",
+      validation: "One of the fields didn't pass validation — please check and retry.",
+      declined: "Based on these basic details, the decision is not currently within Zhiji's scope. Nothing was charged, and no personal history is needed.",
+      declinedReasons: {
+        minor_or_age_unconfirmed: "The pilot is only open to confirmed adults (18+).",
+        unsupported_country: "The pilot currently accepts cases in the US and Canada only.",
+        location_not_enabled: "Your area isn't enabled for the pilot yet.",
+        decision_not_within_90_days: "The pilot prioritizes decisions due within 90 days — you're welcome back when the timing is real.",
+        price_not_acknowledged: "The pilot requires acknowledging the US$388 founding price.",
+        required_acknowledgement_missing: "A required acknowledgement is missing.",
+        acute_crisis:
+          "What you need right now is immediate professional support, not a consultation. In the US or Canada, call or text 988 (Suicide & Crisis Lifeline).",
+        restricted_advice:
+          "Questions like this belong with a licensed professional — medical, legal, immigration, and investment advice are outside this service.",
+        third_party_or_minor_data: "The pilot accepts applications about yourself only.",
+      },
+      accessDenied: "That access code isn't valid. Please check your invitation.",
+      pilotClosed: "This pilot batch is full or not yet open. Your application was not submitted and nothing was charged.",
+      checkoutExpired: "That payment session expired. Please submit the application again.",
+      checkoutUnavailable: "Payment is temporarily unavailable and nothing was charged. Try again later; if the problem continues, contact us through your invitation email.",
+      conflict: "This application looks like it was already submitted. If you changed something, refresh the page and fill it in again.",
+      tooLarge: "The submission is too large — please shorten it and retry.",
+      badContentType: "The submission format was rejected — refresh the page and retry.",
+      network: "Network error — please try again shortly. Your deposit will not be charged twice.",
+    },
+  },
+};
+
+// 定金支付状态页（只读；由 /api/checkout/status 轮询而来）
+export const PILOT_STATUS: Record<
+  Lang,
+  {
+    checking: string;
+    pendingH: string;
+    pendingLead: string;
+    paidH: string;
+    paidLead: string;
+    paidNext: { k: string; v: string }[];
+    refundedH: string;
+    refundedLead: string;
+    notFoundH: string;
+    notFoundLead: string;
+    unavailableH: string;
+    unavailableLead: string;
+    contact: string;
+    home: string;
+  }
+> = {
+  zh: {
+    checking: "正在核对支付状态…",
+    pendingH: "支付仍在处理中",
+    pendingLead:
+      "这个页面会自动更新。你也可以稍后回来查看，不需要重新支付。",
+    paidH: "定金已收到。",
+    paidLead:
+      "US$49 受理与校准定金已确认。正式受理后会全额计入 US$388 服务费；若按公布规则无法继续，将原路退还。",
+    paidNext: [
+      { k: "确认邮件", v: "系统会发送案件编号与当前状态。" },
+      { k: "下一步说明", v: "知几案例团队会联系你，说明资料用途、服务范围与受理规则。" },
+      { k: "资料收集", v: "出生信息与具体问题到那时才会单独收集。" },
+    ],
+    refundedH: "定金已退还",
+    refundedLead: "这笔定金已按预定流程退还。若有疑问，回复你收到的邮件即可。",
+    notFoundH: "没有找到这笔支付",
+    notFoundLead: "这个链接没有对应的支付记录。若你刚完成付款，请稍候刷新，或通过确认邮件联系我们。",
+    unavailableH: "状态暂时无法核对",
+    unavailableLead: "支付状态服务暂时不可用。请稍后刷新——你不会被重复扣款。",
+    contact: "如有疑问，请回复确认邮件并保留案件编号。",
+    home: "返回首页",
+  },
+  en: {
+    checking: "Checking payment status…",
+    pendingH: "Payment is still processing",
+    pendingLead:
+      "This page updates automatically. You can also return later; there is no need to pay again.",
+    paidH: "Deposit received.",
+    paidLead:
+      "Your US$49 case assessment deposit is confirmed. Once accepted, it is credited in full toward the US$388 fee. If the case cannot proceed under the published rule, it is returned to the original payment method.",
+    paidNext: [
+      { k: "Confirmation email", v: "The system sends your case number and current status." },
+      { k: "Next-step explanation", v: "Zhiji will explain data use, service scope, and the acceptance rule." },
+      { k: "Detailed intake", v: "Birth information and your question are collected separately at that point." },
+    ],
+    refundedH: "Deposit refunded",
+    refundedLead: "This deposit has been returned under the stated process. Questions? Just reply to the email you received.",
+    notFoundH: "Payment not found",
+    notFoundLead: "No payment record matches this link. If you just paid, wait a moment and refresh — or reply to your confirmation email.",
+    unavailableH: "Status temporarily unavailable",
+    unavailableLead: "The status service is temporarily unavailable. Refresh in a moment — you will not be charged twice.",
+    contact: "If you have a question, reply to the confirmation email and keep your case number in the thread.",
+    home: "Back to home",
+  },
+};
+
+// /free —— 已改为「试点说明」页：不收集任何信息
+export const PILOT_EXPLAINER: Record<
+  Lang,
+  {
+    back: string;
+    eyebrow: string;
+    h1: string;
+    lead: string;
+    steps: { k: string; v: string }[];
+    note: string;
+    cta: string;
+  }
+> = {
+  zh: {
+    back: "← 返回",
+    eyebrow: "服务流程",
+    h1: "从受邀申请到 90 天复盘",
+    lead: "目前只接受受邀申请。每一步都说明要收什么资料、由谁完成，以及什么时候可以停止。",
+    steps: [
+      { k: "一 · 范围确认", v: "只确认地区、决定类型与时间；不收出生信息或具体经历。" },
+      { k: "二 · 受理定金", v: "US$49。正式受理后计入 US$388 服务费；无法按公布规则继续则原路退还。" },
+      { k: "三 · 资料与方法", v: "说明用途和保存方式后，才收出生时间、地点与一个具体问题。" },
+      { k: "四 · 历史核对", v: "用已发生的事实检查排盘资料与解释是否适用；这不是准确率证明。" },
+      { k: "五 · 判读与面谈", v: "交付书面判读，并完成一次 60 分钟私人面谈。" },
+      { k: "六 · 澄清与复盘", v: "14 天内处理相关澄清；30/90 天后记录有用之处与需要修正的假设。" },
+    ],
+    note: "知几不提供免费盲测，也不会为了获客先收出生信息。没有邀请码，可以先查看演示判读与完整费用说明。",
+    cta: "已有邀请，开始申请",
+  },
+  en: {
+    back: "← Back",
+    eyebrow: "Service process",
+    h1: "From invited application to the 90-day review",
+    lead: "Zhiji currently accepts invited applications only. Each step states what information is collected, who does the work, and where the engagement can stop.",
+    steps: [
+      { k: "1 · Scope check", v: "Location, decision type, and timing only. No birth data or personal history." },
+      { k: "2 · Case assessment deposit", v: "US$49. Credited toward the US$388 fee; returned if the case cannot proceed under the published rule." },
+      { k: "3 · Data and method", v: "Birth time, location, and one question are collected only after purpose and retention are explained." },
+      { k: "4 · Historical check", v: "Past facts are used to check the source data and whether the interpretation is useful—not to claim an accuracy rate." },
+      { k: "5 · Brief and consultation", v: "A written decision brief followed by a 60-minute private consultation." },
+      { k: "6 · Clarification and review", v: "Related clarification for 14 days, then 30/90-day reviews of what helped and what needs revision." },
+    ],
+    note: "Zhiji does not offer a free blind reading or collect birth data as a lead magnet. Without an invitation, you can still review the illustrative brief and complete fee structure.",
+    cta: "Have an invitation? Apply",
+  },
+};
+
+// 首页 band —— 试点入口（替代旧免费盲测转化带）
+export const HOME_PILOT_BAND: Record<Lang, { band: string; cta: string }> = {
+  zh: {
+    band: "目前仅接受受邀申请。提交前，可以先看完整流程、费用与资料边界。",
+    cta: "了解流程",
+  },
+  en: {
+    band: "Zhiji currently accepts invited applications only. Review the process, fees, and data boundaries before applying.",
+    cta: "Review the process",
+  },
+};
+
+// 卷终 —— 安静收尾（订阅表单已按试点合规要求移除）
+export const CLOSING: Record<Lang, { h: string; body: string; cta: string }> = {
+  zh: {
+    h: "等问题具体了，再来。",
+    body: "如果你还没有明确选项，或决定并不在未来 90 天内，现在不需要申请。知几适合一件已经摆在面前、值得认真梳理的事。",
+    cta: "已有邀请，开始申请",
+  },
+  en: {
+    h: "Come when the question is concrete.",
+    body: "If you do not yet have clear options—or the decision is not due within 90 days—there is no reason to apply now. Zhiji is for a decision already in front of you.",
+    cta: "Have an invitation? Apply",
+  },
+};
+
+// 页眉导航
+export const HEADER: Record<Lang, { free: string; ask: string; about: string }> = {
+  zh: { free: "服务流程", ask: "受邀申请", about: "方法与责任" },
+  en: { free: "Process", ask: "Invited application", about: "Method & accountability" },
+};
+
+// 页脚
+export const FOOTER: Record<
+  Lang,
+  { tagline: string; legal: string; rights: string; nav: { label: string; href: string }[] }
+> = {
+  zh: {
+    tagline: "围绕一件重大决定的私人八字咨询。",
+    legal:
+      "八字在这里是一种传统解释框架，不保证结果，也不代替专业意见。决定权在你。",
+    rights: "© 2026 知几 Zhiji",
+    nav: [
+      { label: "服务流程", href: "/free" },
+      { label: "受邀申请", href: "/ask" },
+      { label: "方法与责任", href: "/#about" },
+    ],
+  },
+  en: {
+    tagline: "Private BaZi consultation for one consequential decision.",
+    legal:
+      "BaZi is used here as a traditional interpretive framework. It does not guarantee an outcome or replace professional advice. The decision remains yours.",
+    rights: "© 2026 Zhiji",
+    nav: [
+      { label: "Process", href: "/free" },
+      { label: "Invited application", href: "/ask" },
+      { label: "Method & accountability", href: "/#about" },
+    ],
+  },
+};
+
+// 方法与责任（公开责任归于知几的流程与记录，不塑造个人大师人设）
+export const TRUST: Record<
+  Lang,
+  {
+    eyebrow: string;
+    h: string;
+    body: string;
+    points: { h: string; p: string }[];
+    sign: string;
+  }
+> = {
+  zh: {
+    eyebrow: "方法与责任",
+    h: "每一份判断，都留下可追溯的责任记录",
+    body: "知几不公开个人姓名或照片，也不虚构“大师”人设。每份交付都经过实质性人工审核，并记录案例编号、方法版本、审核日期与修订历史。软件参与哪些环节，也会如实说明。",
+    points: [
+      { h: "人工审核", p: "盘面输入、解释、书面简报与关键修改都必须经过人工复核，不能把自动生成结果直接交付给客户。" },
+      { h: "方法可追溯", p: "排盘选择、关键假设、软件用途、不确定之处与报告版本会保留在案例记录中。" },
+      { h: "允许质疑与修正", p: "客户可以要求解释依据；30/90 天复盘会记录需要修正的地方，而不只记录符合之处。" },
+    ],
+    sign: "— 知几案例审核",
+  },
+  en: {
+    eyebrow: "Method & accountability",
+    h: "Every interpretation leaves an accountable record",
+    body: "Zhiji does not publish a personal name or photograph, and it does not invent a master persona. Every delivery receives substantive human review and records a case number, method version, review date, and revision history. Software involvement is disclosed by task.",
+    points: [
+      { h: "Human review", p: "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Automated output is never delivered as final judgment." },
+      { h: "Traceable method", p: "Calculation choices, key assumptions, software use, uncertainty, and report versions remain in the case record." },
+      { h: "Open to correction", p: "Clients can ask for the reasoning. The 30/90-day review records what needs revision as well as what helped." },
+    ],
+    sign: "— Zhiji case review",
+  },
+};
+
+// 演示样例（装裱的判读）—— 明确标注为演示，不声称真实客户案例
+export const SAMPLE: Record<
+  Lang,
+  {
+    eyebrow: string;
+    h: string;
+    lead: string;
+    tag: string;
+    caseH: string;
+    q: string;
+    meta: string;
+    reading: { k: string; v: string }[];
+    falsifyLabel: string;
+    falsify: string;
+  }
+> = {
+  zh: {
+    eyebrow: "交付示例",
+    h: "先看文件怎么写，再决定值不值得谈。",
+    lead: "下面是一份虚构演示，用来展示判读如何区分盘面观察、现实条件、关键假设与行动边界。它不是客户证明，也不代表准确率。",
+    tag: "虚构演示 · 不对应任何真实个案",
+    caseH: "演示：两份 offer 之间",
+    q: "「大厂稳定的 offer，还是加入一个早期团队？我不想再赌错一次。」",
+    meta: "虚构情境 · 仅展示交付结构",
+    reading: [
+      {
+        k: "现实条件",
+        v: "选择不只关乎兴趣：现金储备、身份安排、团队质量、工作边界与可逆性都会改变结论。判读不会把这些事实藏在盘面之后。",
+      },
+      {
+        k: "盘面观察",
+        v: "这份示意盘把注意力放在「借助成熟资源」与「独立承担不确定性」之间的张力。它提供一个观察角度，不直接决定去哪一家公司。",
+      },
+      {
+        k: "关键假设",
+        v: "只有当过去几年确实反复出现「承担过多、资源不足」的模式时，这个观察才值得进入选项比较；否则需要重看。",
+      },
+      {
+        k: "低后悔行动",
+        v: "先向两边索取同一组事实：直属负责人、前三个月目标、退出成本与身份影响。信息补齐后，再比较哪条路径更符合当下承受能力。",
+      },
+    ],
+    falsifyLabel: "哪些事实会改变或推翻这版判断",
+    falsify:
+      "如果当事人拥有充足现金缓冲、早期团队已有稳定收入，或过去在低资源环境里持续表现更好，风险比较就会改变。正式判读必须把这些反例写出来，而不是等结果出现后再解释。",
+  },
+  en: {
+    eyebrow: "Delivery example",
+    h: "Read the document before deciding whether the service is worth a conversation.",
+    lead: "This fictional walkthrough shows how a brief separates chart observations, real-world constraints, key assumptions, and action boundaries. It is not client proof and says nothing about accuracy.",
+    tag: "Fictional walkthrough · created for demonstration",
+    caseH: "Illustration: choosing between two offers",
+    q: "“A stable offer at a big company, or joining an early-stage team? I can't afford to bet wrong again.”",
+    meta: "Fictional scenario · delivery structure only",
+    reading: [
+      {
+        k: "Real-world constraints",
+        v: "This choice is not only about interest. Cash runway, immigration constraints, team quality, working boundaries, and reversibility can all change the conclusion. The brief keeps those facts separate from the chart.",
+      },
+      {
+        k: "Chart observation",
+        v: "In this illustrative chart, the useful tension is between drawing on established resources and carrying uncertainty independently. That is one interpretive lens—not an instruction about which employer to choose.",
+      },
+      {
+        k: "Key assumption",
+        v: "The observation matters only if recent history also shows a pattern of taking on responsibility without enough support. If that pattern is absent, the interpretation needs revision.",
+      },
+      {
+        k: "Low-regret next step",
+        v: "Ask both employers for the same facts: direct manager, first-quarter expectations, exit cost, and immigration impact. Compare the options again once those unknowns are reduced.",
+      },
+    ],
+    falsifyLabel: "What would change or invalidate this view",
+    falsify:
+      "The comparison changes if the client has a substantial cash buffer, the early-stage company already has durable revenue, or the client consistently performs better in low-resource settings. A real brief must name those counterexamples before the outcome is known.",
+  },
+};
+
+// 运营承诺 —— 只写现在就能兑现的事（研究认可的操作性承诺）
+export const GUARANTEES: Record<
+  Lang,
+  { eyebrow: string; h: string; items: { k: string; v: string }[] }
+> = {
+  zh: {
+    eyebrow: "服务约定",
+    h: "付款前，你应该能确认这些事",
+    items: [
+      {
+        k: "责任如何记录",
+        v: "每份交付记录案例编号、方法版本、审核日期与修订历史；软件用途写明，最终内容经过实质性人工审核。",
+      },
+      {
+        k: "交付写什么",
+        v: "判读区分盘面观察、现实条件、关键假设与不确定之处；决定权始终在你。",
+      },
+      {
+        k: "定金怎么处理",
+        v: "US$49 受理与校准定金全额计入正式服务；若按公布的受理规则无法继续，原路退还。",
+      },
+      {
+        k: "服务何时结束",
+        v: "60 分钟面谈、14 天有限澄清与 30/90 天复盘写入服务范围，不提供无限聊天。",
+      },
+    ],
+  },
+  en: {
+    eyebrow: "Service terms",
+    h: "What you should be able to verify before paying",
+    items: [
+      {
+        k: "How accountability is recorded",
+        v: "Every delivery records a case number, method version, review date, and revision history. Software use is stated, and the final content receives substantive human review.",
+      },
+      {
+        k: "What the brief contains",
+        v: "The brief separates chart observations, real-world facts, key assumptions, and uncertainty. The decision remains yours.",
+      },
+      {
+        k: "How the deposit works",
+        v: "The US$49 case assessment deposit is credited in full. If we cannot proceed under the published acceptance rule, it is returned to the original payment method.",
+      },
+      {
+        k: "Where the engagement ends",
+        v: "The scope includes a 60-minute consultation, 14 days of related clarification, and 30/90-day reviews—not unlimited chat.",
+      },
+    ],
+  },
+};
+
+// 定金规则一句话 —— 出现在价格与取消页
+export const RISK: Record<Lang, string> = {
+  zh: "US$49 受理与校准定金：正式受理后全额计入 US$388 服务费；若按公布的受理规则无法继续，原路退还。",
+  en: "US$49 case assessment deposit: credited in full toward the US$388 engagement; returned to the original payment method if we cannot proceed under the published acceptance rule.",
+};
+
+// 八字命盘（hero 招牌结构件）—— 示意干支，日柱高亮为「日主 = 你」
+export const CHART: Record<
+  Lang,
+  { caption: string; stem: string; branch: string; self: string; pillars: string[] }
+> = {
+  zh: {
+    caption: "示意排盘 · 仅用于展示判读结构",
+    stem: "天干",
+    branch: "地支",
+    self: "日主 = 日干「甲」 · 你",
+    pillars: ["年", "月", "日", "时"],
+  },
+  en: {
+    caption: "Illustrative chart · delivery structure only",
+    stem: "STEM",
+    branch: "BRANCH",
+    self: "Day Master = 甲 (day stem) · you",
+    pillars: ["YEAR", "MONTH", "DAY", "HOUR"],
+  },
+};

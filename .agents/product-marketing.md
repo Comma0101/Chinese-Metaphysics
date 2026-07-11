@@ -1,12 +1,12 @@
 # Product Marketing Context
 
-*Last updated: 2026-07-10*
+*Last updated: 2026-07-11*
 
 ## Product Overview
 
-**One-liner:** Zhiji is a private, human-reviewed Chinese metaphysics consultation for Chinese professionals navigating one consequential decision.
+**One-liner:** Zhiji is a private, asynchronous, human-reviewed Chinese metaphysics consultation delivered in writing for Chinese professionals navigating one consequential decision.
 
-**What it does:** Zhiji combines deterministic calculation, historical calibration, a concrete decision intake, a human-reviewed bilingual brief, a private consultation, and 30/90-day outcome review. BaZi is the default structural framework; Zi Wei Dou Shu may be included when birth-time confidence and the question make it useful. The methods provide a culturally grounded interpretive lens without claiming scientific proof or replacing professional advice.
+**What it does:** Zhiji combines deterministic calculation, historical calibration, a concrete decision intake, a human-reviewed bilingual written decision brief, one consolidated written follow-up submitted within 14 days about the original brief, and written 30/90-day outcome reviews. Material corrections are issued as a new version with the reason and date recorded; a new decision requires a separately scoped case. BaZi is the default structural framework; Zi Wei Dou Shu may be included when birth-time confidence and the question make it useful. The methods provide a culturally grounded interpretive lens without claiming scientific proof or replacing professional advice. The initial service has no meeting, call, live session, or other synchronous component.
 
 **Product category:** Private Chinese metaphysics consultation for one consequential decision / 私人中国命理咨询（重大决定）. Public method language should say BaZi is primary and Zi Wei Dou Shu may be used where appropriate; exact method specifications are not yet approved.
 
@@ -14,7 +14,7 @@
 
 **Public accountability model:** Zhiji does not publish a practitioner's real name or photograph and does not invent a master persona. Every delivered interpretation must receive substantive human review and record a case ID, stable reviewer-role ID, method version, review date, software involvement, and revision history. The lawful seller identity and the internal identity of each reviewer remain available where contracts, payment processing, tax, security, or law require them.
 
-**Business model:** One-off premium consultations. Working hypotheses: US$49 credited/refundable calibration deposit, US$388 founding core, US$488 target core. No subscription initially.
+**Business model:** One-off premium asynchronous written consultations. Working hypotheses: US$49 credited/refundable calibration deposit, US$388 founding core, US$488 target core. The fee is for the written analysis, substantive human review, case provenance, one consolidated written follow-up, and delayed written review—not access time. No subscription initially.
 
 **Current state:** The repository is a smoke-test MVP, not production-ready infrastructure or the final offer.
 
@@ -30,7 +30,7 @@
 - Surface timing, recurring patterns, blind spots, uncertainty, and decision boundaries.
 - Reduce rumination without manufacturing certainty.
 - Discuss migration, family, identity, and private choices bilingually and discreetly.
-- Preserve a durable record and review the decision after 30/90 days.
+- Preserve a durable written record and review the decision in writing after 30/90 days.
 
 **Initial geographies:** U.S. West Coast acquisition hypothesis, followed by Toronto/Vancouver. Operating location and customer geography require separate legal review.
 
@@ -47,7 +47,7 @@
 - conflicting charts and hidden calculation assumptions;
 - generic AI-like prose and commodity long reports;
 - remedy, object, fear, and minute-based upsells;
-- no named accountable reviewer;
+- no durable human-review record or correction provenance;
 - immediate testimonials instead of delayed outcomes;
 - poor records, deletion, billing, privacy, and follow-up;
 - professional coaches may lack cultural fluency while BaZi practitioners may lack decision structure.
@@ -58,7 +58,7 @@
 
 **Direct:** Premium BaZi practitioners and firms such as Master Sean Chan, Joey Yap, Way Fengshui, Master So, and independent readers. They benefit from authority and cultural comprehension but often lack transparent calibration and delayed outcome review.
 
-**Automated:** FateTell, Deep Oracle, LingYuan, calculators, practitioner software, and general AI. They offer speed and price compression but lack named accountability and may create calculation, disclosure, or privacy concerns.
+**Automated:** FateTell, Deep Oracle, LingYuan, calculators, practitioner software, and general AI. They offer speed and price compression but lack accountable human review and may create calculation, disclosure, or privacy concerns.
 
 **Marketplaces:** Fiverr, Etsy, psychic/reader marketplaces, and consultation platforms. They prove transactions but create price competition, variable quality, and dependency incentives.
 
@@ -75,28 +75,28 @@ The detailed source of record is `docs/research/data/competitor-matrix.csv`.
 - historical calibration that records misses and ambiguity;
 - one concrete decision and deadline;
 - Zhiji case-review provenance: case ID, reviewer-role ID, method version, review date, and revision history;
-- bilingual private delivery;
+- bilingual private written delivery;
 - no-remedy/no-affiliate firewall;
 - honest AI task disclosure;
 - client-controlled versioned records;
-- structured 30/90-day outcome review.
+- structured written 30/90-day outcome review.
 
-**How we do it differently:** Chinese metaphysics remains visible, but the service is organized around a real decision, transparent reasoning, bounded scope, client agency, and later review. Public trust rests on inspectable process and substantive human review rather than a personality-led master brand.
+**How we do it differently:** Chinese metaphysics remains visible, but the service is organized around a real decision, transparent written reasoning, bounded scope, client agency, and later written review. Public trust rests on inspectable process and substantive human review rather than a personality-led master brand. The initial product is fully asynchronous: it does not include a meeting, call, live session, or open-ended chat.
 
 **Why customers choose us:** Cultural fluency plus an accountable modern process—not mysticism disguised as certainty and not automated prose disguised as expertise. Whether premium customers will trust a service without a public practitioner identity remains unvalidated.
 
-**Potential moat:** Founder reputation and referrals first; then a consented longitudinal calibration/outcome corpus and practitioner QA. Design and AI alone are not moats.
+**Potential moat:** Zhiji's delivery quality and referrals first; then a consented longitudinal calibration/outcome corpus and reviewer QA. Design and AI alone are not moats.
 
 ## Objections
 
 | Objection | Response |
 |---|---|
 | “Why trust a brand that does not publish a practitioner identity?” | Do not invent personal authority. Show the method, human-review controls, case provenance, a complete sample, corrections, limits, and delayed review. Treat conversion at the premium price as an open validation question. |
-| “ChatGPT can generate this.” | The canonical chart is deterministic; the founder owns interpretation, asks clarifying questions, and reviews outcomes. Disclose software’s actual role. |
+| “ChatGPT can generate this.” | The canonical chart is deterministic; Zhiji applies substantive human review, records the reasoning and provenance, responds once to a consolidated written follow-up about the original brief, and reviews outcomes later. Disclose software’s actual role. |
 | “This is superstition or pseudoscience.” | Do not claim science. Present BaZi as a traditional cultural interpretive framework and keep the client’s decision and professional advice primary. |
 | “Will you sell remedies or frighten me?” | No objects, rituals, fear, affiliate remedies, or repeated-answer monetization. |
 | “What happens to my data?” | Explain concrete minimization, vendors, access, correction, export, retention, deletion, and incident controls. Do not make absolute promises. |
-| “Why US$388–488?” | Fixed human scope, transparent method, private signed artifact, consultation, bounded clarification, and delayed review; validate price with real paid cohorts. |
+| “Why US$388–488?” | Fixed analytical scope, transparent method, a private human-reviewed written artifact, one consolidated written follow-up, and written delayed reviews—not meeting time. Validate price with real paid cohorts. |
 
 **Anti-persona:** A person seeking guaranteed future outcomes, luck-changing remedies, professional medical/legal/financial instructions, repeated reassurance, entertainment rituals, or an anonymous instant AI reading.
 
@@ -104,7 +104,7 @@ The detailed source of record is `docs/research/data/competitor-matrix.csv`.
 
 **Push:** Conflicting charts, generic AI, opaque authority, remedy upsells, missing records, billing distrust, and no delayed accountability.
 
-**Pull:** Substantive human review, cultural fluency, inspectable reasoning, case provenance, no-remedy stance, privacy, fixed scope, client agency, and 30/90-day review.
+**Pull:** Substantive human review, cultural fluency, inspectable written reasoning, case provenance, no-remedy stance, privacy, fixed scope, client agency, and written 30/90-day review.
 
 **Habit:** Family-referred masters, free calculators, general AI, friends/family, and delaying the decision.
 
@@ -129,7 +129,7 @@ The detailed source of record is `docs/research/data/competitor-matrix.csv`.
 - “very expensive… for things that AI can tell us”
 - ratings based on “initial feelings… not necessarily accuracy”
 
-**Words to use:** Private BaZi consultation; 私人八字咨询; 人生节点; timing; recurring patterns; risk posture; decision boundaries; historical calibration; assumptions; uncertainty; human-reviewed and signed; the decision remains yours.
+**Words to use:** Private BaZi consultation; 私人八字咨询; 人生节点; timing; recurring patterns; risk posture; decision boundaries; historical calibration; assumptions; uncertainty; substantive human review; case provenance; the decision remains yours.
 
 **Words to avoid:** Scientific astrology; AI accurate; exact destiny; guaranteed outcome; 改命; 转运; 化解; 注定; 必然; 100%准确; avert disaster; unlock wealth; inflated regulated-advisor titles.
 
@@ -178,6 +178,7 @@ Do not publish market-size scenarios, competitor list prices, or research thresh
 - Current US$49/99/249 tiers and free blind-test funnel are hypotheses and conflict with the researched premium offer.
 - Current JSON storage and redirect-based payment confirmation are unsuitable for live sensitive cases.
 - Do not promise email, deletion, review, or privacy workflows that are not operational.
+- The initial service is fully asynchronous and written. Do not add or promise meetings, calls, live sessions, voice/video delivery, or unlimited chat.
 - No mainland launch, subscription, native app, marketplace, public AI master, or professional-advice expansion without explicit evidence and specialist review.
 
 ## Source Documents

@@ -36,8 +36,10 @@ Files named `evidence_packet.*` in Downloads are unrelated Bimoism asylum docume
 - Working category: **Private BaZi consultation for major life transitions / 私人八字咨询（重大人生节点）**.
 - Approved method architecture: customers buy one decision case; BaZi is the default structural framework and Zi Wei Dou Shu may be included when birth-time confidence and the question make it useful. Exact schools and calculation rules still require a method specification.
 - “Decision support” describes the benefit; it must not hide the BaZi mechanism or imply regulated professional advice.
-- Learn through a human-led concierge service, then productize deterministic calculation, secure case operations, signed reports, and outcome review.
+- The initial service is fully asynchronous and written. It includes a human-reviewed written decision brief, one consolidated written follow-up submitted within 14 days about the original brief, versioned material corrections, and written 30/90-day reviews. It includes no meeting, call, live session, voice/video delivery, or other synchronous component. New decisions are outside the follow-up scope.
+- Learn through a human-reviewed asynchronous written service, then productize deterministic calculation, secure case operations, provenance-bearing reports, bounded written follow-up, and written outcome review.
 - Working price hypotheses are a US$49 credited/refundable calibration deposit, US$388 founding core, and US$488 target core. These are test cells, not validated prices.
+- Price explanations must be based on written analysis, substantive human review, case provenance, bounded written follow-up, and delayed written review—not access time.
 - No subscription, daily oracle, generic AI master, public feed, marketplace, native app, or mainland launch before explicit evidence gates.
 
 ## Evidence Discipline
@@ -52,7 +54,7 @@ Files named `evidence_packet.*` in Downloads are unrelated Bimoism asylum docume
 
 ## Current Product Gap
 
-The codebase now contains the Supabase/Postgres repository, webhook-authoritative payment state, durable notification outbox, and founder operations for qualification, withdrawal, redaction, and retention. Payment remains correctly closed. Before accepting real sensitive cases, the release environment still needs migrations and RLS verified against an isolated database, backup/restore and access controls, secure client delivery, the complete 30/90-day operating workflow, privacy/service terms, current legal and processor clearance, and an end-to-end rehearsal.
+The codebase now contains the Supabase/Postgres repository, webhook-authoritative payment state, durable notification outbox, and founder operations for qualification, withdrawal, redaction, and retention. Payment remains correctly closed. Before accepting real sensitive cases, the release environment still needs migrations and RLS verified against an isolated database, backup/restore and access controls, secure client delivery, the complete one-round written follow-up and written 30/90-day operating workflow, privacy/service terms, current legal and processor clearance, and an end-to-end rehearsal.
 
 ## Updating This Library
 

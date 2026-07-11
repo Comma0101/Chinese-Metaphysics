@@ -62,10 +62,11 @@ export const T: Record<Lang, Chrome> = {
       s2lead: "知几适合这样的时刻：选项已经摆在你面前，越想却越难定——而它不能一直拖，要在 90 天内定下来。",
       isnotLabel: "常见的人生节点",
       isnot: [
-        "两份 offer 之间，哪一份更适合现在的你",
-        "留在海外、回国，或迁往另一座城市",
-        "加入、离开，或继续承担一个创业项目",
-        "关系与家庭安排的下一步",
+        "该接哪份工作，还是趁现在换一条路",
+        "留下、回去，还是去另一座城市重新开始",
+        "这段关系往前走，还是这一步太早、太晚",
+        "家人的期待，和你想走的路，怎么摆到一起",
+        "辞掉稳定的工作去搏一件事，是现在，还是再等等",
       ],
       isLabel: "这次咨询会做什么",
       is: [
@@ -144,10 +145,11 @@ export const T: Record<Lang, Chrome> = {
         "Zhiji is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can't keep waiting past 90 days.",
       isnotLabel: "Common decision points",
       isnot: [
-        "Choosing between two offers or career paths",
-        "Staying abroad, returning, or relocating",
-        "Joining, leaving, or continuing a founder role",
-        "Taking the next step in a relationship or family decision",
+        "Which job to take — or whether to change direction entirely, now",
+        "Stay, go back, or start over in another city",
+        "Whether this relationship moves forward, or the timing is too early or too late",
+        "Your family's expectations and the path you actually want — how they fit together",
+        "Leaving a stable job to bet on something of your own — now, or wait",
       ],
       isLabel: "What the consultation does",
       is: [

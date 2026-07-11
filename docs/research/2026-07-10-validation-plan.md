@@ -1,5 +1,7 @@
 # Zhiji / 知几 — 90-Day Validation Plan
 
+> **Superseding delivery decision — 2026-07-11:** Zhiji's initial service is fully asynchronous and written. The live/60-minute meeting, call, or session was removed. Any such references below are retained only as historical recommendations and are not current operating guidance. See the approved [asynchronous written-delivery design](../plans/2026-07-11-asynchronous-written-delivery-design.md).
+
 ## Objective
 
 Determine whether Zhiji can become a safe, profitable premium productized practice for a narrow North American Chinese-professional segment before significant platform engineering.

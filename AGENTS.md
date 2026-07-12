@@ -106,6 +106,8 @@ Preserve the distinction between facts, inferences, hypotheses, and proposed dec
 <agent-handoff-log>
 # Repo & Agent Handoff — updated 2026-07-11 by Claude/Fable
 
+**➜ START HERE: read `HANDOFF.md` at the repo root first** — it is the single current-state + next-steps map (what's built, decisions, ownership, backlog, operating notes). This log below is the durable detail.
+
 ## Repository facts
 
 - This directory is a standalone git repo pushed to

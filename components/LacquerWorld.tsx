@@ -427,6 +427,7 @@ export function LacquerWorld() {
         cleanup.push(() => { window.removeEventListener("scroll", onScroll); if (pend) window.clearTimeout(pend); });
       } else {
         let running = false;
+        const INTRO = 1.7; // one-shot cinematic entrance, settles into KEYS[0]
         const frame = () => {
           if (disposed || document.hidden) {
             running = false;
@@ -436,7 +437,20 @@ export function LacquerWorld() {
           const dt = Math.min(clock.getDelta(), 0.05);
           const k = 1 - Math.exp(-dt * 3.4); // weighted, frame-rate independent
           state = lerpKey(state, targetKey(), k);
-          apply(state, clock.getElapsedTime(), dt);
+          const el = clock.getElapsedTime();
+          let s = state;
+          if (el < INTRO) {
+            // 入世 — ease in from a softer, wider frame while one raking glint
+            // sweeps the ticks, then hand off to the scroll follow.
+            const p = smooth(el / INTRO);
+            s = {
+              ...state,
+              cam: [state.cam[0], state.cam[1], state.cam[2] + (1 - p) * 2.8] as Vec3,
+              exp: state.exp * (0.66 + 0.34 * p),
+              keyPos: [state.keyPos[0] + (1 - p) * 10, state.keyPos[1], state.keyPos[2]] as Vec3,
+            };
+          }
+          apply(s, el, dt);
         };
         const start = () => {
           if (running || disposed) return;

@@ -26,3 +26,11 @@ test("MotionProvider no longer blanket-fades the monument", async () => {
   assert.match(mp, /:not\(\[data-hero-title\]\)/);
   assert.doesNotMatch(mp, /"\.hero-inner > \*"/);
 });
+
+test("the world has a one-shot cinematic intro in the animated branch only", async () => {
+  const lw = await read("components/LacquerWorld.tsx");
+  assert.match(lw, /INTRO/);
+  assert.match(lw, /el < INTRO/);
+  // the intro lives only in the animated path — reduced-motion still settles plainly
+  assert.match(lw, /if \(reduce\)/);
+});

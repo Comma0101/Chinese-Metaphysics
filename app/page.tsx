@@ -129,7 +129,7 @@ export default function Home({
         </section>
 
         {/* 虚构交付示例 —— 展示格式，不冒充客户证明 */}
-        <section className="section act-paper seam-t" data-act="2">
+        <section className="section act-paper seam-t act-tear" data-act="2">
           <span className="act-num" aria-hidden="true">
             卷二
           </span>

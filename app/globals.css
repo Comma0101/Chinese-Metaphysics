@@ -3510,3 +3510,18 @@ a {
     --ink: 1;
   }
 }
+
+/* ── 撕纸 — the first sheet tears down into place over the world (Cinematic Cut) ──
+   --tear 0→1 is scrubbed by MotionProvider as the section enters; the top-anchored
+   clip unfurls the paper. The inset extends -14px so the deckle edge (.seam-t::before
+   at top:-13px) stays visible at rest. Default 1 (present) for no-JS / reduced-motion. */
+.act-tear {
+  --tear: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .act-tear {
+    /* deckle stays at the top (-14px keeps .seam-t::before); the sheet unrolls
+       downward from that torn edge as --tear 0→1 — the 卷 unfurling over the world */
+    clip-path: inset(-14px 0 calc((1 - var(--tear)) * 62%) 0);
+  }
+}

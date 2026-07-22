@@ -40,3 +40,15 @@ test("the opening travel articulates through a sub-beat (SUB01)", async () => {
   assert.match(lw, /SUB01/);
   assert.match(lw, /i === 0/);
 });
+
+test("the first paper section tears in and is reduced-motion safe", async () => {
+  const [page, css, mp] = await Promise.all([
+    read("app/page.tsx"),
+    read("app/globals.css"),
+    read("components/MotionProvider.tsx"),
+  ]);
+  assert.match(page, /act-paper seam-t act-tear/);
+  assert.match(css, /\.act-tear/);
+  assert.match(css, /prefers-reduced-motion: no-preference[\s\S]*--tear/);
+  assert.match(mp, /--tear/);
+});

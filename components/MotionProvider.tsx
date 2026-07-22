@@ -62,6 +62,17 @@ export function MotionProvider() {
           delay: 0.55,
         });
 
+        // 撕纸 — the first sheet tears down into place over the world on entry
+        const tear = document.querySelector<HTMLElement>(".act-tear");
+        if (tear) {
+          gsap.set(tear, { "--tear": 0 });
+          gsap.to(tear, {
+            "--tear": 1,
+            ease: "none",
+            scrollTrigger: { trigger: tear, start: "top 92%", end: "top 52%", scrub: 0.6 },
+          });
+        }
+
         // 金缮 — the gold seam draws along the crack when the reader reaches it
         const seam = gsap.utils.toArray<SVGPathElement>(".kintsugi .kintsugi-path");
         if (seam.length) {

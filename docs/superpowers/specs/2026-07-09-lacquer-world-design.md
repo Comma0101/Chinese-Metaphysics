@@ -3,6 +3,8 @@
 **Date:** 2026-07-09 · **Owner:** head of product design · **Status:** approved by owner (chat)
 **Scope:** UI/UX only. No backend, payments, marketing copy, or SEO changes.
 
+> **Superseded in part — 2026-07-10:** The 落款/colophon "named-human seal" concept referenced below is replaced by the approved [brand-accountability design](../../plans/2026-07-10-brand-accountability-design.md). Zhiji publishes no real name, personal photograph, or invented practitioner persona — the seal/colophon motif carries case-review provenance (`知几案例审核 · ZJ-R01 · Method version · review date`), not a named individual. The material/world design decisions below remain current.
+
 ## Decision record
 
 - **Carrier decision:** 材质世界 × 文书 — the site is carried by one continuous material world (Igloo Inc model, Awwwards SOTY 2024) plus letterpress-grade document artifacts (Chartogne-Taillet model). Chosen over image-carried (观夏 model) because it requires zero photography assets and builds on what exists (three.js luopan, rice-paper artifacts).

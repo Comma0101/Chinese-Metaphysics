@@ -2,6 +2,8 @@
 
 **Date:** 2026-07-09 · **Status:** approved by owner (chat) · Builds ON TOP of `2026-07-09-lacquer-world-design.md` (world, tablets, kintsugi, certificate, rail all stay).
 
+> **Superseded in part — 2026-07-10:** References below to LXGW WenKai as "the 主理人's hand" (a named practitioner's personal handwriting voice) are replaced by the approved [brand-accountability design](../../plans/2026-07-10-brand-accountability-design.md). The typeface remains the annotation voice, but it represents institutional case-review commentary, not an individual's hand. Zhiji publishes no real name, personal photograph, or invented practitioner persona. The ground-rhythm and type-system decisions below remain current.
+
 ## Owner decisions
 1. **Ground rhythm = lacquer ↔ paper alternation.** Dark where you feel (hero world, 是非, 三步, 价位, 边界/卷终), full-bleed rice-paper daylight where you read (判读+为什么, 关于, 保证书). Documents become the ground, not cards on dark.
 2. **Type voice = 雕宋 + 手写注.** Headlines: Noto Serif SC Black (900) monuments. Annotations/human voice: LXGW WenKai 楷体 (the 主理人's hand). Fraunces Latin display, Newsreader body, Plex Mono data — unchanged.

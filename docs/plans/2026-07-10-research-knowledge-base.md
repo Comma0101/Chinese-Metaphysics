@@ -8,6 +8,8 @@
 
 **Tech Stack:** Markdown, CSV, repository-level `AGENTS.md` guidance.
 
+> **Superseded in part — 2026-07-10:** Any instruction below to record the founder as a named practitioner is replaced by the approved [brand-accountability design](2026-07-10-brand-accountability-design.md). Zhiji publishes no real name, personal photograph, or invented practitioner persona; accountability is recorded as case ID, stable reviewer-role ID (`知几案例审核 · ZJ-R01`), method version, review date, and revision history. The research-preservation architecture below remains current.
+
 ---
 
 ### Task 1: Preserve raw research data

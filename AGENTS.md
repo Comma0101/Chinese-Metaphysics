@@ -166,4 +166,38 @@ Preserve the distinction between facts, inferences, hypotheses, and proposed dec
 - Roadmap of record: `docs/plans/2026-07-11-whats-next-roadmap.md`
   (tracks A–E mapped to the research validation phases; payment stays
   closed; Tracks D/E are explicitly deferred).
+
+## 2026-07-22 audit (Claude, no product/code changes)
+
+Re-verified the whole repo after an 11-day gap using 4 parallel research
+passes (UI layer, backend/data layer, tests, docs-history) plus fresh
+`typecheck`/`build`/`test` runs — all still green. `npm test` is 179 total,
+165 pass, 0 fail, **14 skipped**: every Postgres-integration test skips
+gracefully without `TEST_DATABASE_URL` and is not exercised by a default
+local run.
+
+Corrected two stale claims in `HANDOFF.md`: the newsletter frontend
+(`components/Newsletter.tsx`, unrendered stub) was being conflated with the
+newsletter backend (`/api/subscribe` + `upsertSubscriber`, fully wired,
+DB-backed, just fail-closed by flag); and the font-stack line only named 2
+of the 5 typefaces actually in use. Added an "Architecture map" to
+`HANDOFF.md` §5 (route table, backend request flow, DB schema, feature
+flags) so future sessions don't have to re-derive it from scratch, and
+surfaced backlog items that existed in `docs/plans/` but weren't in
+`HANDOFF.md` §7 (roadmap gap #7, Track C claims-evidence file, the untested
+second migration, the two dead components, the BaZi-only vs. broadened
+category-label mismatch in the frozen Phase-2 test design).
+
+Added the missing brand-accountability superseding note (same pattern as
+the 6 docs already patched 2026-07-10) to 4 docs that never got one:
+`docs/superpowers/specs/2026-07-09-lacquer-world-design.md`,
+`docs/superpowers/specs/2026-07-09-paper-lacquer-design.md`,
+`docs/plans/2026-07-10-research-knowledge-base.md`, and
+`docs/plans/2026-07-10-research-knowledge-base-design.md`. Also added the
+missing async-delivery superseding note to
+`docs/plans/2026-07-10-bilingual-trust-copy-design.md` (it only had the
+brand-accountability one, not the 2026-07-11 async-delivery one).
+
+No strategy, pricing, or scope decision changed. Full detail in
+`HANDOFF.md` §5 and §7.
 </agent-handoff-log>

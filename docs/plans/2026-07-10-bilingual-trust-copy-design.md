@@ -6,6 +6,8 @@
 
 > **Superseded in part — 2026-07-10:** The public named-practitioner biography and photograph requirement in this document is replaced by the approved [brand-accountability design](2026-07-10-brand-accountability-design.md). Zhiji now uses substantive human review, case/reviewer-role provenance, method versions, and correction history without a public personal identity. The customer-language and anti-scam copy principles below remain active.
 
+> **Superseded delivery decision — 2026-07-11:** Zhiji's initial product no longer includes a live or 60-minute consultation. Delivery is asynchronous: a human-reviewed written decision brief, one consolidated written follow-up, and written 30/90-day reviews. References below to a 60-minute session or "one private consultation" as a synchronous meeting are preserved as historical design recommendations and are not current product requirements.
+
 ## Objective
 
 Make Zhiji read like a serious private practice for a specific decision—not a

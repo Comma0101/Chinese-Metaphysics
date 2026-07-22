@@ -3,6 +3,8 @@
 **Date:** 2026-07-10  
 **Status:** Approved in conversation
 
+> **Superseded in part — 2026-07-10:** Any instruction below to record the founder as a named practitioner is replaced by the approved [brand-accountability design](2026-07-10-brand-accountability-design.md). Zhiji publishes no real name, personal photograph, or invented practitioner persona; accountability is recorded as case ID, stable reviewer-role ID (`知几案例审核 · ZJ-R01`), method version, review date, and revision history. The research-preservation architecture below remains current.
+
 ## Goal
 
 Preserve the Zhiji market research inside the project and make its product decisions discoverable to future agents without requiring them to reread a very large raw report.

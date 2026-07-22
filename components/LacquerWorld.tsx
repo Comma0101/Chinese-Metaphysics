@@ -68,6 +68,9 @@ const lerpKey = (a: Key, b: Key, t: number): Key => ({
   heart: lerp(a.heart, b.heart, t),
 });
 
+// mid-beat for the opening travel — a cinematic push-in dip between hero and 是/不是
+const SUB01: Key = { ...lerpKey(KEYS[0], KEYS[1], 0.5), cam: [0, 0.1, 9.2] as Vec3 };
+
 export function LacquerWorld() {
   const mountRef = useRef<HTMLDivElement>(null);
 
@@ -366,8 +369,14 @@ export function LacquerWorld() {
         if (sc >= anchors[n - 1]) return KEYS[n - 1];
         let i = 0;
         while (i < n - 2 && sc > anchors[i + 1]) i++;
-        const u = smooth((sc - anchors[i]) / (anchors[i + 1] - anchors[i]));
-        return lerpKey(KEYS[i], KEYS[i + 1], u);
+        const f = (sc - anchors[i]) / (anchors[i + 1] - anchors[i]);
+        if (i === 0) {
+          // opening travel articulates through SUB01 (a push-in dip), not a straight lerp
+          return f < 0.5
+            ? lerpKey(KEYS[0], SUB01, smooth(f / 0.5))
+            : lerpKey(SUB01, KEYS[1], smooth((f - 0.5) / 0.5));
+        }
+        return lerpKey(KEYS[i], KEYS[i + 1], smooth(f));
       }
 
       // per-register scatter — the instrument is "not yet set" until 三步

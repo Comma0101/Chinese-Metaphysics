@@ -34,3 +34,9 @@ test("the world has a one-shot cinematic intro in the animated branch only", asy
   // the intro lives only in the animated path — reduced-motion still settles plainly
   assert.match(lw, /if \(reduce\)/);
 });
+
+test("the opening travel articulates through a sub-beat (SUB01)", async () => {
+  const lw = await read("components/LacquerWorld.tsx");
+  assert.match(lw, /SUB01/);
+  assert.match(lw, /i === 0/);
+});

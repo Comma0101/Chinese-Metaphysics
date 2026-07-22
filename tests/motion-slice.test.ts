@@ -52,3 +52,10 @@ test("the first paper section tears in and is reduced-motion safe", async () => 
   assert.match(css, /prefers-reduced-motion: no-preference[\s\S]*--tear/);
   assert.match(mp, /--tear/);
 });
+
+test("the world carries a non-interactive cinematic vignette", async () => {
+  const css = await read("app/globals.css");
+  assert.match(css, /\.world-canvas::after/);
+  // the vignette overlay must never capture pointer events
+  assert.match(css, /\.world-canvas::after\s*\{[^}]*pointer-events:\s*none/);
+});

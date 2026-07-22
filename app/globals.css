@@ -3525,3 +3525,15 @@ a {
     clip-path: inset(-14px 0 calc((1 - var(--tear)) * 62%) 0);
   }
 }
+
+/* ── cinematic depth — a soft vignette over the world (Cinematic Cut) ──
+   Painted above the WebGL canvas but inside .world-canvas (z-index:0), so it
+   sits below content. Paper acts are opaque and cover it; only the dark lacquer
+   acts gain edge fall-off, which deepens the frame and lifts the light text. */
+.world-canvas::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(125% 95% at 62% 40%, transparent 45%, rgba(0, 0, 0, 0.4) 100%);
+}

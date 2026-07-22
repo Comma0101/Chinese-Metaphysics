@@ -18,6 +18,7 @@ import { BaziChart } from "@/components/BaziChart";
 import { LacquerWorld } from "@/components/LacquerWorld";
 import { VolumeRail } from "@/components/VolumeRail";
 import { MotionProvider } from "@/components/MotionProvider";
+import { InkReveal } from "@/components/InkReveal";
 
 // long zh monuments break at their commas — a verse stack, never an orphan char
 function clauseBreak(s: string) {
@@ -63,7 +64,7 @@ export default function Home({
                 <p className="eyebrow">{c.eyebrow}</p>
 
                 <h1 className={`hero-title${lang === "zh" ? " hero-title-zh" : ""}`} data-hero-title>
-                  {lang === "zh" ? clauseBreak(c.h1) : c.h1}
+                  <InkReveal text={c.h1} />
                 </h1>
 
                 <div className="hero-aside">

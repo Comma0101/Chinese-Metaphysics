@@ -46,7 +46,7 @@ export function MotionProvider() {
 
       ctx = gsap.context(() => {
         // hero enters like a scroll being unrolled
-        gsap.from(".hero-inner > *", {
+        gsap.from(".hero-inner > *:not([data-hero-title])", {
           opacity: 0,
           y: 20,
           duration: 1.15,

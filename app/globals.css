@@ -3469,3 +3469,44 @@ a {
     font-size: 27px;
   }
 }
+
+/* ── 髹夜 · 落墨 — the hero monument brush-writes itself (Cinematic Cut slice) ──
+   Each glyph inks in bottom-up via a typed @property mask keyframe with a
+   per-character delay set inline by InkReveal. Pure CSS: flash-free, reveals
+   even with JS off, and the text stays painted (LCP-safe). Reduced-motion
+   shows the monument instantly (initial-value:1, no animation). */
+@property --ink {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+[data-ink-reveal] .ink-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+[data-ink-reveal] .ink-char {
+  display: inline-block;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    #000 calc(var(--ink) * 100%),
+    transparent calc(var(--ink) * 100% + 8%)
+  );
+  mask-image: linear-gradient(
+    to top,
+    #000 calc(var(--ink) * 100%),
+    transparent calc(var(--ink) * 100% + 8%)
+  );
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-ink-reveal] .ink-char {
+    animation: ink-in 0.55s var(--ink-delay, 0s) both cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@keyframes ink-in {
+  from {
+    --ink: 0;
+  }
+  to {
+    --ink: 1;
+  }
+}

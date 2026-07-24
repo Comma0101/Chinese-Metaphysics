@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [zhiji] recent context, 2026-07-11 12:59am PDT
+# [zhiji] recent context, 2026-07-22 3:08pm PDT
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 50 obs (24,212t read) | 336,760t work | 93% savings
+Stats: 50 obs (21,898t read) | 289,024t work | 92% savings
 
 ### Jul 10, 2026
 S30 Validate and correct Zhiji V1 product strategy; establish regulatory compliance framework and build order for astrology/divination consultation platform (Jul 10, 3:20 PM)
@@ -16,60 +16,63 @@ S29 Diagnose and resolve CPU heating issue on Linux system (Jul 10, 10:34 PM)
 S31 Validate Zhiji V1 product strategy and establish legal/compliance framework for astrology consultation platform; correct three critical product decisions (Jul 10, 10:34 PM)
 S32 Deep understanding of copywriting skill documentation as part of UI work for Zhiji V1 product (Jul 10, 10:34 PM)
 S33 Deep understanding of Zhiji V1 product charter, positioning, research findings, and copywriting framework as foundation for UI work (Jul 10, 10:54 PM)
-1363 10:55p ✅ Updated AGENTS.md historical footnote to acknowledge brand-accountability decision supersession
-1364 " ✅ Committed brand-accountability strategy alignment across 9 documentation files
 S34 Technical investigation of Zhiji V1 Next.js/React UI codebase to understand current implementation state and how product positioning/copy/pricing are instantiated in frontend (Jul 10, 10:55 PM)
-1365 " ✅ Updated design-language-lacquer-nocturne.json to align visual system with brand-accountability model
-1366 10:58p 🔵 Identified remaining named-human references in design-language motion specifications
-1367 " ✅ Refactored motion-system specification from implementation-heavy to principle-driven language
-1368 " ✅ Added superseding notices to design and planning documents; updated accountability description
-1369 10:59p ✅ Committed design and planning document updates removing personal-authority assumptions
-1370 " ✅ Added English copy-integrity tests ensuring professional messaging and category alignment
-1372 11:03p 🔵 React Server Conditions Entry Point Unavailable in Stable Channel
-1373 " 🔄 Lacquer World Test Refactored to Source Verification Strategy
-1374 11:04p 🔵 LacquerWorld Component No Longer Exports fitPlateXForViewport Function
-1375 " 🟣 Add Viewport-Aware Plate Positioning to LacquerWorld Component
-1376 11:07p ✅ UI responsiveness and opacity tuning for Lacquer World canvas
-1377 " 🔵 Webpack pack file cache write failure during Next.js compilation
-1378 " ✅ Mobile viewport testing at iPhone SE resolution
-1379 " 🔵 Console warnings accumulate during mobile viewport screenshot capture
-1380 11:08p 🔵 scripts/screenshot.mjs does not exist; only pilot-applications.ts in scripts directory
-1383 " 🔵 zhiji project runs dev server with Playwright browser automation for UI work
-1384 11:09p 🔵 zhiji is Next.js 14.2.35 SaaS with subscription/payment infrastructure and hybrid rendering
-1385 " 🔵 zhiji is bilingual BaZi consultation app; production server verified with mobile viewport testing
-1387 11:10p ✅ World Canvas Opacity Adjusted for Viewport Composition
-1388 11:11p 🟣 LacquerWorld Component Created and Committed with Mobile Viewport Support
-1389 " 🔵 Copy Integrity Tests Reveal Two Content Validation Failures
-1390 " 🔵 Content Audit Reveals Centralized Copy Governance Structure
-1391 11:12p ✅ Comprehensive Content Repositioning: Expanded Service Framework and Refined Messaging
-1392 " 🔵 Patch Application Failure: Content Verification Mismatch in lib/content.ts
-1393 11:13p ✅ Application Form Copy Refined and Framework References Updated Across Both Languages
-1394 " ✅ Comprehensive Pre-Launch Messaging and Accountability Language Refinement
-1395 11:14p ✅ Cross-Site Metadata and Navigation Labels Updated for Clarity and SEO Alignment
-1396 " ✅ Sample Reading Page Disclaimer Language Finalized to Prevent Misrepresentation
-1397 " 🔵 Content System Architecture Verified: Centralized Constants Manage All Copy Across Site
-1398 11:15p ✅ Footer Positioning Finalized: Site-Wide Messaging Unified to "Chinese Metaphysics" Framework
-1399 " 🔵 Copy Integrity Tests Show Partial Success: 5 Pass, 2 Fail After Content Update
-1400 " ✅ Copy Integrity Test Validation Complete: All 7 Tests Passing
-1401 11:16p 🔵 Legacy Copy Successfully Removed: Content Audit Confirms No Stale Positioning Remains
-1403 " ✅ Content Restructuring Committed: Comprehensive Bilingual Language Professionalization
-1405 " 🔵 Complete Test Suite Verification: 162 Pass, 0 Fail, All Systems Operational
-1413 11:25p ⚖️ Initiated dual-language copywriting for Zhiji premium consultation offering
-1414 11:26p 🔵 Sample fictional case embedded in Zhiji codebase demonstrates delivery format
-1415 " 🔵 English copy audit completed identifying 11 P0 critical issues and 25+ P1 improvements
-1416 11:27p 🔵 Sample Chinese copy on fictional job-offer case rejected as immature and unprofessional
-### Jul 11, 2026
-1453 12:22a ⚖️ Removed synchronous consultation; committed to fully asynchronous written delivery
-1454 12:23a 🔵 Identified 7 files containing synchronous consultation references requiring update
-1455 " 🔵 Canonical product-marketing context still describes consultation+live-session model
-1456 12:24a 🔵 Product code contains extensive 60-minute consultation language requiring rewrite
-1458 12:25a 🔵 Created comprehensive implementation plan for asynchronous-written-delivery execution
-1461 12:26a 🔵 Subagent dispatched to execute asynchronous-delivery copy implementation
-1462 12:27a 🔵 Subagents completed sample copy review and provided detailed rewrites for both languages
-1463 12:28a 🔵 Subagent completed asynchronous-written-delivery copy update with four commits
-1467 12:29a 🔵 Asynchronous-written-delivery copy files now show uncommitted modifications
+S172 Observe and record the Zhiji project's 2026-07-22 deep-audit session, capturing durable technical signal about what was learned, corrected, documented, and committed. (Jul 10, 10:55 PM)
+### Jul 22, 2026
+S173 Comprehensive verification and assessment of Zhiji research documentation: audit the completeness, internal consistency, and external validity of the 2026-07-10 research corpus (5 markdown memos, 3 CSV data files, 73 claims) and spot-check key citations against live sources. (Jul 22, 1:26 PM)
+4892 1:40p 🟣 OverlayWindowController adds live passthrough expansion and scale-aware canvas resizing
+4900 1:41p 🟣 AppRoot wires control surface: right-click menu, action dispatch, scale-aware positioning, autonomous focus gating
+4903 1:42p ✅ Premium control surface implementation complete: 236 insertions across 11 files
+4909 " 🔴 GDScript type inference error in _apply_display_scale(): missing explicit type annotations
+4910 " ✅ GDScript type annotations fixed; all test suites pass (154/154 GDScript, 35/35 Python)
+4911 1:43p 🔴 Fixed control surface Close button path in scene hierarchy
+4914 " 🔄 Extracted base anchor preservation math into reusable OverlayWindowController.position_for_global_anchor()
+4916 1:47p 🔵 Hyprland compositor dispatch API capabilities documented
+4918 1:48p ✅ Velvet Signal native-verification window closed and verified
+4919 " 🔵 Velvet Signal 2D runtime configuration and animation metadata extracted
+4922 " ⚖️ Behavior state machine defined; v0.1.2 animation spec documented
+4924 " 🟣 Right-click companion control surface implemented with scale and layout preservation
+4925 " 🟣 Animation fallback and gap reporting system with graceful missing-animation handling
+4927 1:49p ✅ Control surface component integrated into Godot project with resource tracking
+4928 " ✅ Control surface feature staged for commit with comprehensive documentation and tests
+4929 " 🟣 Control surface UI implementation with scale preservation and input handling
+4931 1:50p 🔵 Filesystem mounted read-only; git operations blocked
+4933 " 🔵 Control surface UI and test refinements successfully staged with escalated permissions
+4935 " 🔵 Control surface feature verified across Python, GDScript, and integration tests; 155 assertions pass
+4936 " ✅ Control surface feature committed with full test coverage and art handoff specification
+4944 1:53p ⚖️ Cinematic showcase direction locked with material-only spectacle guardrail
+4945 1:54p ✅ Cinematic showcase design spec committed to git (vertical slice)
+4950 1:58p ⚖️ Design system generated for Velvet Signal Companion
+4952 1:59p 🔵 Drag physics and interactive control surface implementation examined
+4956 2:00p 🔵 Patch application failed - file structure mismatch in test file
+4958 " ✅ Added drag threshold and control surface timing tests
+4959 2:01p 🟣 Implemented drag threshold with intentional drag initiation
+4960 " 🔴 Fixed drag logging variable reference in drag_begin
+4963 " 🟣 Added smooth micro-interaction animations to control surface panel
+4969 2:03p 🟣 Implemented comprehensive control surface UI polish and accessibility
+4980 2:09p 🔵 Ink-reveal character animation system validated
+4981 2:10p 🔵 Animation freeze-frame capture for visual debugging
+4985 2:12p 🔄 InkReveal component refactored with kinsoku punctuation merging for CJK
+4986 " 🔵 TypeScript compilation and visual verification of kinsoku fix passed
+4987 2:13p 🟣 Ink-bleed hero monument reveal with pure CSS animation
+4988 2:15p 🟣 Cinematic entrance animation for LacquerWorld 3D compass
+4989 " ✅ Test coverage for LacquerWorld cinematic intro animation
+4990 " 🔵 Cinematic intro verified: typecheck, tests, and visual capture at entrance stages
+4992 2:17p 🟣 Cinematic luopan entrance animation with raking light glint
+4996 2:18p ✅ Added SUB01 intermediate keyframe for cinematic opening travel
+4997 " 🟣 Opening travel now articulates through SUB01 intermediate keyframe
+4999 2:19p 🔵 Task 3 verification complete: typecheck, tests, and travel frames captured
+5042 2:30p 🔵 Animation significantly delays LCP on ink-character rendering
+5043 2:33p 🔵 CLS = 0 on animated hero; WebGL graceful fallback confirmed
+5044 2:34p 🔵 MateEngine Scene Registry Fetch Timeout or Empty Response
+5045 " 🔵 MateEngine Scene Registry Structure Mapped from Public Release
+5046 " 🔵 VRM 1.0 Avatar System Architecture and Godot 4.7 Integration Path
+5047 2:35p 🔵 YouTube Video Research: AI-to-Game-Ready 3D Workflow References
+5048 2:37p 🔵 Desktop Mate Platform Architecture and Feature Set (Steam Research)
+S174 User questioned lack of visible progress on readability and color theme; Claude demonstrated the cinematic hero animation system built on feat/cinematic-cut-slice branch with motion, internationalization, and responsive design (Jul 22, 2:37 PM)
+5049 2:40p 🔵 Velvet Signal Runtime 2D v0.1.2 Production-Approved Asset Package Available
 
-Access 337k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 289k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>
 
 <superseding-decision>

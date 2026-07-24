@@ -13,6 +13,8 @@ import {
 } from "@/lib/content";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { WaitlistBand } from "@/components/WaitlistBand";
+import { TrackedLink } from "@/components/TrackedLink";
 import { LangSync } from "@/components/LangSync";
 import { BaziChart } from "@/components/BaziChart";
 import { LacquerWorld } from "@/components/LacquerWorld";
@@ -84,14 +86,42 @@ export default function Home({
               </div>
 
               <div className="cta-row-new">
-                <Link className="btn-gilt btn-gilt-large" href={withLang("/ask", lang)}>
+                <TrackedLink
+                  className="btn-gilt btn-gilt-large"
+                  href={withLang("/ask", lang)}
+                  label={c.applyCta}
+                  location="hero"
+                >
                   {c.applyCta}
-                </Link>
-                <span className="cta-note-new">{c.ctaNote}</span>
+                </TrackedLink>
+                <TrackedLink
+                  className="cta-secondary"
+                  href={withLang("/reading/sample", lang)}
+                  label={c.secondaryCta}
+                  location="hero"
+                >
+                  {c.secondaryCta}
+                </TrackedLink>
               </div>
+              <div className="hero-trust-signal">
+                <span className="hts-dot" />
+                {c.trustSignal}
+              </div>
+              <span className="cta-note-new">{c.ctaNote}</span>
             </div>
           </div>
         </section>
+
+        {/* 等待名单 — capture the not-ready majority */}
+        <WaitlistBand
+          lang={lang}
+          h={c.waitlistH}
+          lead={c.waitlistLead}
+          placeholder={c.waitlistPlaceholder}
+          btn={c.waitlistBtn}
+          note={c.waitlistNote}
+          done={c.waitlistDone}
+        />
 
         {/* 具体问题与服务内容 */}
         <section className="section" data-act="1" id="service">
@@ -319,9 +349,9 @@ export default function Home({
                     ))}
                   </ul>
                   {s.id === "deposit" ? (
-                    <Link className="btn" href={withLang("/ask", lang)}>
+                    <TrackedLink className="btn" href={withLang("/ask", lang)} label={c.applyCta} location="pricing">
                       {c.applyCta}
-                    </Link>
+                    </TrackedLink>
                   ) : (
                     <div className="turnaround">{risk}</div>
                   )}
@@ -389,9 +419,9 @@ export default function Home({
               <h2>{closing.h}</h2>
               <p className="lead">{closing.body}</p>
               <div className="cta-row" style={{ marginTop: 22 }}>
-                <Link className="btn-gilt" href={withLang("/ask", lang)}>
+                <TrackedLink className="btn-gilt" href={withLang("/ask", lang)} label={closing.cta} location="closing">
                   {closing.cta}
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           </div>

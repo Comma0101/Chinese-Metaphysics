@@ -16,8 +16,16 @@ type Chrome = {
     accent: string;
     cta: string;
     applyCta: string;
+    secondaryCta: string;
+    trustSignal: string;
     ctaNote: string;
     proof: string[];
+    waitlistH: string;
+    waitlistLead: string;
+    waitlistPlaceholder: string;
+    waitlistBtn: string;
+    waitlistNote: string;
+    waitlistDone: string;
     s2h: string;
     s2lead: string;
     isnotLabel: string;
@@ -51,13 +59,21 @@ export const T: Record<Lang, Chrome> = {
     toggleEn: "EN",
     home: {
       eyebrow: "私人八字命理咨询 · 子平体系",
-      h1: "一件难下的决定，先看清它的结构。",
+      h1: "两份 offer，去还是留——先看清时机与结构。",
       lead: "你正站在一个 90 天内必须定下来的选择前。两份 offer、去还是留、进还是退——越想越难定。知几以子平八字为主体框架，把时机、反复出现的模式和你还没看到的取舍，写成一份书面判读。不催你，不吓你，决定始终是你的。",
       accent: "Private Chinese metaphysics consultation, led by BaZi.",
       cta: "查看服务内容",
-      applyCta: "已有邀请，开始申请",
+      applyCta: "申请首批名额",
+      secondaryCta: "先看演示判读 →",
+      trustSignal: "确定性排盘 + 人工审核 · 不是 AI 生成",
       ctaNote: "适合职业、offer、去留、迁移、创业、关系与家庭节点",
       proof: ["一项重大决定", "书面决策判读", "一轮书面澄清 + 30/90 天书面复盘"],
+      waitlistH: "首批名额开放时，第一时间通知你",
+      waitlistLead: "留下邮箱，开放申请时你会收到一封邮件。不会发别的东西。",
+      waitlistPlaceholder: "your@email.com",
+      waitlistBtn: "通知我",
+      waitlistNote: "仅用于首批开放通知，随时可退订。",
+      waitlistDone: "已记录。开放时你会收到邮件。",
       s2h: "你正在决定什么？",
       s2lead: "选项已经摆在面前，越想却越难定——而这件事不能一直拖。知几适合这样的时刻。",
       isnotLabel: "常见的人生节点",
@@ -133,13 +149,21 @@ export const T: Record<Lang, Chrome> = {
     toggleEn: "EN",
     home: {
       eyebrow: "Private BaZi consultation · Ziping system",
-      h1: "A hard decision, seen in its structure.",
+      h1: "Two offers, stay or go — see the timing and structure first.",
       lead: "You're standing in front of one choice due within 90 days — two offers, stay or go, in or out. Using the Ziping BaZi framework as its core, Zhiji writes the timing, the patterns that keep repeating, and the trade-off you can't yet see into one written decision brief. Within 14 days of delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. No pressure, no fear — the decision stays yours.",
       accent: "私人中国命理咨询，以八字为主，按案结合紫微斗数。",
       cta: "See what is included",
-      applyCta: "View application requirements",
+      applyCta: "Apply for a founding seat",
+      secondaryCta: "Read a sample brief →",
+      trustSignal: "Deterministic chart + human review · not AI-generated",
       ctaNote: "For career choices, job offers, relocation, founder decisions, relationships, and family transitions",
       proof: ["One consequential decision", "A written decision brief", "One written follow-up + written 30/90-day reviews"],
+      waitlistH: "Be the first to know when founding seats open",
+      waitlistLead: "Leave your email. You'll get one message when applications open. Nothing else.",
+      waitlistPlaceholder: "your@email.com",
+      waitlistBtn: "Notify me",
+      waitlistNote: "Only for the founding-cohort opening notice. Unsubscribe anytime.",
+      waitlistDone: "Recorded. You'll hear from us when seats open.",
       s2h: "What are you deciding?",
       s2lead:
         "Zhiji is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can’t keep waiting past 90 days.",

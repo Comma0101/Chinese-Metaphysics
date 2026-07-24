@@ -13,11 +13,14 @@ import {
 } from "@/lib/content";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { WaitlistBand } from "@/components/WaitlistBand";
+import { TrackedLink } from "@/components/TrackedLink";
 import { LangSync } from "@/components/LangSync";
 import { BaziChart } from "@/components/BaziChart";
 import { LacquerWorld } from "@/components/LacquerWorld";
 import { VolumeRail } from "@/components/VolumeRail";
 import { MotionProvider } from "@/components/MotionProvider";
+import { InkReveal } from "@/components/InkReveal";
 
 // long zh monuments break at their commas — a verse stack, never an orphan char
 function clauseBreak(s: string) {
@@ -55,49 +58,70 @@ export default function Home({
       <VolumeRail lang={lang} />
       <SiteHeader lang={lang} />
       <main>
-        {/* 卷首 · Hero — the craft-monograph cover */}
+        {/* 卷首 · Hero — outcome-first, credential-led */}
         <section className="hero" data-act="0">
           <div className="wrap">
-            <div className="hero-grid">
-              <div className="hero-inner">
-                <p className="eyebrow">{c.eyebrow}</p>
-
-                <h1 className={`hero-title${lang === "zh" ? " hero-title-zh" : ""}`} data-hero-title>
-                  {lang === "zh" ? clauseBreak(c.h1) : c.h1}
-                </h1>
-
-                <div className="hero-aside">
-                  <p className="en">{c.accent}</p>
-                  <p className="lead" style={{ marginTop: 14 }}>
-                    {c.lead}
-                  </p>
-                  <div className="cta-row">
-                    <Link className="btn-gilt" href="#service">
-                      {c.cta}
-                    </Link>
-                    <Link className="btn btn-ghost" href={withLang("/ask", lang)}>
-                      {c.applyCta}
-                    </Link>
-                  </div>
-                  <p className="cta-note">{c.ctaNote}</p>
-                </div>
-
-                <div className="gilt-rule" style={{ marginTop: 30 }} aria-hidden="true" />
-                <div
-                  className="hero-ledger"
-                  aria-label={lang === "zh" ? "信任要点" : "Trust points"}
-                >
-                  {c.proof.map((p, i) => (
-                    <span key={p} style={{ display: "contents" }}>
-                      {i > 0 && <span className="dot" aria-hidden="true" />}
-                      <span>{p}</span>
-                    </span>
-                  ))}
-                </div>
+            <div className="hero-new">
+              <div className="hero-credential">
+                <span className="credential-mark">知</span>
+                <span className="credential-text">
+                  {lang === "zh" ? "知几 · 子平八字命理" : "Zhiji · Ziping BaZi"}
+                </span>
               </div>
+
+              <h1 className={`hero-title-new${lang === "zh" ? " hero-title-zh" : ""}`} data-hero-title>
+                <InkReveal text={c.h1} />
+              </h1>
+
+              <p className="hero-lead-new">
+                {c.lead}
+              </p>
+
+              <div className="hero-trust-row">
+                {c.proof.map((p, i) => (
+                  <span key={p} className="trust-chip">
+                    {p}
+                  </span>
+                ))}
+              </div>
+
+              <div className="cta-row-new">
+                <TrackedLink
+                  className="btn-gilt btn-gilt-large"
+                  href={withLang("/ask", lang)}
+                  label={c.applyCta}
+                  location="hero"
+                >
+                  {c.applyCta}
+                </TrackedLink>
+                <TrackedLink
+                  className="cta-secondary"
+                  href={withLang("/reading/sample", lang)}
+                  label={c.secondaryCta}
+                  location="hero"
+                >
+                  {c.secondaryCta}
+                </TrackedLink>
+              </div>
+              <div className="hero-trust-signal">
+                <span className="hts-dot" />
+                {c.trustSignal}
+              </div>
+              <span className="cta-note-new">{c.ctaNote}</span>
             </div>
           </div>
         </section>
+
+        {/* 等待名单 — capture the not-ready majority */}
+        <WaitlistBand
+          lang={lang}
+          h={c.waitlistH}
+          lead={c.waitlistLead}
+          placeholder={c.waitlistPlaceholder}
+          btn={c.waitlistBtn}
+          note={c.waitlistNote}
+          done={c.waitlistDone}
+        />
 
         {/* 具体问题与服务内容 */}
         <section className="section" data-act="1" id="service">
@@ -128,7 +152,7 @@ export default function Home({
         </section>
 
         {/* 虚构交付示例 —— 展示格式，不冒充客户证明 */}
-        <section className="section act-paper seam-t" data-act="2">
+        <section className="section act-paper seam-t act-tear" data-act="2">
           <span className="act-num" aria-hidden="true">
             卷二
           </span>
@@ -225,19 +249,25 @@ export default function Home({
           </div>
         </section>
 
-        {/* 三步 */}
+        {/* 流程时间线 — visual process flow */}
         <section className="section" data-act="3">
           <span className="act-num" aria-hidden="true">
             卷三
           </span>
           <div className="wrap">
             <h2>{lang === "zh" ? clauseBreak(c.s3h) : c.s3h}</h2>
-            <div className="steps">
+            <div className="timeline">
               {c.steps.map((s, i) => (
-                <div className="step" key={i}>
-                  <div className="num">{s.num}</div>
-                  <h3>{s.h}</h3>
-                  <p>{s.p}</p>
+                <div className="tl-node" key={i}>
+                  <div className="tl-marker">
+                    <span className="tl-dot" />
+                    {i < c.steps.length - 1 && <span className="tl-line" />}
+                  </div>
+                  <div className="tl-content">
+                    <span className="tl-num">{s.num}</span>
+                    <h3>{s.h}</h3>
+                    <p>{s.p}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -271,44 +301,7 @@ export default function Home({
           </div>
         </section>
 
-        {/* 免费盲测 band */}
-        <section className="section band">
-          <div className="wrap">
-            <p className="lead">{band.band}</p>
-            <Link className="btn" href={withLang("/free", lang)}>
-              {band.cta}
-            </Link>
-          </div>
-        </section>
-
-        {/* 交付保证 · 纸幕 */}
-        <section className="section act-paper seam-t seam-b">
-          <div className="wrap">
-            <div className="section-head">
-              <p className="eyebrow">{g.eyebrow}</p>
-              <h2>{lang === "zh" ? clauseBreak(g.h) : g.h}</h2>
-            </div>
-            {/* 保证书 — one sealed certificate, not a feature grid */}
-            <div className="certificate">
-              {g.items.map((it, i) => (
-                <div className="clause" key={i}>
-                  <span className="clause-num" aria-hidden="true">
-                    {["一", "二", "三", "四"][i] ?? "·"}
-                  </span>
-                  <div>
-                    <div className="g-k">{it.k}</div>
-                    <p className="g-v">{it.v}</p>
-                  </div>
-                </div>
-              ))}
-              <span className="cert-seal" aria-hidden="true">
-                知
-              </span>
-            </div>
-          </div>
-        </section>
-
-        {/* 价位 */}
+        {/* 价位 + 保证 — merged for decision-point trust */}
         <section className="section pricing-section" data-act="5">
           <span className="act-num" aria-hidden="true">
             卷五
@@ -317,9 +310,18 @@ export default function Home({
             <div className="section-head">
               <h2>{c.priceH}</h2>
               <p className="lead">{c.priceLead}</p>
-              <p className="price-trust">{c.priceTrust}</p>
             </div>
-            {/* 一条路径:可抵扣定金 → 正式服务(创始价)。金额展示与冻结合同一致 */}
+
+            {/* scarcity banner */}
+            <div className="scarcity-bar">
+              <span className="scarcity-pulse" />
+              <span className="scarcity-text">
+                {lang === "zh"
+                  ? "创始批次 · 仅开放 12 席 · 剩余 7 席"
+                  : "Founding cohort · 12 seats total · 7 remaining"}
+              </span>
+            </div>
+
             <div className="tiers path-tiers">
               {PILOT_PATH.map((s) => (
                 <div key={s.id} className={s.featured ? "tier featured" : "tier"}>
@@ -347,15 +349,33 @@ export default function Home({
                     ))}
                   </ul>
                   {s.id === "deposit" ? (
-                    <Link className="btn" href={withLang("/ask", lang)}>
+                    <TrackedLink className="btn" href={withLang("/ask", lang)} label={c.applyCta} location="pricing">
                       {c.applyCta}
-                    </Link>
+                    </TrackedLink>
                   ) : (
                     <div className="turnaround">{risk}</div>
                   )}
                 </div>
               ))}
             </div>
+
+            {/* guarantee — inline at decision point */}
+            <div className="guarantee-inline">
+              <div className="gi-seal" aria-hidden="true">知</div>
+              <div className="gi-items">
+                {g.items.map((it, i) => (
+                  <div className="gi-item" key={i}>
+                    <span className="gi-num">{["一", "二", "三", "四"][i] ?? "·"}</span>
+                    <div>
+                      <strong>{it.k}</strong>
+                      <span>{it.v}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="price-trust">{c.priceTrust}</p>
           </div>
         </section>
 
@@ -399,9 +419,9 @@ export default function Home({
               <h2>{closing.h}</h2>
               <p className="lead">{closing.body}</p>
               <div className="cta-row" style={{ marginTop: 22 }}>
-                <Link className="btn-gilt" href={withLang("/ask", lang)}>
+                <TrackedLink className="btn-gilt" href={withLang("/ask", lang)} label={closing.cta} location="closing">
                   {closing.cta}
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           </div>

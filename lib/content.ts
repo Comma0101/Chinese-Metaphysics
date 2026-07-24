@@ -16,8 +16,16 @@ type Chrome = {
     accent: string;
     cta: string;
     applyCta: string;
+    secondaryCta: string;
+    trustSignal: string;
     ctaNote: string;
     proof: string[];
+    waitlistH: string;
+    waitlistLead: string;
+    waitlistPlaceholder: string;
+    waitlistBtn: string;
+    waitlistNote: string;
+    waitlistDone: string;
     s2h: string;
     s2lead: string;
     isnotLabel: string;
@@ -50,16 +58,24 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "私人中国命理咨询 · 以八字为主",
-      h1: "一件难下的决定，先看清它的结构。",
-      lead: "你正站在一个 90 天内要定下来的选择前——两份 offer、去还是留、进还是退。知几以八字为主、适合时结合紫微斗数，把时机、反复出现的模式与关键取舍，写成一份书面决策判读；交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题。不催你，不吓你，决定始终是你的。",
+      eyebrow: "私人八字命理咨询 · 子平体系",
+      h1: "两份 offer，去还是留——先看清时机与结构。",
+      lead: "你正站在一个 90 天内必须定下来的选择前。两份 offer、去还是留、进还是退——越想越难定。知几以子平八字为主体框架，把时机、反复出现的模式和你还没看到的取舍，写成一份书面判读。不催你，不吓你，决定始终是你的。",
       accent: "Private Chinese metaphysics consultation, led by BaZi.",
       cta: "查看服务内容",
-      applyCta: "已有邀请，开始申请",
+      applyCta: "申请首批名额",
+      secondaryCta: "先看演示判读 →",
+      trustSignal: "确定性排盘 + 人工审核 · 不是 AI 生成",
       ctaNote: "适合职业、offer、去留、迁移、创业、关系与家庭节点",
       proof: ["一项重大决定", "书面决策判读", "一轮书面澄清 + 30/90 天书面复盘"],
+      waitlistH: "首批名额开放时，第一时间通知你",
+      waitlistLead: "留下邮箱，开放申请时你会收到一封邮件。不会发别的东西。",
+      waitlistPlaceholder: "your@email.com",
+      waitlistBtn: "通知我",
+      waitlistNote: "仅用于首批开放通知，随时可退订。",
+      waitlistDone: "已记录。开放时你会收到邮件。",
       s2h: "你正在决定什么？",
-      s2lead: "知几适合这样的时刻：选项已经摆在你面前，越想却越难定——而它不能一直拖，要在 90 天内定下来。",
+      s2lead: "选项已经摆在面前，越想却越难定——而这件事不能一直拖。知几适合这样的时刻。",
       isnotLabel: "常见的人生节点",
       isnot: [
         "该接哪份工作，还是趁现在换一条路",
@@ -70,53 +86,53 @@ export const T: Record<Lang, Chrome> = {
       ],
       isLabel: "这次咨询会做什么",
       is: [
-        "以八字为主、适合时结合紫微斗数，看这件事的时机窗口、你反复走进的模式，和此刻没权衡到的取舍",
-        "把盘面解释和现实条件分开写清楚，哪句是观察、哪句是事实，一眼能分",
-        "比较选项，而不是替你下命令",
+        "以子平八字为主体框架，看这件事的时机窗口、你反复走进的模式，和此刻没权衡到的取舍",
+        "命局分析和现实条件分开写——哪句是十神互动的推论、哪句是现实约束，一眼能分",
+        "比较选项，不替你下命令",
         "留下一份可回看、可质疑、可复盘的记录",
       ],
       confidenceH: "一次完整咨询，你会收到什么",
       confidenceLead:
-        "这不是一份自动生成的性格报告，而是围绕一件具体决定、经过实质性人工审核的书面分析。交付、澄清与复盘，全程以书面进行。",
+        "不是自动生成的性格报告。是围绕一件具体决定、经过人工审核的书面分析。",
       confidence: [
         {
           h: "书面决策判读",
-          p: "把盘面观察、现实约束、关键假设、选项差异与不确定之处放在同一份文件里。",
+          p: "盘面观察、现实约束、关键假设、选项差异与不确定之处，放在同一份文件里。",
         },
         {
           h: "一轮书面澄清",
-          p: "交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题。实质性修正会进入版本记录；新的决定不在本案范围内。",
+          p: "交付后 14 天内，集中提交一轮关于判读依据、假设或表述的问题。实质性修正进入版本记录。",
         },
         {
           h: "30/90 天书面复盘",
-          p: "以结构化书面记录回看决定、新事实与原判读，包括有用之处、偏差与需要修订的内容。",
+          p: "回看决定、新事实与原判读——哪些有用、哪些偏了、哪些需要修订。",
         },
       ],
       s3h: "从申请到复盘",
       steps: [
         {
           num: "01 · 受邀申请",
-          h: "先确认范围与基本条件",
-          p: "只确认地区、决定类型、时间与服务边界；这一步不收出生信息，也不要求你讲具体困局。",
+          h: "确认范围与基本条件",
+          p: "只确认地区、决定类型与服务边界。这一步不收出生信息，也不要求你讲具体困局。",
         },
         {
-          num: "02 · 资料确认与判读",
-          h: "核对排盘方法，围绕一件事写作",
-          p: "受理后才收出生时间、地点与具体问题。知几核对方法与相关历史事实，再完成书面决策判读。",
+          num: "02 · 排盘与写作",
+          h: "核对方法，围绕一件事写",
+          p: "受理后才收出生时间与具体问题。核对排盘方法与相关事实，再完成书面判读。",
         },
         {
           num: "03 · 交付与复盘",
-          h: "交付、澄清与复盘，全程以书面进行",
-          p: "交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题；30/90 天以书面记录哪些判断有用、哪些需要修正。",
+          h: "书面交付，书面复盘",
+          p: "交付后 14 天内可提交一轮书面澄清；30/90 天以书面记录哪些判断有用、哪些需要修正。",
         },
       ],
       priceH: "费用与受理方式",
-      priceLead: "受邀个案先支付 US$49 受理与校准定金；正式受理后，全额计入首批服务费 US$388。",
+      priceLead: "受邀个案先付 US$49 受理定金；正式受理后，全额计入首批服务费 US$388。",
       priceTrust:
-        "付款目前保持关闭。开放前，方法说明、受理与退款规则、隐私条款和运营门槛会完整公布。",
+        "付款目前保持关闭。开放前，方法说明、退款规则、隐私条款和运营门槛会完整公布。",
       boundary:
-        "知几把八字作为一种传统解释框架，用来梳理时间、重复模式与选择边界。它不保证结果，也不代替医疗、心理健康、法律、移民、投资或生育方面的专业意见。决定权始终在你。",
-      footer: "知几 · Zhiji　—　围绕一项重大决定的私人中国命理咨询。",
+        "命理是一面镜子，不是一张处方。它照见你命局里的结构——哪些力量在拉扯、哪些窗口在开合、哪些模式在重复。但镜子不替你走路。知几采用子平八字为主体框架，以格局法论命、以旺衰法校时；紫微斗数仅作交叉验证，当两套体系指向同一方向时置信度更高，当它们矛盾时以八字为准并在判读中标注分歧。知几不提供医疗、心理、法律、移民或投资建议——如有相关需要，请咨询持牌专业人士。",
+      footer: "知几 · Zhiji — 围绕一项重大决定的私人命理咨询。",
     },
     cancel: {
       h1: "还没付定金",
@@ -132,14 +148,22 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "Private Chinese metaphysics consultation · BaZi-led",
-      h1: "A hard decision, seen in its structure.",
-      lead: "You’re standing in front of one choice due within 90 days — two offers, stay or go, in or out. Led by BaZi (with Zi Wei Dou Shu when the case supports it), Zhiji writes the timing, the patterns that keep repeating, and the trade-off you can’t yet see into one written decision brief. Within 14 days of delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. No pressure, no fear — the decision stays yours.",
+      eyebrow: "Private BaZi consultation · Ziping system",
+      h1: "Two offers, stay or go — see the timing and structure first.",
+      lead: "You're standing in front of one choice due within 90 days — two offers, stay or go, in or out. Using the Ziping BaZi framework as its core, Zhiji writes the timing, the patterns that keep repeating, and the trade-off you can't yet see into one written decision brief. Within 14 days of delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. No pressure, no fear — the decision stays yours.",
       accent: "私人中国命理咨询，以八字为主，按案结合紫微斗数。",
       cta: "See what is included",
-      applyCta: "View application requirements",
+      applyCta: "Apply for a founding seat",
+      secondaryCta: "Read a sample brief →",
+      trustSignal: "Deterministic chart + human review · not AI-generated",
       ctaNote: "For career choices, job offers, relocation, founder decisions, relationships, and family transitions",
       proof: ["One consequential decision", "A written decision brief", "One written follow-up + written 30/90-day reviews"],
+      waitlistH: "Be the first to know when founding seats open",
+      waitlistLead: "Leave your email. You'll get one message when applications open. Nothing else.",
+      waitlistPlaceholder: "your@email.com",
+      waitlistBtn: "Notify me",
+      waitlistNote: "Only for the founding-cohort opening notice. Unsubscribe anytime.",
+      waitlistDone: "Recorded. You'll hear from us when seats open.",
       s2h: "What are you deciding?",
       s2lead:
         "Zhiji is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can’t keep waiting past 90 days.",
@@ -153,8 +177,8 @@ export const T: Record<Lang, Chrome> = {
       ],
       isLabel: "What the consultation does",
       is: [
-        "Uses BaZi—and Zi Wei Dou Shu when it fits—to read the timing window, the patterns you keep walking back into, and the trade-off you haven’t weighed yet",
-        "Separates chart interpretation from real-world facts, so you can see which line is an observation and which is a constraint",
+        "Uses the Ziping BaZi framework as its core to read the timing window, the patterns you keep walking back into, and the trade-off you haven't weighed yet",
+        "Separates chart analysis from real-world facts — which line is a Ten-God interaction inference, which is a real constraint — at a glance",
         "Compares options without making the decision for you",
         "Leaves you with a record you can revisit, challenge, and review later",
       ],
@@ -198,7 +222,7 @@ export const T: Record<Lang, Chrome> = {
       priceTrust:
         "Payments are not yet open. Before they open, we will publish the method disclosure, privacy notice, service terms, and acceptance and refund policy, and complete our operational readiness checks.",
       boundary:
-        "Zhiji uses BaZi—and, where appropriate, Zi Wei Dou Shu—as traditional interpretive frameworks for examining timing, recurring patterns, and decision boundaries. The service does not guarantee outcomes or replace medical, mental-health, legal, immigration, investment, or fertility advice. The decision remains yours.",
+        "Metaphysics is a mirror, not a prescription. It reflects the structure in your chart — which forces are pulling, which windows are opening, which patterns repeat. But the mirror doesn't walk for you. Zhiji uses the Ziping BaZi system as its core framework, applying Structure Method for pattern analysis and Strength Method for timing calibration. Zi Wei Dou Shu serves only as cross-validation — when both systems point the same direction, confidence is higher; when they conflict, BaZi prevails and the divergence is noted in the brief. Zhiji does not provide medical, mental-health, legal, immigration, or investment advice — consult licensed professionals for those needs.",
       footer: "Zhiji — Private Chinese metaphysics consultation for one consequential decision.",
     },
     cancel: {
@@ -780,24 +804,24 @@ export const SAMPLE: Record<
     reading: [
       {
         k: "现实条件",
-        v: "这不只是一个工作选择。对象能不能一起走、父母真实的健康与身边有没有人照应、这一步可不可逆、以及推掉这次机会的实际代价——这些事实比盘更能改变结论。判读会把它们和盘面分开写。",
+        v: "这不只是一个工作选择。对象能不能一起走、父母真实的健康与身边有没有人照应、这一步可不可逆、以及推掉这次机会的实际代价——这些事实比命局更能改变结论。判读会把它们和命局分开写。",
       },
       {
-        k: "盘面观察",
-        v: "这份示意盘把注意力放在「先扛起别人的需要」与「顺着自己的时机走」之间的张力。它解释的是这件事为什么这么难，而不是叫你走还是留。",
+        k: "命局分析",
+        v: "日主甲木，四柱土重火旺而水木全无透干——典型的财多身弱结构。月干戊土偏财透干、时干己土正财再透，财星双现而日主在地支无强根（辰中乙木余气太弱，午巳皆火土）。命局里反复出现的张力不是「该不该走」，而是「承接力够不够」：财星代表机会确实来了，但身弱不受财，等于力气不够的人面前摆了两箱金子。当前大运走辛未，未土再助财星——窗口是开的，但窗口开着不等于你走得动。判读要回答的不是「走不走」，而是「以什么姿态走、带什么条件走」。",
       },
       {
         k: "关键假设",
-        v: "只有当过去几年确实反复出现「为了让别人安心，一再推迟自己的选择」时，这个观察才值得进入比较；否则需要重看。",
+        v: "只有当过去几年确实反复出现「为了让别人安心，一再推迟自己的选择」时，财多身弱的结构判断才成立——因为这意味着命主一直在用「比劫」（自我意志）去扛「财星」（外部需求），而比劫本身就不够强。如果过去每一次大胆独立的决定反而走得更好，那身弱的判断需要修正，用神取向也可能不同。",
       },
       {
         k: "低后悔行动",
-        v: "先向三边要同一组事实：这个机会能不能等、能不能远程、真实的截止在哪；和对象认真谈一次「真要走需要什么」；弄清父母除了你之外还有哪些支持。信息补齐后，再比较哪条路更符合当下的承受力。",
+        v: "先向三边要同一组事实：这个机会能不能等、能不能远程、真实的截止在哪；和对象认真谈一次「真要走需要什么」；弄清父母除了你之外还有哪些支持。信息补齐后，再比较哪条路更符合当下的承受力。用神水木的方向：找一个能给你「印星」（支持系统、缓冲空间）的方案，而不是裸身去扛财星。",
       },
     ],
     falsifyLabel: "哪些事实会改变或推翻这版判断",
     falsify:
-      "如果对象其实愿意一起搬、父母身边已有稳妥的照应，或你过去每一次大胆独立的决定反而走得更好，那么整个风险判断都会改变。正式判读必须把这些反例写在前面，而不是等结果出来再补解释。",
+      "如果对象其实愿意一起搬、父母身边已有稳妥的照应，或你过去每一次大胆独立的决定反而走得更好，那么整个风险判断都会改变——身弱的结论可能被推翻，用神取向也会不同。正式判读必须把这些反例写在前面，而不是等结果出来再补解释。",
   },
   en: {
     eyebrow: "Delivery example",
@@ -813,16 +837,16 @@ export const SAMPLE: Record<
         v: "This is not only a career choice. Whether your partner could move too, your parents' actual health and whether anyone else is nearby to help, how reversible the move is, and the real cost of turning this down — these facts change the answer more than the chart does. The brief keeps them separate from the chart.",
       },
       {
-        k: "Chart observation",
-        v: "In this illustrative chart, the useful tension is between carrying other people’s needs first and acting on your own window. It explains why this feels so hard—it does not tell you to go or to stay.",
+        k: "Chart analysis",
+        v: "Day Master Jia Wood, four pillars heavy with Earth and Fire while Water and Wood show no transparent stems — a classic 'wealth overwhelms weak self' structure. Month stem Wu Earth (Indirect Wealth) and hour stem Ji Earth (Direct Wealth) both appear on top, yet the Day Master has no strong root in the branches (the Yi Wood hidden in Chen is too weak; Wu and Si are both Fire-Earth). The recurring tension in this chart is not 'should I go' but 'can I carry it': Wealth stars mean the opportunity is real, but a weak self cannot hold wealth — like someone without enough strength facing two chests of gold. The current Major Luck runs Xin Wei, Wei Earth further strengthening Wealth — the window is open, but an open window doesn't mean you can walk through it. The brief answers not 'go or stay' but 'in what posture, with what conditions.'",
       },
       {
         k: "Key assumption",
-        v: "This matters only if recent years also show a pattern of putting off your own moves to keep others comfortable. If that pattern is absent, the reading needs revision.",
+        v: "The 'wealth overwhelms weak self' reading only holds if recent years show a repeated pattern of putting off your own moves to keep others comfortable — because that pattern means the self (Companion/Rob Wealth) has been spending its limited strength carrying external demands (Wealth). If past bold independent moves actually went well, the weak-self conclusion needs revision and the favorable-element direction may differ.",
       },
       {
         k: "Low-regret next step",
-        v: "Before deciding, get the same set of facts from all three sides: whether the opportunity can wait or be remote and its real deadline; one honest conversation with your partner about what a move would actually take; and what support your parents have beyond you. Compare again once those unknowns shrink.",
+        v: "Before deciding, get the same set of facts from all three sides: whether the opportunity can wait or be remote and its real deadline; one honest conversation with your partner about what a move would actually take; and what support your parents have beyond you. Compare again once those unknowns shrink. Follow the favorable Water-Wood direction: find a plan that gives you 'Seal' energy (support system, buffer space) rather than going bare-handed against the Wealth stars.",
       },
     ],
     falsifyLabel: "What would change this assessment",

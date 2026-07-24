@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Agent(general-purpose)"
+    ]
+  },
+  "$version": 4
+}

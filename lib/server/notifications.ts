@@ -195,9 +195,9 @@ export function buildNotificationMessage(
     return {
       from: config.fromEmail,
       to: job.clientEmail,
-      subject: "Zhiji · Calibration deposit received",
+      subject: "Meridian · Calibration deposit received",
       text: [
-        "Zhiji deposit confirmation",
+        "Meridian deposit confirmation",
         `Case: ${job.applicationId}`,
         `Event state: ${job.lifecycleState}`,
         `Amount: ${amount}`,
@@ -215,14 +215,14 @@ export function buildNotificationMessage(
     from: config.fromEmail,
     to: config.founderEmail,
     subject: alert
-      ? `Zhiji · Payment alert · ${job.applicationId}`
+      ? `Meridian · Payment alert · ${job.applicationId}`
       : application
-        ? `Zhiji · Application received · ${job.applicationId}`
+        ? `Meridian · Application received · ${job.applicationId}`
         : job.lifecycleState === "deposit_paid"
-          ? `Zhiji · Deposit paid · ${job.applicationId}`
-          : `Zhiji · Case state update · ${job.applicationId}`,
+          ? `Meridian · Deposit paid · ${job.applicationId}`
+          : `Meridian · Case state update · ${job.applicationId}`,
     text: [
-      application ? "Zhiji application notification" : "Zhiji payment notification",
+      application ? "Meridian application notification" : "Meridian payment notification",
       `Case: ${job.applicationId}`,
       `Event state: ${job.lifecycleState}`,
       `Amount: ${amount}`,

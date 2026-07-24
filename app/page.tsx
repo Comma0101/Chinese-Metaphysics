@@ -63,9 +63,9 @@ export default function Home({
           <div className="wrap">
             <div className="hero-new">
               <div className="hero-credential">
-                <span className="credential-mark">知</span>
+                <span className="credential-mark">观</span>
                 <span className="credential-text">
-                  {lang === "zh" ? "知几 · 子平八字命理" : "Zhiji · Ziping BaZi"}
+                  {lang === "zh" ? "观复 · 子平八字命理" : "Meridian · Ziping BaZi"}
                 </span>
               </div>
 
@@ -361,7 +361,7 @@ export default function Home({
 
             {/* guarantee — inline at decision point */}
             <div className="guarantee-inline">
-              <div className="gi-seal" aria-hidden="true">知</div>
+              <div className="gi-seal" aria-hidden="true">观</div>
               <div className="gi-items">
                 {g.items.map((it, i) => (
                   <div className="gi-item" key={i}>

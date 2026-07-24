@@ -137,7 +137,7 @@ export function BaziChart({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      <span className="chart-stamp" aria-hidden="true">知</span>
+      <span className="chart-stamp" aria-hidden="true">观</span>
     </div>
   );
 }

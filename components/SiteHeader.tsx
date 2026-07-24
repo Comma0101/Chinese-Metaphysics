@@ -51,9 +51,9 @@ export function SiteHeader({ lang }: { lang: Lang }) {
     <header className="site-header">
       <div className="inner">
         <Link className="brand" href={`/?lang=${lang}`}>
-          <span className="seal">知</span>
+          <span className="seal">观</span>
           <span>
-            <span className="word">知几</span>
+            <span className="word">观复</span>
             <span className="latin" style={{ display: "block" }}>
               ZHIJI
             </span>

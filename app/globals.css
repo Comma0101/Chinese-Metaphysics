@@ -1,5 +1,5 @@
 /* =========================================================================
-   知几 · ZHIJI — Ink, Gold & Vermilion
+   观复 · ZHIJI — Ink, Gold & Vermilion
    Living tradition, not museum dust.
 
    Material logic:
@@ -1689,7 +1689,7 @@ a {
   gap: 12px;
 }
 
-/* 落款 — Zhiji case-review colophon beside an institutional seal */
+/* 落款 — Meridian case-review colophon beside an institutional seal */
 .sign {
   font-family: var(--kai);
   font-style: normal;
@@ -1698,7 +1698,7 @@ a {
 /* a hand-pressed chop, not a printed logo: solid, slightly canted,
    ink sitting unevenly in the stone */
 .sign::before {
-  content: "知";
+  content: "观";
   width: 30px;
   height: 30px;
   display: grid;

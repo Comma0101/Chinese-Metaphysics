@@ -38,7 +38,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zhiji 知几 | Private Chinese Metaphysics Consultation",
+  title: "Meridian 观复 | Private Chinese Metaphysics Consultation",
   description:
     "A private, human-reviewed, BaZi-led Chinese metaphysics consultation for one consequential decision. Invitation-only; applications and payments are currently closed.",
   icons: {

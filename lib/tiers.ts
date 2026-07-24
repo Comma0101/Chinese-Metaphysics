@@ -32,12 +32,12 @@ export const PILOT_PATH: PilotStage[] = [
     },
     includes: {
       zh: [
-        "知几联系你，说明资料用途与服务范围",
+        "观复联系你，说明资料用途与服务范围",
         "此时才收集出生信息与你的问题",
         "核对排盘方法与相关历史事实",
       ],
       en: [
-        "Zhiji contacts you to explain what data is needed, how it will be used, and the service scope",
+        "Meridian contacts you to explain what data is needed, how it will be used, and the service scope",
         "Birth details and your question are collected only then",
         "Birth data, calculation settings, and relevant past events are reviewed",
       ],

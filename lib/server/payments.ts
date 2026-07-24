@@ -63,7 +63,7 @@ export function buildDepositCheckoutParams(
           currency: DEPOSIT_CURRENCY,
           unit_amount: DEPOSIT_AMOUNT_CENTS,
           product_data: {
-            name: "Zhiji · Calibration deposit / 知几 · 校准押金",
+            name: "Meridian · Calibration deposit / 观复 · 校准押金",
             description: "Credited toward the founding core consultation",
           },
         },

@@ -59,8 +59,8 @@ export const T: Record<Lang, Chrome> = {
     toggleEn: "EN",
     home: {
       eyebrow: "私人八字命理咨询 · 子平体系",
-      h1: "两份 offer，去还是留——先看清时机与结构。",
-      lead: "你正站在一个 90 天内必须定下来的选择前。两份 offer、去还是留、进还是退——越想越难定。知几以子平八字为主体框架，把时机、反复出现的模式和你还没看到的取舍，写成一份书面判读。不催你，不吓你，决定始终是你的。",
+      h1: "你以为你在犹豫。其实你在重复。",
+      lead: "想了很多遍的事，值得被看清楚一次。观复以子平八字为框架，把时机、反复出现的模式和你还没看到的取舍，写成一份书面判读。不催你，不吓你，决定始终是你的。",
       accent: "Private Chinese metaphysics consultation, led by BaZi.",
       cta: "查看服务内容",
       applyCta: "申请首批名额",
@@ -75,7 +75,7 @@ export const T: Record<Lang, Chrome> = {
       waitlistNote: "仅用于首批开放通知，随时可退订。",
       waitlistDone: "已记录。开放时你会收到邮件。",
       s2h: "你正在决定什么？",
-      s2lead: "选项已经摆在面前，越想却越难定——而这件事不能一直拖。知几适合这样的时刻。",
+      s2lead: "选项已经摆在面前，越想却越难定——而这件事不能一直拖。观复适合这样的时刻。",
       isnotLabel: "常见的人生节点",
       isnot: [
         "该接哪份工作，还是趁现在换一条路",
@@ -131,8 +131,8 @@ export const T: Record<Lang, Chrome> = {
       priceTrust:
         "付款目前保持关闭。开放前，方法说明、退款规则、隐私条款和运营门槛会完整公布。",
       boundary:
-        "命理是一面镜子，不是一张处方。它照见你命局里的结构——哪些力量在拉扯、哪些窗口在开合、哪些模式在重复。但镜子不替你走路。知几采用子平八字为主体框架，以格局法论命、以旺衰法校时；紫微斗数仅作交叉验证，当两套体系指向同一方向时置信度更高，当它们矛盾时以八字为准并在判读中标注分歧。知几不提供医疗、心理、法律、移民或投资建议——如有相关需要，请咨询持牌专业人士。",
-      footer: "知几 · Zhiji — 围绕一项重大决定的私人命理咨询。",
+        "命理是一面镜子，不是一张处方。它照见你命局里的结构——哪些力量在拉扯、哪些窗口在开合、哪些模式在重复。但镜子不替你走路。观复采用子平八字为主体框架，以格局法论命、以旺衰法校时；紫微斗数仅作交叉验证，当两套体系指向同一方向时置信度更高，当它们矛盾时以八字为准并在判读中标注分歧。观复不提供医疗、心理、法律、移民或投资建议——如有相关需要，请咨询持牌专业人士。",
+      footer: "观复 · Meridian — 围绕一项重大决定的私人命理咨询。",
     },
     cancel: {
       h1: "还没付定金",
@@ -149,8 +149,8 @@ export const T: Record<Lang, Chrome> = {
     toggleEn: "EN",
     home: {
       eyebrow: "Private BaZi consultation · Ziping system",
-      h1: "Two offers, stay or go — see the timing and structure first.",
-      lead: "You're standing in front of one choice due within 90 days — two offers, stay or go, in or out. Using the Ziping BaZi framework as its core, Zhiji writes the timing, the patterns that keep repeating, and the trade-off you can't yet see into one written decision brief. Within 14 days of delivery, you may submit one consolidated written follow-up about its reasoning, assumptions, or wording. No pressure, no fear — the decision stays yours.",
+      h1: "You think you're hesitating. You're repeating.",
+      lead: "Something you've thought about many times deserves to be seen clearly, once. Meridian uses the Ziping BaZi framework to write the timing, the patterns that repeat, and the trade-offs you can't yet see into one written brief. No pressure, no fear — the decision stays yours.",
       accent: "私人中国命理咨询，以八字为主，按案结合紫微斗数。",
       cta: "See what is included",
       applyCta: "Apply for a founding seat",
@@ -166,7 +166,7 @@ export const T: Record<Lang, Chrome> = {
       waitlistDone: "Recorded. You'll hear from us when seats open.",
       s2h: "What are you deciding?",
       s2lead:
-        "Zhiji is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can’t keep waiting past 90 days.",
+        "Meridian is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can’t keep waiting past 90 days.",
       isnotLabel: "Common decision points",
       isnot: [
         "Which job to take — or whether to change direction entirely, now",
@@ -209,7 +209,7 @@ export const T: Record<Lang, Chrome> = {
         {
           num: "02 · Intake and written analysis",
           h: "Validate the inputs and focus the analysis on one question",
-          p: "Birth details and your question are collected only after acceptance. Zhiji checks the method and relevant history, then prepares the brief.",
+          p: "Birth details and your question are collected only after acceptance. Meridian checks the method and relevant history, then prepares the brief.",
         },
         {
           num: "03 · Delivery and review",
@@ -222,8 +222,8 @@ export const T: Record<Lang, Chrome> = {
       priceTrust:
         "Payments are not yet open. Before they open, we will publish the method disclosure, privacy notice, service terms, and acceptance and refund policy, and complete our operational readiness checks.",
       boundary:
-        "Metaphysics is a mirror, not a prescription. It reflects the structure in your chart — which forces are pulling, which windows are opening, which patterns repeat. But the mirror doesn't walk for you. Zhiji uses the Ziping BaZi system as its core framework, applying Structure Method for pattern analysis and Strength Method for timing calibration. Zi Wei Dou Shu serves only as cross-validation — when both systems point the same direction, confidence is higher; when they conflict, BaZi prevails and the divergence is noted in the brief. Zhiji does not provide medical, mental-health, legal, immigration, or investment advice — consult licensed professionals for those needs.",
-      footer: "Zhiji — Private Chinese metaphysics consultation for one consequential decision.",
+        "Metaphysics is a mirror, not a prescription. It reflects the structure in your chart — which forces are pulling, which windows are opening, which patterns repeat. But the mirror doesn't walk for you. Meridian uses the Ziping BaZi system as its core framework, applying Structure Method for pattern analysis and Strength Method for timing calibration. Zi Wei Dou Shu serves only as cross-validation — when both systems point the same direction, confidence is higher; when they conflict, BaZi prevails and the divergence is noted in the brief. Meridian does not provide medical, mental-health, legal, immigration, or investment advice — consult licensed professionals for those needs.",
+      footer: "Meridian — Private Chinese metaphysics consultation for one consequential decision.",
     },
     cancel: {
       h1: "No deposit was paid",
@@ -338,10 +338,10 @@ export const PILOT_FORM: Record<
       { v: "later", label: "更晚" },
       { v: "unsure", label: "不确定" },
     ],
-    friendGraph: "你如何得知知几（可选）",
+    friendGraph: "你如何得知观复（可选）",
     friendGraphs: [
       { v: "unknown", label: "不方便说 / 其他" },
-      { v: "direct_friend", label: "知几团队直接认识的人" },
+      { v: "direct_friend", label: "观复团队直接认识的人" },
       { v: "client_referral", label: "客户介绍" },
       { v: "community", label: "社群" },
       { v: "organic", label: "自己搜到 / 看到内容" },
@@ -374,7 +374,7 @@ export const PILOT_FORM: Record<
       },
       {
         key: "softwareDisclosureAcknowledged",
-        label: "我知悉最终判读会经过知几的实质性人工审核；软件用途会披露，我的资料默认不用于训练模型。",
+        label: "我知悉最终判读会经过观复的实质性人工审核；软件用途会披露，我的资料默认不用于训练模型。",
       },
       {
         key: "privacyConsent",
@@ -408,7 +408,7 @@ export const PILOT_FORM: Record<
     errors: {
       missing: "请完成所有必填项与必要的确认。",
       validation: "有一项信息未通过校验，请检查后重试。",
-      declined: "根据这些基本信息，这件事目前不在知几的受理范围内。没有扣款，也不需要补充个人经历。",
+      declined: "根据这些基本信息，这件事目前不在观复的受理范围内。没有扣款，也不需要补充个人经历。",
       declinedReasons: {
         minor_or_age_unconfirmed: "试点仅面向已确认年满 18 岁的申请人。",
         unsupported_country: "试点目前仅在美国与加拿大受理。",
@@ -471,13 +471,13 @@ export const PILOT_FORM: Record<
       { v: "later", label: "Later" },
       { v: "unsure", label: "Unsure" },
     ],
-    friendGraph: "How did you find Zhiji? (optional)",
+    friendGraph: "How did you find Meridian? (optional)",
     friendGraphs: [
       { v: "unknown", label: "Prefer not to say / other" },
-      { v: "direct_friend", label: "Direct invitation from Zhiji" },
+      { v: "direct_friend", label: "Direct invitation from Meridian" },
       { v: "client_referral", label: "Client referral" },
       { v: "community", label: "Community" },
-      { v: "organic", label: "Search or Zhiji content" },
+      { v: "organic", label: "Search or Meridian content" },
       { v: "paid", label: "An ad" },
     ],
     accessCode: "Invitation code",
@@ -508,7 +508,7 @@ export const PILOT_FORM: Record<
       },
       {
         key: "softwareDisclosureAcknowledged",
-        label: "I understand that Zhiji completes a substantive human review of the final interpretation, software use is disclosed, and my data is not used for model training by default.",
+        label: "I understand that Meridian completes a substantive human review of the final interpretation, software use is disclosed, and my data is not used for model training by default.",
       },
       {
         key: "privacyConsent",
@@ -542,7 +542,7 @@ export const PILOT_FORM: Record<
     errors: {
       missing: "Please complete all required fields and confirmations.",
       validation: "One of the fields didn’t pass validation — please check and retry.",
-      declined: "Based on these basic details, the decision is not currently within Zhiji’s scope. Nothing was charged, and no personal history is needed.",
+      declined: "Based on these basic details, the decision is not currently within Meridian’s scope. Nothing was charged, and no personal history is needed.",
       declinedReasons: {
         minor_or_age_unconfirmed: "The pilot is only open to confirmed adults (18+).",
         unsupported_country: "The pilot currently accepts cases in the US and Canada only.",
@@ -551,7 +551,7 @@ export const PILOT_FORM: Record<
         price_not_acknowledged: "Entering the service requires acknowledging the US$388 initial-cohort fee.",
         required_acknowledgement_missing: "A required acknowledgement is missing.",
         acute_crisis:
-          "Zhiji is not appropriate for an immediate mental-health crisis. In the U.S. or Canada, contact 988 by phone or text for immediate support.",
+          "Meridian is not appropriate for an immediate mental-health crisis. In the U.S. or Canada, contact 988 by phone or text for immediate support.",
         restricted_advice:
           "Questions like this belong with a licensed professional — medical, legal, immigration, and investment advice are outside this service.",
         third_party_or_minor_data: "The pilot accepts applications about yourself only.",
@@ -598,7 +598,7 @@ export const PILOT_STATUS: Record<
       "US$49 受理与校准定金已确认。正式受理后会全额计入 US$388 服务费；若按公布规则无法继续，将原路退还。",
     paidNext: [
       { k: "确认邮件", v: "系统会发送案件编号与当前状态。" },
-      { k: "下一步说明", v: "知几案例团队会联系你，说明资料用途、服务范围与受理规则。" },
+      { k: "下一步说明", v: "观复案例团队会联系你，说明资料用途、服务范围与受理规则。" },
       { k: "资料收集", v: "出生信息与具体问题到那时才会单独收集。" },
     ],
     refundedH: "定金已退还",
@@ -620,7 +620,7 @@ export const PILOT_STATUS: Record<
       "Your US$49 case assessment deposit is confirmed. Once accepted, it is credited in full toward the US$388 fee. If the case cannot proceed under the published acceptance criteria, it is returned to the original payment method.",
     paidNext: [
       { k: "Confirmation email", v: "The system sends your case number and current status." },
-      { k: "Next-step explanation", v: "Zhiji will explain data use, service scope, and the acceptance rule." },
+      { k: "Next-step explanation", v: "Meridian will explain data use, service scope, and the acceptance rule." },
       { k: "Detailed intake", v: "Birth information and your question are collected separately at that point." },
     ],
     refundedH: "Deposit refunded",
@@ -660,7 +660,7 @@ export const PILOT_EXPLAINER: Record<
       { k: "五 · 书面交付", v: "交付一份经过人工审核、带版本记录的书面决策判读；整个服务以书面异步方式完成。" },
       { k: "六 · 书面澄清与复盘", v: "交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题；30/90 天后完成书面复盘。" },
     ],
-    note: "知几不提供免费盲测，也不会为了获客先收出生信息。没有邀请码，可以先查看演示判读与完整费用说明。",
+    note: "观复不提供免费盲测，也不会为了获客先收出生信息。没有邀请码，可以先查看演示判读与完整费用说明。",
     cta: "已有邀请，开始申请",
   },
   en: {
@@ -676,7 +676,7 @@ export const PILOT_EXPLAINER: Record<
       { k: "5 · Written delivery", v: "A human-reviewed, versioned written decision brief. The entire service is delivered asynchronously in writing." },
       { k: "6 · Written follow-up and review", v: "Within 14 days after delivery, you may submit one consolidated written follow-up about the original brief’s reasoning, assumptions, or wording. Written reviews follow at 30 and 90 days." },
     ],
-    note: "Zhiji does not offer a free blind reading or collect birth data as a lead magnet. You can review the illustrative brief and current fee structure before applications open.",
+    note: "Meridian does not offer a free blind reading or collect birth data as a lead magnet. You can review the illustrative brief and current fee structure before applications open.",
     cta: "View application requirements",
   },
 };
@@ -697,12 +697,12 @@ export const HOME_PILOT_BAND: Record<Lang, { band: string; cta: string }> = {
 export const CLOSING: Record<Lang, { h: string; body: string; cta: string }> = {
   zh: {
     h: "等问题具体了，再来。",
-    body: "如果你还没有明确选项，或决定并不在未来 90 天内，现在不需要申请。知几适合一件已经摆在面前、值得认真梳理的事。",
+    body: "如果你还没有明确选项，或决定并不在未来 90 天内，现在不需要申请。观复适合一件已经摆在面前、值得认真梳理的事。",
     cta: "已有邀请，开始申请",
   },
   en: {
     h: "Apply when you have a concrete decision.",
-    body: "If you do not yet have clear options—or the decision is not due within 90 days—there is no reason to apply now. Zhiji is for a decision already in front of you.",
+    body: "If you do not yet have clear options—or the decision is not due within 90 days—there is no reason to apply now. Meridian is for a decision already in front of you.",
     cta: "View application requirements",
   },
 };
@@ -722,7 +722,7 @@ export const FOOTER: Record<
     tagline: "围绕一件重大决定的私人中国命理咨询。",
     legal:
       "八字，以及适用时采用的紫微斗数，在这里都是传统解释框架，不保证结果，也不代替专业意见。决定权在你。",
-    rights: "© 2026 知几 Zhiji",
+    rights: "© 2026 观复 Meridian",
     nav: [
       { label: "服务流程", href: "/free" },
       { label: "申请条件", href: "/ask" },
@@ -733,7 +733,7 @@ export const FOOTER: Record<
     tagline: "Private Chinese metaphysics consultation for one consequential decision.",
     legal:
       "BaZi—and Zi Wei Dou Shu when used—are traditional interpretive frameworks. They do not guarantee an outcome or replace professional advice. The decision remains yours.",
-    rights: "© 2026 Zhiji",
+    rights: "© 2026 Meridian",
     nav: [
       { label: "Process", href: "/free" },
       { label: "Application requirements", href: "/ask" },
@@ -742,7 +742,7 @@ export const FOOTER: Record<
   },
 };
 
-// 方法与责任（公开责任归于知几的流程与记录，不塑造个人大师人设）
+// 方法与责任（公开责任归于观复的流程与记录，不塑造个人大师人设）
 export const TRUST: Record<
   Lang,
   {
@@ -756,24 +756,24 @@ export const TRUST: Record<
   zh: {
     eyebrow: "方法与责任",
     h: "每一份判断，都留下可追溯的责任记录",
-    body: "知几不公开个人姓名或照片，也不虚构「大师」人设。每份交付都经过实质性人工审核，并记录案例编号、方法版本、审核日期与修订历史。软件参与哪些环节，也会如实说明。",
+    body: "观复不公开个人姓名或照片，也不虚构「大师」人设。每份交付都经过实质性人工审核，并记录案例编号、方法版本、审核日期与修订历史。软件参与哪些环节，也会如实说明。",
     points: [
       { h: "人工审核", p: "盘面输入、解释、书面简报与关键修改都必须经过人工复核，不能把自动生成结果直接交付给客户。" },
       { h: "方法可追溯", p: "排盘选择、关键假设、软件用途、不确定之处与报告版本会保留在案例记录中。" },
       { h: "允许质疑与修正", p: "客户可以要求解释依据；30/90 天复盘会记录需要修正的地方，而不只记录符合之处。" },
     ],
-    sign: "— 知几案例审核",
+    sign: "— 观复案例审核",
   },
   en: {
     eyebrow: "Method & accountability",
     h: "Every case includes a traceable review record",
-    body: "Zhiji uses brand accountability rather than a public practitioner persona. Every delivered interpretation undergoes substantive human review and carries a case number, reviewer-role ID, method version, review date, and revision history. The report also states which tasks were software-assisted. We do not publish a practitioner’s name or photograph, and we do not invent a ‘master’ persona.",
+    body: "Meridian uses brand accountability rather than a public practitioner persona. Every delivered interpretation undergoes substantive human review and carries a case number, reviewer-role ID, method version, review date, and revision history. The report also states which tasks were software-assisted. We do not publish a practitioner’s name or photograph, and we do not invent a ‘master’ persona.",
     points: [
       { h: "Human review", p: "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Automated output is never delivered as final judgment." },
       { h: "Traceable method", p: "Calculation choices, key assumptions, software use, uncertainty, and report versions remain in the case record." },
       { h: "Open to correction", p: "Clients can ask for the reasoning. The 30/90-day review records what needs revision as well as what helped." },
     ],
-    sign: "— Zhiji case review",
+    sign: "— Meridian case review",
   },
 };
 
@@ -974,13 +974,13 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     method: {
       eyebrow: "方法与责任",
       h1: "怎么排盘，谁来负责",
-      lead: "知几以八字为主，出生资料与问题适合时结合紫微斗数。排盘计算是确定、可复现的；解释由人负责。依据、假设与不确定之处都会写清楚。",
+      lead: "观复以八字为主，出生资料与问题适合时结合紫微斗数。排盘计算是确定、可复现的；解释由人负责。依据、假设与不确定之处都会写清楚。",
       version: "方法版本 · Method v1.0 · 2026-07-10",
       sections: [
         {
           h: "以八字为主，兼采中国命理的其他方法",
           body: [
-            "知几做的是中国命理，不只是八字。八字是默认的结构框架，用来观察时间、重复模式与选择边界；当出生时间足够可靠、问题也适合时，会结合紫微斗数等其他中国命理方法作为补充视角。每份判读只会用到真正用上的方法，并写清楚用了哪些。",
+            "观复做的是中国命理，不只是八字。八字是默认的结构框架，用来观察时间、重复模式与选择边界；当出生时间足够可靠、问题也适合时，会结合紫微斗数等其他中国命理方法作为补充视角。每份判读只会用到真正用上的方法，并写清楚用了哪些。",
             "这些都是传统解释框架，不是预测科学。它们帮助你多一个可参照的结构，而不是给出一个确定的未来。",
           ],
         },
@@ -1009,7 +1009,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           h: "人工审核与案例记录",
           body: [
             "盘面输入、解释、书面简报与关键修改都必须经过人工复核。每个案例带有案例编号、审核角色标识（如 ZJ-R01）、方法版本、审核日期与修订历史。",
-            "知几不公开个人姓名或照片，也不虚构大师人设。公开责任归于知几这套可追溯的流程与记录。",
+            "观复不公开个人姓名或照片，也不虚构大师人设。公开责任归于观复这套可追溯的流程与记录。",
           ],
         },
       ],
@@ -1018,7 +1018,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     promise: {
       eyebrow: "承诺与边界",
       h1: "我们不做什么",
-      lead: "很多人对这个行业的不信任，来自被推销、被吓唬、被留住。知几把边界写在最前面。",
+      lead: "很多人对这个行业的不信任，来自被推销、被吓唬、被留住。观复把边界写在最前面。",
       version: "版本 · 2026-07-10",
       sections: [
         {
@@ -1162,13 +1162,13 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     method: {
       eyebrow: "Method & accountability",
       h1: "How the chart is cast, and who is accountable",
-      lead: "Zhiji is BaZi-led, with Zi Wei Dou Shu included when the birth data and question support it. The chart calculation is deterministic and reproducible; interpretation is done by a person. Reasoning, assumptions, and uncertainty are stated plainly.",
+      lead: "Meridian is BaZi-led, with Zi Wei Dou Shu included when the birth data and question support it. The chart calculation is deterministic and reproducible; interpretation is done by a person. Reasoning, assumptions, and uncertainty are stated plainly.",
       version: "Method v1.0 · 2026-07-10",
       sections: [
         {
           h: "BaZi-led, drawing on the wider Chinese metaphysics tradition",
           body: [
-            "Zhiji practices Chinese metaphysics, not BaZi alone. BaZi is the default structural framework for examining timing, recurring patterns, and decision boundaries. When the birth time is reliable enough and the question fits, Zi Wei Dou Shu and other Chinese methods are drawn in as complementary lenses. Each brief uses only the methods it actually applied, and names which ones.",
+            "Meridian practices Chinese metaphysics, not BaZi alone. BaZi is the default structural framework for examining timing, recurring patterns, and decision boundaries. When the birth time is reliable enough and the question fits, Zi Wei Dou Shu and other Chinese methods are drawn in as complementary lenses. Each brief uses only the methods it actually applied, and names which ones.",
             "Both are traditional interpretive frameworks, not predictive science. They give you one more structure to reason with — not a fixed future.",
           ],
         },
@@ -1197,7 +1197,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           h: "Human review and the case record",
           body: [
             "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Each case carries a case number, reviewer-role ID (e.g. ZJ-R01), method version, review date, and revision history.",
-            "Zhiji does not publish a personal name or photograph, and does not invent a master persona. Accountability belongs to this traceable process and record.",
+            "Meridian does not publish a personal name or photograph, and does not invent a master persona. Accountability belongs to this traceable process and record.",
           ],
         },
       ],
@@ -1206,7 +1206,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     promise: {
       eyebrow: "Our promise",
       h1: "What we don’t do",
-      lead: "Much of the distrust in this category comes from being sold to, frightened, or kept hooked. Zhiji states the boundaries first.",
+      lead: "Much of the distrust in this category comes from being sold to, frightened, or kept hooked. Meridian states the boundaries first.",
       version: "Version 2026-07-10",
       sections: [
         {

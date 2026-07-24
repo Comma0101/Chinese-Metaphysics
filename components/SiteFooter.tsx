@@ -15,8 +15,8 @@ export function SiteFooter({ lang }: { lang: Lang }) {
         <div className="cols3">
           <div>
             <div className="fbrand">
-              <span className="seal">知</span>
-              <span className="word">知几 Zhiji</span>
+              <span className="seal">观</span>
+              <span className="word">观复 Meridian</span>
             </div>
             <p className="ftag">{f.tagline}</p>
           </div>

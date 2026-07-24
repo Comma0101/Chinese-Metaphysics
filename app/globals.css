@@ -1067,6 +1067,141 @@ a {
   opacity: 0.9;
 }
 
+/* 格局 · 旺衰 · 用神 · 忌神 judgment bar */
+.chart-judgment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  background: rgba(26, 24, 21, 0.04);
+  border: 1px solid rgba(26, 24, 21, 0.1);
+  border-radius: 2px;
+  flex-wrap: wrap;
+}
+
+.cj-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.cj-k {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6d675d;
+}
+
+.cj-v {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.cj-v.cj-use { color: #2d7a5a; }
+.cj-v.cj-avoid { color: #a04030; }
+
+.cj-sep {
+  width: 1px;
+  height: 14px;
+  background: rgba(26, 24, 21, 0.15);
+}
+
+/* 十神 cells */
+.cell.shishen {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: #6d675d;
+  padding: 6px 0;
+  background: rgba(26, 24, 21, 0.02);
+}
+
+.cell.shishen.self {
+  color: var(--seal);
+  font-weight: 600;
+  background: rgba(178, 58, 43, 0.06);
+}
+
+/* 藏干 cells */
+.cell.canggan {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding: 6px 2px;
+  letter-spacing: 0.08em;
+}
+
+/* 藏干十神 cells */
+.cell.canggan-ss {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #8a8478;
+  padding: 5px 2px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+/* 纳音 cells */
+.cell.nayin {
+  font-family: var(--serif);
+  font-size: 11px;
+  color: #8a8478;
+  padding: 6px 2px;
+  font-style: italic;
+}
+
+/* 大运 section */
+.chart-dayun {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(26, 24, 21, 0.12);
+}
+
+.cd-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6d675d;
+  margin-bottom: 8px;
+}
+
+.cd-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.cd-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 10px;
+  border: 1px solid rgba(26, 24, 21, 0.1);
+  border-radius: 2px;
+  min-width: 52px;
+  background: rgba(26, 24, 21, 0.02);
+}
+
+.cd-gz {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.cd-meta {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #8a8478;
+  letter-spacing: 0.02em;
+}
+
 /* ---------------- 是什么 / 不是什么 ---------------- */
 .cols {
   display: grid;

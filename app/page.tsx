@@ -63,7 +63,7 @@ export default function Home({
               <div className="hero-credential">
                 <span className="credential-mark">知</span>
                 <span className="credential-text">
-                  {lang === "zh" ? "知几 · 私人命理判读" : "Zhiji · Private Metaphysics Reading"}
+                  {lang === "zh" ? "知几 · 子平八字命理" : "Zhiji · Ziping BaZi"}
                 </span>
               </div>
 

@@ -306,47 +306,95 @@ export function LacquerWorld() {
           });
         };
 
-        // 24 mountains — outer ring, color-coded
-        ringChars("子癸丑艮寅甲卯乙辰巽巳丙午丁未坤申庚酉辛戌乾亥壬".split(""), 2.4, 52, true, true);
-        // 24 solar terms — season-colored
-        const solarTerms = "小寒大寒立春雨水惊蛰春分清明谷雨立夏小满芒种夏至小暑大暑立秋处暑白露秋分寒露霜降立冬小雪大雪冬至".match(/.{2}/g)!;
-        const seasonColors = ["rgba(110,155,90,0.75)", "rgba(185,70,50,0.75)", "rgba(178,142,82,0.75)", "rgba(90,125,145,0.75)"];
-        g2.font = `400 26px "Noto Serif CJK SC", "Songti SC", "SimSun", serif`;
-        b.font = `400 26px "Noto Serif CJK SC", "Songti SC", "SimSun", serif`;
+        // --- 五行 color for 天干 ---
+        const wuxingColor = (stem: string): string => {
+          const m: Record<string, string> = {
+            甲: "rgba(90,150,80,0.85)", 乙: "rgba(90,150,80,0.85)",
+            丙: "rgba(190,60,40,0.85)", 丁: "rgba(190,60,40,0.85)",
+            戊: "rgba(178,142,82,0.85)", 己: "rgba(178,142,82,0.85)",
+            庚: "rgba(200,200,210,0.85)", 辛: "rgba(200,200,210,0.85)",
+            壬: "rgba(70,110,150,0.85)", 癸: "rgba(70,110,150,0.85)",
+          };
+          return m[stem] || "rgba(178,142,82,0.85)";
+        };
+        // --- 三元龙 color for 24 mountains ---
+        const sanyuanColor = (ch: string): string => {
+          const tianyuan = new Set(["子", "午", "卯", "酉", "乾", "坤", "艮", ""]);
+          const diyuan = new Set(["甲", "庚", "丙", "壬", "辰", "戌", "丑", "未"]);
+          if (tianyuan.has(ch)) return "rgba(178,142,82,0.92)";
+          if (diyuan.has(ch)) return "rgba(190,55,35,0.92)";
+          return "rgba(107,158,138,0.85)";
+        };
+        // --- color-aware ring drawer ---
+        const ringCharsColor = (chars: string[], r: number, size: number, halfStep: boolean, colorFn: (ch: string) => string) => {
+          g2.font = `600 ${size}px "Noto Serif CJK SC", "Songti SC", "SimSun", serif`;
+          b.font = `600 ${size}px "Noto Serif CJK SC", "Songti SC", "SimSun", serif`;
+          g2.textAlign = "center"; g2.textBaseline = "middle";
+          b.textAlign = "center"; b.textBaseline = "middle";
+          chars.forEach((ch, i) => {
+            const a = ((i + (halfStep ? 0.5 : 0)) / chars.length) * Math.PI * 2;
+            const color = colorFn(ch);
+            for (const ctx of [g2, b]) {
+              ctx.save(); ctx.translate(cx, cx); ctx.rotate(a); ctx.translate(0, -px(r));
+              if (ctx === g2) {
+                ctx.fillStyle = "rgba(0,0,0,0.55)"; ctx.fillText(ch, 2, 2);
+                ctx.fillStyle = "rgba(240,210,150,0.15)"; ctx.fillText(ch, -1, -1);
+                ctx.fillStyle = color; ctx.fillText(ch, 0, 0);
+              } else {
+                ctx.fillStyle = "#d0d0d0"; ctx.fillText(ch, 0, 0);
+              }
+              ctx.restore();
+            }
+          });
+        };
+        // Ring 6: 24 mountains — 三元龙 colors
+        ringCharsColor("子癸丑艮寅甲卯乙辰巽巳丙午丁未坤申庚酉辛戌乾亥壬".split(""), 2.4, 52, true, sanyuanColor);
+        // Ring 5: 十二长生 (replaces 节气 — core 命理 concept)
+        const changsheng = ["长生", "沐浴", "冠带", "临官", "帝旺", "衰", "病", "死", "墓", "绝", "胎", "养"];
+        const csColors = ["rgba(90,150,80,0.7)", "rgba(90,150,80,0.5)", "rgba(178,142,82,0.6)", "rgba(190,60,40,0.7)", "rgba(190,60,40,0.8)", "rgba(178,142,82,0.5)", "rgba(100,100,110,0.5)", "rgba(100,100,110,0.6)", "rgba(100,100,110,0.7)", "rgba(100,100,110,0.8)", "rgba(70,110,150,0.5)", "rgba(70,110,150,0.6)"];
+        g2.font = `400 24px "Noto Serif CJK SC", "Songti SC", "SimSun", serif`;
+        b.font = `400 24px "Noto Serif CJK SC", "Songti SC", "SimSun", serif`;
         g2.textAlign = "center"; g2.textBaseline = "middle";
         b.textAlign = "center"; b.textBaseline = "middle";
-        solarTerms.forEach((term, i) => {
-          const a = ((i + 0.5) / 24) * Math.PI * 2 - Math.PI / 2;
-          const sc = seasonColors[Math.floor(i / 6)];
+        changsheng.forEach((term, i) => {
+          const a = (i / 12) * Math.PI * 2 - Math.PI / 2;
           for (const ctx of [g2, b]) {
             ctx.save(); ctx.translate(cx, cx); ctx.rotate(a); ctx.translate(0, -px(2.08));
             if (ctx === g2) {
               ctx.fillStyle = "rgba(0,0,0,0.4)"; ctx.fillText(term, 1, 1);
-              ctx.fillStyle = sc; ctx.fillText(term, 0, 0);
+              ctx.fillStyle = csColors[i]; ctx.fillText(term, 0, 0);
             } else {
               ctx.fillStyle = "#c0c0c0"; ctx.fillText(term, 0, 0);
             }
             ctx.restore();
           }
         });
-        // 12 earthly branches — bold
-        ringChars("子丑寅卯辰巳午未申酉戌亥".split(""), 1.1, 80, false);
-        // 10 heavenly stems
-        ringChars("甲乙丙丁戊己庚辛壬癸".split(""), 0.78, 56, false);
+        // Ring 4: 12 earthly branches
+        ringCharsColor("子丑寅卯辰巳午未申酉戌亥".split(""), 1.1, 80, false, () => "rgba(178,142,82,0.88)");
+        // Ring 3: 10 heavenly stems — 五行 colors
+        ringCharsColor("甲乙丙丁戊己庚辛壬癸".split(""), 0.78, 56, false, wuxingColor);
 
-        // --- 八卦 symbols around the heaven pool ---
-        const baguaSymbols = ["☰", "☱", "☲", "", "☴", "", "☶", ""];
-        g2.font = `400 42px "Noto Serif CJK SC", serif`;
-        b.font = `400 42px "Noto Serif CJK SC", serif`;
+        // --- 后天八卦 — correct cardinal orientation ---
+        const baguaHT = [
+          { sym: "\u2632", a: -Math.PI / 2 },       // 离 S
+          { sym: "\u2637", a: -Math.PI / 4 },       // 坤 SW
+          { sym: "\u2631", a: 0 },                   // 兑 W
+          { sym: "\u2630", a: Math.PI / 4 },        // 乾 NW
+          { sym: "\u2635", a: Math.PI / 2 },        // 坎 N
+          { sym: "\u2636", a: Math.PI * 3 / 4 },    // 艮 NE
+          { sym: "\u2633", a: Math.PI },             // 震 E
+          { sym: "\u2634", a: -Math.PI * 3 / 4 },   // 巽 SE
+        ];
+        g2.font = `400 36px "Noto Serif CJK SC", serif`;
+        b.font = `400 36px "Noto Serif CJK SC", serif`;
         g2.textAlign = "center"; g2.textBaseline = "middle";
         b.textAlign = "center"; b.textBaseline = "middle";
-        baguaSymbols.forEach((sym, i) => {
-          const a = (i / 8) * Math.PI * 2 + Math.PI / 8;
+        baguaHT.forEach(({ sym, a }) => {
           for (const ctx of [g2, b]) {
             ctx.save(); ctx.translate(cx, cx); ctx.rotate(a); ctx.translate(0, -px(0.52));
             if (ctx === g2) {
               ctx.fillStyle = "rgba(0,0,0,0.4)"; ctx.fillText(sym, 1, 1);
-              ctx.fillStyle = "rgba(178,142,82,0.7)"; ctx.fillText(sym, 0, 0);
+              ctx.fillStyle = "rgba(178,142,82,0.75)"; ctx.fillText(sym, 0, 0);
             } else {
               ctx.fillStyle = "#c8c8c8"; ctx.fillText(sym, 0, 0);
             }

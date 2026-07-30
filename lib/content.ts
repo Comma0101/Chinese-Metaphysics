@@ -58,16 +58,16 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "私人八字命理咨询 · 子平体系",
+      eyebrow: "私人中国命理咨询 · 只为一件重大决定",
       h1: "你以为你在犹豫。其实你在重复。",
-      lead: "想了很多遍的事，值得被看清楚一次。观复以子平八字为框架，把时机、反复出现的模式和你还没看到的取舍，写成一份书面判读。不催你，不吓你，决定始终是你的。",
-      accent: "Private Chinese metaphysics consultation, led by BaZi.",
+      lead: "去还是留、转还是不转、开还是等——同一件事你已经在心里推演过太多次，每次都回到原地。观复把这次推演交给紫微·七政·奇门三套工具，还你一份看得见的书面判读：你卡在哪里、张力在哪、你一直绕开的那个取舍是什么。全程书面、人工复核，不催你，不吓你，决定始终是你的。",
+      accent: "Private Chinese metaphysics consultation · three systems, three questions.",
       cta: "查看服务内容",
       applyCta: "申请首批名额",
-      secondaryCta: "先看演示判读 →",
-      trustSignal: "确定性排盘 + 人工审核 · 不是 AI 生成",
-      ctaNote: "适合职业、offer、去留、迁移、创业、关系与家庭节点",
-      proof: ["一项重大决定", "书面决策判读", "一轮书面澄清 + 30/90 天书面复盘"],
+      secondaryCta: "先看交付节选 →",
+      trustSignal: "首份正式交付已完成 · 方法 v1.0 · 人工复核，不是 AI 生成",
+      ctaNote: "US$49 受理定金全额计入 US$388 · 若不符合受理规则，原路退还",
+      proof: ["去留 / 迁移", "转行 / offer", "创业 / 关停", "关系 / 家庭"],
       waitlistH: "首批名额开放时，第一时间通知你",
       waitlistLead: "留下邮箱，开放申请时你会收到一封邮件。不会发别的东西。",
       waitlistPlaceholder: "your@email.com",
@@ -86,8 +86,8 @@ export const T: Record<Lang, Chrome> = {
       ],
       isLabel: "这次咨询会做什么",
       is: [
-        "以子平八字为主体框架，看这件事的时机窗口、你反复走进的模式，和此刻没权衡到的取舍",
-        "命局分析和现实条件分开写——哪句是十神互动的推论、哪句是现实约束，一眼能分",
+        "紫微斗数看领域与角色，七政四余看长期机制，奇门遁甲看当下时势——三套工具分工，看这件事的时机窗口、你反复走进的模式，和此刻没权衡到的取舍",
+        "命局分析和现实条件分开写——哪句是盘面推论、哪句是现实约束，一眼能分",
         "比较选项，不替你下命令",
         "留下一份可回看、可质疑、可复盘的记录",
       ],
@@ -122,7 +122,7 @@ export const T: Record<Lang, Chrome> = {
         },
         {
           num: "03 · 交付与复盘",
-          h: "书面交付，书面复盘",
+          h: "交付、澄清与复盘，全程以书面进行",
           p: "交付后 14 天内可提交一轮书面澄清；30/90 天以书面记录哪些判断有用、哪些需要修正。",
         },
       ],
@@ -131,7 +131,7 @@ export const T: Record<Lang, Chrome> = {
       priceTrust:
         "付款目前保持关闭。开放前，方法说明、退款规则、隐私条款和运营门槛会完整公布。",
       boundary:
-        "命理是一面镜子，不是一张处方。它照见你命局里的结构——哪些力量在拉扯、哪些窗口在开合、哪些模式在重复。但镜子不替你走路。观复采用子平八字为主体框架，以格局法论命、以旺衰法校时；紫微斗数仅作交叉验证，当两套体系指向同一方向时置信度更高，当它们矛盾时以八字为准并在判读中标注分歧。观复不提供医疗、心理、法律、移民或投资建议——如有相关需要，请咨询持牌专业人士。",
+        "命理是一面镜子，不是一张处方。它照见你命局里的结构——哪些力量在拉扯、哪些窗口在开合、哪些模式在重复。但镜子不替你走路。观复以紫微斗数、七政四余、奇门遁甲三套工具分工合参：紫微看人生领域与角色结构，七政看长期运行机制，奇门看当下时势与行动顺序。三者回答不同的问题，而不是同一个问题问三遍；指向同一处时置信度更高，彼此矛盾时，分歧会如实写进判读。观复不提供医疗、心理、法律、移民或投资建议——如有相关需要，请咨询持牌专业人士。",
       footer: "观复 · Meridian — 围绕一项重大决定的私人命理咨询。",
     },
     cancel: {
@@ -148,16 +148,16 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "Private BaZi consultation · Ziping system",
+      eyebrow: "Private Chinese metaphysics consultation · for one consequential decision",
       h1: "You think you're hesitating. You're repeating.",
-      lead: "Something you've thought about many times deserves to be seen clearly, once. Meridian uses the Ziping BaZi framework to write the timing, the patterns that repeat, and the trade-offs you can't yet see into one written brief. No pressure, no fear — the decision stays yours.",
-      accent: "私人中国命理咨询，以八字为主，按案结合紫微斗数。",
+      lead: "Leave or stay, switch or hold, start or wait — the decision you've turned over too many times, each time landing where you started. Meridian hands that loop to three systems — Zi Wei, Qi Zheng, Qi Men — and returns a brief you can see: where you're stuck, the tension, the trade-off you keep circling. Written, human-reviewed, no pressure. The decision stays yours.",
+      accent: "私人中国命理咨询，紫微斗数、七政四余、奇门遁甲三术合参。",
       cta: "See what is included",
       applyCta: "Apply for a founding seat",
-      secondaryCta: "Read a sample brief →",
-      trustSignal: "Deterministic chart + human review · not AI-generated",
-      ctaNote: "For career choices, job offers, relocation, founder decisions, relationships, and family transitions",
-      proof: ["One consequential decision", "A written decision brief", "One written follow-up + written 30/90-day reviews"],
+      secondaryCta: "Read delivery excerpts →",
+      trustSignal: "First formal delivery completed · method v1.0 · human-reviewed, not AI-generated",
+      ctaNote: "US$49 assessment deposit, credited in full toward US$388 · refunded if we can't proceed",
+      proof: ["Relocation", "Career & offers", "Start or wind down", "Relationships"],
       waitlistH: "Be the first to know when founding seats open",
       waitlistLead: "Leave your email. You'll get one message when applications open. Nothing else.",
       waitlistPlaceholder: "your@email.com",
@@ -177,8 +177,8 @@ export const T: Record<Lang, Chrome> = {
       ],
       isLabel: "What the consultation does",
       is: [
-        "Uses the Ziping BaZi framework as its core to read the timing window, the patterns you keep walking back into, and the trade-off you haven't weighed yet",
-        "Separates chart analysis from real-world facts — which line is a Ten-God interaction inference, which is a real constraint — at a glance",
+        "Works three systems in division of labor — Zi Wei Dou Shu for life domains and roles, Qi Zheng Si Yu for long-term mechanisms, Qi Men Dun Jia for current timing — to read the timing window, the patterns you keep walking back into, and the trade-off you haven't weighed yet",
+        "Separates chart analysis from real-world facts — which line is a chart inference, which is a real constraint — at a glance",
         "Compares options without making the decision for you",
         "Leaves you with a record you can revisit, challenge, and review later",
       ],
@@ -222,7 +222,7 @@ export const T: Record<Lang, Chrome> = {
       priceTrust:
         "Payments are not yet open. Before they open, we will publish the method disclosure, privacy notice, service terms, and acceptance and refund policy, and complete our operational readiness checks.",
       boundary:
-        "Metaphysics is a mirror, not a prescription. It reflects the structure in your chart — which forces are pulling, which windows are opening, which patterns repeat. But the mirror doesn't walk for you. Meridian uses the Ziping BaZi system as its core framework, applying Structure Method for pattern analysis and Strength Method for timing calibration. Zi Wei Dou Shu serves only as cross-validation — when both systems point the same direction, confidence is higher; when they conflict, BaZi prevails and the divergence is noted in the brief. Meridian does not provide medical, mental-health, legal, immigration, or investment advice — consult licensed professionals for those needs.",
+        "Metaphysics is a mirror, not a prescription. It reflects the structure in your chart — which forces are pulling, which windows are opening, which patterns repeat. But the mirror doesn't walk for you. Meridian works three systems in strict division of labor: Zi Wei Dou Shu for life domains and role structure, Qi Zheng Si Yu for long-term operating mechanisms, and Qi Men Dun Jia for current timing and the sequence of action. They answer different questions rather than the same question three times; where they converge, confidence is higher, and where they diverge, the disagreement is noted in the brief. Meridian does not provide medical, mental-health, legal, immigration, or investment advice — consult licensed professionals for those needs.",
       footer: "Meridian — Private Chinese metaphysics consultation for one consequential decision.",
     },
     cancel: {
@@ -362,7 +362,7 @@ export const PILOT_FORM: Record<
       },
       {
         key: "frameworkAccepted",
-        label: "我理解八字，以及适用时采用的紫微斗数，在这里都是传统解释框架，不保证结果。",
+        label: "我理解紫微斗数、七政四余与奇门遁甲在这里都是传统解释框架，不保证结果。",
       },
       {
         key: "agencyAccepted",
@@ -496,7 +496,7 @@ export const PILOT_FORM: Record<
       },
       {
         key: "frameworkAccepted",
-        label: "I understand that BaZi—and Zi Wei Dou Shu when used—are traditional interpretive frameworks and do not guarantee an outcome.",
+        label: "I understand that Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia are traditional interpretive frameworks and do not guarantee an outcome.",
       },
       {
         key: "agencyAccepted",
@@ -660,7 +660,7 @@ export const PILOT_EXPLAINER: Record<
       { k: "五 · 书面交付", v: "交付一份经过人工审核、带版本记录的书面决策判读；整个服务以书面异步方式完成。" },
       { k: "六 · 书面澄清与复盘", v: "交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题；30/90 天后完成书面复盘。" },
     ],
-    note: "观复不提供免费盲测，也不会为了获客先收出生信息。没有邀请码，可以先查看演示判读与完整费用说明。",
+    note: "观复不提供免费盲测，也不会为了获客先收出生信息。没有邀请码，可以先查看真实交付节选与完整费用说明。",
     cta: "已有邀请，开始申请",
   },
   en: {
@@ -676,7 +676,7 @@ export const PILOT_EXPLAINER: Record<
       { k: "5 · Written delivery", v: "A human-reviewed, versioned written decision brief. The entire service is delivered asynchronously in writing." },
       { k: "6 · Written follow-up and review", v: "Within 14 days after delivery, you may submit one consolidated written follow-up about the original brief’s reasoning, assumptions, or wording. Written reviews follow at 30 and 90 days." },
     ],
-    note: "Meridian does not offer a free blind reading or collect birth data as a lead magnet. You can review the illustrative brief and current fee structure before applications open.",
+    note: "Meridian does not offer a free blind reading or collect birth data as a lead magnet. You can review excerpts from a real (anonymized) delivery and the current fee structure before applications open.",
     cta: "View application requirements",
   },
 };
@@ -721,7 +721,7 @@ export const FOOTER: Record<
   zh: {
     tagline: "围绕一件重大决定的私人中国命理咨询。",
     legal:
-      "八字，以及适用时采用的紫微斗数，在这里都是传统解释框架，不保证结果，也不代替专业意见。决定权在你。",
+      "紫微斗数、七政四余与奇门遁甲在这里都是传统解释框架，不保证结果，也不代替专业意见。决定权在你。",
     rights: "© 2026 观复 Meridian",
     nav: [
       { label: "服务流程", href: "/free" },
@@ -732,7 +732,7 @@ export const FOOTER: Record<
   en: {
     tagline: "Private Chinese metaphysics consultation for one consequential decision.",
     legal:
-      "BaZi—and Zi Wei Dou Shu when used—are traditional interpretive frameworks. They do not guarantee an outcome or replace professional advice. The decision remains yours.",
+      "Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia are traditional interpretive frameworks. They do not guarantee an outcome or replace professional advice. The decision remains yours.",
     rights: "© 2026 Meridian",
     nav: [
       { label: "Process", href: "/free" },
@@ -777,7 +777,7 @@ export const TRUST: Record<
   },
 };
 
-// 演示样例（装裱的判读）—— 明确标注为演示，不声称真实客户案例
+// 交付节选（装裱的判读）—— 真实交付、已脱敏：移除出生资料与具体时间，不声称准确率
 export const SAMPLE: Record<
   Lang,
   {
@@ -794,64 +794,88 @@ export const SAMPLE: Record<
   }
 > = {
   zh: {
-    eyebrow: "交付示例",
+    eyebrow: "交付节选",
     h: "先看文件怎么写，再决定值不值得谈。",
-    lead: "下面是一份虚构演示，用来展示判读如何区分盘面观察、现实条件、关键假设与行动边界。它不是客户证明，也不代表准确率。",
-    tag: "虚构演示 · 不对应任何真实个案",
-    caseH: "演示：机会在别处，家在这里",
-    q: "「一个很好的机会在另一座城市，可我对象的生活在这边，爸妈也一年比一年需要人。我到底该抓住这次，还是留下来？」",
-    meta: "虚构情境 · 仅展示交付结构",
+    lead: "下面是一份真实交付的节选，已脱敏——出生资料与具体时间均已移除，分析结构、方法与文字原样保留。它展示三套工具如何分工、结论如何收敛、置信度如何标注。它不是客户证明，也不代表准确率。",
+    tag: "真实交付节选 · 已脱敏",
+    caseH: "节选：让一个方向真正拥有重量",
+    q: "「当前阶段的主势是什么，真正阻力在哪里，下一步应怎样用力？」",
+    meta: "真实交付节选 · 已脱敏 · 仅展示结构",
     reading: [
       {
-        k: "现实条件",
-        v: "这不只是一个工作选择。对象能不能一起走、父母真实的健康与身边有没有人照应、这一步可不可逆、以及推掉这次机会的实际代价——这些事实比命局更能改变结论。判读会把它们和命局分开写。",
+        k: "三套工具的分工",
+        v: "这份交付包含紫微斗数、七政四余、奇门遁甲三套独立分析。三者不承担同一个任务：紫微看十二宫、命身、四化与大限，回答人生领域如何互相牵动、当前十年的组织中心发生什么变化；七政看出生时刻的日月五星与宫位，回答长期运行机制如何从信息、价值、资源与契约形成现实位置；奇门看提问当下的时空局势，回答当前入口在哪里、为什么尚未落实、应按什么顺序行动。三套工具给出的不是三份重复的人格描述，而是三个不同层次。",
       },
       {
-        k: "命局分析",
-        v: "日主甲木，四柱土重火旺而水木全无透干——典型的财多身弱结构。月干戊土偏财透干、时干己土正财再透，财星双现而日主在地支无强根（辰中乙木余气太弱，午巳皆火土）。命局里反复出现的张力不是「该不该走」，而是「承接力够不够」：财星代表机会确实来了，但身弱不受财，等于力气不够的人面前摆了两箱金子。当前大运走辛未，未土再助财星——窗口是开的，但窗口开着不等于你走得动。判读要回答的不是「走不走」，而是「以什么姿态走、带什么条件走」。",
+        k: "四条共同结论",
+        v: "一、外在运行强调秩序、分寸、标准和可信度；真正进入重大问题时，内部主导欲、决断力和破局能力显著增强。二、长期优势不是某一个单点标签，而是把复杂信息整理成价值，把价值组织成资源，再用清晰契约固定下来。三、当前十年的重心，从一对一绑定、共同未来和关系组织，逐渐转向创造物、作品、用户、后继者与长期养成。四、当前局势并不缺少方向，真正缺少的是能够证明方向成立的现实填充：已完成、已付费、已签署、已重复或已稳定运行。",
       },
       {
-        k: "关键假设",
-        v: "只有当过去几年确实反复出现「为了让别人安心，一再推迟自己的选择」时，财多身弱的结构判断才成立——因为这意味着命主一直在用「比劫」（自我意志）去扛「财星」（外部需求），而比劫本身就不够强。如果过去每一次大胆独立的决定反而走得更好，那身弱的判断需要修正，用神取向也可能不同。",
+        k: "三个最重要的张力",
+        v: "秩序与破局：天相的合理性，与紫微七杀、廉破的构造之间的张力——成熟的整合不是反对规则，而是在旧规则失效时建立更可信的新秩序。标准与生长：七政中的价值标准，与木星式扩张之间的张力——让标准成为筛选器，而不是在事物尚未生长前成为终止器。方向与实体：奇门开门已现，与坎宫空亡之间的张力——用现实结果填充战略：先做完，再重复，再扩大。",
       },
       {
-        k: "低后悔行动",
-        v: "先向三边要同一组事实：这个机会能不能等、能不能远程、真实的截止在哪；和对象认真谈一次「真要走需要什么」；弄清父母除了你之外还有哪些支持。信息补齐后，再比较哪条路更符合当下的承受力。用神水木的方向：找一个能给你「印星」（支持系统、缓冲空间）的方案，而不是裸身去扛财星。",
+        k: "奇门深读 · 有门无实",
+        v: "值符、天心、开门同落坎宫：当前并不是没有方向，而是已经可以辨认一个足以正式进入的路径。关键不在于门是否存在，而在于门所在宫位为空——方向、结构或机会在观念上已经成立，现实承诺、资源、人员、交易、合同或重复结果仍未完全填入。看见路径、拥有概念、完成网页或得到口头兴趣，都不等于结构已经成立。必须出现已支付、已签署、已交付、已完成或可重复的事实。与此同时，日干落兑临死门与太阴：当前主势不是单纯向外扩张，而是通过结束、筛选与归档重新获得集中度——不关闭旧循环，新路径只能获得剩余资源。",
+      },
+      {
+        k: "三套体系如何合并",
+        v: "收敛处：三套工具都没有把核心问题指向「找到更多解释」，而是指向结构形成、成果养成与现实固定；都强调标准、可信度、契约或责任，但这些要从认知原则进入真实制度；都不支持无限横向扩张，真正有利的是把理解沉淀为可以反复承担的结构。分歧处：紫微要求养成与耐心，七政要求增长经过标准，奇门要求迅速拿到现实填充——三者合起来不是「更努力」或「更大胆」，而是减少无效控制，给真正值得发展的事物养成空间，同时设置现实完成条件，防止「养成」退化为无限准备。",
+      },
+      {
+        k: "未来 90 天 · 四个阶段",
+        v: "第一阶段（第 1–14 天）关闭旧循环、冻结边界：正式停止或降级长期不产生价值的方向，为主方向写下范围、完成条件、责任人与截止日。第二阶段（第 15–45 天）取得第一个现实结果：结果必须可以被第三方辨认——付款、合同、交付、批准或稳定运行，并区分「有人感兴趣」「有人承诺」和「事情已经发生」。第三阶段（第 46–75 天）重复三次：用相近流程再完成三次相似结果；若每次都需要全新解释或英雄式投入，结构尚未形成。第四阶段（第 76–90 天）决定是否放大：只有在结果可以重复且系统能够承载时，才增加传播、合作、招聘或资金投入。少开新门，真正走完一扇门。",
+      },
+      {
+        k: "方法边界与置信度",
+        v: "交付区分四个层级：计算结构（可复算，但受流派与时间口径影响）、传统解释（作为文化模型与结构假设）、现代转译（最容易受解释者影响，需要用户反馈）、现实建议（由现实约束与风险边界优先决定）。置信度分别标注：长期人格与人生领域转译为中低，具体事件、收入或关系结果为低——本报告不将其作为确定性预言。不用于决定是否停止医疗或药物，不替代律师、移民顾问或持牌财务人士，不对死亡、寿命、重病、诉讼或投资收益作确定判断，不以恐惧、灾难或付费化解制造依赖。",
       },
     ],
     falsifyLabel: "哪些事实会改变或推翻这版判断",
     falsify:
-      "如果对象其实愿意一起搬、父母身边已有稳妥的照应，或你过去每一次大胆独立的决定反而走得更好，那么整个风险判断都会改变——身弱的结论可能被推翻，用神取向也会不同。正式判读必须把这些反例写在前面，而不是等结果出来再补解释。",
+      "可靠出生记录证明应使用其他时辰：紫微部分需全部重排。现实表明当前主要矛盾并非方向与落地，而是健康、法律、现金或安全风险：现实风险优先。未来 90 天内，扩大探索反而持续产生高质量现实结果，而收缩没有改善承载：奇门行动解释需要修订。长期主题的实际表现持续与报告假设相反：相关转译需要降低置信度。不同专业人员对计算口径提出可复现的重大异议：采用版本化重算，而非口头调和。",
   },
   en: {
-    eyebrow: "Delivery example",
+    eyebrow: "Delivery excerpts",
     h: "See the deliverable before deciding whether to apply.",
-    lead: "This fictional sample shows how a brief separates chart observations, real-world constraints, key assumptions, and action boundaries. It uses no real client data and makes no claim about accuracy.",
-    tag: "Fictional sample · no real client data",
-    caseH: "Fictional case: a chance elsewhere, home is here",
-    q: "“There’s a real opportunity in another city, but my partner’s life is here and my parents need me more every year. Do I take this, or stay?”",
-    meta: "Fictional scenario · delivery structure only",
+    lead: "These are excerpts from a real delivery, anonymized — birth data and specific dates removed, with the analytical structure, method, and writing kept intact. They show how the three systems divide the work, where conclusions converge, and how confidence is labeled. This is not a testimonial and makes no claim about accuracy.",
+    tag: "Excerpts from a real delivery · anonymized",
+    caseH: "Excerpt: giving a direction real weight",
+    q: "“What is the main current of this phase, where is the real resistance, and how should effort be applied next?”",
+    meta: "Excerpts from a real delivery · anonymized · structure shown",
     reading: [
       {
-        k: "Real-world constraints",
-        v: "This is not only a career choice. Whether your partner could move too, your parents' actual health and whether anyone else is nearby to help, how reversible the move is, and the real cost of turning this down — these facts change the answer more than the chart does. The brief keeps them separate from the chart.",
+        k: "Three systems, one division of labor",
+        v: "This delivery contains three independent analyses. They do not do the same job: Zi Wei Dou Shu maps the twelve palaces, self and body, four transformations, and decade cycles — how life domains pull on one another, and what is changing at the organizing center of the current decade. Qi Zheng Si Yu reads the luminaries and planets at the birth moment — how long-term position forms through information, value, resource, and contract. Qi Men Dun Jia reads the situation at the moment of the question — where the entry point is, why it has not materialized, and in what order to act. The three give not three repeated personality descriptions but three different layers.",
       },
       {
-        k: "Chart analysis",
-        v: "Day Master Jia Wood, four pillars heavy with Earth and Fire while Water and Wood show no transparent stems — a classic 'wealth overwhelms weak self' structure. Month stem Wu Earth (Indirect Wealth) and hour stem Ji Earth (Direct Wealth) both appear on top, yet the Day Master has no strong root in the branches (the Yi Wood hidden in Chen is too weak; Wu and Si are both Fire-Earth). The recurring tension in this chart is not 'should I go' but 'can I carry it': Wealth stars mean the opportunity is real, but a weak self cannot hold wealth — like someone without enough strength facing two chests of gold. The current Major Luck runs Xin Wei, Wei Earth further strengthening Wealth — the window is open, but an open window doesn't mean you can walk through it. The brief answers not 'go or stay' but 'in what posture, with what conditions.'",
+        k: "Four shared conclusions",
+        v: "One: outward operation emphasizes order, measure, standards, and credibility; when truly major questions arise, the inner drive to lead, decide, and break through rises sharply. Two: the long-term advantage is not a single label but a chain — organizing complex information into value, organizing value into resources, and fixing it in place with clear contracts. Three: the current decade's center of gravity is moving from one-to-one binding, shared futures, and relationship organization toward creations, works, users, successors, and long-term cultivation. Four: the current situation does not lack direction. What it lacks is the real-world filling that would prove the direction holds: completed, paid, signed, repeated, or stably running.",
       },
       {
-        k: "Key assumption",
-        v: "The 'wealth overwhelms weak self' reading only holds if recent years show a repeated pattern of putting off your own moves to keep others comfortable — because that pattern means the self (Companion/Rob Wealth) has been spending its limited strength carrying external demands (Wealth). If past bold independent moves actually went well, the weak-self conclusion needs revision and the favorable-element direction may differ.",
+        k: "The three central tensions",
+        v: "Order vs. breakthrough: the legitimacy of structure against the construction of rupture — the mature integration is not to oppose rules but to build a more credible new order when the old one fails. Standards vs. growth: the value standard against Jupiter-like expansion — let standards be a filter, not a terminator that ends things before they have grown. Direction vs. substance: the Qi Men open door has appeared, yet its palace is void — fill the strategy with real-world results: finish first, then repeat, then scale.",
       },
       {
-        k: "Low-regret next step",
-        v: "Before deciding, get the same set of facts from all three sides: whether the opportunity can wait or be remote and its real deadline; one honest conversation with your partner about what a move would actually take; and what support your parents have beyond you. Compare again once those unknowns shrink. Follow the favorable Water-Wood direction: find a plan that gives you 'Seal' energy (support system, buffer space) rather than going bare-handed against the Wealth stars.",
+        k: "Qi Men deep-dive · a door without substance",
+        v: "The Chief Symbol, the Heart Star, and the Open Door all land in the Kan palace: it is not that there is no direction — a path worth formally entering can already be identified. The point is not whether the door exists but that the palace it sits in is void: the direction, structure, or opportunity holds conceptually, while real-world commitment, resources, people, transactions, contracts, or repeated results have not yet been filled in. Seeing the path, owning the concept, finishing a website, or receiving verbal interest is not the same as the structure holding. There must be facts: paid, signed, delivered, completed, or repeatable. Meanwhile the day stem lands in Dui with the Death Door and the Great Moon: the main current is not simple outward expansion but regaining concentration through ending, sorting, and archiving — unless the old cycle is closed, the new path gets only leftover resources.",
+      },
+      {
+        k: "How the three systems merge",
+        v: "Convergence: none of the three points the core problem toward 'finding more explanation'; all point to structure forming, results being cultivated, and reality being fixed in place. All stress standards, credibility, contracts, or responsibility — but these must move from cognitive principles into real institutions. None supports unlimited lateral expansion; what truly helps is settling understanding into a structure that can carry weight repeatedly. Divergence: Zi Wei asks for cultivation and patience, Qi Zheng asks that growth pass through standards, Qi Men asks for real-world filling quickly. Together they say not 'try harder' or 'be bolder' but: reduce ineffective control, give what truly deserves development room to grow, and set real-world completion conditions so 'cultivation' does not degrade into endless preparation.",
+      },
+      {
+        k: "The next 90 days · four phases",
+        v: "Phase one (days 1–14), close old cycles and freeze boundaries: formally stop or downgrade directions that have long produced no value; write down the main direction's scope, completion conditions, owner, and deadline. Phase two (days 15–45), get the first real-world result: it must be recognizable by a third party — payment, contract, delivery, approval, or stable running — and you must distinguish 'someone is interested', 'someone committed', and 'the thing has happened'. Phase three (days 46–75), repeat three times: complete three similar results with a similar process; if each one needs a brand-new explanation or heroic effort, the structure has not formed. Phase four (days 76–90), decide whether to scale: only add promotion, partnership, hiring, or capital once results repeat and the system can carry them. Open fewer doors; walk one door all the way through.",
+      },
+      {
+        k: "Method boundaries and confidence",
+        v: "The delivery separates four levels: computed structure (recomputable, but affected by school and time conventions), traditional interpretation (as cultural model and structural hypothesis), modern translation (most influenced by the interpreter, requiring client feedback), and real-world advice (decided first by real constraints and risk boundaries). Confidence is labeled separately: long-term personality and life-domain translation is medium-low; specific events, income, or relationship outcomes are low — the report does not treat them as deterministic predictions. It is not used to decide whether to stop medical care or medication, does not replace lawyers, immigration advisors, or licensed financial professionals, makes no definitive judgment on death, lifespan, serious illness, litigation, or investment returns, and never creates dependency through fear, disaster, or paid remedies.",
       },
     ],
     falsifyLabel: "What would change this assessment",
     falsify:
-      "If your partner is in fact open to moving, your parents already have dependable support, or you have historically done better by making bold independent moves, the whole risk picture changes. A real brief names those counterexamples up front, not after the outcome.",
+      "A reliable birth record showing a different hour: the Zi Wei section must be fully re-cast. Reality showing the main contradiction is not direction and execution but health, legal, cash, or safety risk: real-world risk takes priority. If over the next 90 days expanded exploration keeps producing high-quality real results while contraction does not improve capacity: the Qi Men action reading needs revision. If long-term themes keep behaving opposite to the report's assumptions: the relevant translations need lower confidence. If different professionals raise reproducible objections to the calculation conventions: versioned recomputation, not verbal reconciliation.",
   },
 };
 
@@ -912,27 +936,6 @@ export const RISK: Record<Lang, string> = {
   en: "US$49 case assessment deposit: credited in full toward the US$388 consultation; returned to the original payment method if we cannot proceed under the published acceptance criteria.",
 };
 
-// 八字命盘（hero 招牌结构件）—— 示意干支，日柱高亮为「日主 = 你」
-export const CHART: Record<
-  Lang,
-  { caption: string; stem: string; branch: string; self: string; pillars: string[] }
-> = {
-  zh: {
-    caption: "示意排盘 · 仅用于展示判读结构",
-    stem: "天干",
-    branch: "地支",
-    self: "日主 = 日干「甲」 · 你",
-    pillars: ["年", "月", "日", "时"],
-  },
-  en: {
-    caption: "Illustrative chart · delivery structure only",
-    stem: "HEAVENLY STEM",
-    branch: "EARTHLY BRANCH",
-    self: "Day Master · 甲 (day stem)",
-    pillars: ["YEAR", "MONTH", "DAY", "HOUR"],
-  },
-};
-
 // 说明页(方法/承诺/隐私/条款/定金)—— 集中管理,受 copy-integrity 测试覆盖。
 // 隐私/条款/定金为「公布前草案」:法律条文需律师复核,页面明确标注草案状态。
 export type DocSlug = "method" | "promise" | "privacy" | "terms" | "deposit";
@@ -974,20 +977,20 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
     method: {
       eyebrow: "方法与责任",
       h1: "怎么排盘，谁来负责",
-      lead: "观复以八字为主，出生资料与问题适合时结合紫微斗数。排盘计算是确定、可复现的；解释由人负责。依据、假设与不确定之处都会写清楚。",
+      lead: "观复以紫微斗数、七政四余、奇门遁甲三套工具分工合参：紫微看领域与角色，七政看长期机制，奇门看当下时势。排盘计算是确定、可复现的；解释由人负责。依据、假设与不确定之处都会写清楚。",
       version: "方法版本 · Method v1.0 · 2026-07-10",
       sections: [
         {
-          h: "以八字为主，兼采中国命理的其他方法",
+          h: "三套工具，严格分工",
           body: [
-            "观复做的是中国命理，不只是八字。八字是默认的结构框架，用来观察时间、重复模式与选择边界；当出生时间足够可靠、问题也适合时，会结合紫微斗数等其他中国命理方法作为补充视角。每份判读只会用到真正用上的方法，并写清楚用了哪些。",
-            "这些都是传统解释框架，不是预测科学。它们帮助你多一个可参照的结构，而不是给出一个确定的未来。",
+            "观复做的是中国命理，不是一套工具重复三次。紫微斗数看人生领域与角色结构，以及当前十年的组织中心发生什么变化；七政四余看出生天空所示的长期运行机制——现实位置如何从信息、价值、资源与契约一步步形成；奇门遁甲看提问当下的入口、空缺与行动顺序。三者回答的是不同层次的问题，而不是同一个问题的三种说法。",
+            "每份判读只会用到真正用上的工具，并写清楚各自给出了什么、哪里收敛、哪里分歧。这些都是传统解释框架，不是预测科学：它们帮你多几重可参照的结构，而不是给出一个确定的未来。",
           ],
         },
         {
           h: "排盘计算是确定、可复现的",
           body: [
-            "排盘本身（干支、大运、宫位）由确定的规则计算，不是由语言模型「猜」出来的。计算方法、时区与真太阳时处理、出生时间不确定时的处理方式，以及版本号，都会记录在案，可以复核。",
+            "排盘本身（紫微的宫位与四化、七政的星体宫位、奇门的局式）由确定的规则计算，不是由语言模型「猜」出来的。计算方法、时区与真太阳时处理、出生时间或起局时间不确定时的处理方式，以及版本号，都会记录在案，可以复核。",
             "出生资料更正会作废依赖它的输出，并生成带日期与原因的新版本。",
           ],
         },
@@ -1008,7 +1011,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "人工审核与案例记录",
           body: [
-            "盘面输入、解释、书面简报与关键修改都必须经过人工复核。每个案例带有案例编号、审核角色标识（如 ZJ-R01）、方法版本、审核日期与修订历史。",
+            "盘面输入、解释、书面简报与关键修改都必须经过人工复核。每个案例带有案例编号、审核角色标识（如 GF-R01）、方法版本、审核日期与修订历史。",
             "观复不公开个人姓名或照片，也不虚构大师人设。公开责任归于观复这套可追溯的流程与记录。",
           ],
         },
@@ -1115,7 +1118,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "不构成专业意见",
           body: [
-            "八字与紫微斗数在这里是传统解释框架，不保证结果，也不代替医疗、心理健康、法律、移民、投资或生育方面的专业意见。决定权始终在你。",
+            "紫微斗数、七政四余与奇门遁甲在这里是传统解释框架，不保证结果，也不代替医疗、心理健康、法律、移民、投资或生育方面的专业意见。决定权始终在你。",
           ],
         },
         {
@@ -1161,21 +1164,21 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
   en: {
     method: {
       eyebrow: "Method & accountability",
-      h1: "How the chart is cast, and who is accountable",
-      lead: "Meridian is BaZi-led, with Zi Wei Dou Shu included when the birth data and question support it. The chart calculation is deterministic and reproducible; interpretation is done by a person. Reasoning, assumptions, and uncertainty are stated plainly.",
+      h1: "How the charts are cast, and who is accountable",
+      lead: "Meridian works three systems in strict division of labor: Zi Wei Dou Shu for life domains and roles, Qi Zheng Si Yu for long-term mechanisms, and Qi Men Dun Jia for current timing. The chart calculations are deterministic and reproducible; interpretation is done by a person. Reasoning, assumptions, and uncertainty are stated plainly.",
       version: "Method v1.0 · 2026-07-10",
       sections: [
         {
-          h: "BaZi-led, drawing on the wider Chinese metaphysics tradition",
+          h: "Three systems, strictly divided",
           body: [
-            "Meridian practices Chinese metaphysics, not BaZi alone. BaZi is the default structural framework for examining timing, recurring patterns, and decision boundaries. When the birth time is reliable enough and the question fits, Zi Wei Dou Shu and other Chinese methods are drawn in as complementary lenses. Each brief uses only the methods it actually applied, and names which ones.",
-            "Both are traditional interpretive frameworks, not predictive science. They give you one more structure to reason with — not a fixed future.",
+            "Meridian practices Chinese metaphysics — not one tool repeated three times. Zi Wei Dou Shu maps life domains and role structure, and how the organizing center of the current decade is shifting. Qi Zheng Si Yu reads the long-term operating mechanisms shown by the birth sky — how real-world position forms, step by step, through information, value, resource, and contract. Qi Men Dun Jia reads the entry point, the gaps, and the sequence of action at the moment of the question. The three answer different layers of the question, not the same question three times.",
+            "Each brief uses only the tools it actually applied, and states what each contributed, where they converge, and where they diverge. All are traditional interpretive frameworks, not predictive science: they give you more structures to reason with — not a fixed future.",
           ],
         },
         {
           h: "The chart calculation is deterministic",
           body: [
-            "The chart itself (stems, branches, luck cycles, palaces) is computed by fixed rules — it is not guessed by a language model. The calculation method, time-zone and true-solar-time handling, treatment of an uncertain birth time, and the version are recorded and can be checked.",
+            "The charts themselves (Zi Wei palaces and transformations, Qi Zheng planetary positions, the Qi Men configuration) are computed by fixed rules — not guessed by a language model. The calculation method, time-zone and true-solar-time handling, treatment of an uncertain birth or question time, and the version are recorded and can be checked.",
             "Corrected birth data invalidates the outputs that depend on it and produces a new version with the date and reason.",
           ],
         },
@@ -1196,7 +1199,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "Human review and the case record",
           body: [
-            "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Each case carries a case number, reviewer-role ID (e.g. ZJ-R01), method version, review date, and revision history.",
+            "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Each case carries a case number, reviewer-role ID (e.g. GF-R01), method version, review date, and revision history.",
             "Meridian does not publish a personal name or photograph, and does not invent a master persona. Accountability belongs to this traceable process and record.",
           ],
         },
@@ -1303,7 +1306,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "Not professional advice",
           body: [
-            "BaZi and Zi Wei Dou Shu are traditional interpretive frameworks here. They guarantee no outcome and do not replace medical, mental-health, legal, immigration, investment, or fertility advice. The decision remains yours.",
+            "Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia are traditional interpretive frameworks here. They guarantee no outcome and do not replace medical, mental-health, legal, immigration, investment, or fertility advice. The decision remains yours.",
           ],
         },
         {

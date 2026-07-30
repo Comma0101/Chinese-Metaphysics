@@ -37,10 +37,37 @@ const mono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
+// Canonical deployed origin (e.g. https://meridian.kummalabs.com). Drives
+// metadataBase / Open Graph / canonical so share previews and SEO resolve to
+// the real host. Env-gated: when unset (local dev, or a build without it) we
+// emit no absolute URLs rather than baking a wrong host. The checkout already
+// reads this same var as the only trusted origin.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const metadataBase = siteUrl ? new URL(siteUrl) : undefined;
+
+const ogTitle = "Meridian 观复 | Private Chinese Metaphysics Consultation";
+const ogDescription =
+  "A private, human-reviewed Chinese metaphysics consultation for one consequential decision, reading through Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia. Invitation-only.";
+
 export const metadata: Metadata = {
+  ...(metadataBase ? { metadataBase } : {}),
   title: "Meridian 观复 | Private Chinese Metaphysics Consultation",
   description:
-    "A private, human-reviewed, BaZi-led Chinese metaphysics consultation for one consequential decision. Invitation-only; applications and payments are currently closed.",
+    "A private, human-reviewed Chinese metaphysics consultation for one consequential decision, reading through Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia. Invitation-only; applications and payments are currently closed.",
+  openGraph: {
+    title: ogTitle,
+    description: ogDescription,
+    siteName: "Meridian 观复",
+    type: "website",
+    locale: "zh_CN",
+    ...(metadataBase ? { url: "/" } : {}),
+  },
+  ...(metadataBase ? { alternates: { canonical: "/" } } : {}),
+  twitter: {
+    card: "summary_large_image",
+    title: ogTitle,
+    description: ogDescription,
+  },
   icons: {
     icon: "/icon.svg",
   },

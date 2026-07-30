@@ -55,7 +55,7 @@ export function SiteHeader({ lang }: { lang: Lang }) {
           <span>
             <span className="word">观复</span>
             <span className="latin" style={{ display: "block" }}>
-              ZHIJI
+              MERIDIAN
             </span>
           </span>
         </Link>

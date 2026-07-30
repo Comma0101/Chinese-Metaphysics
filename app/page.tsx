@@ -16,7 +16,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { WaitlistBand } from "@/components/WaitlistBand";
 import { TrackedLink } from "@/components/TrackedLink";
 import { LangSync } from "@/components/LangSync";
-import { BaziChart } from "@/components/BaziChart";
+import { ThreeSystemChart } from "@/components/ThreeSystemChart";
 import { LacquerWorld } from "@/components/LacquerWorld";
 import { VolumeRail } from "@/components/VolumeRail";
 import { MotionProvider } from "@/components/MotionProvider";
@@ -65,7 +65,7 @@ export default function Home({
               <div className="hero-credential">
                 <span className="credential-mark">观</span>
                 <span className="credential-text">
-                  {lang === "zh" ? "观复 · 子平八字命理" : "Meridian · Ziping BaZi"}
+                  {c.eyebrow}
                 </span>
               </div>
 
@@ -85,6 +85,11 @@ export default function Home({
                 ))}
               </div>
 
+              <div className="hero-trust-signal">
+                <span className="hts-dot" />
+                {c.trustSignal}
+              </div>
+
               <div className="cta-row-new">
                 <TrackedLink
                   className="btn-gilt btn-gilt-large"
@@ -102,10 +107,6 @@ export default function Home({
                 >
                   {c.secondaryCta}
                 </TrackedLink>
-              </div>
-              <div className="hero-trust-signal">
-                <span className="hts-dot" />
-                {c.trustSignal}
               </div>
               <span className="cta-note-new">{c.ctaNote}</span>
             </div>
@@ -151,7 +152,7 @@ export default function Home({
           </div>
         </section>
 
-        {/* 虚构交付示例 —— 展示格式，不冒充客户证明 */}
+        {/* 真实交付节选（已脱敏）—— 展示格式，不冒充客户证明 */}
         <section className="section act-paper seam-t act-tear" data-act="2">
           <span className="act-num" aria-hidden="true">
             卷二
@@ -163,7 +164,7 @@ export default function Home({
               <p className="lead">{sm.lead}</p>
             </div>
             <div className="sample-chart">
-              <BaziChart lang={lang} />
+              <ThreeSystemChart lang={lang} />
             </div>
             <div className="sample">
               <div className="sample-side">
@@ -222,10 +223,10 @@ export default function Home({
                 <p>{sm.falsify}</p>
               </div>
             </div>
-            {/* 查看完整的虚构交付示例 */}
+            {/* 查看完整的交付节选 */}
             <p className="sample-more">
               <Link href={withLang("/reading/sample", lang)}>
-                {lang === "zh" ? "查看完整演示判读 →" : "View the full illustrative brief →"}
+                {lang === "zh" ? "查看完整交付节选 →" : "View the full delivery excerpts →"}
               </Link>
             </p>
           </div>

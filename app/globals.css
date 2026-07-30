@@ -1,5 +1,5 @@
 /* =========================================================================
-   观复 · ZHIJI — Ink, Gold & Vermilion
+   观复 · MERIDIAN — Ink, Gold & Vermilion
    Living tradition, not museum dust.
 
    Material logic:
@@ -582,7 +582,7 @@ a {
   min-height: calc(100dvh - 66px);
   display: flex;
   align-items: center;
-  padding: 88px 0 76px;
+  padding: 72px 0 64px;
   position: relative;
   overflow: hidden;
 }
@@ -598,7 +598,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 20px;
 }
 
 .hero-credential {
@@ -628,8 +628,9 @@ a {
 }
 
 .credential-text {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
 }
 
 .hero-title-new {
@@ -1404,6 +1405,94 @@ a {
   font-size: 9px;
   color: #8a8478;
   letter-spacing: 0.02em;
+}
+
+/* ---------------- 三系统分工表 — the three-system artifact (replaces the four-pillar chart) ---------------- */
+.sys-chart {
+  padding-bottom: 26px;
+}
+
+.sys-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6d675d;
+  margin: 18px 0 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(26, 26, 28, 0.12);
+}
+
+.sys-table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(26, 26, 28, 0.16);
+}
+
+.sys-table th {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: left;
+  padding: 8px 10px;
+  background: rgba(26, 26, 28, 0.04);
+  border-bottom: 1px solid rgba(26, 26, 28, 0.16);
+}
+
+.sys-table td {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  padding: 10px;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  vertical-align: top;
+}
+
+.sys-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sys-table th:first-child,
+.sys-table td:first-child {
+  width: 24%;
+}
+
+.sys-table th:nth-child(2),
+.sys-table td:nth-child(2) {
+  width: 30%;
+}
+
+.sys-table .sys-tool {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sys-table tr.sys-key td {
+  background: rgba(201, 168, 76, 0.12);
+}
+
+.sys-table tr.sys-avoid td {
+  color: #8a8478;
+  background: rgba(160, 64, 48, 0.05);
+}
+
+@media (max-width: 640px) {
+  .sys-table th,
+  .sys-table td {
+    padding: 7px 8px;
+  }
+  .sys-table th:first-child,
+  .sys-table td:first-child,
+  .sys-table th:nth-child(2),
+  .sys-table td:nth-child(2) {
+    width: auto;
+  }
 }
 
 /* ---------------- 是什么 / 不是什么 ---------------- */

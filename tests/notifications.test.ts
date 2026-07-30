@@ -107,7 +107,7 @@ test("builds privacy-minimal founder and client plain-text messages", () => {
   );
 
   assert.equal(founder.to, config.founderEmail);
-  assert.match(founder.subject, /Zhiji/);
+  assert.match(founder.subject, /Meridian/);
   assert.match(founder.text, new RegExp(applicationId));
   assert.match(founder.text, /deposit_paid/);
   assert.match(founder.text, /Event state: deposit_paid/);
@@ -119,7 +119,7 @@ test("builds privacy-minimal founder and client plain-text messages", () => {
   assert.doesNotMatch(founder.text, /begin.*calibration/i);
 
   assert.equal(client.to, "private-client@example.com");
-  assert.match(client.subject, /Zhiji/);
+  assert.match(client.subject, /Meridian/);
   assert.match(client.text, new RegExp(applicationId));
   assert.match(client.text, /Event state: deposit_paid/);
   assert.match(client.text, /Amount: USD 49\.00/);

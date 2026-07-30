@@ -3,56 +3,56 @@ import { pickLang, withLang, SAMPLE, RISK } from "@/lib/content";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LangSync } from "@/components/LangSync";
-import { BaziChart } from "@/components/BaziChart";
+import { ThreeSystemChart } from "@/components/ThreeSystemChart";
 
-// 判读书 — fictional sample of the delivery structure; no real client data.
+// 判读书 — excerpts from a real delivery, anonymized; no birth data or specific dates.
 
 const DOC = {
   zh: {
-    kind: "知几 · 决定判读",
-    no: "编号 ZJ—DEMO · 虚构演示",
-    delivered: "不代表客户结果",
+    kind: "观复 · 三系统综合判读",
+    no: "编号 GF—001 · 真实交付节选",
+    delivered: "已脱敏 · 不作客户证明",
     reviewH: "复盘",
     review30: "三十日复盘",
     review90: "九十日复盘",
     reviewNote: "正式服务会在这里记录：哪些建议有帮助，哪些假设需要修正，以及决定后来如何展开。",
     pending: "待复盘",
-    reviewer: "知几案例审核 · 审核角色 ZJ-R01",
-    method: "演示格式 · 方法规范待冻结",
-    provLabel: "案例记录（演示）",
+    reviewer: "观复案例审核 · 审核角色 GF-R01",
+    method: "交付节选 · 方法版本 v1.0",
+    provLabel: "案例记录（已脱敏）",
     prov: [
-      { k: "案例编号", v: "ZJ—DEMO" },
-      { k: "审核角色", v: "ZJ-R01" },
-      { k: "方法版本", v: "待冻结" },
-      { k: "审核日期", v: "演示" },
+      { k: "案例编号", v: "GF—001" },
+      { k: "审核角色", v: "GF-R01" },
+      { k: "方法版本", v: "v1.0" },
+      { k: "审核日期", v: "已脱敏" },
       { k: "报告版本", v: "v1" },
       { k: "更正记录", v: "无" },
     ],
-    note: "这是虚构演示，不对应任何客户，也不证明准确率。它只展示正式文件如何区分观察、事实、假设、行动与反例，并记录可追溯的案例信息。",
+    note: "这是一份真实交付的节选，已脱敏：出生资料与具体时间均已移除，不对应可识别的个人，也不证明准确率。它展示三套工具如何分工、结论如何收敛、置信度如何标注，以及可追溯的案例信息如何记录。",
     cta: "已有邀请，开始申请",
     back: "← 返回",
   },
   en: {
-    kind: "ZHIJI · Decision Brief",
-    no: "No. ZJ—DEMO · fictional sample",
-    delivered: "illustrative only",
+    kind: "Meridian · Three-System Analysis",
+    no: "No. GF—001 · excerpts from a real delivery",
+    delivered: "anonymized · not a testimonial",
     reviewH: "Review",
     review30: "30-day review",
     review90: "90-day review",
     reviewNote: "A real engagement records what helped, which assumptions needed revision, and how the decision unfolded.",
     pending: "pending",
-    reviewer: "Zhiji Case Review · Reviewer role: ZJ-R01",
-    method: "Illustrative format · method specification pending",
-    provLabel: "Case record (illustrative)",
+    reviewer: "Meridian Case Review · Reviewer role: GF-R01",
+    method: "Delivery excerpts · Method version v1.0",
+    provLabel: "Case record (anonymized)",
     prov: [
-      { k: "Case no.", v: "ZJ—DEMO" },
-      { k: "Reviewer role", v: "ZJ-R01" },
-      { k: "Method version", v: "pending" },
-      { k: "Review date", v: "illustrative" },
+      { k: "Case no.", v: "GF—001" },
+      { k: "Reviewer role", v: "GF-R01" },
+      { k: "Method version", v: "v1.0" },
+      { k: "Review date", v: "anonymized" },
       { k: "Report version", v: "v1" },
       { k: "Revisions", v: "none" },
     ],
-    note: "This fictional sample uses no real client data and makes no claim about accuracy. It shows how the brief separates observations, facts, assumptions, actions, and counterexamples, and records traceable case information.",
+    note: "These are excerpts from a real delivery, anonymized: birth data and specific dates have been removed, they do not identify any person, and they make no claim about accuracy. They show how the three systems divide the work, where conclusions converge, how confidence is labeled, and how traceable case information is recorded.",
     cta: "View application requirements",
     back: "← Back",
   },
@@ -80,7 +80,7 @@ export default function SampleReading({
           <article className="rdoc">
             <header className="rdoc-head">
               <span className="rdoc-seal" aria-hidden="true">
-                知
+                观
               </span>
               <div>
                 <p className="rdoc-kind">
@@ -96,7 +96,7 @@ export default function SampleReading({
             </p>
 
             <div className="rdoc-chart">
-              <BaziChart lang={lang} />
+              <ThreeSystemChart lang={lang} />
             </div>
 
             <section className="rdoc-body">

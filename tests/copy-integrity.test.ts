@@ -18,14 +18,21 @@ import { PILOT_PATH } from "../lib/tiers";
 test("homepage leads with a concrete Chinese metaphysics service, not a fate slogan", () => {
   assert.match(T.zh.home.eyebrow, /私人中国命理咨询/);
   assert.match(T.en.home.eyebrow, /Private Chinese metaphysics consultation/);
-  assert.match(T.zh.home.lead, /八字/);
-  assert.match(T.en.home.lead, /BaZi/);
+  // the hero lead names the three-system method (abbreviated for a cold reader) and never BaZi
+  assert.match(T.zh.home.lead, /紫微/);
+  assert.doesNotMatch(T.zh.home.lead, /八字|子平/);
+  assert.match(T.en.home.lead, /Zi Wei/);
+  assert.doesNotMatch(T.en.home.lead, /\bBaZi\b|Ziping/i);
   assert.doesNotMatch(T.zh.home.h1, /命是结构|结局/);
   assert.doesNotMatch(T.en.home.h1, /\bfate\b|verdict/i);
-  assert.match(T.zh.home.lead, /书面决策判读/);
-  assert.match(T.zh.home.lead, /集中提交一轮关于原判读依据、假设或表述的书面问题/);
-  assert.match(T.en.home.lead, /written decision brief/i);
-  assert.match(T.en.home.lead, /one consolidated written follow-up/i);
+  // deliverable + written-follow-up promises live on the page (confidence / guarantees), not the hero lead
+  assert.match(JSON.stringify(T.zh.home), /书面决策判读/);
+  assert.match(
+    JSON.stringify({ home: T.zh.home, guarantees: GUARANTEES.zh }),
+    /集中提交一轮关于原判读依据、假设或表述的书面问题/,
+  );
+  assert.match(JSON.stringify(T.en.home), /written decision brief/i);
+  assert.match(JSON.stringify(T.en.home), /one consolidated written follow-up/i);
   assert.doesNotMatch(T.zh.home.cta, /申请|试点/);
   assert.doesNotMatch(T.en.home.cta, /apply|pilot/i);
 });
@@ -72,16 +79,18 @@ test("public delivery is fully asynchronous and written", () => {
   );
 });
 
-test("illustrative sample avoids fabricated proof and precise future timing", () => {
+test("sample delivery excerpts avoid fabricated proof, precise future timing, and identifying data", () => {
   const sample = JSON.stringify(SAMPLE);
 
-  assert.match(SAMPLE.zh.tag, /演示|虚构/);
-  assert.match(SAMPLE.en.tag, /illustrative|fictional/i);
+  assert.match(SAMPLE.zh.tag, /真实交付|脱敏/);
+  assert.match(SAMPLE.en.tag, /real delivery|anonymized/i);
   assert.doesNotMatch(
     sample,
     /18 个月|18 months|2\.5 years|两年半|真实客户案例|real client (?:case|result|proof)/i,
   );
   assert.doesNotMatch(sample, /一定|必然|will succeed|best time/i);
+  // anonymization: no birth data, birth place, or frozen chart timing from the source case
+  assert.doesNotMatch(sample, /1991|金阳|凌晨\s*3\s*点|13:57|丑时|阴遁/);
   assert.match(SAMPLE.zh.falsifyLabel, /改变|推翻|不成立/);
   assert.match(SAMPLE.en.falsifyLabel, /change|invalidate|wrong/i);
 });
@@ -158,7 +167,8 @@ test("pages contain no stale hard-coded hero, personal practitioner promise, or 
     sample,
     /practitioner profile|practitioner's name|portrait(?:Url|Src)/i,
   );
-  assert.doesNotMatch(sample, /Method v1\.0|not client proof/i);
-  assert.match(sample, /method specification pending/i);
+  // the sample is an anonymized real delivery, not a fictional scenario
+  assert.doesNotMatch(sample, /fictional|虚构演示/i);
+  assert.match(sample, /anonymized|已脱敏/);
   assert.match(layout, /Private Chinese Metaphysics Consultation/);
 });

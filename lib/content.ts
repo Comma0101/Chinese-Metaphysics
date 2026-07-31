@@ -20,12 +20,21 @@ type Chrome = {
     trustSignal: string;
     ctaNote: string;
     proof: string[];
-    waitlistH: string;
-    waitlistLead: string;
-    waitlistPlaceholder: string;
-    waitlistBtn: string;
-    waitlistNote: string;
-    waitlistDone: string;
+    inviteH: string;
+    inviteLead: string;
+    inviteEmailPlaceholder: string;
+    inviteCountryLabel: string;
+    inviteCityLabel: string;
+    inviteCityPlaceholder: string;
+    inviteDecisionLabel: string;
+    inviteDecisionOptions: string[];
+    inviteWindowLabel: string;
+    inviteWindowOptions: string[];
+    invitePriceAck: string;
+    inviteBtn: string;
+    inviteNote: string;
+    inviteDone: string;
+    inviteError: string;
     s2h: string;
     s2lead: string;
     isnotLabel: string;
@@ -68,12 +77,21 @@ export const T: Record<Lang, Chrome> = {
       trustSignal: "首份正式交付已完成 · 方法 v1.0 · 人工复核，不是 AI 生成",
       ctaNote: "US$49 受理定金全额计入 US$388 · 若不符合受理规则，原路退还",
       proof: ["去留 / 迁移", "转行 / offer", "创业 / 关停", "关系 / 家庭"],
-      waitlistH: "首批名额开放时，第一时间通知你",
-      waitlistLead: "留下邮箱，开放申请时你会收到一封邮件。不会发别的东西。",
-      waitlistPlaceholder: "your@email.com",
-      waitlistBtn: "通知我",
-      waitlistNote: "仅用于首批开放通知，随时可退订。",
-      waitlistDone: "已记录。开放时你会收到邮件。",
+      inviteH: "申请创始批次邀请",
+      inviteLead: "告诉我们你正在决定什么。如果匹配，你会收到一封邀请邮件，内含申请链接。不收集出生信息，不要求你讲具体困局。",
+      inviteEmailPlaceholder: "your@email.com",
+      inviteCountryLabel: "所在国家",
+      inviteCityLabel: "城市",
+      inviteCityPlaceholder: "例如：西雅图、多伦多、新加坡",
+      inviteDecisionLabel: "你正在决定什么",
+      inviteDecisionOptions: ["职业 / offer 取舍", "搬迁 / 去留", "创业 / 关停", "关系 / 家庭", "其他重大决定"],
+      inviteWindowLabel: "这件事需要在 90 天内决定吗？",
+      inviteWindowOptions: ["是，90 天内", "还不急，但在考虑中"],
+      invitePriceAck: "我了解创始批次价格为 US$388（含 US$49 受理定金）",
+      inviteBtn: "提交申请",
+      inviteNote: "仅用于创始批次资格确认。不会发送营销邮件。",
+      inviteDone: "已收到。如果匹配，你会收到邀请邮件。",
+      inviteError: "提交失败，请稍后重试。",
       s2h: "你正在决定什么？",
       s2lead: "选项已经摆在面前，越想却越难定——而这件事不能一直拖。观复适合这样的时刻。",
       isnotLabel: "常见的人生节点",
@@ -158,12 +176,21 @@ export const T: Record<Lang, Chrome> = {
       trustSignal: "First formal delivery completed · method v1.0 · human-reviewed, not AI-generated",
       ctaNote: "US$49 assessment deposit, credited in full toward US$388 · refunded if we can't proceed",
       proof: ["Relocation", "Career & offers", "Start or wind down", "Relationships"],
-      waitlistH: "Be the first to know when founding seats open",
-      waitlistLead: "Leave your email. You'll get one message when applications open. Nothing else.",
-      waitlistPlaceholder: "your@email.com",
-      waitlistBtn: "Notify me",
-      waitlistNote: "Only for the founding-cohort opening notice. Unsubscribe anytime.",
-      waitlistDone: "Recorded. You'll hear from us when seats open.",
+      inviteH: "Request a founding invitation",
+      inviteLead: "Tell us what you're deciding. If it's a fit, you'll receive an invitation email with an application link. No birth data collected here — no personal narrative required.",
+      inviteEmailPlaceholder: "your@email.com",
+      inviteCountryLabel: "Country",
+      inviteCityLabel: "City",
+      inviteCityPlaceholder: "e.g. Seattle, Toronto, Singapore",
+      inviteDecisionLabel: "What are you deciding?",
+      inviteDecisionOptions: ["Career / offer choice", "Relocation / stay or go", "Start or wind down", "Relationship / family", "Other consequential decision"],
+      inviteWindowLabel: "Does this need a decision within 90 days?",
+      inviteWindowOptions: ["Yes, within 90 days", "Not urgent yet, but considering"],
+      invitePriceAck: "I understand the founding cohort price is US$388 (includes the US$49 assessment deposit)",
+      inviteBtn: "Submit request",
+      inviteNote: "Used only for founding-cohort qualification. No marketing emails.",
+      inviteDone: "Received. If it's a fit, you'll get an invitation email.",
+      inviteError: "Something went wrong. Please try again.",
       s2h: "What are you deciding?",
       s2lead:
         "Meridian is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can’t keep waiting past 90 days.",

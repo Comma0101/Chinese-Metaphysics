@@ -291,6 +291,12 @@ main {
   --seal: #c0392b;
 }
 
+/* the blanket .act-paper p rule (0,1,1) would force dark ink on this
+   dark card — override with higher specificity so the light token wins */
+.act-paper .commission-summary p {
+  color: var(--ivory-soft);
+}
+
 /* 楷体 — the annotation voice */
 .sample-falsify p {
   font-family: var(--kai);
@@ -865,6 +871,105 @@ a {
 .wl-done-mark {
   font-size: 16px;
   font-weight: 700;
+}
+
+/* invitation-request form (reuses .waitlist-band shell) */
+.ir-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.ir-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.ir-email {
+  grid-column: 1 / -1;
+  border-right: 1px solid var(--ivory-ghost) !important;
+  border-radius: 2px !important;
+}
+
+.ir-city {
+  border-right: 1px solid var(--ivory-ghost) !important;
+  border-radius: 2px !important;
+}
+
+.ir-select {
+  min-height: 46px;
+  padding: 0 12px;
+  background: rgba(242, 239, 232, 0.06);
+  border: 1px solid var(--ivory-ghost);
+  border-radius: 2px;
+  color: var(--ivory);
+  font-family: var(--mono);
+  font-size: 13px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.ir-select:focus {
+  border-color: var(--gold-line);
+  background: rgba(242, 239, 232, 0.09);
+}
+
+.ir-select option {
+  background: var(--lacquer-2);
+  color: var(--ivory);
+}
+
+.ir-ack {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ivory-faint);
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ir-ack input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: var(--gold);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.ir-btn {
+  border-radius: 2px !important;
+  width: 100%;
+}
+
+.ir-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.ir-error {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: #d4756a;
+  margin: 0;
+}
+
+@media (max-width: 540px) {
+  .ir-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 髹夜世界 — the persistent material world, fixed behind the page.
@@ -3527,6 +3632,7 @@ a {
   gap: 10px;
   color: var(--silk-muted);
   opacity: 0.85;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7), 0 0 12px rgba(0, 0, 0, 0.4);
   transition: opacity 0.4s var(--ease-material), color 0.4s var(--ease-material);
 }
 
@@ -4286,7 +4392,7 @@ a {
    per-character delay set inline by InkReveal. Pure CSS: flash-free, reveals
    even with JS off, and the text stays painted (LCP-safe). Reduced-motion
    shows the monument instantly (initial-value:1, no animation). */
-@property --ink {
+@property --ink-reveal {
   syntax: "<number>";
   inherits: false;
   initial-value: 1;
@@ -4299,13 +4405,13 @@ a {
   display: inline-block;
   -webkit-mask-image: linear-gradient(
     to top,
-    #000 calc(var(--ink) * 100%),
-    transparent calc(var(--ink) * 100% + 8%)
+    #000 calc(var(--ink-reveal) * 100%),
+    transparent calc(var(--ink-reveal) * 100% + 8%)
   );
   mask-image: linear-gradient(
     to top,
-    #000 calc(var(--ink) * 100%),
-    transparent calc(var(--ink) * 100% + 8%)
+    #000 calc(var(--ink-reveal) * 100%),
+    transparent calc(var(--ink-reveal) * 100% + 8%)
   );
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -4315,10 +4421,10 @@ a {
 }
 @keyframes ink-in {
   from {
-    --ink: 0;
+    --ink-reveal: 0;
   }
   to {
-    --ink: 1;
+    --ink-reveal: 1;
   }
 }
 

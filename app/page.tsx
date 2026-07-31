@@ -13,7 +13,7 @@ import {
 } from "@/lib/content";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { WaitlistBand } from "@/components/WaitlistBand";
+import { InvitationRequest } from "@/components/InvitationRequest";
 import { TrackedLink } from "@/components/TrackedLink";
 import { LangSync } from "@/components/LangSync";
 import { ThreeSystemChart } from "@/components/ThreeSystemChart";
@@ -91,14 +91,9 @@ export default function Home({
               </div>
 
               <div className="cta-row-new">
-                <TrackedLink
-                  className="btn-gilt btn-gilt-large"
-                  href={withLang("/ask", lang)}
-                  label={c.applyCta}
-                  location="hero"
-                >
+                <a className="btn-gilt btn-gilt-large" href="#request">
                   {c.applyCta}
-                </TrackedLink>
+                </a>
                 <TrackedLink
                   className="cta-secondary"
                   href={withLang("/reading/sample", lang)}
@@ -113,15 +108,24 @@ export default function Home({
           </div>
         </section>
 
-        {/* 等待名单 — capture the not-ready majority */}
-        <WaitlistBand
+        {/* 创始邀请申请 — public pre-qualification, no access code needed */}
+        <InvitationRequest
           lang={lang}
-          h={c.waitlistH}
-          lead={c.waitlistLead}
-          placeholder={c.waitlistPlaceholder}
-          btn={c.waitlistBtn}
-          note={c.waitlistNote}
-          done={c.waitlistDone}
+          h={c.inviteH}
+          lead={c.inviteLead}
+          emailPlaceholder={c.inviteEmailPlaceholder}
+          countryLabel={c.inviteCountryLabel}
+          cityLabel={c.inviteCityLabel}
+          cityPlaceholder={c.inviteCityPlaceholder}
+          decisionLabel={c.inviteDecisionLabel}
+          decisionOptions={c.inviteDecisionOptions}
+          windowLabel={c.inviteWindowLabel}
+          windowOptions={c.inviteWindowOptions}
+          priceAck={c.invitePriceAck}
+          btn={c.inviteBtn}
+          note={c.inviteNote}
+          done={c.inviteDone}
+          error={c.inviteError}
         />
 
         {/* 具体问题与服务内容 */}
@@ -313,13 +317,12 @@ export default function Home({
               <p className="lead">{c.priceLead}</p>
             </div>
 
-            {/* scarcity banner */}
+            {/* cohort status — truthful, no manufactured urgency */}
             <div className="scarcity-bar">
-              <span className="scarcity-pulse" />
               <span className="scarcity-text">
                 {lang === "zh"
-                  ? "创始批次 · 仅开放 12 席 · 剩余 7 席"
-                  : "Founding cohort · 12 seats total · 7 remaining"}
+                  ? "创始批次 · 尚未开放申请"
+                  : "Founding cohort · applications not yet open"}
               </span>
             </div>
 
@@ -420,9 +423,9 @@ export default function Home({
               <h2>{closing.h}</h2>
               <p className="lead">{closing.body}</p>
               <div className="cta-row" style={{ marginTop: 22 }}>
-                <TrackedLink className="btn-gilt" href={withLang("/ask", lang)} label={closing.cta} location="closing">
+                <a className="btn-gilt" href="#request">
                   {closing.cta}
-                </TrackedLink>
+                </a>
               </div>
             </div>
           </div>

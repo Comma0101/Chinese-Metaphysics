@@ -72,10 +72,28 @@ export function trackScroll(depth: number) {
   track("scroll_depth", { depth_percent: depth });
 }
 
-export function trackWaitlistSubmit() {
-  track("waitlist_submitted");
-}
-
 export function trackPageView(lang: string) {
   track("page_view", { lang });
+}
+
+/* ---- funnel events ---- */
+
+export function trackSampleOpened() {
+  track("sample_opened");
+}
+
+export function trackInvitationStarted(location: string) {
+  track("invitation_request_started", { location });
+}
+
+export function trackInvitationCompleted(location: string) {
+  track("invitation_request_completed", { location });
+}
+
+export function trackDepositCheckoutStarted() {
+  track("deposit_checkout_started");
+}
+
+export function trackDepositPaid() {
+  track("deposit_paid");
 }

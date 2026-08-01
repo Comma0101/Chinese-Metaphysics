@@ -72,14 +72,14 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "私人中国命理咨询 · 紫微·七政·奇门三术合参",
+      eyebrow: "私人中国命理咨询 · 三术分工，一事合参",
       h1: "你以为你在犹豫。其实你在重复。",
-      lead: "同一种关系模式、同一个事业卡点、同一类对自己的困惑——你已经在心里推演过太多次，每次都回到原地。观复以紫微·七政·奇门三套工具，为你梳理命局里看不见的结构：你的模式在哪里、张力在哪里、哪些窗口正在打开。全程书面、人工复核，不催你，不吓你，决定始终是你的。",
+      lead: "同一种关系模式、同一个事业卡点、同一类对自己的困惑，往往会在某个必须决定的时刻同时浮出来。观复围绕这一件决定，以紫微、七政、奇门三套工具，分别看长期结构、当下时势与现实取舍。全程书面，不催你，不吓你，决定始终是你的。",
       accent: "Private Chinese metaphysics consultation · three systems, three questions.",
       cta: "查看服务内容",
       applyCta: "申请首批名额",
       secondaryCta: "先看交付节选 →",
-      trustSignal: "首份正式交付已完成 · 方法 v1.0 · 人工复核，不是 AI 生成",
+      trustSignal: "首份正式交付已完成 · 方法 v1.0 · 不是自动生成后直接交付",
       ctaNote: "US$49 受理定金全额计入 US$388 · 若不符合受理规则，原路退还",
       proof: ["去留 / 迁移", "转行 / offer", "创业 / 关停", "关系 / 家庭", "自我认知"],
       inviteH: "申请创始批次邀请",
@@ -122,7 +122,7 @@ export const T: Record<Lang, Chrome> = {
       isLabel: "这次咨询会做什么",
       is: [
         "紫微斗数看领域与角色，七政四余看长期机制，奇门遁甲看当下时势——三套工具分工，看这件事的时机窗口、你反复走进的模式，和此刻没权衡到的取舍",
-        "从同一张命盘同时看清事业方向、关系模式与人生周期——不是分开问三次",
+        "围绕一件决定，只调用事业、关系与人生周期中真正相关的部分——不是把整张命盘泛泛讲一遍",
         "命局分析和现实条件分开写——哪句是盘面推论、哪句是现实约束，一眼能分",
         "比较选项，不替你下命令",
         "留下一份可回看、可质疑、可复盘的记录",
@@ -184,14 +184,14 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "Private Chinese metaphysics consultation · Zi Wei, Qi Zheng, Qi Men",
+      eyebrow: "Private Chinese metaphysics consultation · three systems, one decision",
       h1: "You think you're hesitating. You're repeating.",
-      lead: "The same relationship pattern, the same career knot, the same question about yourself — the loop you've turned over too many times, each time landing where you started. Meridian hands that loop to three systems — Zi Wei, Qi Zheng, Qi Men — and returns a brief you can see: your patterns, the tension, the windows that are opening. Written, human-reviewed, no pressure. The decision stays yours.",
+      lead: "Recurring relationship patterns, career knots, and questions about yourself matter most when they become a decision you cannot keep postponing. Meridian examines that one decision through Zi Wei, Qi Zheng, and Qi Men — long-term structure, current timing, and real-world trade-offs. Written, no pressure. The decision stays yours.",
       accent: "私人中国命理咨询，紫微斗数、七政四余、奇门遁甲三术合参。",
       cta: "See what is included",
       applyCta: "Apply for a founding seat",
       secondaryCta: "Read delivery excerpts →",
-      trustSignal: "First formal delivery completed · method v1.0 · human-reviewed, not AI-generated",
+      trustSignal: "First formal delivery completed · method v1.0 · no automated output delivered as final judgment",
       ctaNote: "US$49 assessment deposit, credited in full toward US$388 · refunded if we can't proceed",
       proof: ["Relocation", "Career & offers", "Start or wind down", "Relationships", "Self-knowledge"],
       inviteH: "Request a founding invitation",
@@ -235,7 +235,7 @@ isnot: [
       isLabel: "What the consultation does",
       is: [
         "Works three systems in division of labor — Zi Wei Dou Shu for life domains and roles, Qi Zheng Si Yu for long-term mechanisms, Qi Men Dun Jia for current timing — to read the timing window, the patterns you keep walking back into, and the trade-off you haven't weighed yet",
-        "See career direction, relationship patterns, and life cycles from the same chart — not three separate questions",
+        "Centered on one decision, engages only the relevant parts of career, relationships, and life cycles — not a generic full-chart walkthrough",
         "Separates chart analysis from real-world facts — which line is a chart inference, which is a real constraint — at a glance",
         "Compares options without making the decision for you",
         "Leaves you with a record you can revisit, challenge, and review later",
@@ -436,21 +436,21 @@ export const PILOT_FORM: Record<
       },
       {
         key: "privacyConsent",
-        label: "我已阅读隐私说明草案，并了解具约束力的正式版本会在付款开放前发布。",
+        label: "我已阅读隐私说明，并了解具约束力的正式版本会在付款开放前发布。",
         href: "privacy",
-        linkLabel: "阅读草案",
+        linkLabel: "阅读",
       },
       {
         key: "termsAccepted",
-        label: "我已阅读服务条款草案，并了解正式版本会在付款开放前发布；当前不能提交付款。",
+        label: "我已阅读服务条款，并了解正式版本会在付款开放前发布；当前不能提交付款。",
         href: "terms",
-        linkLabel: "阅读草案",
+        linkLabel: "阅读",
       },
       {
         key: "depositPolicyAccepted",
-        label: "我已阅读定金规则草案：定金计入正式服务，无法按公布规则受理则原路退还。",
+        label: "我已阅读定金规则：定金计入正式服务，无法按公布规则受理则原路退还。",
         href: "deposit",
-        linkLabel: "阅读草案",
+        linkLabel: "阅读",
       },
       {
         key: "selfOnlyDataConfirmed",
@@ -570,21 +570,21 @@ export const PILOT_FORM: Record<
       },
       {
         key: "privacyConsent",
-        label: "I have read the privacy draft and understand the binding version will be published before payment opens.",
+        label: "I have read the privacy notice and understand the binding version will be published before payment opens.",
         href: "privacy",
-        linkLabel: "Read draft",
+        linkLabel: "Read",
       },
       {
         key: "termsAccepted",
-        label: "I have read the terms draft and understand the binding version will be published before payment opens; payment cannot currently be submitted.",
+        label: "I have read the terms of service and understand the binding version will be published before payment opens; payment cannot currently be submitted.",
         href: "terms",
-        linkLabel: "Read draft",
+        linkLabel: "Read",
       },
       {
         key: "depositPolicyAccepted",
-        label: "I have read the deposit-policy draft: the deposit is credited to the engagement, or returned if the case cannot proceed under the published rule.",
+        label: "I have read the deposit policy: the deposit is credited to the engagement, or returned if the case cannot proceed under the published rule.",
         href: "deposit",
-        linkLabel: "Read draft",
+        linkLabel: "Read",
       },
       {
         key: "selfOnlyDataConfirmed",
@@ -905,7 +905,7 @@ export const SAMPLE: Record<
       steps: [
         {
           k: "一 · 盘面观察",
-          v: "紫微斗数：命宫天相与迁移宫紫微七杀同宫，形成「外在维持秩序、内在破局」的格局——此人方向感强，但天相的合理性容易将方向停留在观念层，而紫微七杀的破局能量需要外部事实才能激活。七政四余：木星落命宫或与命主星有相位，显示扩张倾向和方向感；但土星或契约相关的宫位尚未形成稳定结构——方向清晰，但缺乏将方向转化为可重复运行的机制。奇门遁甲：值符、天心、开门同落坎宫——「开门」是方向之门，已现，表示当前确实存在一个可以进入的路径；但坎宫空亡——门所在宫位没有实质内容，意味着方向在观念上已经成立，但尚未被现实承诺、资源、交易或可重复的结果所填充。",
+          v: "紫微斗数：命宫见天相；迁移宫见紫微、七杀同宫；两宫共同构成命迁轴上的结构张力——「外在维持秩序、内在破局」的格局，解释了为什么此人方向感强，但天相的合理性容易将方向停留在观念层，而紫微七杀的破局能量需要外部事实才能激活。七政四余：本结论依赖的七政结构为——木星位于［已脱敏］宫位，与［已脱敏］形成［已脱敏］相位，显示扩张倾向与方向感；但土星位于［已脱敏］宫位，与［已脱敏］形成［已脱敏］关系——层级、秩序与长期稳定运行的结构尚未形成。具体宫位与度数已脱敏，但保留的结构关系足以被复核。奇门遁甲：值符、天心、开门同落坎宫——「开门」是方向之门，已现，表示当前确实存在一个可以进入的路径；但坎宫空亡——门所在宫位没有实质内容，意味着方向在观念上已经成立，但尚未被现实承诺、资源、交易或可重复的结果所填充。",
         },
         {
           k: "二 · 解释",
@@ -913,11 +913,11 @@ export const SAMPLE: Record<
         },
         {
           k: "三 · 时机判断",
-          v: "奇门日干落兑宫，临死门与太阴——当前主势不是向外扩张，而是先结束旧循环、筛选已有项目、归档已完成事项，以此重新获得集中度。不关闭旧循环，新方向只能得到剩余资源。因此，未来 90 天的行动建议分为四个阶段：关闭旧循环（第 1–14 天）、取得第一个现实结果（第 15–45 天）、重复三次（第 46–75 天）、决定是否放大（第 76–90 天）。这个阶段划分不是命理「预测」，而是基于盘面结构对行动顺序的推演——如果旧循环未被关闭，第一阶段的判断就不成立，后续阶段也需要修订。",
+          v: "时势判断：奇门日干落兑宫，临死门与太阴——当前命理上的主势不是向外扩张，而是先结束、筛选、集中，再扩大。不关闭旧循环，新方向只能得到剩余资源。现实转译：基于这个时势顺序，观复将未来 90 天组织为四个执行阶段——关闭旧循环（第 1–14 天）、取得第一个现实结果（第 15–45 天）、重复三次（第 46–75 天）、决定是否放大（第 76–90 天）。这些日期是人为设计的行动框架，不是命盘预测出的事件日期。如果旧循环未被关闭，第一阶段的判断就不成立，后续阶段也需要修订。",
         },
         {
           k: "四 · 置信度",
-          v: "「方向感强但缺乏现实填充」这一判断，三套工具同时收敛 → 置信度：高。具体的 90 天四阶段划分，基于奇门时局与紫微大限的综合推演，但受流派口径与执行变量影响 → 置信度：中。具体事件（如「是否能在 45 天内拿到第一个合同」）涉及现实变量远超命理可判断范围 → 置信度：低，报告中不作为确定性预言。",
+          v: "内部收敛度：高——三套框架独立指向相近的结构判断（方向感强，但缺乏现实填充）。中——具体的 90 天四阶段划分，基于奇门时局与紫微大限的综合推演，但受流派口径与执行变量影响较大。低——具体事件（如「是否能在 45 天内拿到第一个合同」）涉及现实变量远超命理可判断范围，不视为确定性结论。",
         },
       ],
     },
@@ -969,7 +969,7 @@ export const SAMPLE: Record<
       steps: [
         {
           k: "1 · Chart observation",
-          v: "Zi Wei Dou Shu: The Self Palace's Tian Xiang and the Travel Palace's Zi Wei + Qi Sha co-located form a pattern of 'order maintained externally, breakthrough ready internally' — this person has strong directional sense, but Tian Xiang's reasonableness tends to keep direction at the conceptual level, while Zi Wei + Qi Sha's breakthrough energy requires external facts to activate. Qi Zheng Si Yu: Jupiter in the Self Palace or in aspect with the Life Lord shows expansion tendency and directional clarity; but Saturn or contract-related houses lack stable structure — direction is clear, but the mechanism for turning it into repeatable operation is missing. Qi Men Dun Jia: The Chief Symbol, Heart Star, and Open Door all land in the Kan palace — the 'Open Door' is the gate of direction, already present, indicating a path worth entering; but the Kan palace is void — the door's palace has no substance, meaning the direction is conceptually established but not yet filled with real commitment, resources, transactions, or repeatable results.",
+          v: "Zi Wei Dou Shu: Tian Xiang occupies the Self Palace; Zi Wei and Qi Sha are co-located in the Travel Palace. Together, the two palaces form the Self–Travel axis — the pattern of 'order maintained externally, breakthrough ready internally' explains why this person has strong directional sense, but Tian Xiang's reasonableness tends to keep direction at the conceptual level, while Zi Wei + Qi Sha's breakthrough energy requires external facts to activate. Qi Zheng Si Yu: The Qi Zheng structure this conclusion relies on is — Jupiter is in [anonymized] house, forming [anonymized] aspect with [anonymized], showing expansion tendency and directional clarity; but Saturn is in [anonymized] house, forming [anonymized] relationship with [anonymized] — the stabilizing structure of hierarchy, order, and long-term operation has not yet formed. Specific houses and degrees are anonymized; the structural relationships retained are sufficient for verification. Qi Men Dun Jia: The Chief Symbol, Heart Star, and Open Door all land in the Kan palace — the 'Open Door' is the gate of direction, already present, indicating a path worth entering; but the Kan palace is void — the door's palace has no substance, meaning the direction is conceptually established but not yet filled with real commitment, resources, transactions, or repeatable results.",
         },
         {
           k: "2 · Interpretation",
@@ -977,11 +977,11 @@ export const SAMPLE: Record<
         },
         {
           k: "3 · Timing",
-          v: "The Qi Men day stem falls in the Dui palace with the Death Door and Tai Yin — the main current is not outward expansion, but first closing old cycles, filtering existing projects, and archiving completed items to regain focus. Without closing old cycles, the new direction gets only leftover resources. Hence the 90-day action plan in four phases: close old cycles (days 1–14), get the first real result (days 15–45), repeat three times (days 46–75), decide whether to scale (days 76–90). This phasing is not a metaphysical 'prediction' — it is a structural deduction of action sequence based on the chart. If old cycles are not closed, the first-phase judgment does not hold, and subsequent phases need revision.",
+          v: "Timing assessment: The Qi Men day stem falls in the Dui palace with the Death Door and Tai Yin — the main current in the chart favors ending, filtering, and concentrating first, then expanding. Without closing old cycles, the new direction gets only leftover resources. Real-world translation: Based on this timing sequence, Meridian organizes the next 90 days as four execution phases — close old cycles (days 1–14), get the first real result (days 15–45), repeat three times (days 46–75), decide whether to scale (days 76–90). These dates are a designed action framework, not event dates predicted by the chart. If old cycles are not closed, the first-phase judgment does not hold, and subsequent phases need revision.",
         },
         {
           k: "4 · Confidence",
-          v: "The judgment 'strong directional sense, lacking real-world filling' — all three systems converge → confidence: high. The specific 90-day four-phase plan, based on Qi Men configuration and Zi Wei decade-cycle reasoning, but affected by school conventions and execution variables → confidence: medium. Specific events (e.g., 'will a contract be signed within 45 days') involve real-world variables far beyond what metaphysics can assess → confidence: low, not treated as a deterministic prediction in the report.",
+          v: "Internal convergence: high — the three frameworks independently point toward materially similar structural interpretations (strong directional sense, lacking real-world filling). Medium — the specific 90-day four-phase plan, based on Qi Men configuration and Zi Wei decade-cycle reasoning, but meaningfully affected by school conventions and execution variables. Low — specific events (e.g., 'will a contract be signed within 45 days') involve real-world variables far beyond what metaphysics can assess; not treated as a deterministic conclusion.",
         },
       ],
     },
@@ -1197,7 +1197,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           h: "你的权利",
           body: [
             "你可以要求查看、更正、导出与删除你的信息。未受理或被婉拒的申请默认在 90 天后删除。",
-            "具体的申请与响应方式，会随正式版本一并公布。",
+            "如需行使上述权利，请通过本页列出的联系方式提交书面请求，观复将在 30 天内响应。",
           ],
         },
       ],
@@ -1230,7 +1230,6 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "费用与受理",
           body: [
-            "受邀个案先支付 US$49 受理与校准定金；正式受理后全额计入 US$388 服务费。定金规则见「定金规则」页。",
             "受邀个案先支付 US$49 受理与校准定金；正式受理后全额计入 US$388 服务费。详见「定金规则」页。",
           ],
         },
@@ -1379,7 +1378,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           h: "Your rights",
           body: [
             "You can ask to access, correct, export, and delete your information. Unaccepted or declined applications are deleted after 90 days by default.",
-            "The exact request and response process will be published with the binding version.",
+            "To exercise these rights, submit a written request through the contact information listed on this page. Meridian responds within 30 days.",
           ],
         },
       ],
@@ -1412,7 +1411,6 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
         {
           h: "Fees and acceptance",
           body: [
-            "Invited cases begin with a US$49 case assessment deposit, credited in full toward the US$388 consultation once accepted. See the deposit policy for details.",
             "Invited cases begin with a US$49 case assessment deposit, credited in full toward the US$388 consultation once accepted. See the deposit policy for details.",
           ],
         },

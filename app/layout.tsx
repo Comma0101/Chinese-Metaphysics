@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title: "Meridian 观复 | Private Chinese Metaphysics Consultation",
   description:
-    "A private, human-reviewed Chinese metaphysics consultation for one consequential decision, reading through Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia. Invitation-only; applications and payments are currently closed.",
+    "A private, written Chinese metaphysics consultation for one consequential decision, reading through Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia. Invitation-only.",
   openGraph: {
     title: ogTitle,
     description: ogDescription,

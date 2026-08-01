@@ -68,8 +68,8 @@ export const PILOT_PATH: PilotStage[] = [
       ],
     },
     footnote: {
-      zh: "定金全额计入服务费；方法说明、受理与退款规则、隐私条款和运营门槛公布前，付款保持关闭。",
-      en: "The deposit is credited in full. Payments remain closed until the method disclosure, privacy notice, service terms, acceptance and refund policy, and operational readiness checks are complete.",
+      zh: "定金全额计入服务费。申请书与付款通道将在发布前政策（隐私、条款、定金规则）与运营准备就绪后开放。",
+      en: "The deposit is credited in full. The application and payment channel will open once the pre-launch policies (privacy, terms, deposit) and operational readiness checks are complete.",
     },
   },
 ];

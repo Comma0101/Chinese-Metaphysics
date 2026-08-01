@@ -29,7 +29,14 @@ const DOC = {
       { k: "更正记录", v: "无" },
     ],
     note: "这是一份真实交付的节选，已脱敏：出生资料与具体时间均已移除，不对应可识别的个人，也不证明准确率。它展示三套工具如何分工、结论如何收敛、置信度如何标注，以及可追溯的案例信息如何记录。",
-    cta: "已有邀请，开始申请",
+    observedH: "受观察的结构",
+    observedLead: "下面解剖的结论，来自以下盘面结构。具体宫位与度数已脱敏，但保留的结构关系足以被复核。",
+    observed: [
+      { system: "紫微斗数", factor: "命宫天相；迁移宫紫微、七杀同宫", role: "秩序与破局的命迁轴张力" },
+      { system: "七政四余", factor: "木星与命主星的具体宫位与相位已脱敏；土星与相关主星的关系已脱敏", role: "扩张倾向与层级稳定结构的缺口" },
+      { system: "奇门遁甲", factor: "值符、天心、开门落坎宫；坎宫空亡", role: "方向已现，但门所在宫位无实质内容" },
+    ],
+    cta: "申请创始批次邀请",
     back: "← 返回",
   },
   en: {
@@ -53,7 +60,14 @@ const DOC = {
       { k: "Revisions", v: "none" },
     ],
     note: "These are excerpts from a real delivery, anonymized: birth data and specific dates have been removed, they do not identify any person, and they make no claim about accuracy. They show how the three systems divide the work, where conclusions converge, how confidence is labeled, and how traceable case information is recorded.",
-    cta: "View application requirements",
+    observedH: "Observed factors",
+    observedLead: "The conclusion dissected below is based on the following chart structures. Specific houses and degrees are anonymized, but the structural relationships retained are sufficient for verification.",
+    observed: [
+      { system: "Zi Wei Dou Shu", factor: "Tian Xiang in Self Palace; Zi Wei + Qi Sha co-located in Travel Palace", role: "Self–Travel axis tension: order vs. breakthrough" },
+      { system: "Qi Zheng Si Yu", factor: "Specific house and aspect of Jupiter relative to the Life Lord anonymized; Saturn's relationship with relevant lords anonymized", role: "Gap between expansion tendency and stabilizing structure" },
+      { system: "Qi Men Dun Jia", factor: "Chief Symbol, Heart Star, Open Door in Kan palace; Kan palace void", role: "Direction present, material support absent" },
+    ],
+    cta: "Request a founding invitation",
     back: "← Back",
   },
 } as const;
@@ -106,6 +120,21 @@ export default function SampleReading({
                   <p className="rdoc-v">{r.v}</p>
                 </div>
               ))}
+            </section>
+
+            {/* 受观察的结构 — compact table mapping chart factors to the dissected conclusion */}
+            <section className="rdoc-observed">
+              <h2 className="rdoc-k">{d.observedH}</h2>
+              <p className="rdoc-observed-lead">{d.observedLead}</p>
+              <div className="rdoc-observed-table">
+                {d.observed.map((o, i) => (
+                  <div className="rdo-row" key={i}>
+                    <span className="rdo-sys">{o.system}</span>
+                    <span className="rdo-factor">{o.factor}</span>
+                    <span className="rdo-role">{o.role}</span>
+                  </div>
+                ))}
+              </div>
             </section>
 
             {/* 解剖一条结论 — annotated reasoning chain from chart to conclusion */}
@@ -165,7 +194,7 @@ export default function SampleReading({
           <p className="rdoc-risk">{RISK[lang]}</p>
 
           <div className="cta-row rdoc-cta">
-            <Link className="btn-gilt" href={withLang("/ask", lang)}>
+            <Link className="btn-gilt" href={withLang("/#request", lang)}>
               {d.cta}
             </Link>
           </div>

@@ -108,6 +108,20 @@ export default function SampleReading({
               ))}
             </section>
 
+            {/* 解剖一条结论 — annotated reasoning chain from chart to conclusion */}
+            <section className="rdoc-dissection">
+              <h2 className="rdoc-k">{sm.dissection.h}</h2>
+              <p className="rdoc-dissection-lead">{sm.dissection.lead}</p>
+              <div className="rdoc-dissection-steps">
+                {sm.dissection.steps.map((s, i) => (
+                  <div className="rds-step" key={i}>
+                    <span className="rds-num">{s.k}</span>
+                    <p>{s.v}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
             <div className="rdoc-falsify">
               <span className="falsify-label">{sm.falsifyLabel}</span>
               <p>{sm.falsify}</p>

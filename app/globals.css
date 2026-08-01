@@ -4240,6 +4240,58 @@ a {
   max-width: 66ch;
 }
 
+/* ---------------- dissection: annotated reasoning chain ---------------- */
+.rdoc-dissection {
+  margin: 32px 0 4px;
+  padding: 28px 32px;
+  border: 1px solid var(--gold-line);
+  border-radius: 2px;
+  background: rgba(150, 122, 52, 0.04);
+}
+
+.rdoc-dissection .rdoc-k {
+  margin-bottom: 12px;
+}
+
+.rdoc-dissection-lead {
+  font-family: var(--kai);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+  max-width: 66ch;
+}
+
+.rdoc-dissection-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.rds-step {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.rds-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--gold-leaf);
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.rds-step p {
+  font-family: var(--kai);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0;
+}
+
 .rdoc-review {
   margin-top: 30px;
   padding-top: 22px;

@@ -851,6 +851,11 @@ export const SAMPLE: Record<
     reading: { k: string; v: string }[];
     falsifyLabel: string;
     falsify: string;
+    dissection: {
+      h: string;
+      lead: string;
+      steps: { k: string; v: string }[];
+    };
   }
 > = {
   zh: {
@@ -894,6 +899,28 @@ export const SAMPLE: Record<
     falsifyLabel: "哪些事实会改变或推翻这版判断",
     falsify:
       "可靠出生记录证明应使用其他时辰：紫微部分需全部重排。现实表明当前主要矛盾并非方向与落地，而是健康、法律、现金或安全风险：现实风险优先。未来 90 天内，扩大探索反而持续产生高质量现实结果，而收缩没有改善承载：奇门行动解释需要修订。长期主题的实际表现持续与报告假设相反：相关转译需要降低置信度。不同专业人员对计算口径提出可复现的重大异议：采用版本化重算，而非口头调和。",
+    dissection: {
+      h: "解剖一条结论",
+      lead: "下面以「四条共同结论」中的第四条——「当前局势并不缺少方向，真正缺少的是现实填充」——为例，展示这份判读的推理链条：从盘面观察到解释，再到时机判断与置信度标注。",
+      steps: [
+        {
+          k: "一 · 盘面观察",
+          v: "紫微斗数：命宫天相与迁移宫紫微七杀同宫，形成「外在维持秩序、内在破局」的格局——此人方向感强，但天相的合理性容易将方向停留在观念层，而紫微七杀的破局能量需要外部事实才能激活。七政四余：木星落命宫或与命主星有相位，显示扩张倾向和方向感；但土星或契约相关的宫位尚未形成稳定结构——方向清晰，但缺乏将方向转化为可重复运行的机制。奇门遁甲：值符、天心、开门同落坎宫——「开门」是方向之门，已现，表示当前确实存在一个可以进入的路径；但坎宫空亡——门所在宫位没有实质内容，意味着方向在观念上已经成立，但尚未被现实承诺、资源、交易或可重复的结果所填充。",
+        },
+        {
+          k: "二 · 解释",
+          v: "三套工具从不同角度进入同一个判断。紫微看到的是人格结构——「维持秩序」与「破局」的张力，解释了为什么此人一直在「准备」而不是「完成」。七政看到的是长期运行机制——扩张倾向与契约结构的缺口，解释了为什么方向感强却没有形成可重复的系统。奇门看到的是当下局势——门已开但宫为空，解释了为什么「知道该做什么」却没有转化为「已经做了」。三者收敛于同一个结论：这个人不缺少方向，缺少的是把方向变成现实结果。",
+        },
+        {
+          k: "三 · 时机判断",
+          v: "奇门日干落兑宫，临死门与太阴——当前主势不是向外扩张，而是先结束旧循环、筛选已有项目、归档已完成事项，以此重新获得集中度。不关闭旧循环，新方向只能得到剩余资源。因此，未来 90 天的行动建议分为四个阶段：关闭旧循环（第 1–14 天）、取得第一个现实结果（第 15–45 天）、重复三次（第 46–75 天）、决定是否放大（第 76–90 天）。这个阶段划分不是命理「预测」，而是基于盘面结构对行动顺序的推演——如果旧循环未被关闭，第一阶段的判断就不成立，后续阶段也需要修订。",
+        },
+        {
+          k: "四 · 置信度",
+          v: "「方向感强但缺乏现实填充」这一判断，三套工具同时收敛 → 置信度：高。具体的 90 天四阶段划分，基于奇门时局与紫微大限的综合推演，但受流派口径与执行变量影响 → 置信度：中。具体事件（如「是否能在 45 天内拿到第一个合同」）涉及现实变量远超命理可判断范围 → 置信度：低，报告中不作为确定性预言。",
+        },
+      ],
+    },
   },
   en: {
     eyebrow: "Delivery excerpts",
@@ -936,6 +963,28 @@ export const SAMPLE: Record<
     falsifyLabel: "What would change this assessment",
     falsify:
       "A reliable birth record showing a different hour: the Zi Wei section must be fully re-cast. Reality showing the main contradiction is not direction and execution but health, legal, cash, or safety risk: real-world risk takes priority. If over the next 90 days expanded exploration keeps producing high-quality real results while contraction does not improve capacity: the Qi Men action reading needs revision. If long-term themes keep behaving opposite to the report's assumptions: the relevant translations need lower confidence. If different professionals raise reproducible objections to the calculation conventions: versioned recomputation, not verbal reconciliation.",
+    dissection: {
+      h: "One conclusion, dissected",
+      lead: "Below, we trace the reasoning chain behind conclusion #4 from the 'Four shared conclusions' — 'the current situation does not lack direction; what it lacks is real-world filling.' From chart observation to interpretation, timing, and confidence labeling.",
+      steps: [
+        {
+          k: "1 · Chart observation",
+          v: "Zi Wei Dou Shu: The Self Palace's Tian Xiang and the Travel Palace's Zi Wei + Qi Sha co-located form a pattern of 'order maintained externally, breakthrough ready internally' — this person has strong directional sense, but Tian Xiang's reasonableness tends to keep direction at the conceptual level, while Zi Wei + Qi Sha's breakthrough energy requires external facts to activate. Qi Zheng Si Yu: Jupiter in the Self Palace or in aspect with the Life Lord shows expansion tendency and directional clarity; but Saturn or contract-related houses lack stable structure — direction is clear, but the mechanism for turning it into repeatable operation is missing. Qi Men Dun Jia: The Chief Symbol, Heart Star, and Open Door all land in the Kan palace — the 'Open Door' is the gate of direction, already present, indicating a path worth entering; but the Kan palace is void — the door's palace has no substance, meaning the direction is conceptually established but not yet filled with real commitment, resources, transactions, or repeatable results.",
+        },
+        {
+          k: "2 · Interpretation",
+          v: "The three systems converge on the same judgment from different angles. Zi Wei sees personality structure — the tension between 'maintaining order' and 'breaking through,' explaining why this person has been 'preparing' rather than 'completing.' Qi Zheng sees long-term operating mechanisms — the gap between expansion tendency and contract structure, explaining why directional clarity hasn't formed a repeatable system. Qi Men sees the current situation — the door is open but the palace is void, explaining why 'knowing what to do' hasn't become 'having done it.' All three converge: this person does not lack direction; they lack real-world results that prove the direction holds.",
+        },
+        {
+          k: "3 · Timing",
+          v: "The Qi Men day stem falls in the Dui palace with the Death Door and Tai Yin — the main current is not outward expansion, but first closing old cycles, filtering existing projects, and archiving completed items to regain focus. Without closing old cycles, the new direction gets only leftover resources. Hence the 90-day action plan in four phases: close old cycles (days 1–14), get the first real result (days 15–45), repeat three times (days 46–75), decide whether to scale (days 76–90). This phasing is not a metaphysical 'prediction' — it is a structural deduction of action sequence based on the chart. If old cycles are not closed, the first-phase judgment does not hold, and subsequent phases need revision.",
+        },
+        {
+          k: "4 · Confidence",
+          v: "The judgment 'strong directional sense, lacking real-world filling' — all three systems converge → confidence: high. The specific 90-day four-phase plan, based on Qi Men configuration and Zi Wei decade-cycle reasoning, but affected by school conventions and execution variables → confidence: medium. Specific events (e.g., 'will a contract be signed within 45 days') involve real-world variables far beyond what metaphysics can assess → confidence: low, not treated as a deterministic prediction in the report.",
+        },
+      ],
+    },
   },
 };
 

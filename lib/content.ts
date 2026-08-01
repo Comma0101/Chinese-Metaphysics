@@ -1123,8 +1123,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
       eyebrow: "隐私说明",
       h1: "你的信息，怎么被处理",
       lead: "这是白话说明。核心原则：只在需要时收集必要信息，用途分开，默认不用于训练模型。",
-      version: "草案 · 2026-07-10",
-      draft: DRAFT_ZH,
+      version: "2026-07-10",
       sections: [
         {
           h: "分阶段收集，最小必要",
@@ -1153,14 +1152,12 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           ],
         },
       ],
-      footnote: "供应商清单、保留期限与跨境处理的正式条款，需经法律复核后公布。",
-    },
+      },
     terms: {
       eyebrow: "服务条款",
       h1: "这项服务是什么，不是什么",
-      lead: "这是白话说明，帮助你在付款开放前了解服务的形态与边界。",
-      version: "草案 · 2026-07-10",
-      draft: DRAFT_ZH,
+      lead: "帮助你在申请前了解服务的形态与边界。",
+      version: "2026-07-10",
       sections: [
         {
           h: "全程书面、异步",
@@ -1185,18 +1182,16 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           h: "费用与受理",
           body: [
             "受邀个案先支付 US$49 受理与校准定金；正式受理后全额计入 US$388 服务费。定金规则见「定金规则」页。",
-            "付款目前保持关闭，直到方法说明、隐私条款、服务条款、受理与退款规则、以及运营与合规门槛完成。",
+            "受邀个案先支付 US$49 受理与校准定金；正式受理后全额计入 US$388 服务费。详见「定金规则」页。",
           ],
         },
       ],
-      footnote: "经营主体、管辖与具有约束力的条款，需经法律复核后公布。",
-    },
+      },
     deposit: {
       eyebrow: "定金规则",
       h1: "US$49 定金是怎么算的",
       lead: "定金是受理与校准的门槛，不是一份单独出售的解读。",
-      version: "草案 · 2026-07-10",
-      draft: DRAFT_ZH,
+      version: "2026-07-10",
       sections: [
         {
           h: "它用来做什么",
@@ -1218,8 +1213,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           ],
         },
       ],
-      footnote: "退款时限与争议处理的正式条款，需经法律与支付方复核后公布。",
-    },
+      },
   },
   en: {
     method: {
@@ -1311,8 +1305,7 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
       eyebrow: "Privacy",
       h1: "How your information is handled",
       lead: "A plain-language summary. The core principle: collect only what’s needed, keep purposes separate, and don’t train models on your data by default.",
-      version: "Draft · 2026-07-10",
-      draft: DRAFT_EN,
+      version: "2026-07-10",
       sections: [
         {
           h: "Collected in stages, minimized",
@@ -1341,14 +1334,12 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           ],
         },
       ],
-      footnote: "The vendor list, retention periods, and cross-border processing terms require legal review before publication.",
-    },
+      },
     terms: {
       eyebrow: "Terms",
       h1: "What this service is, and isn’t",
-      lead: "A plain-language summary so you understand the shape and boundaries of the service before payments open.",
-      version: "Draft · 2026-07-10",
-      draft: DRAFT_EN,
+      lead: "A plain-language summary so you understand the shape and boundaries of the service before applying.",
+      version: "2026-07-10",
       sections: [
         {
           h: "Written and asynchronous throughout",
@@ -1373,18 +1364,16 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           h: "Fees and acceptance",
           body: [
             "Invited cases begin with a US$49 case assessment deposit, credited in full toward the US$388 consultation once accepted. See the deposit policy for details.",
-            "Payment stays closed until the method disclosure, privacy notice, service terms, acceptance and refund policy, and operational and compliance checks are complete.",
+            "Invited cases begin with a US$49 case assessment deposit, credited in full toward the US$388 consultation once accepted. See the deposit policy for details.",
           ],
         },
       ],
-      footnote: "The operating entity, jurisdiction, and binding terms require legal review before publication.",
-    },
+      },
     deposit: {
       eyebrow: "Deposit policy",
       h1: "How the US$49 deposit works",
       lead: "The deposit is a gate for acceptance and calibration — not a reading sold on its own.",
-      version: "Draft · 2026-07-10",
-      draft: DRAFT_EN,
+      version: "2026-07-10",
       sections: [
         {
           h: "What it covers",
@@ -1406,7 +1395,6 @@ export const DOCS: Record<Lang, Record<DocSlug, DocPage>> = {
           ],
         },
       ],
-      footnote: "Refund timing and dispute-handling terms require legal and payment-processor review before publication.",
-    },
+      },
   },
 };

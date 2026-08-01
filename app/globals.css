@@ -2078,6 +2078,86 @@ a {
   margin: 0;
 }
 
+/* ---------------- next band: human-review proof + post-application timeline ---------------- */
+.next-band {
+  padding: 78px 0 86px;
+}
+
+.next-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .next-grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(56px, 7vw, 96px);
+  }
+}
+
+.next-band .next-proof-body {
+  font-family: var(--serif);
+  font-size: clamp(19px, 2.2vw, 26px);
+  line-height: 1.5;
+  color: #1c1916;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.next-band .next-proof-teaser {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4a4540;
+  margin: 22px 0 0;
+}
+
+.next-band .next-proof-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--gold-leaf);
+  border-bottom: 1px solid var(--gold-line);
+  padding-bottom: 3px;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.next-band .next-proof-link:hover {
+  color: #1c1916;
+  border-color: #1c1916;
+}
+
+.next-band .next-steps-h {
+  font-family: var(--carve-stack);
+  font-weight: 900;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.2;
+  color: #1c1916;
+  margin: 0;
+}
+
+.next-band .next-steps .timeline {
+  margin-top: 30px;
+  max-width: none;
+}
+
+/* on paper, the timeline dot sheds its dark lacquer ring */
+.next-band .tl-dot {
+  border-color: var(--rice);
+  box-shadow: 0 0 0 3px rgba(168, 50, 36, 0.16);
+}
+
+.next-band .tl-content {
+  padding-bottom: 30px;
+}
+
 /* ---------------- scarcity bar ---------------- */
 .scarcity-bar {
   display: inline-flex;

@@ -128,6 +128,45 @@ export default function Home({
           error={c.inviteError}
         />
 
+        {/* 信任与下一步 — human-review proof + post-application timeline */}
+        <section className="section next-band act-paper seam-t seam-b">
+          <div className="wrap">
+            <div className="next-grid">
+              <div className="next-proof">
+                <p className="eyebrow">{lang === "zh" ? "人工复核" : "Human review"}</p>
+                <p className="next-proof-body">{c.humanBody}</p>
+                <p className="next-proof-teaser">{c.humanProof}</p>
+                <TrackedLink
+                  className="next-proof-link"
+                  href={withLang("/reading/sample", lang)}
+                  label={c.humanLink}
+                  location="next-band"
+                >
+                  {c.humanLink}
+                </TrackedLink>
+              </div>
+              <div className="next-steps">
+                <h2 className="next-steps-h">{c.afterH}</h2>
+                <div className="timeline">
+                  {c.afterSteps.map((s, i) => (
+                    <div className="tl-node" key={i}>
+                      <div className="tl-marker">
+                        <span className="tl-dot" />
+                        {i < c.afterSteps.length - 1 && <span className="tl-line" />}
+                      </div>
+                      <div className="tl-content">
+                        <span className="tl-num">{`0${i + 1}`}</span>
+                        <h3>{s.k}</h3>
+                        <p>{s.v}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 具体问题与服务内容 */}
         <section className="section" data-act="1" id="service">
           <div className="wrap">
@@ -321,8 +360,8 @@ export default function Home({
             <div className="scarcity-bar">
               <span className="scarcity-text">
                 {lang === "zh"
-                  ? "创始批次 · 尚未开放申请"
-                  : "Founding cohort · applications not yet open"}
+                  ? "创始批次 · 小规模受理，保证复核质量"
+                  : "Founding cohort · small intake to protect review quality"}
               </span>
             </div>
 

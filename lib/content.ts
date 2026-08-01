@@ -35,6 +35,11 @@ type Chrome = {
     inviteNote: string;
     inviteDone: string;
     inviteError: string;
+    afterH: string;
+    afterSteps: { k: string; v: string }[];
+    humanBody: string;
+    humanProof: string;
+    humanLink: string;
     s2h: string;
     s2lead: string;
     isnotLabel: string;
@@ -67,16 +72,16 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "私人中国命理咨询 · 只为一件重大决定",
+      eyebrow: "私人中国命理咨询 · 紫微·七政·奇门三术合参",
       h1: "你以为你在犹豫。其实你在重复。",
-      lead: "去还是留、转还是不转、开还是等——同一件事你已经在心里推演过太多次，每次都回到原地。观复把这次推演交给紫微·七政·奇门三套工具，还你一份看得见的书面判读：你卡在哪里、张力在哪、你一直绕开的那个取舍是什么。全程书面、人工复核，不催你，不吓你，决定始终是你的。",
+      lead: "同一种关系模式、同一个事业卡点、同一类对自己的困惑——你已经在心里推演过太多次，每次都回到原地。观复以紫微·七政·奇门三套工具，为你梳理命局里看不见的结构：你的模式在哪里、张力在哪里、哪些窗口正在打开。全程书面、人工复核，不催你，不吓你，决定始终是你的。",
       accent: "Private Chinese metaphysics consultation · three systems, three questions.",
       cta: "查看服务内容",
       applyCta: "申请首批名额",
       secondaryCta: "先看交付节选 →",
       trustSignal: "首份正式交付已完成 · 方法 v1.0 · 人工复核，不是 AI 生成",
       ctaNote: "US$49 受理定金全额计入 US$388 · 若不符合受理规则，原路退还",
-      proof: ["去留 / 迁移", "转行 / offer", "创业 / 关停", "关系 / 家庭"],
+      proof: ["去留 / 迁移", "转行 / offer", "创业 / 关停", "关系 / 家庭", "自我认知"],
       inviteH: "申请创始批次邀请",
       inviteLead: "告诉我们你正在决定什么。如果匹配，你会收到一封邀请邮件，内含申请链接。不收集出生信息，不要求你讲具体困局。",
       inviteEmailPlaceholder: "your@email.com",
@@ -91,20 +96,33 @@ export const T: Record<Lang, Chrome> = {
       inviteBtn: "提交申请",
       inviteNote: "仅用于创始批次资格确认。不会发送营销邮件。",
       inviteDone: "已收到。如果匹配，你会收到邀请邮件。",
-      inviteError: "提交失败，请稍后重试。",
-      s2h: "你正在决定什么？",
+    inviteError: "提交失败，请稍后重试。",
+    afterH: "提交之后，会发生什么",
+    afterSteps: [
+      { k: "我们回复你", v: "确认你的决定在受理范围内后，你会收到一封邀请邮件，内含申请链接。" },
+      { k: "US$49 受理定金", v: "用于资料核对与受理判断；正式受理后全额计入 US$388，无法按公布规则受理则原路退还。" },
+      { k: "书面交付", v: "受理后，围绕一件具体决定，完成经人工审核的书面决策判读。" },
+      { k: "澄清与复盘", v: "交付后 14 天内，可集中提交一轮关于原判读依据、假设或表述的书面问题；30/90 天完成书面复盘。" },
+    ],
+    humanBody: "你收到的判读由人完成审核，不是自动生成后直接发出。软件参与了哪些环节，会如实写进交付——你的资料默认不用于训练任何模型。",
+    humanProof: "先看一份真实交付节选，再决定值不值得谈。",
+    humanLink: "查看交付节选",
+    s2h: "你正在决定什么？",
       s2lead: "选项已经摆在面前，越想却越难定——而这件事不能一直拖。观复适合这样的时刻。",
       isnotLabel: "常见的人生节点",
       isnot: [
         "该接哪份工作，还是趁现在换一条路",
         "留下、回去，还是去另一座城市重新开始",
         "这段关系往前走，还是这一步太早、太晚",
+        "为什么每段关系走到相似的地方就卡住",
         "家人的期待，和你想走的路，怎么摆到一起",
         "辞掉稳定的工作去搏一件事，是现在，还是再等等",
+        "想知道自己到底适合什么——不是技能，是命局里的结构",
       ],
       isLabel: "这次咨询会做什么",
       is: [
         "紫微斗数看领域与角色，七政四余看长期机制，奇门遁甲看当下时势——三套工具分工，看这件事的时机窗口、你反复走进的模式，和此刻没权衡到的取舍",
+        "从同一张命盘同时看清事业方向、关系模式与人生周期——不是分开问三次",
         "命局分析和现实条件分开写——哪句是盘面推论、哪句是现实约束，一眼能分",
         "比较选项，不替你下命令",
         "留下一份可回看、可质疑、可复盘的记录",
@@ -166,16 +184,16 @@ export const T: Record<Lang, Chrome> = {
     toggleZh: "中文",
     toggleEn: "EN",
     home: {
-      eyebrow: "Private Chinese metaphysics consultation · for one consequential decision",
+      eyebrow: "Private Chinese metaphysics consultation · Zi Wei, Qi Zheng, Qi Men",
       h1: "You think you're hesitating. You're repeating.",
-      lead: "Leave or stay, switch or hold, start or wait — the decision you've turned over too many times, each time landing where you started. Meridian hands that loop to three systems — Zi Wei, Qi Zheng, Qi Men — and returns a brief you can see: where you're stuck, the tension, the trade-off you keep circling. Written, human-reviewed, no pressure. The decision stays yours.",
+      lead: "The same relationship pattern, the same career knot, the same question about yourself — the loop you've turned over too many times, each time landing where you started. Meridian hands that loop to three systems — Zi Wei, Qi Zheng, Qi Men — and returns a brief you can see: your patterns, the tension, the windows that are opening. Written, human-reviewed, no pressure. The decision stays yours.",
       accent: "私人中国命理咨询，紫微斗数、七政四余、奇门遁甲三术合参。",
       cta: "See what is included",
       applyCta: "Apply for a founding seat",
       secondaryCta: "Read delivery excerpts →",
       trustSignal: "First formal delivery completed · method v1.0 · human-reviewed, not AI-generated",
       ctaNote: "US$49 assessment deposit, credited in full toward US$388 · refunded if we can't proceed",
-      proof: ["Relocation", "Career & offers", "Start or wind down", "Relationships"],
+      proof: ["Relocation", "Career & offers", "Start or wind down", "Relationships", "Self-knowledge"],
       inviteH: "Request a founding invitation",
       inviteLead: "Tell us what you're deciding. If it's a fit, you'll receive an invitation email with an application link. No birth data collected here — no personal narrative required.",
       inviteEmailPlaceholder: "your@email.com",
@@ -190,21 +208,34 @@ export const T: Record<Lang, Chrome> = {
       inviteBtn: "Submit request",
       inviteNote: "Used only for founding-cohort qualification. No marketing emails.",
       inviteDone: "Received. If it's a fit, you'll get an invitation email.",
-      inviteError: "Something went wrong. Please try again.",
-      s2h: "What are you deciding?",
+    inviteError: "Something went wrong. Please try again.",
+    afterH: "What happens after you apply",
+    afterSteps: [
+      { k: "We reply", v: "Once we confirm your decision is within scope, you receive an invitation email with an application link." },
+      { k: "US$49 assessment deposit", v: "Covers intake verification and case assessment; credited in full toward US$388 once accepted, returned if we cannot proceed under the published rule." },
+      { k: "Written delivery", v: "After acceptance, a human-reviewed written decision brief built around one concrete decision." },
+      { k: "Follow-up and review", v: "Within 14 days of delivery, one consolidated written follow-up about the brief's reasoning, assumptions, or wording; written reviews at 30 and 90 days." },
+    ],
+    humanBody: "Your brief is reviewed by a person, not generated and sent. Which tasks software touched is stated in the delivery — and your data is not used to train any model by default.",
+    humanProof: "Read excerpts from a real delivery before deciding whether to apply.",
+    humanLink: "Read delivery excerpts",
+    s2h: "What are you deciding?",
       s2lead:
         "Meridian is for the moment when the options are already in front of you — the more you turn them over, the less certain you feel — and the choice can’t keep waiting past 90 days.",
       isnotLabel: "Common decision points",
-      isnot: [
+isnot: [
         "Which job to take — or whether to change direction entirely, now",
         "Stay, go back, or start over in another city",
         "Whether this relationship moves forward, or the timing is too early or too late",
-        "Your family’s expectations and the path you actually want — how they fit together",
+        "Why every relationship hits the same wall",
+        "Your family's expectations and the path you actually want — how they fit together",
         "Leaving a stable job to bet on something of your own — now, or wait",
+        "What you're actually suited for — not skills, but the structure in your chart",
       ],
       isLabel: "What the consultation does",
       is: [
         "Works three systems in division of labor — Zi Wei Dou Shu for life domains and roles, Qi Zheng Si Yu for long-term mechanisms, Qi Men Dun Jia for current timing — to read the timing window, the patterns you keep walking back into, and the trade-off you haven't weighed yet",
+        "See career direction, relationship patterns, and life cycles from the same chart — not three separate questions",
         "Separates chart analysis from real-world facts — which line is a chart inference, which is a real constraint — at a glance",
         "Compares options without making the decision for you",
         "Leaves you with a record you can revisit, challenge, and review later",
@@ -788,6 +819,7 @@ export const TRUST: Record<
       { h: "人工审核", p: "盘面输入、解释、书面简报与关键修改都必须经过人工复核，不能把自动生成结果直接交付给客户。" },
       { h: "方法可追溯", p: "排盘选择、关键假设、软件用途、不确定之处与报告版本会保留在案例记录中。" },
       { h: "允许质疑与修正", p: "客户可以要求解释依据；30/90 天复盘会记录需要修正的地方，而不只记录符合之处。" },
+      { h: "谁在审核", p: "审核者多年研习紫微斗数、七政四余与奇门遁甲。责任归于观复的方法版本与案例记录，而非个人名气——你看不到姓名与照片，但看得到每一份判读的依据与修订历史。" },
     ],
     sign: "— 观复案例审核",
   },
@@ -799,6 +831,7 @@ export const TRUST: Record<
       { h: "Human review", p: "Chart inputs, interpretation, the written brief, and substantive revisions must be reviewed by a person. Automated output is never delivered as final judgment." },
       { h: "Traceable method", p: "Calculation choices, key assumptions, software use, uncertainty, and report versions remain in the case record." },
       { h: "Open to correction", p: "Clients can ask for the reasoning. The 30/90-day review records what needs revision as well as what helped." },
+      { h: "Who reviews", p: "The reviewer has studied Zi Wei Dou Shu, Qi Zheng Si Yu, and Qi Men Dun Jia for years. Accountability belongs to Meridian's method versions and case records, not to personal celebrity — you will not see a name or photograph, but you will see the reasoning and revision history of every brief." },
     ],
     sign: "— Meridian case review",
   },
